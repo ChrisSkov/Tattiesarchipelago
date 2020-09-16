@@ -4,16 +4,15 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] float speed;
-    [SerializeField] float stepSoundDelay;
+    [SerializeField] float speed = 10f;
+    [SerializeField] float stepSoundDelay = 0.2f;
     [SerializeField] AudioClip[] footStep;
     Rigidbody playerRB;
     Vector3 moveDirection;
     Animator playerAnim;
     int layerMask = 1 << 8;
-    Vector3 mouseWorldPositon;
+    Vector3 mouseWorldPositon = Vector3.zero;
     AudioSource source;
-    bool isPlayStepSound = false;
     float runTimer = Mathf.Infinity;
     void Start()
     {

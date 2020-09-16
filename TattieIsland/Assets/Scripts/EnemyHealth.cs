@@ -13,6 +13,7 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField] bool isDead = false;
 
     [SerializeField] GameObject shatterObject;
+    [SerializeField] GameObject[] enemyPhysicsObjects;
 
     [SerializeField] float destroyTime = 1f;
 
@@ -55,6 +56,11 @@ public class EnemyHealth : MonoBehaviour
     {
         if (isDead && !hasSpawnedShatter && !bloodHasPlayed)
         {
+            foreach(GameObject g in enemyPhysicsObjects)
+            {
+                g.GetComponent<SphereCollider>().enabled = true;
+                g.GetComponent<Rigidbody>().isKinematic = false;
+            }
             bloodHasPlayed = true;
             gameObject.GetComponent<MeshRenderer>().enabled = false;
             transform.GetChild(2).gameObject.SetActive(false);

@@ -48,8 +48,14 @@ public class PlayerCombat : MonoBehaviour
         LayerMask mask = LayerMask.GetMask("Enemy");
         foreach (Collider c in Physics.OverlapSphere(weapons[0].transform.position, hitDistance, mask))
         {
-            c.gameObject.GetComponent<EnemyHealth>().TakeDamage(hitDamage);
-            source.PlayOneShot(punchSound[Random.Range(0, punchSound.Length)]);
+            if (c == null)
+                return;
+            if (c.gameObject.GetComponent<EnemyHealth>() != null)
+            {
+                c.gameObject.GetComponent<EnemyHealth>().TakeDamage(hitDamage);
+                source.PlayOneShot(punchSound[Random.Range(0, punchSound.Length)]);
+            }
+            print(c.gameObject.name);
             if (Physics.Raycast(transform.position, c.transform.position - transform.position, out hit, mask))
             {
                 c.GetComponent<Rigidbody>().AddForce(-hit.normal * hitForce, ForceMode.Impulse);
