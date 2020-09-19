@@ -16,10 +16,10 @@ public class Shoot : MonoBehaviour
 
     [SerializeField] float damage = 10f;
 
-    [SerializeField] GameObject bulletSocket;
-    [SerializeField] GameObject shellHolder;
+    [SerializeField] GameObject bulletSocket = null;
+    [SerializeField] GameObject shellHolder = null;
 
-    [SerializeField] ParticleSystem pellets;
+    [SerializeField] ParticleSystem pellets = null;
 
     GameObject[] shotgunShells;
 

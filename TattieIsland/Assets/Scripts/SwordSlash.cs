@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SwordSlash : MonoBehaviour
 {
-    [SerializeField] CapsuleCollider swordCollider;
+    [SerializeField] CapsuleCollider swordCollider = null;
     public float swordDamage = 20f;
     // Start is called before the first frame update
     void Start()

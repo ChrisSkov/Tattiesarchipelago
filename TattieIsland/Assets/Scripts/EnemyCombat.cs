@@ -5,19 +5,19 @@ using UnityEngine;
 
 public class EnemyCombat : MonoBehaviour
 {
-    AIPath path;
-    [SerializeField] GameObject fireballPrefab;
+    [SerializeField] GameObject fireballPrefab = null;
     [SerializeField] float fireballDamage = 10f;
     [SerializeField] float fireballSpeed = 10f;
     [SerializeField] float timeBetweenFireballs = 2f;
     [SerializeField] float destroyTimeAfterHit = 1f;
-    [SerializeField] Transform fireballSocket;
+    [SerializeField] Transform fireballSocket = null;
     [SerializeField] float playerInCombatRange = 8f;
     [SerializeField] float playerInFollowRange = 12f;
-    Transform player;
     [SerializeField] float timer = Mathf.Infinity;
 
+    Transform player;
     Animator anim;
+    AIPath path;
     void Start()
     {
         anim = GetComponent<Animator>();

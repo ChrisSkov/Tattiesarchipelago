@@ -222,7 +222,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 686590402195646996}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 2
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -293,13 +293,11 @@ MonoBehaviour:
   - {fileID: 1783544366}
   - {fileID: 2122956523}
   - {fileID: 566925127020762295}
-  hitDistance: 1
+  hitDistance: 1.16
   hitDamage: 25
   hitForce: 4
   currentlyEquippedWeapon: 0
   punchSound:
-  - {fileID: 8300000, guid: 9779732bb42545d41b2f5a4b736c20b1, type: 3}
-  - {fileID: 8300000, guid: 985b41111d89d25408856b8dc7a49853, type: 3}
   - {fileID: 8300000, guid: 43243f92f398aa743a7cc03e4b048c72, type: 3}
 --- !u!114 &7433885309689952306
 MonoBehaviour:

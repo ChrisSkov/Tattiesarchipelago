@@ -6,11 +6,10 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] float speed = 10f;
     [SerializeField] float stepSoundDelay = 0.2f;
-    [SerializeField] AudioClip[] footStep;
+    [SerializeField] AudioClip[] footStep = new AudioClip[3];
     Rigidbody playerRB;
-    Vector3 moveDirection;
+    Vector3 moveDirection = Vector3.zero;
     Animator playerAnim;
-    int layerMask = 1 << 8;
     Vector3 mouseWorldPositon = Vector3.zero;
     AudioSource source;
     float runTimer = Mathf.Infinity;
@@ -73,8 +72,8 @@ public class PlayerMovement : MonoBehaviour
         //Rotation
         RaycastHit hit;
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-        Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask);
+        LayerMask mask = LayerMask.GetMask("Ground");
+        Physics.Raycast(ray, out hit, Mathf.Infinity, mask);
         mouseWorldPositon = new Vector3(hit.point.x, transform.position.y, hit.point.z) - transform.position;
         transform.rotation = Quaternion.LookRotation(mouseWorldPositon, Vector3.up);
 

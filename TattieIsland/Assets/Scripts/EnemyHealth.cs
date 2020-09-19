@@ -12,15 +12,16 @@ public class EnemyHealth : MonoBehaviour
 
     [SerializeField] bool isDead = false;
 
-    [SerializeField] GameObject shatterObject;
-    [SerializeField] GameObject[] enemyPhysicsObjects;
+    [SerializeField] GameObject shatterObject = null;
+    [SerializeField] GameObject[] enemyPhysicsObjects = new GameObject[4];
+    [SerializeField] SkinnedMeshRenderer mesh = null;
 
     [SerializeField] float destroyTime = 1f;
 
-    [SerializeField] ParticleSystem bloodSpray;
+    [SerializeField] ParticleSystem bloodSpray = null;
     Transform particleHolder;
 
-
+    [SerializeField] bool primitiveMesh = false;
     bool hasSpawnedShatter = false;
 
     bool bloodHasPlayed = false;
@@ -56,13 +57,20 @@ public class EnemyHealth : MonoBehaviour
     {
         if (isDead && !hasSpawnedShatter && !bloodHasPlayed)
         {
-            foreach(GameObject g in enemyPhysicsObjects)
+            foreach (GameObject g in enemyPhysicsObjects)
             {
                 g.GetComponent<SphereCollider>().enabled = true;
                 g.GetComponent<Rigidbody>().isKinematic = false;
             }
             bloodHasPlayed = true;
-            gameObject.GetComponent<MeshRenderer>().enabled = false;
+            if (primitiveMesh)
+            {
+                gameObject.GetComponent<MeshRenderer>().enabled = false;
+            }
+            else
+            {
+                mesh.enabled = false;
+            }
             transform.GetChild(2).gameObject.SetActive(false);
             transform.GetChild(3).gameObject.SetActive(false);
             transform.GetChild(0).gameObject.SetActive(false);

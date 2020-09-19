@@ -4,18 +4,19 @@ using UnityEngine;
 
 public class PlayerCombat : MonoBehaviour
 {
-    [SerializeField] GameObject[] weapons;
+    [SerializeField] GameObject[] weapons = new GameObject[3];
 
     [SerializeField] float hitDistance = 2f;
     [SerializeField] float hitDamage = 25f;
     [SerializeField] float hitForce = 3f;
     [SerializeField] int currentlyEquippedWeapon;
-    [SerializeField] AudioClip[] punchSound;
+    [SerializeField] AudioClip punchSound = null;
     Animator anim;
     AudioSource source;
 
     private void Start()
     {
+
         source = GetComponent<AudioSource>();
         anim = GetComponent<Animator>();
 
@@ -53,7 +54,7 @@ public class PlayerCombat : MonoBehaviour
             if (c.gameObject.GetComponent<EnemyHealth>() != null)
             {
                 c.gameObject.GetComponent<EnemyHealth>().TakeDamage(hitDamage);
-                source.PlayOneShot(punchSound[Random.Range(0, punchSound.Length)]);
+                source.PlayOneShot(punchSound);
             }
             print(c.gameObject.name);
             if (Physics.Raycast(transform.position, c.transform.position - transform.position, out hit, mask))
@@ -62,6 +63,7 @@ public class PlayerCombat : MonoBehaviour
             }
         }
     }
+
     private void ChangeWeapon()
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
@@ -82,6 +84,7 @@ public class PlayerCombat : MonoBehaviour
     {
         Gizmos.color = Color.black;
         Gizmos.DrawWireSphere(weapons[0].transform.position, hitDistance);
+
     }
     public int GetEquippedWeapon()
     {
