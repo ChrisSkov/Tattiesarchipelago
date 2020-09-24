@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca5286e47dffa064481121714e481850, type: 3}
+  m_Name: Shotgun
+  m_EditorClassIdentifier: 
+  wepPrefab: {fileID: 2100338803721662578, guid: 874b5c5dbf04b1c439377cab4577d441, type: 3}
+  isRanged: 1
+  hasAmmo: 1
+  maxAmmo: 2
+  currentAmmo: 0
+  attackRange: 0
+  attackDamage: 15
+  particles: {fileID: 5404509237704347722, guid: 231354b3b257a274b97843b2f74d9ead, type: 3}
+  attackSound: {fileID: 8300000, guid: 4d5e5268a90a63247979d923d59f5af6, type: 3}
+  reloadSound: {fileID: 8300000, guid: 014c646e4a7ccc942b14236551f872c2, type: 3}
+  animOverrideControl: {fileID: 0}

@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c35008a81f69f8429a487ede2fdd372, type: 3}
   m_Name: Float
   m_EditorClassIdentifier: 
-  Value: 3
+  DeveloperDescription: 
+  Value: 100

@@ -783,7 +783,7 @@ MonoBehaviour:
   repathRate: 0.5
   canSearch: 1
   canMove: 1
-  maxSpeed: 1
+  maxSpeed: 1.5
   gravity: {x: NaN, y: NaN, z: NaN}
   groundMask:
     serializedVersion: 2
@@ -794,13 +794,13 @@ MonoBehaviour:
   targetCompatibility: {fileID: 0}
   maxAcceleration: -2.5
   rotationSpeed: 360
-  slowdownDistance: 0
+  slowdownDistance: 0.33
   pickNextWaypointDist: 2
   endReachedDistance: 1.5
   alwaysDrawGizmos: 0
   slowWhenNotFacingTarget: 1
   whenCloseToDestination: 0
-  constrainInsideGraph: 0
+  constrainInsideGraph: 1
 --- !u!136 &1390202984
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -861,10 +861,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spearAim: {fileID: 2060712805}
-  spearRadius: 2
+  spearRadius: 0.83
   spearDamage: 10
-  stabRange: 10
-  timeBetweenAttacks: 1.5
+  stabRange: 3.73
+  timeBetweenAttacks: 3.5
+  fleeThreshold: 45
+  timer: Infinity
 --- !u!135 &1301916444
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -874,7 +876,7 @@ SphereCollider:
   m_GameObject: {fileID: 6105218660479243235}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 1
   m_Center: {x: 0, y: 5.71, z: 0}

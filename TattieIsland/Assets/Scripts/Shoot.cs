@@ -4,25 +4,14 @@ using UnityEngine;
 
 public class Shoot : MonoBehaviour
 {
-    [Header("Audio")]
-    [SerializeField] AudioClip gunSound = null;
 
-    [SerializeField] AudioClip reloadSound = null;
-
-    [Header("Gun variables")]
-    [SerializeField] int maxAmmo;
-
-    [SerializeField] int currentAmmo;
-
-    [SerializeField] float damage = 10f;
-
+    [Header("Scriptable Objects")]
+    public PlayerStats stats;
+    public WeaponObj weapon;
     [SerializeField] GameObject bulletSocket = null;
     [SerializeField] GameObject shellHolder = null;
-
-    [SerializeField] ParticleSystem pellets = null;
-
+    [SerializeField] GameObject weaponHolder = null;
     GameObject[] shotgunShells;
-
     AudioSource source;
 
     public bool canShoot = true;
@@ -31,34 +20,29 @@ public class Shoot : MonoBehaviour
 
     EnemyHealth enemyHealth;
 
-    HitEnemy hitEnemy;
-
-    PlayerCombat combat;
-
     // Start is called before the first frame update
     void Start()
     {
-        combat = GetComponent<PlayerCombat>();
-        shotgunShells = GameObject.FindGameObjectsWithTag("ShotgunShell");
-        maxAmmo = shotgunShells.Length;
-        enemyHealth = GameObject.FindGameObjectWithTag("Enemy").GetComponent<EnemyHealth>();
-        currentAmmo = maxAmmo;
         source = GetComponent<AudioSource>();
+        shotgunShells = GameObject.FindGameObjectsWithTag("ShotgunShell");
+        weapon.maxAmmo = shotgunShells.Length;
+        enemyHealth = GameObject.FindGameObjectWithTag("Enemy").GetComponent<EnemyHealth>();
+        weapon.currentAmmo = weapon.maxAmmo;
         anim = GetComponent<Animator>();
-        hitEnemy = pellets.GetComponent<HitEnemy>();
-        hitEnemy.SetDamage(damage);
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (combat.GetEquippedWeapon() == 1)
+        if (stats.currentlyEquippedWeapon == 1)
         {
             FireShot();
             Reload();
             shellHolder.SetActive(true);
         }
-        else{
+        else
+        {
             shellHolder.SetActive(false);
         }
 
@@ -78,7 +62,7 @@ public class Shoot : MonoBehaviour
 
     private void FireShot()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0) && currentAmmo > 0 && canShoot)
+        if (Input.GetKeyDown(KeyCode.Mouse0) && weapon.currentAmmo > 0 && canShoot)
         {
             anim.SetTrigger("shoot");
         }
@@ -87,8 +71,8 @@ public class Shoot : MonoBehaviour
     // Reload Anim Event
     void ReloadGunAnim()
     {
-        currentAmmo = maxAmmo;
-        source.PlayOneShot(reloadSound);
+        weapon.currentAmmo = weapon.maxAmmo;
+        source.PlayOneShot(weapon.reloadSound);
     }
 
     void WeCanShoot()
@@ -104,9 +88,9 @@ public class Shoot : MonoBehaviour
     //anim event
     void PlayPelletParticles()
     {
-        currentAmmo--;
-        Instantiate(pellets, bulletSocket.transform.position, bulletSocket.transform.rotation);
-        source.PlayOneShot(gunSound);
-        shotgunShells[maxAmmo - currentAmmo - 1].SetActive(false);
+        weapon.currentAmmo--;
+        Instantiate(weapon.particles, bulletSocket.transform.position, bulletSocket.transform.rotation);
+        source.PlayOneShot(weapon.attackSound);
+        shotgunShells[weapon.maxAmmo - weapon.currentAmmo - 1].SetActive(false);
     }
 }

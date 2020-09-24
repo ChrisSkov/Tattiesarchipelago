@@ -34,7 +34,7 @@ public class EnemySavage : MonoBehaviour
         {
             anim.SetBool("lowHealth", true);
             bool hasFleeDestination = false;
-            if(!hasFleeDestination)
+            if (!hasFleeDestination)
             {
                 path.destination = transform.TransformDirection(Vector3.forward * 3);
             }
@@ -58,16 +58,16 @@ public class EnemySavage : MonoBehaviour
 
     void StabAnimEvent()
     {
-
         timer = 0f;
         foreach (Collider c in Physics.OverlapSphere(spearAim.position, spearRadius))
         {
             if (c.gameObject.tag == "Player")
             {
-                c.gameObject.GetComponent<Health>().TakeDamage(spearDamage);
+                c.gameObject.GetComponent<HealthScriptObj>().TakeDamage(spearDamage);
             }
         }
     }
+
     private void HandleMoveAnim()
     {
         if (path.velocity.magnitude > 0.5)
