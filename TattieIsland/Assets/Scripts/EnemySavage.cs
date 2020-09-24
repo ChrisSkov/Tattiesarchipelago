@@ -4,24 +4,18 @@ using UnityEngine;
 using Pathfinding;
 public class EnemySavage : MonoBehaviour
 {
-
+    public EnemyStats stats;
     Animator anim;
     AIPath path;
     Transform player;
     [SerializeField] Transform spearAim = null;
     [SerializeField] float spearRadius = 2f;
-    [SerializeField] float spearDamage = 10f;
-    [SerializeField] float stabRange = 10f;
-    [SerializeField] float timeBetweenAttacks = 1.5f;
-    EnemyHealth health;
-    [SerializeField] float fleeThreshold = 30f;
+
     public float timer = Mathf.Infinity;
-    bool isFleeing = false;
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-        health = GetComponent<EnemyHealth>();
         path = GetComponent<AIPath>();
         anim = GetComponent<Animator>();
     }
@@ -30,7 +24,7 @@ public class EnemySavage : MonoBehaviour
     void Update()
     {
 
-        if (health.GetCurrentHP() <= fleeThreshold)
+        if (stats.currentHp <= stats.fleeThreshold)
         {
             anim.SetBool("lowHealth", true);
             bool hasFleeDestination = false;
@@ -46,10 +40,10 @@ public class EnemySavage : MonoBehaviour
 
     private void StabBehavior()
     {
-        if (Vector3.Distance(transform.position, player.position) <= stabRange && !anim.GetBool("lowHealth"))
+        if (Vector3.Distance(transform.position, player.position) <= stats.attackRange && !anim.GetBool("lowHealth"))
         {
             transform.LookAt(player.position);
-            if (timer >= timeBetweenAttacks)
+            if (timer >= stats.timeBetweenAttacks)
             {
                 anim.SetTrigger("attack");
             }
@@ -63,7 +57,7 @@ public class EnemySavage : MonoBehaviour
         {
             if (c.gameObject.tag == "Player")
             {
-                c.gameObject.GetComponent<HealthScriptObj>().TakeDamage(spearDamage);
+                c.gameObject.GetComponent<HealthScriptObj>().TakeDamage(stats.damage);
             }
         }
     }
@@ -89,6 +83,6 @@ public class EnemySavage : MonoBehaviour
         Gizmos.color = Color.black;
         Gizmos.DrawWireSphere(spearAim.position, spearRadius);
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, stabRange);
+        Gizmos.DrawWireSphere(transform.position, stats.damage);
     }
 }

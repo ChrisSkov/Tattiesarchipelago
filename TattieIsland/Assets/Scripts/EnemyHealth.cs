@@ -4,28 +4,15 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
-    [SerializeField]
-    float maxHealth = 100f;
-
-    [SerializeField]
-    float currentHealth;
-
-    [SerializeField] bool isDead = false;
-
+    [SerializeField] EnemyStats stats = null;
     [SerializeField] GameObject shatterObject = null;
     [SerializeField] GameObject[] enemyPhysicsObjects = new GameObject[4];
     [SerializeField] SkinnedMeshRenderer mesh = null;
-
-    [SerializeField] float destroyTime = 1f;
-
     [SerializeField] ParticleSystem bloodSpray = null;
-    Transform particleHolder;
-
     [SerializeField] bool primitiveMesh = false;
+    Transform particleHolder;
     bool hasSpawnedShatter = false;
-
     bool bloodHasPlayed = false;
-
     Transform playerTransform;
 
     // Start is called before the first frame update
@@ -33,10 +20,8 @@ public class EnemyHealth : MonoBehaviour
     {
         particleHolder = transform.GetChild(1).GetComponent<Transform>();
         playerTransform = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-        currentHealth = maxHealth;
+        stats.currentHp = stats.maxHp;
     }
-
-    // Update is called once per frame
     void Update()
     {
         particleHolder.transform.LookAt(playerTransform);
@@ -46,16 +31,16 @@ public class EnemyHealth : MonoBehaviour
 
     private void Die()
     {
-        if (currentHealth <= 0)
+        if (stats.currentHp <= 0)
         {
-            currentHealth = 0f;
-            isDead = true;
+            stats.currentHp = 0f;
+            stats.isDead = true;
         }
     }
 
     void SpawnShatterObject()
     {
-        if (isDead && !hasSpawnedShatter && !bloodHasPlayed)
+        if (stats.isDead && !hasSpawnedShatter && !bloodHasPlayed)
         {
             foreach (GameObject g in enemyPhysicsObjects)
             {
@@ -83,22 +68,12 @@ public class EnemyHealth : MonoBehaviour
 
     void DespawnEnemy()
     {
-        Destroy(gameObject, destroyTime);
+        Destroy(gameObject, stats.destroyTime);
     }
 
     public void TakeDamage(float damage)
     {
-        currentHealth -= damage;
+        stats.currentHp -= damage;
         print("av");
-    }
-
-    public float GetMaxHP()
-    {
-        return maxHealth;
-    }
-
-    public float GetCurrentHP()
-    {
-        return currentHealth;
     }
 }

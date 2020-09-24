@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Shotgun
   m_EditorClassIdentifier: 
   wepPrefab: {fileID: 2100338803721662578, guid: 874b5c5dbf04b1c439377cab4577d441, type: 3}
+  currentlyEquippedWeaponNumber: 0
   isRanged: 1
   hasAmmo: 1
   maxAmmo: 2

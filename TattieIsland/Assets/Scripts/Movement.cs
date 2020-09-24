@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    [SerializeField] PlayerStats stats;
+    [SerializeField] PlayerStats stats = null;
     Rigidbody playerRB;
     Vector3 moveDirection = Vector3.zero;
     Animator playerAnim;

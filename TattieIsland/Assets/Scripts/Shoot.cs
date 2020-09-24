@@ -10,14 +10,10 @@ public class Shoot : MonoBehaviour
     public WeaponObj weapon;
     [SerializeField] GameObject bulletSocket = null;
     [SerializeField] GameObject shellHolder = null;
-    [SerializeField] GameObject weaponHolder = null;
     GameObject[] shotgunShells;
     AudioSource source;
-
     public bool canShoot = true;
-
     Animator anim;
-
     EnemyHealth enemyHealth;
 
     // Start is called before the first frame update
@@ -29,7 +25,6 @@ public class Shoot : MonoBehaviour
         enemyHealth = GameObject.FindGameObjectWithTag("Enemy").GetComponent<EnemyHealth>();
         weapon.currentAmmo = weapon.maxAmmo;
         anim = GetComponent<Animator>();
-
     }
 
     // Update is called once per frame
