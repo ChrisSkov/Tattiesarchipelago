@@ -824,10 +824,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.88
-  m_Height: 1.6
+  m_Radius: 0.48
+  m_Height: 2
   m_Direction: 1
-  m_Center: {x: 0, y: 0.8, z: 0}
+  m_Center: {x: 0, y: 1.06, z: 0}
 --- !u!114 &2134061569734563805
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -858,7 +858,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40cd4d5222236704e91c79934daac175, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stats: {fileID: 0}
+  stats: {fileID: 11400000, guid: 30ca505f265a0c148bc1d0da742410d3, type: 2}
 --- !u!114 &6121800254340854614
 MonoBehaviour:
   m_ObjectHideFlags: 0

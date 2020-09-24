@@ -21,7 +21,7 @@ public class HealthScriptObj : MonoBehaviour
 
     private void RegenHealth()
     {
-        if (timer >= stats.healthRegenTime)
+        if (timer >= stats.healthRegenTime && stats.currentHp < stats.maxHp)
         {
             timer = 0;
             stats.currentHp += stats.healthRegen;

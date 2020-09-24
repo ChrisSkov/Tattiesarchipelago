@@ -24,6 +24,10 @@ public class EnemySavage : MonoBehaviour
     void Update()
     {
 
+        if (PlayerInChaseRange() && !anim.GetBool("lowHealth"))
+        {
+            path.destination = player.position;
+        }
         if (stats.currentHp <= stats.fleeThreshold)
         {
             anim.SetBool("lowHealth", true);
@@ -38,9 +42,17 @@ public class EnemySavage : MonoBehaviour
         StabBehavior();
     }
 
+    bool PlayerInChaseRange()
+    {
+        return Vector3.Distance(transform.position, player.position) <= stats.chaseRange;
+    }
+    bool PlayerInAttackRange()
+    {
+        return Vector3.Distance(transform.position, player.position) <= stats.attackRange;
+    }
     private void StabBehavior()
     {
-        if (Vector3.Distance(transform.position, player.position) <= stats.attackRange && !anim.GetBool("lowHealth"))
+        if (PlayerInAttackRange() && !anim.GetBool("lowHealth"))
         {
             transform.LookAt(player.position);
             if (timer >= stats.timeBetweenAttacks)
@@ -57,7 +69,7 @@ public class EnemySavage : MonoBehaviour
         {
             if (c.gameObject.tag == "Player")
             {
-                c.gameObject.GetComponent<HealthScriptObj>().TakeDamage(stats.damage);
+                c.gameObject.GetComponent<HealthScriptObj>().stats.currentHp -= stats.damage;
             }
         }
     }
@@ -82,7 +94,10 @@ public class EnemySavage : MonoBehaviour
     {
         Gizmos.color = Color.black;
         Gizmos.DrawWireSphere(spearAim.position, spearRadius);
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, stats.attackRange);
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, stats.damage);
+        Gizmos.DrawWireSphere(transform.position, stats.chaseRange);
     }
+
 }

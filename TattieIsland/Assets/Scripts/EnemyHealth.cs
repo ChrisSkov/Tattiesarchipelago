@@ -10,6 +10,8 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField] SkinnedMeshRenderer mesh = null;
     [SerializeField] ParticleSystem bloodSpray = null;
     [SerializeField] bool primitiveMesh = false;
+    public float currentHp;
+    public bool isDead = false;
     Transform particleHolder;
     bool hasSpawnedShatter = false;
     bool bloodHasPlayed = false;
@@ -20,7 +22,7 @@ public class EnemyHealth : MonoBehaviour
     {
         particleHolder = transform.GetChild(1).GetComponent<Transform>();
         playerTransform = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-        stats.currentHp = stats.maxHp;
+        currentHp = stats.maxHp;
     }
     void Update()
     {
@@ -31,16 +33,16 @@ public class EnemyHealth : MonoBehaviour
 
     private void Die()
     {
-        if (stats.currentHp <= 0)
+        if (currentHp <= 0)
         {
-            stats.currentHp = 0f;
-            stats.isDead = true;
+            currentHp = 0f;
+            isDead = true;
         }
     }
 
     void SpawnShatterObject()
     {
-        if (stats.isDead && !hasSpawnedShatter && !bloodHasPlayed)
+        if (isDead && !hasSpawnedShatter && !bloodHasPlayed)
         {
             foreach (GameObject g in enemyPhysicsObjects)
             {
@@ -73,7 +75,7 @@ public class EnemyHealth : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-        stats.currentHp -= damage;
+        currentHp -= damage;
         print("av");
     }
 }

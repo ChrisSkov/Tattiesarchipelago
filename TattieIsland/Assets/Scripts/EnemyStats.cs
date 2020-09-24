@@ -14,5 +14,5 @@ public class EnemyStats : ScriptableObject
     public bool fleeOnLowHealth;
     public float fleeThreshold;
     public float destroyTime;
-    public bool isDead;
+    public bool isDead = false;
 }
