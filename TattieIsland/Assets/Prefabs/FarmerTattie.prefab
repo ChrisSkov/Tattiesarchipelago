@@ -84,6 +84,7 @@ GameObject:
   - component: {fileID: 8501936937698113510}
   - component: {fileID: 389231716743321359}
   - component: {fileID: 80591520286368855}
+  - component: {fileID: 8113840244497424633}
   m_Layer: 0
   m_Name: FarmerTattie
   m_TagString: Player
@@ -143,7 +144,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 1
-  m_Constraints: 112
+  m_Constraints: 116
   m_CollisionDetection: 3
 --- !u!136 &7575348734677563935
 CapsuleCollider:
@@ -311,14 +312,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stats: {fileID: 11400000, guid: d66d5124d742a3c44820ab8d1c02d69b, type: 2}
   weapon: {fileID: 11400000, guid: 48094e0a2f5967143b69af1a57ea8774, type: 2}
-  gunSound: {fileID: 8300000, guid: 4d5e5268a90a63247979d923d59f5af6, type: 3}
-  reloadSound: {fileID: 8300000, guid: 014c646e4a7ccc942b14236551f872c2, type: 3}
-  currentAmmo: 0
-  damage: 10
   bulletSocket: {fileID: 8969957477003842585}
   shellHolder: {fileID: 6470475440583297382}
-  pellets: {fileID: 5404509237704347722, guid: 231354b3b257a274b97843b2f74d9ead, type: 3}
   canShoot: 1
+--- !u!114 &8113840244497424633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8501936937698113529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac0bf272c46fe6847a6ac73e4acc62f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stats: {fileID: 11400000, guid: d66d5124d742a3c44820ab8d1c02d69b, type: 2}
 --- !u!1 &8969957475301674256
 GameObject:
   m_ObjectHideFlags: 0
