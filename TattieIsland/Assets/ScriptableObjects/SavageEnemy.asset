@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 1.5
   chaseRange: 10
-  attackRange: 2.15
-  damage: 11.93
-  timeBetweenAttacks: 5
+  attackRange: 3
+  damage: 10
+  timeBetweenAttacks: 4
   maxHp: 100
   currentHp: 100
   fleeOnLowHealth: 1
