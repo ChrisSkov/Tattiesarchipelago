@@ -5,16 +5,18 @@ using Pathfinding;
 public class EnemySavage : MonoBehaviour
 {
     public EnemyStats stats;
+    EnemyHealth health;
     Animator anim;
     AIPath path;
     Transform player;
     [SerializeField] Transform spearAim = null;
     [SerializeField] float spearRadius = 2f;
-
+    public bool isFleeing = false;
     public float timer = Mathf.Infinity;
     // Start is called before the first frame update
     void Start()
     {
+        health = GetComponent<EnemyHealth>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         path = GetComponent<AIPath>();
         anim = GetComponent<Animator>();
@@ -25,17 +27,21 @@ public class EnemySavage : MonoBehaviour
     {
 
         timer += Time.deltaTime;
-        if (PlayerInChaseRange() && !anim.GetBool("lowHealth"))
-        {
-            path.destination = player.position;
-        }
-        if (stats.currentHp <= stats.fleeThreshold)
+        if (health.currentHp <= stats.fleeThreshold)
         {
             anim.SetBool("lowHealth", true);
             bool hasFleeDestination = false;
+            isFleeing = hasFleeDestination;
             if (!hasFleeDestination)
             {
                 path.destination = transform.TransformDirection(Vector3.forward * 3);
+            }
+        }
+        if (!anim.GetBool("lowHealth"))
+        {
+            if (PlayerInChaseRange())
+            {
+                path.destination = player.position;
             }
         }
         HandleMoveAnim();
