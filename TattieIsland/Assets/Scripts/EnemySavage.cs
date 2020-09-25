@@ -24,6 +24,7 @@ public class EnemySavage : MonoBehaviour
     void Update()
     {
 
+        timer += Time.deltaTime;
         if (PlayerInChaseRange() && !anim.GetBool("lowHealth"))
         {
             path.destination = player.position;
@@ -37,7 +38,6 @@ public class EnemySavage : MonoBehaviour
                 path.destination = transform.TransformDirection(Vector3.forward * 3);
             }
         }
-        timer += Time.deltaTime;
         HandleMoveAnim();
         StabBehavior();
     }
@@ -57,6 +57,7 @@ public class EnemySavage : MonoBehaviour
             transform.LookAt(player.position);
             if (timer >= stats.timeBetweenAttacks)
             {
+                timer = 0f;
                 anim.SetTrigger("attack");
             }
         }
@@ -64,7 +65,6 @@ public class EnemySavage : MonoBehaviour
 
     void StabAnimEvent()
     {
-        timer = 0f;
         foreach (Collider c in Physics.OverlapSphere(spearAim.position, spearRadius))
         {
             if (c.gameObject.tag == "Player")

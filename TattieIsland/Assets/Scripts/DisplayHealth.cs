@@ -5,17 +5,20 @@ using UnityEngine.UI;
 
 public class DisplayHealth : MonoBehaviour
 {
-    Slider slider;
     public PlayerStats stats;
+    Slider slider;
+    Text hpText;
     // Start is called before the first frame update
     void Start()
     {
+        hpText = GetComponentInChildren<Text>();
         slider = GetComponentInChildren<Slider>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        hpText.text = string.Format("{0}/{1}", Mathf.RoundToInt(stats.currentHp), Mathf.RoundToInt(stats.maxHp));
         slider.value = stats.currentHp;
     }
 }

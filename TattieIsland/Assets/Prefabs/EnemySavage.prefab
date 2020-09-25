@@ -846,6 +846,8 @@ MonoBehaviour:
   mesh: {fileID: 1047210262597653605}
   bloodSpray: {fileID: 539340935798995716, guid: ef96e9681868bb24abdb1e6d7847232c, type: 3}
   primitiveMesh: 0
+  currentHp: 0
+  isDead: 0
 --- !u!114 &2134061569734563804
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -859,6 +861,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stats: {fileID: 11400000, guid: 30ca505f265a0c148bc1d0da742410d3, type: 2}
+  health: {fileID: 0}
 --- !u!114 &6121800254340854614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -873,7 +876,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stats: {fileID: 11400000, guid: 30ca505f265a0c148bc1d0da742410d3, type: 2}
   spearAim: {fileID: 2060712805}
-  spearRadius: 0.5
+  spearRadius: 0.83
   timer: Infinity
 --- !u!135 &1301916444
 SphereCollider:
@@ -886,7 +889,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 0
   serializedVersion: 2
-  m_Radius: 1
+  m_Radius: 1.58
   m_Center: {x: 0, y: 5.71, z: 0}
 --- !u!1 &9039665542541677486
 GameObject:
