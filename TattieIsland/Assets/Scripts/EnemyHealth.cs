@@ -16,17 +16,19 @@ public class EnemyHealth : MonoBehaviour
     bool hasSpawnedShatter = false;
     bool bloodHasPlayed = false;
     Transform playerTransform;
-
+    DisplayEnemyHealth health;
     // Start is called before the first frame update
     void Start()
     {
         particleHolder = transform.GetChild(1).GetComponent<Transform>();
         playerTransform = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         currentHp = stats.maxHp;
+        health = GetComponent<DisplayEnemyHealth>();
+        health.SetHPBarMaxValue(stats.maxHp);
+        health.UpdateHealthBar(currentHp);
     }
     void Update()
     {
-        particleHolder.transform.LookAt(playerTransform);
         Die();
         SpawnShatterObject();
     }
@@ -58,9 +60,10 @@ public class EnemyHealth : MonoBehaviour
             {
                 mesh.enabled = false;
             }
+            transform.GetChild(0).gameObject.SetActive(false);
             transform.GetChild(2).gameObject.SetActive(false);
             transform.GetChild(3).gameObject.SetActive(false);
-            transform.GetChild(0).gameObject.SetActive(false);
+            particleHolder.transform.LookAt(playerTransform);
             Instantiate(bloodSpray, particleHolder.position, particleHolder.rotation);
             Instantiate(shatterObject, transform.position, transform.rotation);
             hasSpawnedShatter = true;
@@ -76,6 +79,6 @@ public class EnemyHealth : MonoBehaviour
     public void TakeDamage(float damage)
     {
         currentHp -= damage;
-        print("av");
+        health.UpdateHealthBar(currentHp);
     }
 }

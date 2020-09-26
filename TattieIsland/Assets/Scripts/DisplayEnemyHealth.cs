@@ -5,20 +5,21 @@ using UnityEngine.UI;
 
 public class DisplayEnemyHealth : MonoBehaviour
 {
-    public EnemyStats stats;
     Slider hpBar;
-    public EnemyHealth health;
     // Start is called before the first frame update
     void Start()
     {
-        health = GetComponent<EnemyHealth>();
         hpBar = GetComponentInChildren<Slider>();
-        hpBar.maxValue = stats.maxHp;
+        print(hpBar);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SetHPBarMaxValue(float maxHP)
     {
-        hpBar.value = health.currentHp;
+        hpBar.maxValue = maxHP;
+    }
+
+    public void UpdateHealthBar(float currentHp)
+    {
+        hpBar.value = currentHp;
     }
 }

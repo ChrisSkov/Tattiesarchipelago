@@ -5,17 +5,20 @@ using Pathfinding;
 public class EnemySavage : MonoBehaviour
 {
     public EnemyStats stats;
+    [SerializeField] Transform spearAim = null;
+    [SerializeField] float spearRadius = 2f;
+    [SerializeField] AudioClip stabSound = null;
+    public bool isFleeing = false;
+    public float timer = Mathf.Infinity;
     EnemyHealth health;
     Animator anim;
     AIPath path;
     Transform player;
-    [SerializeField] Transform spearAim = null;
-    [SerializeField] float spearRadius = 2f;
-    public bool isFleeing = false;
-    public float timer = Mathf.Infinity;
+    AudioSource source;
     // Start is called before the first frame update
     void Start()
     {
+        source = GetComponent<AudioSource>();
         health = GetComponent<EnemyHealth>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         path = GetComponent<AIPath>();
@@ -61,11 +64,16 @@ public class EnemySavage : MonoBehaviour
         if (PlayerInAttackRange() && !anim.GetBool("lowHealth"))
         {
             transform.LookAt(player.position);
+            path.maxSpeed = 0f;
             if (timer >= stats.timeBetweenAttacks)
             {
                 timer = 0f;
                 anim.SetTrigger("attack");
             }
+        }
+        else
+        {
+            path.maxSpeed = stats.moveSpeed;
         }
     }
 
@@ -76,6 +84,7 @@ public class EnemySavage : MonoBehaviour
             if (c.gameObject.tag == "Player")
             {
                 c.gameObject.GetComponent<HealthScriptObj>().stats.currentHp -= stats.damage;
+                source.PlayOneShot(stabSound);
             }
         }
     }
