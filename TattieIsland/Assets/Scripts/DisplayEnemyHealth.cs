@@ -26,7 +26,7 @@ public class DisplayEnemyHealth : MonoBehaviour
     public void UpdateHealthBar(float currentHp)
     {
         hpBar.value = currentHp;
-        hpText.text = string.Format("{0}/{1}", Mathf.RoundToInt(currentHp), Mathf.RoundToInt(stats.maxHp));
+        hpText.text = string.Format("{0}/{1}", currentHp, stats.maxHp);
     }
 
 

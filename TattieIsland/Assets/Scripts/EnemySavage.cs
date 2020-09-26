@@ -15,6 +15,7 @@ public class EnemySavage : MonoBehaviour
     AIPath path;
     Transform player;
     AudioSource source;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,7 +31,8 @@ public class EnemySavage : MonoBehaviour
     {
 
         timer += Time.deltaTime;
-        if (health.currentHp <= stats.fleeThreshold)
+
+        if (health.currentHp <= stats.fleeThreshold && health.isDead == false)
         {
             anim.SetBool("lowHealth", true);
             bool hasFleeDestination = false;
@@ -40,7 +42,7 @@ public class EnemySavage : MonoBehaviour
                 path.destination = transform.TransformDirection(Vector3.forward * 3);
             }
         }
-        if (!anim.GetBool("lowHealth"))
+        if (!anim.GetBool("lowHealth") && health.isDead == false)
         {
             if (PlayerInChaseRange())
             {

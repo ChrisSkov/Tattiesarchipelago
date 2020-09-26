@@ -20,4 +20,4 @@ MonoBehaviour:
   maxHp: 100
   fleeOnLowHealth: 1
   fleeThreshold: 30
-  destroyTime: 0.2
+  destroyTime: 1

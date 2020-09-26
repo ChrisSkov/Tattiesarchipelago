@@ -10965,7 +10965,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2202538925470564596, guid: fa4095aa930f88b4aa3dc6f3c09ad21d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.2
+      value: 2.15
       objectReference: {fileID: 0}
     - target: {fileID: 2202538925470564596, guid: fa4095aa930f88b4aa3dc6f3c09ad21d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -10973,7 +10973,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2202538925470564596, guid: fa4095aa930f88b4aa3dc6f3c09ad21d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5.65
+      value: -0.21
       objectReference: {fileID: 0}
     - target: {fileID: 2202538925470564596, guid: fa4095aa930f88b4aa3dc6f3c09ad21d, type: 3}
       propertyPath: m_LocalRotation.x
@@ -11011,6 +11011,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemySavage
       objectReference: {fileID: 0}
+    - target: {fileID: 2202538926306496667, guid: fa4095aa930f88b4aa3dc6f3c09ad21d, type: 3}
+      propertyPath: deathSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 01021012487f6f24bbb63beb6480c80f, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa4095aa930f88b4aa3dc6f3c09ad21d, type: 3}
 --- !u!1001 &2516139929508774771
@@ -11130,6 +11134,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4977012911021638895, guid: e511adcddddd13545b6a9c5b7122d4cb, type: 3}
+      propertyPath: m_Volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4977012911021638895, guid: e511adcddddd13545b6a9c5b7122d4cb, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8501936937698113528, guid: e511adcddddd13545b6a9c5b7122d4cb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
