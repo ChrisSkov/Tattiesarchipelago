@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: SavageEnemy
   m_EditorClassIdentifier: 
   moveSpeed: 1.5
+  fleeSpeed: 2.2
   chaseRange: 10
   attackRange: 3
   damage: 10

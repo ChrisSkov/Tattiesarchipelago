@@ -26,6 +26,10 @@ public class DisplayEnemyHealth : MonoBehaviour
     public void UpdateHealthBar(float currentHp)
     {
         hpBar.value = currentHp;
+        if(currentHp <= 0)
+        {
+            currentHp = 0f;
+        }
         hpText.text = string.Format("{0}/{1}", currentHp, stats.maxHp);
     }
 

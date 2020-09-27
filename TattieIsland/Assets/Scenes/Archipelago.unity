@@ -688,14 +688,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 180177500}
     m_Modifications:
-    - target: {fileID: 1065051259663755785, guid: 923c070ea6db0804d939eac729895388, type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1335282830331211680, guid: 923c070ea6db0804d939eac729895388, type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 1619007742484521070, guid: 923c070ea6db0804d939eac729895388, type: 3}
       propertyPath: m_LocalPosition.x
       value: -14.7
@@ -743,14 +735,6 @@ PrefabInstance:
     - target: {fileID: 2318376540581352061, guid: 923c070ea6db0804d939eac729895388, type: 3}
       propertyPath: m_Name
       value: P_ENV_TREE_village (5)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2318376540581352061, guid: 923c070ea6db0804d939eac729895388, type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 8661135257201548965, guid: 923c070ea6db0804d939eac729895388, type: 3}
-      propertyPath: m_Layer
-      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 923c070ea6db0804d939eac729895388, type: 3}
@@ -6867,7 +6851,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6967525631280868030, guid: 50b9e5061742dc04abc5b1f0bd8104d9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.46
+      value: -2.531
       objectReference: {fileID: 0}
     - target: {fileID: 6967525631280868030, guid: 50b9e5061742dc04abc5b1f0bd8104d9, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6875,7 +6859,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6967525631280868030, guid: 50b9e5061742dc04abc5b1f0bd8104d9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.32
+      value: 2.49
       objectReference: {fileID: 0}
     - target: {fileID: 6967525631280868030, guid: 50b9e5061742dc04abc5b1f0bd8104d9, type: 3}
       propertyPath: m_LocalRotation.x
@@ -7047,14 +7031,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 180177500}
     m_Modifications:
-    - target: {fileID: 1065051259663755785, guid: 923c070ea6db0804d939eac729895388, type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1335282830331211680, guid: 923c070ea6db0804d939eac729895388, type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 1619007742484521070, guid: 923c070ea6db0804d939eac729895388, type: 3}
       propertyPath: m_LocalPosition.x
       value: -12.25
@@ -7102,14 +7078,6 @@ PrefabInstance:
     - target: {fileID: 2318376540581352061, guid: 923c070ea6db0804d939eac729895388, type: 3}
       propertyPath: m_Name
       value: P_ENV_TREE_village (4)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2318376540581352061, guid: 923c070ea6db0804d939eac729895388, type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 8661135257201548965, guid: 923c070ea6db0804d939eac729895388, type: 3}
-      propertyPath: m_Layer
-      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 923c070ea6db0804d939eac729895388, type: 3}
@@ -8101,10 +8069,6 @@ PrefabInstance:
     - target: {fileID: 8354404576475655613, guid: 4058c7f8dd5c0c14d9bf6d69ed7affed, type: 3}
       propertyPath: m_Name
       value: P_PROP_barrel_05 (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8354404576475655613, guid: 4058c7f8dd5c0c14d9bf6d69ed7affed, type: 3}
-      propertyPath: m_Layer
-      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4058c7f8dd5c0c14d9bf6d69ed7affed, type: 3}
@@ -9853,14 +9817,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 180177500}
     m_Modifications:
-    - target: {fileID: 1065051259663755785, guid: 923c070ea6db0804d939eac729895388, type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1335282830331211680, guid: 923c070ea6db0804d939eac729895388, type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 1619007742484521070, guid: 923c070ea6db0804d939eac729895388, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11.83
@@ -9909,13 +9865,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_ENV_TREE_village (7)
       objectReference: {fileID: 0}
-    - target: {fileID: 2318376540581352061, guid: 923c070ea6db0804d939eac729895388, type: 3}
-      propertyPath: m_Layer
-      value: 10
+    - target: {fileID: 2719830359300893365, guid: 923c070ea6db0804d939eac729895388, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.39
       objectReference: {fileID: 0}
-    - target: {fileID: 8661135257201548965, guid: 923c070ea6db0804d939eac729895388, type: 3}
-      propertyPath: m_Layer
-      value: 10
+    - target: {fileID: 2719830359300893365, guid: 923c070ea6db0804d939eac729895388, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.92
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 923c070ea6db0804d939eac729895388, type: 3}
@@ -11011,10 +10967,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemySavage
       objectReference: {fileID: 0}
-    - target: {fileID: 2202538926306496667, guid: fa4095aa930f88b4aa3dc6f3c09ad21d, type: 3}
-      propertyPath: deathSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 01021012487f6f24bbb63beb6480c80f, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa4095aa930f88b4aa3dc6f3c09ad21d, type: 3}
 --- !u!1001 &2516139929508774771

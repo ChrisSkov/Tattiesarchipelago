@@ -29,41 +29,54 @@ public class EnemySavage : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        timer += Time.deltaTime;
-
-        if (health.currentHp <= stats.fleeThreshold && health.isDead == false)
+        if (health.IsDead())
         {
-            anim.SetBool("lowHealth", true);
-            bool hasFleeDestination = false;
-            isFleeing = hasFleeDestination;
-            if (!hasFleeDestination)
+            path.maxSpeed = 0f;
+            return;
+        }
+        else
+        {
+            timer += Time.deltaTime;
+            HandleMoveAnim();
+            if (LowHealth())
             {
-                path.destination = transform.TransformDirection(Vector3.forward * 3);
+                FleeBehavior();
+            }
+            else
+            {
+                ChaseBehavior();
+                StabBehavior();
             }
         }
-        if (!anim.GetBool("lowHealth") && health.isDead == false)
+    }
+
+    private void ChaseBehavior()
+    {
+        if (!anim.GetBool("lowHealth"))
         {
             if (PlayerInChaseRange())
             {
                 path.destination = player.position;
             }
         }
-        HandleMoveAnim();
-        StabBehavior();
     }
 
-    bool PlayerInChaseRange()
+    private void FleeBehavior()
     {
-        return Vector3.Distance(transform.position, player.position) <= stats.chaseRange;
-    }
-    bool PlayerInAttackRange()
-    {
-        return Vector3.Distance(transform.position, player.position) <= stats.attackRange;
+
+        if (LowHealth())
+        {
+            if (!isFleeing)
+            {
+                path.maxSpeed = stats.fleeSpeed;
+                path.destination = transform.TransformDirection(Vector3.back * 100);
+                isFleeing = true;
+            }
+        }
     }
     private void StabBehavior()
     {
-        if (PlayerInAttackRange() && !anim.GetBool("lowHealth"))
+        if (PlayerInAttackRange() && !LowHealth())
         {
             transform.LookAt(player.position);
             path.maxSpeed = 0f;
@@ -79,17 +92,6 @@ public class EnemySavage : MonoBehaviour
         }
     }
 
-    void StabAnimEvent()
-    {
-        foreach (Collider c in Physics.OverlapSphere(spearAim.position, spearRadius))
-        {
-            if (c.gameObject.tag == "Player")
-            {
-                c.gameObject.GetComponent<HealthScriptObj>().stats.currentHp -= stats.damage;
-                source.PlayOneShot(stabSound);
-            }
-        }
-    }
 
     private void HandleMoveAnim()
     {
@@ -107,6 +109,39 @@ public class EnemySavage : MonoBehaviour
         anim.SetFloat("forwardSpeed", yVelocity);
     }
 
+    void StabAnimEvent()
+    {
+        foreach (Collider c in Physics.OverlapSphere(spearAim.position, spearRadius))
+        {
+            if (c.gameObject.tag == "Player")
+            {
+                c.gameObject.GetComponent<HealthScriptObj>().stats.currentHp -= stats.damage;
+                source.PlayOneShot(stabSound);
+            }
+        }
+    }
+
+    bool LowHealth()
+    {
+        if (health.currentHp <= stats.fleeThreshold)
+        {
+            anim.SetBool("lowHealth", true);
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    bool PlayerInChaseRange()
+    {
+        return Vector3.Distance(transform.position, player.position) <= stats.chaseRange;
+    }
+    bool PlayerInAttackRange()
+    {
+        return Vector3.Distance(transform.position, player.position) <= stats.attackRange;
+    }
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.black;

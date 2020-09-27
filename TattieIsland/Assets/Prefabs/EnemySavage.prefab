@@ -1034,9 +1034,10 @@ MonoBehaviour:
   - {fileID: 2527727985284984003}
   - {fileID: 2527727986075348346}
   - {fileID: 1963129987027219834}
+  - {fileID: 6320609445036217509}
   mesh: {fileID: 974247448344630051}
   bloodSpray: {fileID: 539340935798995716, guid: ef96e9681868bb24abdb1e6d7847232c, type: 3}
-  primitiveMesh: 0
+  deathSound: {fileID: 8300000, guid: 01021012487f6f24bbb63beb6480c80f, type: 3}
   currentHp: 0
   isDead: 0
 --- !u!114 &2202538926306496666

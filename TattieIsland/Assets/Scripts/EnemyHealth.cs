@@ -6,7 +6,7 @@ public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] EnemyStats stats = null;
     [SerializeField] GameObject shatterObject = null;
-    [SerializeField] GameObject[] enemyPhysicsObjects = new GameObject[7];
+    [SerializeField] GameObject[] enemyPhysicsObjects = new GameObject[8];
     [SerializeField] SkinnedMeshRenderer mesh = null;
     [SerializeField] ParticleSystem bloodSpray = null;
     [SerializeField] AudioClip deathSound = null;
@@ -24,6 +24,7 @@ public class EnemyHealth : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         source = GetComponent<AudioSource>();
+
         particleHolder = transform.GetChild(1).GetComponent<Transform>();
         playerTransform = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         currentHp = stats.maxHp;
@@ -32,35 +33,35 @@ public class EnemyHealth : MonoBehaviour
         health.SetHPBarMaxValue(stats.maxHp);
         health.UpdateHealthBar(currentHp);
     }
-    void SpawnShatterObject()
+    private void Update()
     {
-        if (isDead && !hasSpawnedShatter && !bloodHasPlayed)
-        {
-
-            //Loop through objects that enemy wears that need to be affected by physics
-            foreach (GameObject g in enemyPhysicsObjects)
-            {
-                //Enable their collider and add rigidbody so they go flying
-                g.GetComponent<Collider>().enabled = true;
-                g.AddComponent<Rigidbody>();
-            }
-
-            //disable main character mesh
-            mesh.enabled = false;
-            //Get ready to spray blood everywhere
-            particleHolder.transform.LookAt(playerTransform);
-            //BLOOD FOR THE BLOOD GODS!
-            Instantiate(bloodSpray, particleHolder.position, particleHolder.rotation);
-            source.PlayOneShot(deathSound);
-            bloodHasPlayed = true;
-            //Shatter into pieces
-            //    Instantiate(shatterObject, transform.position, transform.rotation);
-            hasSpawnedShatter = true;
-            //Despawn the mess we just made
-            DespawnEnemy();
-        }
+        HandleDeath();
     }
 
+//anim event
+    void DeathAnimEvent()
+    {
+        source.PlayOneShot(deathSound);
+        particleHolder.transform.LookAt(playerTransform);
+        Instantiate(bloodSpray, particleHolder.position, particleHolder.rotation);
+        Instantiate(shatterObject, transform.position, transform.rotation);
+        DespawnEnemy();
+
+    }
+
+    public bool IsDead()
+    {
+        return currentHp <= 0;
+    }
+    void HandleDeath()
+    {
+        if (IsDead() && !isDead)
+        {
+            currentHp = 0;
+            isDead = true;
+            anim.SetTrigger("isDead");
+        }
+    }
     void DespawnEnemy()
     {
         Destroy(gameObject, stats.destroyTime);
@@ -69,12 +70,6 @@ public class EnemyHealth : MonoBehaviour
     public void TakeDamage(float damage)
     {
         currentHp -= damage;
-        if (currentHp <= 0)
-        {
-            currentHp = 0;
-            isDead = true;
-            SpawnShatterObject();
-        }
         health.UpdateHealthBar(currentHp);
     }
 }
