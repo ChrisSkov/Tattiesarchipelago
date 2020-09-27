@@ -30,7 +30,7 @@ public class Shoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (stats.currentlyEquippedWeapon == 1)
+        if (stats.currentlyEquippedWeapon == 1 && anim.GetBool("canShoot"))
         {
             FireShot();
             Reload();

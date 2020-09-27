@@ -21,11 +21,31 @@ public class Movement : MonoBehaviour
 
     void FixedUpdate()
     {
-        HandleMovement();
-        Rotate();
-        PlayWalkSound();
+        if (playerAnim.GetBool("canMove"))
+        {
+            HandleMovement();
+            Rotate();
+            PlayWalkSound();
+        }
+        if (playerAnim.GetBool("canJump"))
+        {
+            Jump();
+        }
     }
 
+    private void Jump()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            playerAnim.SetBool("isJumping", true);
+        }
+
+    }
+
+    void JumpAnimEvent()
+    {
+        playerAnim.SetBool("isJumping", false);
+    }
     private void PlayWalkSound()
     {
         runTimer += Time.deltaTime;
@@ -35,6 +55,7 @@ public class Movement : MonoBehaviour
             source.PlayOneShot(stats.walkSound);
         }
     }
+
 
     private void HandleMovement()
     {

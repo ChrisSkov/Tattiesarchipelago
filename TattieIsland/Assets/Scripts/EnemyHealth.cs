@@ -6,16 +6,12 @@ public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] EnemyStats stats = null;
     [SerializeField] GameObject shatterObject = null;
-    [SerializeField] GameObject[] enemyPhysicsObjects = new GameObject[8];
-    [SerializeField] SkinnedMeshRenderer mesh = null;
     [SerializeField] ParticleSystem bloodSpray = null;
     [SerializeField] AudioClip deathSound = null;
     Animator anim;
     public float currentHp;
     public bool isDead = false;
     Transform particleHolder;
-    bool hasSpawnedShatter = false;
-    bool bloodHasPlayed = false;
     Transform playerTransform;
     DisplayEnemyHealth health;
     AudioSource source;
@@ -38,7 +34,7 @@ public class EnemyHealth : MonoBehaviour
         HandleDeath();
     }
 
-//anim event
+    //anim event
     void DeathAnimEvent()
     {
         source.PlayOneShot(deathSound);

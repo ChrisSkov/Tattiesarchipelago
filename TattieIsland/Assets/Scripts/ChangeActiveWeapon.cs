@@ -14,7 +14,11 @@ public class ChangeActiveWeapon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ChangeWeapon();
+        if (GetComponent<Animator>().GetBool("canChangeWeapons"))
+        {
+            ChangeWeapon();
+        }
+
     }
     private void ChangeWeapon()
     {

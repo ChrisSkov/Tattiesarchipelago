@@ -115,7 +115,7 @@ public class EnemySavage : MonoBehaviour
         {
             if (c.gameObject.tag == "Player")
             {
-                c.gameObject.GetComponent<HealthScriptObj>().stats.currentHp -= stats.damage;
+                c.gameObject.GetComponent<HealthScriptObj>().TakeDamage(stats.damage);
                 source.PlayOneShot(stabSound);
             }
         }
