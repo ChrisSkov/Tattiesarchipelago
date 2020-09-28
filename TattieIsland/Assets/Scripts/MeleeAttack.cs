@@ -18,8 +18,11 @@ public class MeleeAttack : MonoBehaviour
 
     private void Update()
     {
-        ShowCorrectWeapon(stats.currentlyEquippedWeapon);
-        ThrowPunch();
+        if (anim.GetBool("canAttack"))
+        {
+            ShowCorrectWeapon(stats.currentlyEquippedWeapon);
+            ThrowPunch();
+        }
     }
 
 

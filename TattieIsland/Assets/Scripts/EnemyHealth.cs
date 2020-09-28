@@ -6,68 +6,58 @@ public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] EnemyStats stats = null;
     [SerializeField] GameObject shatterObject = null;
-    [SerializeField] GameObject[] enemyPhysicsObjects = new GameObject[4];
-    [SerializeField] SkinnedMeshRenderer mesh = null;
     [SerializeField] ParticleSystem bloodSpray = null;
-    [SerializeField] bool primitiveMesh = false;
+    [SerializeField] AudioClip deathSound = null;
+    Animator anim;
     public float currentHp;
     public bool isDead = false;
     Transform particleHolder;
-    bool hasSpawnedShatter = false;
-    bool bloodHasPlayed = false;
     Transform playerTransform;
-
+    DisplayEnemyHealth health;
+    AudioSource source;
     // Start is called before the first frame update
     void Start()
     {
+        anim = GetComponent<Animator>();
+        source = GetComponent<AudioSource>();
+
         particleHolder = transform.GetChild(1).GetComponent<Transform>();
         playerTransform = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         currentHp = stats.maxHp;
+
+        health = GetComponent<DisplayEnemyHealth>();
+        health.SetHPBarMaxValue(stats.maxHp);
+        health.UpdateHealthBar(currentHp);
     }
-    void Update()
+    private void Update()
     {
+        HandleDeath();
+    }
+
+    //anim event
+    void DeathAnimEvent()
+    {
+        source.PlayOneShot(deathSound);
         particleHolder.transform.LookAt(playerTransform);
-        Die();
-        SpawnShatterObject();
+        Instantiate(bloodSpray, particleHolder.position, particleHolder.rotation);
+        Instantiate(shatterObject, transform.position, transform.rotation);
+        DespawnEnemy();
+
     }
 
-    private void Die()
+    public bool IsDead()
     {
-        if (currentHp <= 0)
+        return currentHp <= 0;
+    }
+    void HandleDeath()
+    {
+        if (IsDead() && !isDead)
         {
-            currentHp = 0f;
+            currentHp = 0;
             isDead = true;
+            anim.SetTrigger("isDead");
         }
     }
-
-    void SpawnShatterObject()
-    {
-        if (isDead && !hasSpawnedShatter && !bloodHasPlayed)
-        {
-            foreach (GameObject g in enemyPhysicsObjects)
-            {
-                g.GetComponent<SphereCollider>().enabled = true;
-                g.GetComponent<Rigidbody>().isKinematic = false;
-            }
-            bloodHasPlayed = true;
-            if (primitiveMesh)
-            {
-                gameObject.GetComponent<MeshRenderer>().enabled = false;
-            }
-            else
-            {
-                mesh.enabled = false;
-            }
-            transform.GetChild(2).gameObject.SetActive(false);
-            transform.GetChild(3).gameObject.SetActive(false);
-            transform.GetChild(0).gameObject.SetActive(false);
-            Instantiate(bloodSpray, particleHolder.position, particleHolder.rotation);
-            Instantiate(shatterObject, transform.position, transform.rotation);
-            hasSpawnedShatter = true;
-            DespawnEnemy();
-        }
-    }
-
     void DespawnEnemy()
     {
         Destroy(gameObject, stats.destroyTime);
@@ -76,6 +66,6 @@ public class EnemyHealth : MonoBehaviour
     public void TakeDamage(float damage)
     {
         currentHp -= damage;
-        print("av");
+        health.UpdateHealthBar(currentHp);
     }
 }

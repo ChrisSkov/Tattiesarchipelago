@@ -12,12 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb50884c8b79ecd45b9256346dc9ec24, type: 3}
   m_Name: SavageEnemy
   m_EditorClassIdentifier: 
-  moveSpeed: 1.5
+  moveSpeed: 2
+  fleeSpeed: 3
   chaseRange: 10
-  attackRange: 3
-  damage: 10
-  timeBetweenAttacks: 4
+  attackRange: 2.6
+  damage: 35
+  timeBetweenAttacks: 2
   maxHp: 100
   fleeOnLowHealth: 1
   fleeThreshold: 30
-  destroyTime: 0.2
+  destroyTime: 1

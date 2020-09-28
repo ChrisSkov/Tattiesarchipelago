@@ -5,17 +5,21 @@ using Pathfinding;
 public class EnemySavage : MonoBehaviour
 {
     public EnemyStats stats;
+    [SerializeField] Transform spearAim = null;
+    [SerializeField] float spearRadius = 2f;
+    [SerializeField] AudioClip stabSound = null;
+    public bool isFleeing = false;
+    public float timer = Mathf.Infinity;
     EnemyHealth health;
     Animator anim;
     AIPath path;
     Transform player;
-    [SerializeField] Transform spearAim = null;
-    [SerializeField] float spearRadius = 2f;
-    public bool isFleeing = false;
-    public float timer = Mathf.Infinity;
+    AudioSource source;
+
     // Start is called before the first frame update
     void Start()
     {
+        source = GetComponent<AudioSource>();
         health = GetComponent<EnemyHealth>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         path = GetComponent<AIPath>();
@@ -25,18 +29,29 @@ public class EnemySavage : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        timer += Time.deltaTime;
-        if (health.currentHp <= stats.fleeThreshold)
+        if (health.IsDead())
         {
-            anim.SetBool("lowHealth", true);
-            bool hasFleeDestination = false;
-            isFleeing = hasFleeDestination;
-            if (!hasFleeDestination)
+            path.maxSpeed = 0f;
+            return;
+        }
+        else
+        {
+            timer += Time.deltaTime;
+            HandleMoveAnim();
+            if (LowHealth())
             {
-                path.destination = transform.TransformDirection(Vector3.forward * 3);
+                FleeBehavior();
+            }
+            else
+            {
+                ChaseBehavior();
+                StabBehavior();
             }
         }
+    }
+
+    private void ChaseBehavior()
+    {
         if (!anim.GetBool("lowHealth"))
         {
             if (PlayerInChaseRange())
@@ -44,41 +59,39 @@ public class EnemySavage : MonoBehaviour
                 path.destination = player.position;
             }
         }
-        HandleMoveAnim();
-        StabBehavior();
     }
 
-    bool PlayerInChaseRange()
+    private void FleeBehavior()
     {
-        return Vector3.Distance(transform.position, player.position) <= stats.chaseRange;
-    }
-    bool PlayerInAttackRange()
-    {
-        return Vector3.Distance(transform.position, player.position) <= stats.attackRange;
+
+        if (LowHealth())
+        {
+            if (!isFleeing)
+            {
+                path.maxSpeed = stats.fleeSpeed;
+                path.destination = transform.TransformDirection(Vector3.back * 100);
+                isFleeing = true;
+            }
+        }
     }
     private void StabBehavior()
     {
-        if (PlayerInAttackRange() && !anim.GetBool("lowHealth"))
+        if (PlayerInAttackRange() && !LowHealth())
         {
             transform.LookAt(player.position);
+            path.maxSpeed = 0f;
             if (timer >= stats.timeBetweenAttacks)
             {
                 timer = 0f;
                 anim.SetTrigger("attack");
             }
         }
-    }
-
-    void StabAnimEvent()
-    {
-        foreach (Collider c in Physics.OverlapSphere(spearAim.position, spearRadius))
+        else
         {
-            if (c.gameObject.tag == "Player")
-            {
-                c.gameObject.GetComponent<HealthScriptObj>().stats.currentHp -= stats.damage;
-            }
+            path.maxSpeed = stats.moveSpeed;
         }
     }
+
 
     private void HandleMoveAnim()
     {
@@ -96,6 +109,39 @@ public class EnemySavage : MonoBehaviour
         anim.SetFloat("forwardSpeed", yVelocity);
     }
 
+    void StabAnimEvent()
+    {
+        foreach (Collider c in Physics.OverlapSphere(spearAim.position, spearRadius))
+        {
+            if (c.gameObject.tag == "Player")
+            {
+                c.gameObject.GetComponent<HealthScriptObj>().TakeDamage(stats.damage);
+                source.PlayOneShot(stabSound);
+            }
+        }
+    }
+
+    bool LowHealth()
+    {
+        if (health.currentHp <= stats.fleeThreshold)
+        {
+            anim.SetBool("lowHealth", true);
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    bool PlayerInChaseRange()
+    {
+        return Vector3.Distance(transform.position, player.position) <= stats.chaseRange;
+    }
+    bool PlayerInAttackRange()
+    {
+        return Vector3.Distance(transform.position, player.position) <= stats.attackRange;
+    }
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.black;

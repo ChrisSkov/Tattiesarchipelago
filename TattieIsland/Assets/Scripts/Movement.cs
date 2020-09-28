@@ -21,10 +21,15 @@ public class Movement : MonoBehaviour
 
     void FixedUpdate()
     {
-        HandleMovement();
-        Rotate();
-        PlayWalkSound();
+        if (playerAnim.GetBool("canMove"))
+        {
+            HandleMovement();
+            Rotate();
+            PlayWalkSound();
+        }
+
     }
+
 
     private void PlayWalkSound()
     {
@@ -35,6 +40,7 @@ public class Movement : MonoBehaviour
             source.PlayOneShot(stats.walkSound);
         }
     }
+
 
     private void HandleMovement()
     {

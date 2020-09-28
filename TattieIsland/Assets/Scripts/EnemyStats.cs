@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyStats : ScriptableObject
 {
     public float moveSpeed;
+    public float fleeSpeed;
     public float chaseRange;
     public float attackRange;
     public float damage;
