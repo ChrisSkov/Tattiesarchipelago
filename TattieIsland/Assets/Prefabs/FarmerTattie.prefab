@@ -203,7 +203,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.8
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -313,7 +313,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stats: {fileID: 11400000, guid: d66d5124d742a3c44820ab8d1c02d69b, type: 2}
-  deathSound: {fileID: 8300000, guid: 01021012487f6f24bbb63beb6480c80f, type: 3}
+  deathSound: {fileID: 8300000, guid: 7d22e579568c3cb4b98ce36358cb9fd0, type: 3}
   takeDamageSound:
   - {fileID: 8300000, guid: 618529203ed2bd149950c0d3f396873a, type: 3}
   - {fileID: 8300000, guid: 298045c584fd3cc439bdea769c84320c, type: 3}

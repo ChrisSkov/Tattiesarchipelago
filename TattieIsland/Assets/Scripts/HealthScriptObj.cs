@@ -39,8 +39,8 @@ public class HealthScriptObj : MonoBehaviour
             anim.SetBool("canMove", false);
             anim.SetBool("canAttack", false);
             anim.SetBool("canShoot", false);
-            anim.SetBool("canJump", false);
             anim.SetBool("canChangeWeapons", false);
+            source.volume = 0f;
             if (!hasStartedDeathAnim)
             {
                 hasStartedDeathAnim = true;
@@ -50,6 +50,7 @@ public class HealthScriptObj : MonoBehaviour
         else
         {
             RegenHealth();
+            source.volume = 1f;
         }
     }
 
