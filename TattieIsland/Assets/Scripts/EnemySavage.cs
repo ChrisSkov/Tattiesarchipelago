@@ -8,6 +8,8 @@ public class EnemySavage : MonoBehaviour
     [SerializeField] Transform spearAim = null;
     [SerializeField] float spearRadius = 2f;
     [SerializeField] AudioClip stabSound = null;
+    [SerializeField] AudioClip walkSound = null;
+    [SerializeField] float walkSoundInterval = 0.2f;
     public bool isFleeing = false;
     public float timer = Mathf.Infinity;
     EnemyHealth health;
@@ -15,6 +17,7 @@ public class EnemySavage : MonoBehaviour
     AIPath path;
     Transform player;
     AudioSource source;
+    float runTimer = Mathf.Infinity;
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +32,8 @@ public class EnemySavage : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        runTimer += Time.deltaTime;
+        
         if (health.IsDead())
         {
             path.maxSpeed = 0f;
@@ -38,6 +43,14 @@ public class EnemySavage : MonoBehaviour
         {
             timer += Time.deltaTime;
             HandleMoveAnim();
+            if(anim.GetBool("isMoving"))
+            {
+                if(runTimer >= walkSoundInterval)
+                {
+                    source.PlayOneShot(walkSound);
+                    runTimer = 0f;
+                }
+            }
             if (LowHealth())
             {
                 FleeBehavior();
