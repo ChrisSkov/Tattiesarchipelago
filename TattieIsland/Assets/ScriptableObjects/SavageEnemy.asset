@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb50884c8b79ecd45b9256346dc9ec24, type: 3}
   m_Name: SavageEnemy
   m_EditorClassIdentifier: 
-  moveSpeed: 2
-  fleeSpeed: 3
+  moveSpeed: 3
+  fleeSpeed: 4
   chaseRange: 10
   attackRange: 2.6
   damage: 15

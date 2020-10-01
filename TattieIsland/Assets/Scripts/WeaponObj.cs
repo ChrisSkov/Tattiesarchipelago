@@ -7,6 +7,7 @@ using UnityEngine;
 public class WeaponObj : ScriptableObject
 {
     public GameObject wepPrefab;
+    public GameObject wepHoldObject;
     public int currentlyEquippedWeaponNumber;
     public bool isRanged;
     public bool hasAmmo;

@@ -4,12 +4,21 @@ using UnityEngine;
 
 public class HitEnemy : MonoBehaviour
 {
+    public WeaponObj stats;
     float damage = 10f;
     private void OnParticleCollision(GameObject other)
     {
         if (other.tag == "Enemy")
         {
-            other.GetComponent<EnemyHealth>().TakeDamage(damage);
+            other.GetComponent<EnemyHealth>().TakeDamage(stats.attackDamage);
+        }
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.tag == "Enemy")
+        {
+            other.gameObject.GetComponent<EnemyHealth>().TakeDamage(stats.attackDamage);
         }
     }
     public float GetDamage()

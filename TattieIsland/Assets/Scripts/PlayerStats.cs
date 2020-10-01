@@ -13,9 +13,9 @@ public class PlayerStats : ScriptableObject
     [Header("locomotion Variables")]
     public float moveSpeed;
     public float stepSoundDelay;
+    public AudioClip walkSound;
     [Header("Weapon Variables")]
     public int currentlyEquippedWeapon;
-    public AudioClip walkSound;
 
     [Header("Unarmed Variables")]
     public float leftHandDamage;
@@ -23,9 +23,11 @@ public class PlayerStats : ScriptableObject
     public float unarmedRange;
     public float unarmedKnockbackForce;
     public AudioClip punchSound;
+    public AudioClip[] throwSounds;
     [Header("Misc variables")]
     public float constructionSpeed;
     public float potionMultiplier;
+    public bool hasPickUpItem;
     [Header("Crit variables")]
     public float critChance;
     public float critDamageMultiplier;
