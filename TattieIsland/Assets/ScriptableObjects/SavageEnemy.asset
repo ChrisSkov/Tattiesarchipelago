@@ -16,8 +16,8 @@ MonoBehaviour:
   fleeSpeed: 4
   chaseRange: 10
   attackRange: 2.6
-  damage: 15
-  timeBetweenAttacks: 2
+  damage: 5
+  timeBetweenAttacks: 4
   maxHp: 100
   fleeOnLowHealth: 1
   fleeThreshold: 30

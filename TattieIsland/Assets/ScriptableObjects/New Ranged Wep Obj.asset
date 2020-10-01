@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d96f9ddba195f9b4db69b02ac461558f, type: 3}
+  m_Name: New Ranged Wep Obj
+  m_EditorClassIdentifier: 
+  damage: 14
+  prefab: {fileID: 2132024356339087248, guid: 26a636b767c57d14394a06a1010924f9, type: 3}
+  hand: {fileID: 0}
+  animOverride: {fileID: 22100000, guid: 93709fbc56be559488f0d8b8b73fd596, type: 2}
