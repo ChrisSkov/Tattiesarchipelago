@@ -5,23 +5,20 @@ using UnityEngine.UI;
 
 public class DisplayChickenInfo : MonoBehaviour
 {
-    Slider hpBar;
+    public Slider hpBar;
     Text nameText;
+    public ChickenScriptObj stats;
     // Start is called before the first frame update
     void Start()
     {
-        nameText = GetComponentInChildren<Text>();
         hpBar = GetComponentInChildren<Slider>();
+        nameText = GetComponentInChildren<Text>();
+        hpBar.maxValue = stats.maxHp;
+        hpBar.value = stats.maxHp;
+        nameText.text = stats.chickenNames[Random.Range(0, stats.chickenNames.Length)];
+
     }
 
-    public void SetHPBarMaxValue(float maxHP)
-    {
-        hpBar.maxValue = maxHP;
-    }
-    public void DisplayChickenName(string name)
-    {
-        nameText.text = name;
-    }
 
     public void UpdateHealthBar(float currentHp)
     {

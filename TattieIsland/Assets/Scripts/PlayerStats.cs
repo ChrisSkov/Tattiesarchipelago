@@ -18,7 +18,8 @@ public class PlayerStats : ScriptableObject
     public AudioClip walkSound;
 
     [Header("Unarmed Variables")]
-    public float unarmedDamage;
+    public float leftHandDamage;
+    public float rightHandDamage;
     public float unarmedRange;
     public float unarmedKnockbackForce;
     public AudioClip punchSound;
@@ -28,6 +29,8 @@ public class PlayerStats : ScriptableObject
     [Header("Crit variables")]
     public float critChance;
     public float critDamageMultiplier;
+    public GameObject critEffect;
+    public AudioClip critSound;
     [Header("Energy variables")]
     public float maxEnergy;
     public float energyRegen;

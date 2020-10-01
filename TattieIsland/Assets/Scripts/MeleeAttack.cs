@@ -22,6 +22,7 @@ public class MeleeAttack : MonoBehaviour
         {
             ShowCorrectWeapon(stats.currentlyEquippedWeapon);
             ThrowPunch();
+            ThrowRightPunch();
         }
     }
 
@@ -38,6 +39,13 @@ public class MeleeAttack : MonoBehaviour
             anim.SetTrigger("attack");
         }
     }
+    private void ThrowRightPunch()
+    {
+        if (Input.GetKeyDown(KeyCode.Mouse1) && stats.currentlyEquippedWeapon == 0)
+        {
+            anim.SetTrigger("rightClick");
+        }
+    }
     bool CriticalHit()
     {
         return Random.Range(0, 100) <= stats.critChance;
@@ -50,13 +58,30 @@ public class MeleeAttack : MonoBehaviour
         {
             if (CriticalHit())
             {
-                print("CRIIIIT!");
-                c.gameObject.GetComponent<EnemyHealth>().TakeDamage(stats.unarmedDamage * stats.critDamageMultiplier);
+                c.gameObject.GetComponent<EnemyHealth>().TakeDamage(stats.leftHandDamage * stats.critDamageMultiplier);
+                var clone = Instantiate(stats.critEffect, weapons[0].transform.position, weapons[0].transform.rotation);
+                Destroy(clone, 0.3f);
             }
             else
             {
-                c.gameObject.GetComponent<EnemyHealth>().TakeDamage(stats.unarmedDamage);
+                c.gameObject.GetComponent<EnemyHealth>().TakeDamage(stats.leftHandDamage);
             }
+
+            source.PlayOneShot(stats.punchSound);
+
+            if (Physics.Raycast(transform.position, c.transform.position - transform.position, out hit, mask))
+            {
+                c.GetComponent<Rigidbody>().AddForce(-hit.normal * stats.unarmedKnockbackForce, ForceMode.Impulse);
+            }
+        }
+    }
+    void RightPunchAnimEvent()
+    {
+        RaycastHit hit;
+        LayerMask mask = LayerMask.GetMask("Enemy");
+        foreach (Collider c in Physics.OverlapSphere(weapons[2].transform.position, stats.unarmedRange, mask))
+        {
+            c.gameObject.GetComponent<EnemyHealth>().TakeDamage(stats.rightHandDamage);
             source.PlayOneShot(stats.punchSound);
 
             if (Physics.Raycast(transform.position, c.transform.position - transform.position, out hit, mask))

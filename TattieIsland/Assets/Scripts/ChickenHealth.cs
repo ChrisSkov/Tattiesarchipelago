@@ -10,20 +10,14 @@ public class ChickenHealth : MonoBehaviour
     public float currentHungerLevel = 0f;
     public float layEggCountDown;
     public float currentEnemyFear;
-    public string chickenName;
     public float layEggTimer;
     public float healthRegenTimer;
     DisplayChickenInfo chickenInfo;
     // Start is called before the first frame update
     void Start()
     {
-        currentHp = chickenStats.maxHp;
-        chickenName = chickenStats.chickenNames[Random.Range(0, chickenStats.chickenNames.Length)];
         currentEnemyFear = chickenStats.fearOfEnemies;
         chickenInfo = GetComponent<DisplayChickenInfo>();
-        chickenInfo.SetHPBarMaxValue(chickenStats.maxHp);
-        chickenInfo.UpdateHealthBar(currentHp);
-        chickenInfo.DisplayChickenName(chickenName);
     }
 
     // Update is called once per frame
