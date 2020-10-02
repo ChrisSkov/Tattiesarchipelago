@@ -16,6 +16,9 @@ MonoBehaviour:
   leftClickDamage: 20
   rightClickDamage: 25
   timeBetweenAttacks: 1
+  isRightHanded: 1
   range: 3
-  leftClickOverride: {fileID: 22100000, guid: 601e76c461e30a34eabc948658c52e0c, type: 2}
-  rightClickOverride: {fileID: 0}
+  pickUp: 0
+  animOverride: {fileID: 22100000, guid: 601e76c461e30a34eabc948658c52e0c, type: 2}
+  stats: {fileID: 11400000, guid: d66d5124d742a3c44820ab8d1c02d69b, type: 2}
+  pickUpItem: {fileID: 11400000, guid: 5b7c637c95e33e24c8a4a1e753af4c08, type: 2}

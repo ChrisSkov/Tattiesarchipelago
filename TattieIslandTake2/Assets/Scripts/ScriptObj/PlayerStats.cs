@@ -6,6 +6,8 @@ using UnityEngine;
 public class PlayerStats : ScriptableObject
 {
     public MeleeScriptObj currentWeapon;
+    public Transform activeHand;
+    public bool closeToPickUp;
     public float maxMoveSpeed;
     public float currentMoveSpeed;
     public float maxHealth;

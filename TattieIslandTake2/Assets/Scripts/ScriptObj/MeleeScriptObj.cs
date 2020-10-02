@@ -8,26 +8,32 @@ public class MeleeScriptObj : MeleeAbstract
     public float leftClickDamage;
     public float rightClickDamage;
     public float timeBetweenAttacks;
+    public bool isRightHanded;
     public float range;
     public bool pickUp = false;
-    public AnimatorOverrideController leftClickOverride;
-    public AnimatorOverrideController rightClickOverride;
-
-
+    public AnimatorOverrideController animOverride;
+    public PlayerStats stats;
+    public PickUpScriptObj pickUpItem;
+    GameObject clone;
     public override void triggerAttack(Animator anim, string trigger)
     {
-        anim.runtimeAnimatorController = leftClickOverride;
+        if (stats.currentWeapon.animOverride != null)
+        {
+            anim.runtimeAnimatorController = animOverride;
+        }
         anim.SetTrigger(trigger);
+
+
     }
-    public override void leftClickAttack(Transform pos)
+    public override void leftClickAttack(Transform weaponPosition, Transform rayCastPosition)
     {
         RaycastHit hit;
         LayerMask mask = LayerMask.GetMask("Enemy");
-        foreach (Collider c in Physics.OverlapSphere(pos.position, range, mask))
+        foreach (Collider c in Physics.OverlapSphere(weaponPosition.position, range, mask))
         {
-            if (Physics.Raycast(Vector3.forward, Vector3.forward * 3, out hit, 100f, mask))
+            if (Physics.Raycast(rayCastPosition.TransformDirection(Vector3.forward), c.gameObject.transform.position * 3, out hit, 100f, mask))
             {
-                hit.collider.gameObject.GetComponent<Rigidbody>().AddForce(-hit.normal * 15, ForceMode.Impulse);
+                hit.collider.gameObject.GetComponent<Rigidbody>().AddForce(-hit.normal * 4, ForceMode.Impulse);
             }
         }
     }
@@ -38,10 +44,18 @@ public class MeleeScriptObj : MeleeAbstract
 
     public override void OnPickUp(Transform pos)
     {
-        
-        var clone = Instantiate(weaponPrefab, pos.position, pos.rotation);
+        clone = Instantiate(weaponPrefab, pos.position, pos.rotation);
         clone.transform.SetParent(pos);
-        clone.GetComponentInParent<Fight>().weapon = this;
+        stats.currentWeapon = this;
+    }
+
+    public override void DropWeapon(Transform pos)
+    {
+        stats.currentWeapon = null;
+
+        var pickUpClone = Instantiate(pickUpItem.pickUpPrefab, pos.position, pos.rotation);
+        pickUpClone.transform.rotation = Quaternion.Euler(90,0,0);
+        Destroy(clone);
     }
 
 
