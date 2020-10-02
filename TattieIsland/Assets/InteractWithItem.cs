@@ -6,7 +6,7 @@ public class InteractWithItem : MonoBehaviour
 {
     Animator anim;
     public RangedWepObj obj;
-
+    public PlayerStats stats;
     public Transform hand;
     // Start is called before the first frame update
     void Start()
@@ -17,11 +17,12 @@ public class InteractWithItem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.Q) && stats.hasPickUpItem)
         {
             obj.hand = hand;
             GetComponent<Animator>().runtimeAnimatorController = obj.animOverride;
             GetComponent<Animator>().SetTrigger("rightClick");
+            stats.hasPickUpItem = false;
 
         }
     }

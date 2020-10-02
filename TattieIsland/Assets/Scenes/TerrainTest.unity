@@ -258,6 +258,10 @@ PrefabInstance:
       propertyPath: hand
       value: 
       objectReference: {fileID: 1849235304}
+    - target: {fileID: 1655525646, guid: e511adcddddd13545b6a9c5b7122d4cb, type: 3}
+      propertyPath: stats
+      value: 
+      objectReference: {fileID: 11400000, guid: d66d5124d742a3c44820ab8d1c02d69b, type: 2}
     - target: {fileID: 8501936937698113510, guid: e511adcddddd13545b6a9c5b7122d4cb, type: 3}
       propertyPath: deathScreen
       value: 
