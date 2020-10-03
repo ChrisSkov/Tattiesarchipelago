@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28ccd21472de5d84ba45f51ab6066cfa, type: 3}
   m_Name: SwordPickUp
   m_EditorClassIdentifier: 
-  pickUpPrefab: {fileID: 1033960063214299627, guid: bcdd8243e2f5b384dace52982cf094f7, type: 3}
+  pickUpPrefab: {fileID: 1222253414400084737, guid: e31f2c3eff5256943ae012ace844c51b, type: 3}
   pickUpRadius: 2

@@ -5,7 +5,7 @@ using UnityEngine;
 public class PickMeUp : MonoBehaviour
 {
     public PlayerStats stats;
-    public MeleeScriptObj thisWeapon;
+    public MeleeAbstract thisWeapon;
     private void OnTriggerStay(Collider other)
     {
 
@@ -15,13 +15,6 @@ public class PickMeUp : MonoBehaviour
             SwapWeapon();
         }
     }
-    // private void Update()
-    // {
-    //     if (stats.closeToPickUp)
-    //     {
-    //         SwapWeapon();
-    //     }
-    // }
     void SwapWeapon()
     {
         if (Input.GetKeyDown(KeyCode.E))

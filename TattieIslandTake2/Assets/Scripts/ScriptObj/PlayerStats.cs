@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "PlayerStats", menuName = "TattieIslandTake2/PlayerStats", order = 0)]
 public class PlayerStats : ScriptableObject
 {
-    public MeleeScriptObj currentWeapon;
+    public MeleeAbstract currentWeapon;
     public Transform activeHand;
     public bool closeToPickUp;
     public float maxMoveSpeed;
