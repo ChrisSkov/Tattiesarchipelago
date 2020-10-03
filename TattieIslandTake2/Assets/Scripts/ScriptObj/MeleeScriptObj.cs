@@ -4,16 +4,7 @@ using UnityEngine;
 [CreateAssetMenu]
 public class MeleeScriptObj : MeleeAbstract
 {
-    public GameObject weaponPrefab;
-    public float leftClickDamage;
-    public float rightClickDamage;
-    public float timeBetweenAttacks;
-    public bool isRightHanded;
-    public float range;
-    public bool pickUp = false;
-    public AnimatorOverrideController animOverride;
-    public PlayerStats stats;
-    public PickUpScriptObj pickUpItem;
+
     GameObject clone;
     public override void triggerAttack(Animator anim, string trigger)
     {
@@ -31,7 +22,7 @@ public class MeleeScriptObj : MeleeAbstract
         LayerMask mask = LayerMask.GetMask("Enemy");
         foreach (Collider c in Physics.OverlapSphere(weaponPosition.position, range, mask))
         {
-            if (Physics.Raycast(rayCastPosition.TransformDirection(Vector3.forward), c.gameObject.transform.position * 3, out hit, 100f, mask))
+            if (Physics.Raycast(rayCastPosition.position, c.gameObject.transform.position - rayCastPosition.position, out hit, 100f, mask))
             {
                 hit.collider.gameObject.GetComponent<Rigidbody>().AddForce(-hit.normal * 4, ForceMode.Impulse);
             }
@@ -54,7 +45,7 @@ public class MeleeScriptObj : MeleeAbstract
         stats.currentWeapon = null;
 
         var pickUpClone = Instantiate(pickUpItem.pickUpPrefab, pos.position, pos.rotation);
-        pickUpClone.transform.rotation = Quaternion.Euler(90,0,0);
+        pickUpClone.transform.rotation = Quaternion.Euler(90, 0, 0);
         Destroy(clone);
     }
 

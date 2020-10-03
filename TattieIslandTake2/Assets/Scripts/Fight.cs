@@ -9,7 +9,7 @@ public class Fight : MonoBehaviour
     public Transform rightHand;
     public MeleeAbstract meleeWeapon = null;
     public MeleeAbstract defaultMeleeWeapon;
-    
+
 
     Animator anim;
     public PlayerStats stats;
@@ -58,7 +58,7 @@ public class Fight : MonoBehaviour
 
     private void PickUpWeapon()
     {
-        if (meleeWeapon != null && meleeWeapon.pickUp == true )
+        if (meleeWeapon != null && meleeWeapon.pickUp == true)
         {
             if (meleeWeapon.isRightHanded)
             {
@@ -81,6 +81,7 @@ public class Fight : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.black;
+        Gizmos.DrawRay(transform.GetChild(0).transform.position, transform.TransformDirection(Vector3.forward) * 3);
         if (stats.activeHand != null && Application.isPlaying)
         {
             Gizmos.DrawWireSphere(stats.activeHand.position, stats.currentWeapon.range);
