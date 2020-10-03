@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1189cf116c88f4a4f8776e6b40485402, type: 3}
-  m_Name: Sword2
+  m_Name: Spear
   m_EditorClassIdentifier: 
-  weaponPrefab: {fileID: 1033960063214299627, guid: bcdd8243e2f5b384dace52982cf094f7, type: 3}
-  leftClickDamage: 10
-  rightClickDamage: 15
+  weaponPrefab: {fileID: 4704645702350024099, guid: e39057722374f85488b5f5c8026307f9, type: 3}
+  leftClickDamage: 15
+  rightClickDamage: 10
   timeBetweenAttacks: 2
   isRightHanded: 1
-  range: 3.22
+  range: 3
   pickUp: 0
   hitSound: {fileID: 8300000, guid: 43243f92f398aa743a7cc03e4b048c72, type: 3}
-  animOverride: {fileID: 22100000, guid: 601e76c461e30a34eabc948658c52e0c, type: 2}
+  animOverride: {fileID: 22100000, guid: 073db2d9382d76c4484a1807c2086ed0, type: 2}
   stats: {fileID: 11400000, guid: d66d5124d742a3c44820ab8d1c02d69b, type: 2}
-  pickUpItem: {fileID: 11400000, guid: 5b7c637c95e33e24c8a4a1e753af4c08, type: 2}
+  pickUpItem: {fileID: 11400000, guid: dbbaa2a4a02875643bacbb1f9983ea0e, type: 2}

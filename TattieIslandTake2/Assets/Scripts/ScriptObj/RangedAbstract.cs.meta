@@ -1,12 +1,13 @@
 fileFormatVersion: 2
-guid: 1189cf116c88f4a4f8776e6b40485402
+guid: c6c36f688db78684d9ab7b3c2ce21352
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - weaponPrefab: {instanceID: 0}
-  - animOverride: {instanceID: 0}
   - stats: {fileID: 11400000, guid: d66d5124d742a3c44820ab8d1c02d69b, type: 2}
+  - weaponPrefab: {instanceID: 0}
+  - hitSound: {instanceID: 0}
+  - animOverride: {instanceID: 0}
   - pickUpItem: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}

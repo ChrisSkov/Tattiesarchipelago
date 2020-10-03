@@ -3,7 +3,12 @@ guid: f4ed98f1a9cc1b24c92c43655eefe4bf
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - weaponPrefab: {instanceID: 0}
+  - hitSound: {instanceID: 0}
+  - animOverride: {instanceID: 0}
+  - stats: {fileID: 11400000, guid: d66d5124d742a3c44820ab8d1c02d69b, type: 2}
+  - pickUpItem: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

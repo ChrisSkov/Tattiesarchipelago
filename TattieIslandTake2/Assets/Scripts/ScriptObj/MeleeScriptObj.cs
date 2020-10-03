@@ -24,7 +24,7 @@ public class MeleeScriptObj : MeleeAbstract
         {
             if (Physics.Raycast(rayCastPosition.position, c.gameObject.transform.position - rayCastPosition.position, out hit, 100f, mask))
             {
-                hit.collider.gameObject.GetComponent<Rigidbody>().AddForce(-hit.normal * 4, ForceMode.Impulse);
+                hit.collider.gameObject.GetComponent<Rigidbody>().AddForce(-hit.normal * 8, ForceMode.Impulse);
             }
         }
     }

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6327649463628056490}
   - component: {fileID: 6327649463628056485}
   - component: {fileID: 6327649463628056491}
+  - component: {fileID: 7342411783145297990}
   m_Layer: 0
   m_Name: WeaponHolder
   m_TagString: Untagged
@@ -76,4 +77,17 @@ CapsuleCollider:
   m_Radius: 1.32
   m_Height: 4.65
   m_Direction: 0
-  m_Center: {x: -1.16, y: 0, z: 0}
+  m_Center: {x: -1.16, y: 0.95, z: 0}
+--- !u!65 &7342411783145297990
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6327649463628056487}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.92, y: 0.23, z: 0.45}
+  m_Center: {x: -0.93, y: -0.02, z: 0}

@@ -35,7 +35,7 @@ public class Fight : MonoBehaviour
             stats.activeHand = leftHand;
         }
 
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.Q) && meleeWeapon != null)
         {
             meleeWeapon.DropWeapon(stats.activeHand);
         }
@@ -76,6 +76,7 @@ public class Fight : MonoBehaviour
     void AnimEvent()
     {
         meleeWeapon.leftClickAttack(stats.activeHand, gameObject.transform);
+        GetComponent<AudioSource>().PlayOneShot(stats.currentWeapon.hitSound);
     }
 
     private void OnDrawGizmos()

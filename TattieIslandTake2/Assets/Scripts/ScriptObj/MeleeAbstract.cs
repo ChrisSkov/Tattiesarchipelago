@@ -11,6 +11,7 @@ public abstract class MeleeAbstract : ScriptableObject
     public bool isRightHanded;
     public float range;
     public bool pickUp = false;
+    public AudioClip hitSound;
     public AnimatorOverrideController animOverride;
     public PlayerStats stats;
     public PickUpScriptObj pickUpItem;
