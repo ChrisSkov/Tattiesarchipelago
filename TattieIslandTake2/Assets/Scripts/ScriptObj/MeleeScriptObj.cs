@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 [CreateAssetMenu]
-public class MeleeScriptObj : MeleeAbstract
+public class MeleeScriptObj : WeaponAbstract
 {
 
     GameObject clone;
@@ -16,7 +16,7 @@ public class MeleeScriptObj : MeleeAbstract
 
 
     }
-    public override void leftClickAttack(Transform weaponPosition, Transform rayCastPosition)
+    public override void leftClickAttack(Transform weaponPosition, Transform rayCastPosition, AudioSource source)
     {
         RaycastHit hit;
         LayerMask mask = LayerMask.GetMask("Enemy");
@@ -25,6 +25,8 @@ public class MeleeScriptObj : MeleeAbstract
             if (Physics.Raycast(rayCastPosition.position, c.gameObject.transform.position - rayCastPosition.position, out hit, 100f, mask))
             {
                 hit.collider.gameObject.GetComponent<Rigidbody>().AddForce(-hit.normal * 8, ForceMode.Impulse);
+                source.PlayOneShot(stats.currentWeapon.hitSound);
+
             }
         }
     }

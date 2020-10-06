@@ -7,8 +7,8 @@ public class Fight : MonoBehaviour
 
     public Transform leftHand;
     public Transform rightHand;
-    public MeleeAbstract meleeWeapon = null;
-    public MeleeAbstract defaultMeleeWeapon;
+    public WeaponAbstract meleeWeapon = null;
+    public WeaponAbstract defaultMeleeWeapon;
 
 
     Animator anim;
@@ -75,8 +75,7 @@ public class Fight : MonoBehaviour
 
     void AnimEvent()
     {
-        meleeWeapon.leftClickAttack(stats.activeHand, gameObject.transform);
-        GetComponent<AudioSource>().PlayOneShot(stats.currentWeapon.hitSound);
+        meleeWeapon.leftClickAttack(stats.activeHand, gameObject.transform, GetComponent<AudioSource>());
     }
 
     private void OnDrawGizmos()

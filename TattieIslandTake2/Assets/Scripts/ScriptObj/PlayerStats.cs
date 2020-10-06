@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "PlayerStats", menuName = "TattieIslandTake2/PlayerStats", order = 0)]
 public class PlayerStats : ScriptableObject
 {
-    public MeleeAbstract currentWeapon;
+    public WeaponAbstract currentWeapon;
     public Transform activeHand;
     public bool closeToPickUp;
     public float maxMoveSpeed;
@@ -14,6 +14,7 @@ public class PlayerStats : ScriptableObject
     public float currentHealth;
     public float stepSoundDelay;
     public AudioClip walkSound;
+    public AudioSource source;
 
 }
 

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 [CreateAssetMenu]
-public class SwordScriptObj : MeleeAbstract
+public class SwordScriptObj : WeaponAbstract
 {
     GameObject clone;
     public override void triggerAttack(Animator anim, string trigger)
@@ -13,7 +13,7 @@ public class SwordScriptObj : MeleeAbstract
         }
         anim.SetTrigger(trigger);
     }
-    public override void leftClickAttack(Transform pos, Transform rayCastPosition)
+    public override void leftClickAttack(Transform pos, Transform rayCastPosition, AudioSource source)
     {
         RaycastHit hit;
         LayerMask mask = LayerMask.GetMask("Enemy");
@@ -22,6 +22,8 @@ public class SwordScriptObj : MeleeAbstract
             if (Physics.Raycast(rayCastPosition.position, c.gameObject.transform.position - rayCastPosition.position, out hit, mask))
             {
                 hit.collider.gameObject.GetComponent<Rigidbody>().AddForce(-hit.normal * 8, ForceMode.Impulse);
+                source.PlayOneShot(stats.currentWeapon.hitSound);
+
             }
         }
     }

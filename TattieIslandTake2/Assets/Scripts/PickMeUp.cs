@@ -5,7 +5,7 @@ using UnityEngine;
 public class PickMeUp : MonoBehaviour
 {
     public PlayerStats stats;
-    public MeleeAbstract thisWeapon;
+    public WeaponAbstract thisWeapon;
     private void OnTriggerStay(Collider other)
     {
 
