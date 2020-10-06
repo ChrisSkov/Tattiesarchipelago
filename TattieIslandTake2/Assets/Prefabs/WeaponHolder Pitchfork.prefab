@@ -139,7 +139,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6327649463628056487, guid: c589eeb6aba435a40adcf4c5888d870b, type: 3}
       propertyPath: m_Name
-      value: WeaponHolder (1)
+      value: WeaponHolder Pitchfork
       objectReference: {fileID: 0}
     - target: {fileID: 6327649463628056490, guid: c589eeb6aba435a40adcf4c5888d870b, type: 3}
       propertyPath: thisWeapon

@@ -10,6 +10,7 @@ public class Fight : MonoBehaviour
     public WeaponAbstract meleeWeapon = null;
     public WeaponAbstract defaultMeleeWeapon;
 
+    Vector3 mouseWorldPositon = Vector3.zero;
 
     Animator anim;
     public PlayerStats stats;
@@ -24,6 +25,17 @@ public class Fight : MonoBehaviour
     void Update()
     {
         HandleWeaponBehavior();
+        //Set up hit, ray and mask for raycast
+        RaycastHit hit;
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        LayerMask mask = LayerMask.GetMask("WeaponPickUp");
+
+        //execute raycast and calculate mouse position
+        if (Physics.Raycast(ray, out hit, Mathf.Infinity, mask))
+        {
+            mouseWorldPositon = new Vector3(hit.point.x, transform.position.y, hit.point.z) - transform.position;
+            print(hit.collider.gameObject);
+        }
 
         PickUpWeapon();
         if (meleeWeapon.isRightHanded)
@@ -86,5 +98,6 @@ public class Fight : MonoBehaviour
         {
             Gizmos.DrawWireSphere(stats.activeHand.position, stats.currentWeapon.range);
         }
+        Gizmos.DrawWireSphere(mouseWorldPositon, 1f);
     }
 }
