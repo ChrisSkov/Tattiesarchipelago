@@ -8,6 +8,7 @@ public class PlayerStats : ScriptableObject
     public WeaponAbstract currentWeapon;
     public Transform activeHand;
     public bool closeToPickUp;
+    public bool hasThrowable;
     public float maxMoveSpeed;
     public float currentMoveSpeed;
     public float maxHealth;

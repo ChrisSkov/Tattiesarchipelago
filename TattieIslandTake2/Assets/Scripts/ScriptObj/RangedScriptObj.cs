@@ -39,7 +39,15 @@ public class RangedScriptObj : WeaponAbstract
         stats.currentWeapon = null;
     }
 
-
+    public override void attack(Transform pos, float force)
+    {
+        Destroy(clone);
+        GameObject clone2 = Instantiate(weaponPrefab, pos.position, pos.rotation);
+        // clone.AddComponent<CapsuleCollider>();
+        clone2.AddComponent<Rigidbody>().AddRelativeForce(Vector3.forward * force, ForceMode.Impulse);
+        clone2.GetComponent<Explode>().startExplosionTimer = true;
+        stats.currentWeapon = null;
+    }
 
     public override void rightClickAttack(Transform pos)
     {

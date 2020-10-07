@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PickMeUp : MonoBehaviour
 {
+    public PlayerStats stats;
     public WeaponAbstract thisWeapon;
 
 }

@@ -48,5 +48,9 @@ public class SwordScriptObj : WeaponAbstract
         var pickUpClone = Instantiate(pickUpItem.pickUpPrefab, pos.position, pos.rotation);
         Destroy(clone);
     }
-    
+
+    public override void attack(Transform pos, float throwForce)
+    {
+        throw new System.NotImplementedException();
+    }
 }

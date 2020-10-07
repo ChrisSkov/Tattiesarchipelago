@@ -51,5 +51,8 @@ public class MeleeScriptObj : WeaponAbstract
         Destroy(clone);
     }
 
-
+    public override void attack(Transform pos, float throwForce)
+    {
+        throw new System.NotImplementedException();
+    }
 }
