@@ -8,8 +8,11 @@ public class RangedScriptObj : WeaponAbstract
     public float throwForce;
     public override void OnPickUp(Transform pos)
     {
+
         clone = Instantiate(weaponPrefab, pos.position, pos.rotation);
         clone.transform.SetParent(pos);
+        clone.transform.rotation = Quaternion.Euler(0,0,00);
+       // clone.transform.rotation = Quaternion.Euler(90,0,0);
         stats.currentWeapon = this;
     }
 

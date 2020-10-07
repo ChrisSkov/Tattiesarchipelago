@@ -28,7 +28,7 @@ public class Fight : MonoBehaviour
     {
         DefaultWeaponBehavior();
         PickUpWeapon();
-
+        Physics.IgnoreLayerCollision(10, 12);
         HandManagement();
         DropWeapon();
         DetermineWeaponType();
@@ -64,15 +64,20 @@ public class Fight : MonoBehaviour
                 GameObject weaponToPickUp = hit.collider.gameObject;
                 WeaponAbstract newWeapon = weaponToPickUp.GetComponent<PickMeUp>().thisWeapon;
 
-                newWeapon.pickUp = true;
-                if (Input.GetKeyDown(KeyCode.E))
+                if (Input.GetKeyDown(KeyCode.E) && stats.closeToPickUp == true)
                 {
+                    newWeapon.pickUp = true;
                     weaponInHand = newWeapon;
                     if (stats.currentWeapon != defaultWeapon)
                     {
                         stats.currentWeapon.DropWeapon(stats.activeHand);
                     }
                     Destroy(weaponToPickUp);
+                    stats.closeToPickUp = false;
+                }
+                else
+                {
+                    newWeapon.pickUp = false;
                 }
             }
         }
@@ -105,8 +110,8 @@ public class Fight : MonoBehaviour
                 stats.activeHand = leftHand;
             }
             weaponInHand.OnPickUp(stats.activeHand);
-            weaponInHand.pickUp = false;
         }
+        weaponInHand.pickUp = false;
 
     }
 
