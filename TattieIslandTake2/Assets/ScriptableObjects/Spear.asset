@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1189cf116c88f4a4f8776e6b40485402, type: 3}
   m_Name: Spear
   m_EditorClassIdentifier: 
-  weaponPrefab: {fileID: 4704645702350024099, guid: e39057722374f85488b5f5c8026307f9, type: 3}
+  weaponPrefab: {fileID: 5271372890095054624, guid: 08bd5193bd74cc548b0b9ad1dabb94d8, type: 3}
   leftClickDamage: 15
   rightClickDamage: 10
   timeBetweenAttacks: 2
   isRightHanded: 1
-  range: 3
+  range: 0.86
   pickUp: 0
   hitSound: {fileID: 8300000, guid: 43243f92f398aa743a7cc03e4b048c72, type: 3}
   animOverride: {fileID: 22100000, guid: 073db2d9382d76c4484a1807c2086ed0, type: 2}

@@ -24,20 +24,10 @@ public class Fight : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        HandleWeaponBehavior();
-        //Set up hit, ray and mask for raycast
-        RaycastHit hit;
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        LayerMask mask = LayerMask.GetMask("WeaponPickUp");
-
-        //execute raycast and calculate mouse position
-        if (Physics.Raycast(ray, out hit, Mathf.Infinity, mask))
-        {
-            mouseWorldPositon = new Vector3(hit.point.x, transform.position.y, hit.point.z) - transform.position;
-            print(hit.collider.gameObject);
-        }
-
+        DefaultWeaponBehavior();
         PickUpWeapon();
+
+        HandManagement();
         if (meleeWeapon.isRightHanded)
         {
             stats.activeHand = rightHand;
@@ -47,18 +37,36 @@ public class Fight : MonoBehaviour
             stats.activeHand = leftHand;
         }
 
-        if (Input.GetKeyDown(KeyCode.Q) && meleeWeapon != null)
-        {
-            meleeWeapon.DropWeapon(stats.activeHand);
-        }
-        if (Input.GetKeyDown(KeyCode.Mouse0))
-        {
-            meleeWeapon.triggerAttack(anim, "attack");
-        }
+
 
     }
 
-    private void HandleWeaponBehavior()
+    private void PickUpWeapon()
+    {
+        //Set up hit, ray and mask for raycast
+        RaycastHit hit;
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        LayerMask mask = LayerMask.GetMask("WeaponPickUp");
+
+        //execute raycast and calculate mouse position
+        if (Physics.Raycast(ray, out hit, Mathf.Infinity, mask))
+        {
+            mouseWorldPositon = new Vector3(hit.point.x, transform.position.y, hit.point.z) - transform.position;
+            if (Vector3.Distance(transform.position, hit.collider.gameObject.transform.position) <= 5f && Input.GetKeyDown(KeyCode.E))
+            {
+                stats.closeToPickUp = true;
+                hit.collider.gameObject.GetComponent<PickMeUp>().thisWeapon.pickUp = true;
+                meleeWeapon = hit.collider.gameObject.GetComponent<PickMeUp>().thisWeapon;
+                if (stats.currentWeapon != defaultMeleeWeapon)
+                {
+                    stats.currentWeapon.DropWeapon(stats.activeHand);
+                }
+                Destroy(hit.collider.gameObject);
+            }
+        }
+    }
+
+    private void DefaultWeaponBehavior()
     {
         if (meleeWeapon == null)
         {
@@ -68,8 +76,16 @@ public class Fight : MonoBehaviour
         meleeWeapon = stats.currentWeapon;
     }
 
-    private void PickUpWeapon()
+    private void HandManagement()
     {
+        if (Input.GetKeyDown(KeyCode.Q) && meleeWeapon != null)
+        {
+            meleeWeapon.DropWeapon(stats.activeHand);
+        }
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            meleeWeapon.triggerAttack(anim, "attack");
+        }
         if (meleeWeapon != null && meleeWeapon.pickUp == true)
         {
             if (meleeWeapon.isRightHanded)

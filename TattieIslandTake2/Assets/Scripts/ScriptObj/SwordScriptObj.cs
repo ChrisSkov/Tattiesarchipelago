@@ -19,6 +19,7 @@ public class SwordScriptObj : WeaponAbstract
         LayerMask mask = LayerMask.GetMask("Enemy");
         foreach (Collider c in Physics.OverlapSphere(pos.GetChild(5).transform.GetChild(0).transform.position, range, mask))
         {
+            Debug.Log("hit");
             if (Physics.Raycast(rayCastPosition.position, c.gameObject.transform.position - rayCastPosition.position, out hit, mask))
             {
                 hit.collider.gameObject.GetComponent<Rigidbody>().AddForce(-hit.normal * 8, ForceMode.Impulse);
@@ -45,7 +46,7 @@ public class SwordScriptObj : WeaponAbstract
         stats.currentWeapon = null;
 
         var pickUpClone = Instantiate(pickUpItem.pickUpPrefab, pos.position, pos.rotation);
-        pickUpClone.transform.rotation = Quaternion.Euler(90, 0, 0);
         Destroy(clone);
     }
+    
 }
