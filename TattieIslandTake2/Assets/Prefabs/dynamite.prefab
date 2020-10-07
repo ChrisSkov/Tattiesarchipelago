@@ -145,6 +145,7 @@ MonoBehaviour:
   explosionVFX: {fileID: 1029920829223762, guid: b5195f1bc5ffde8498b6de71ce48a806, type: 3}
   timer: 0
   timeBeforeBoom: 0.8
+  stats: {fileID: 11400000, guid: abbefdc95bfbf2e41906e1d8d2a9d271, type: 2}
 --- !u!1 &7931218919336383697
 GameObject:
   m_ObjectHideFlags: 0

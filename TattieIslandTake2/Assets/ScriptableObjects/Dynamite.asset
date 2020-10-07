@@ -17,9 +17,11 @@ MonoBehaviour:
   rightClickDamage: 0
   timeBetweenAttacks: 0
   isRightHanded: 1
-  range: 1.08
+  range: 3
+  force: 10
   pickUp: 0
   hitSound: {fileID: 0}
   animOverride: {fileID: 22100000, guid: 93709fbc56be559488f0d8b8b73fd596, type: 2}
   stats: {fileID: 11400000, guid: d66d5124d742a3c44820ab8d1c02d69b, type: 2}
   pickUpItem: {fileID: 11400000, guid: 41f830d98033e2d46ad467139c4be6ea, type: 2}
+  throwForce: 10

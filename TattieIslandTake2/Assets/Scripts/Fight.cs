@@ -103,7 +103,15 @@ public class Fight : MonoBehaviour
 
     void AnimEvent()
     {
-        meleeWeapon.leftClickAttack(stats.activeHand, gameObject.transform, GetComponent<AudioSource>());
+        if (stats.currentWeapon.name == "Dynamite")
+        {
+            meleeWeapon.leftClickAttack(transform.GetChild(0).transform, gameObject.transform, GetComponent<AudioSource>());
+
+        }
+        else
+        {
+            meleeWeapon.leftClickAttack(stats.activeHand, gameObject.transform, GetComponent<AudioSource>());
+        }
     }
 
     private void OnDrawGizmos()

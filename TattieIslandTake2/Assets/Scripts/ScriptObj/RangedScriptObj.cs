@@ -5,6 +5,7 @@ using UnityEngine;
 public class RangedScriptObj : WeaponAbstract
 {
     GameObject clone;
+    public float throwForce;
     public override void OnPickUp(Transform pos)
     {
         clone = Instantiate(weaponPrefab, pos.position, pos.rotation);
@@ -33,7 +34,7 @@ public class RangedScriptObj : WeaponAbstract
         Destroy(clone);
         GameObject clone2 = Instantiate(weaponPrefab, pos.position, pos.rotation);
         // clone.AddComponent<CapsuleCollider>();
-        clone2.AddComponent<Rigidbody>().AddRelativeForce(Vector3.forward * 6, ForceMode.Impulse);
+        clone2.AddComponent<Rigidbody>().AddRelativeForce(Vector3.forward * throwForce, ForceMode.Impulse);
         clone2.GetComponent<Explode>().startExplosionTimer = true;
         stats.currentWeapon = null;
     }
