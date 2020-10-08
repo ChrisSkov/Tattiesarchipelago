@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DestroyMe : MonoBehaviour
 {
-        [SerializeField] float destroyTime = 2f;
+    [SerializeField] float destroyTime = 2f;
 
 
     // Start is called before the first frame update

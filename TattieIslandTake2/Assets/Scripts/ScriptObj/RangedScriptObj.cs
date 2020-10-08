@@ -12,7 +12,6 @@ public class RangedScriptObj : WeaponAbstract
         clone = Instantiate(weaponPrefab, pos.position, pos.rotation);
         clone.transform.SetParent(pos);
         clone.transform.rotation = Quaternion.Euler(0,0,00);
-       // clone.transform.rotation = Quaternion.Euler(90,0,0);
         stats.currentWeapon = this;
     }
 
@@ -36,7 +35,6 @@ public class RangedScriptObj : WeaponAbstract
     {
         Destroy(clone);
         GameObject clone2 = Instantiate(weaponPrefab, pos.position, pos.rotation);
-        // clone.AddComponent<CapsuleCollider>();
         clone2.AddComponent<Rigidbody>().AddRelativeForce(Vector3.forward * throwForce, ForceMode.Impulse);
         clone2.GetComponent<Explode>().startExplosionTimer = true;
         stats.currentWeapon = null;
@@ -46,7 +44,6 @@ public class RangedScriptObj : WeaponAbstract
     {
         Destroy(clone);
         GameObject clone2 = Instantiate(weaponPrefab, pos.position, pos.rotation);
-        // clone.AddComponent<CapsuleCollider>();
         clone2.AddComponent<Rigidbody>().AddRelativeForce(Vector3.forward * force, ForceMode.Impulse);
         clone2.GetComponent<Explode>().startExplosionTimer = true;
         stats.currentWeapon = null;

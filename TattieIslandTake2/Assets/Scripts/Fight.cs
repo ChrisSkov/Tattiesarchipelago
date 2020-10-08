@@ -21,30 +21,21 @@ public class Fight : MonoBehaviour
     {
 
         anim = GetComponent<Animator>();
+        Physics.IgnoreLayerCollision(10, 12);
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(stats.canAttack == false)
+        return;
         DefaultWeaponBehavior();
         PickUpWeapon();
-        Physics.IgnoreLayerCollision(10, 12);
         HandManagement();
         DropWeapon();
         DetermineWeaponType();
         StandardWeaponAttack();
         ThrowWeaponAttack();
-        if (weaponInHand.isRightHanded)
-        {
-            stats.activeHand = rightHand;
-        }
-        else
-        {
-            stats.activeHand = leftHand;
-        }
-
-
-
     }
 
     private void PickUpWeapon()

@@ -10,10 +10,13 @@ public class PlayerStats : ScriptableObject
     public bool closeToPickUp;
     public bool hasThrowable;
     public float maxMoveSpeed;
+    public float stepSoundDelay;
     public float currentMoveSpeed;
     public float maxHealth;
     public float currentHealth;
-    public float stepSoundDelay;
+    public bool isDead;
+    public bool canMove;
+    public bool canAttack;
     public AudioClip walkSound;
     public AudioSource source;
 

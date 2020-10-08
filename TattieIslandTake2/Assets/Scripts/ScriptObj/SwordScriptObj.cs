@@ -19,10 +19,13 @@ public class SwordScriptObj : WeaponAbstract
         LayerMask mask = LayerMask.GetMask("Enemy");
         foreach (Collider c in Physics.OverlapSphere(pos.GetChild(0).transform.GetChild(0).transform.position, range, mask))
         {
-            Debug.Log("hit");
             if (Physics.Raycast(rayCastPosition.position, c.gameObject.transform.position - rayCastPosition.position, out hit, mask))
             {
                 hit.collider.gameObject.GetComponent<Rigidbody>().AddForce(-hit.normal * 8, ForceMode.Impulse);
+                if (hit.collider.gameObject.GetComponent<EnemyHealth>() != null)
+                {
+                    hit.collider.gameObject.GetComponent<EnemyHealth>().TakeDamage(leftClickDamage);
+                }
                 source.PlayOneShot(stats.currentWeapon.hitSound);
 
             }
