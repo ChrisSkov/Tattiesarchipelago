@@ -118,6 +118,8 @@ public class Fight : MonoBehaviour
 
     private void DetermineWeaponType()
     {
+        if(weaponInHand == null)
+        return;
         if (weaponInHand.isThrowWeapon)
         {
             stats.hasThrowable = true;

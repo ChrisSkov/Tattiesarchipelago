@@ -26,13 +26,13 @@ public class Explode : MonoBehaviour
                 RaycastHit hit;
                 foreach (Collider c in Physics.OverlapSphere(transform.position, stats.range, mask))
                 {
+                    if (c.gameObject.GetComponent<EnemyHealth>() != null)
+                    {
+                        c.gameObject.GetComponent<EnemyHealth>().TakeDamage(stats.leftClickDamage);
+                    }
                     if (Physics.Raycast(transform.position, c.gameObject.transform.position - transform.position, out hit, mask))
                     {
                         hit.collider.gameObject.GetComponent<Rigidbody>().AddForce(-hit.normal * stats.force, ForceMode.Impulse);
-                        if (hit.collider.gameObject.GetComponent<EnemyHealth>() != null)
-                        {
-                            hit.collider.gameObject.GetComponent<EnemyHealth>().TakeDamage(stats.leftClickDamage);
-                        }
 
                     }
                 }

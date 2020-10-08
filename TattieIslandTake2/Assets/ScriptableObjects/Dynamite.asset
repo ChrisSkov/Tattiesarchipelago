@@ -18,7 +18,7 @@ MonoBehaviour:
   rightClickDamage: 0
   timeBetweenAttacks: 0
   isRightHanded: 1
-  range: 3
+  range: 2
   force: 10
   pickUp: 0
   hitSound: {fileID: 0}
