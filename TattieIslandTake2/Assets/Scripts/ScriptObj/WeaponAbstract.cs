@@ -22,5 +22,5 @@ public abstract class WeaponAbstract : ScriptableObject
     public abstract void triggerAttack(Animator anim, string trigger);
     public abstract void OnPickUp(Transform pos);
     public abstract void DropWeapon(Transform pos);
-    public abstract void attack(Transform pos, float throwForce);
+    public abstract void attack(Transform pos, float throwForce, AudioSource source);
 }

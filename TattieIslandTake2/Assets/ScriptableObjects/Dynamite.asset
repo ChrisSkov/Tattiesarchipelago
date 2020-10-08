@@ -21,8 +21,9 @@ MonoBehaviour:
   range: 2
   force: 10
   pickUp: 0
-  hitSound: {fileID: 0}
+  hitSound: {fileID: 8300000, guid: ea82ddb032396d648a4accb8c20c9140, type: 3}
   animOverride: {fileID: 22100000, guid: 93709fbc56be559488f0d8b8b73fd596, type: 2}
   stats: {fileID: 11400000, guid: d66d5124d742a3c44820ab8d1c02d69b, type: 2}
   pickUpItem: {fileID: 11400000, guid: 41f830d98033e2d46ad467139c4be6ea, type: 2}
   throwForce: 10
+  throwSound: {fileID: 8300000, guid: 05273ac0e8d9e76448462f82dd6db3dd, type: 3}

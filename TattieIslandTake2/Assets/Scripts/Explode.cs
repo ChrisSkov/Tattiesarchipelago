@@ -10,7 +10,7 @@ public class Explode : MonoBehaviour
     public float timeBeforeBoom = 1f;
     public WeaponAbstract stats;
     bool hasBlownUp = false;
-
+   
 
     // Update is called once per frame
     void Update()
@@ -21,6 +21,8 @@ public class Explode : MonoBehaviour
             if (timer >= timeBeforeBoom && !hasBlownUp)
             {
                 hasBlownUp = true;
+                AudioSource source= GetComponent<AudioSource>();
+                source.PlayOneShot(stats.hitSound);
                 Instantiate(explosionVFX, transform.position, transform.rotation);
                 LayerMask mask = LayerMask.GetMask("Enemy");
                 RaycastHit hit;
@@ -36,7 +38,7 @@ public class Explode : MonoBehaviour
 
                     }
                 }
-                Destroy(gameObject);
+                Destroy(gameObject, 1.4f);
             }
         }
     }

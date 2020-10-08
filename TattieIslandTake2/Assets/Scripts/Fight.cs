@@ -15,11 +15,11 @@ public class Fight : MonoBehaviour
     Animator anim;
     public PlayerStats stats;
     public float force = 0f;
-
+    AudioSource source;
     // Start is called before the first frame update
     void Start()
     {
-
+        source = GetComponent<AudioSource>();
         anim = GetComponent<Animator>();
         Physics.IgnoreLayerCollision(10, 12);
     }
@@ -27,8 +27,8 @@ public class Fight : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(stats.canAttack == false)
-        return;
+        if (stats.canAttack == false)
+            return;
         DefaultWeaponBehavior();
         PickUpWeapon();
         HandManagement();
@@ -118,8 +118,8 @@ public class Fight : MonoBehaviour
 
     private void DetermineWeaponType()
     {
-        if(weaponInHand == null)
-        return;
+        if (weaponInHand == null)
+            return;
         if (weaponInHand.isThrowWeapon)
         {
             stats.hasThrowable = true;
@@ -155,12 +155,12 @@ public class Fight : MonoBehaviour
     {
         if (stats.hasThrowable)
         {
-            weaponInHand.attack(transform.GetChild(0).transform, force);
+            weaponInHand.attack(transform.GetChild(0).transform, force, source);
             force = 0f;
         }
         else
         {
-            weaponInHand.leftClickAttack(stats.activeHand, gameObject.transform, GetComponent<AudioSource>());
+            weaponInHand.leftClickAttack(stats.activeHand, gameObject.transform, source);
         }
     }
 

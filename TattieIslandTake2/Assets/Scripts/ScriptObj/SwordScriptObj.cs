@@ -52,7 +52,7 @@ public class SwordScriptObj : WeaponAbstract
         Destroy(clone);
     }
 
-    public override void attack(Transform pos, float throwForce)
+    public override void attack(Transform pos, float throwForce, AudioSource source)
     {
         throw new System.NotImplementedException();
     }

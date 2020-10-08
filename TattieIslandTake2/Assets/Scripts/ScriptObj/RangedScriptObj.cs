@@ -6,6 +6,7 @@ public class RangedScriptObj : WeaponAbstract
 {
     GameObject clone;
     public float throwForce;
+    public AudioClip throwSound;
     public override void OnPickUp(Transform pos)
     {
 
@@ -40,12 +41,13 @@ public class RangedScriptObj : WeaponAbstract
         stats.currentWeapon = null;
     }
 
-    public override void attack(Transform pos, float force)
+    public override void attack(Transform pos, float force, AudioSource source)
     {
         Destroy(clone);
         GameObject clone2 = Instantiate(weaponPrefab, pos.position, pos.rotation);
         clone2.AddComponent<Rigidbody>().AddRelativeForce(Vector3.forward * force, ForceMode.Impulse);
         clone2.GetComponent<Explode>().startExplosionTimer = true;
+        source.PlayOneShot(throwSound);
         stats.currentWeapon = null;
     }
 
