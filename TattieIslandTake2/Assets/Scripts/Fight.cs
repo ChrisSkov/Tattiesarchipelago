@@ -16,7 +16,7 @@ public class Fight : MonoBehaviour
     public PlayerStats stats;
     public float force = 0f;
     AudioSource source;
-    bool hasWeapon = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -101,16 +101,16 @@ public class Fight : MonoBehaviour
             return;
 
 
+        if (weaponInHand.isRightHanded)
+        {
+            stats.activeHand = rightHand;
+        }
+        else
+        {
+            stats.activeHand = leftHand;
+        }
         if (weaponInHand.pickUp == true)
         {
-            if (weaponInHand.isRightHanded)
-            {
-                stats.activeHand = rightHand;
-            }
-            else
-            {
-                stats.activeHand = leftHand;
-            }
             weaponInHand.OnPickUp(stats.activeHand);
         }
         weaponInHand.pickUp = false;
