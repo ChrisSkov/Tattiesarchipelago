@@ -6,6 +6,7 @@ using UnityEngine;
 public class PlayerStats : ScriptableObject
 {
     public WeaponAbstract currentWeapon;
+    public WeaponAbstract sheathedWeapon;
     public Transform activeHand;
     public bool closeToPickUp;
     public bool hasThrowable;

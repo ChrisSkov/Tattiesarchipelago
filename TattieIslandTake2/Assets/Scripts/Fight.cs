@@ -9,13 +9,14 @@ public class Fight : MonoBehaviour
     public Transform rightHand;
     public WeaponAbstract weaponInHand = null;
     public WeaponAbstract defaultWeapon;
-
+    public WeaponAbstract sheathedWeapon;
     Vector3 mouseWorldPositon = Vector3.zero;
 
     Animator anim;
     public PlayerStats stats;
     public float force = 0f;
     AudioSource source;
+    bool hasWeapon = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +37,13 @@ public class Fight : MonoBehaviour
         DetermineWeaponType();
         StandardWeaponAttack();
         ThrowWeaponAttack();
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            stats.sheathedWeapon = stats.currentWeapon;
+            stats.currentWeapon = sheathedWeapon;
+            sheathedWeapon = stats.sheathedWeapon;
+        }
     }
 
     private void PickUpWeapon()
@@ -61,7 +69,10 @@ public class Fight : MonoBehaviour
                     weaponInHand = newWeapon;
                     if (stats.currentWeapon != defaultWeapon)
                     {
-                        stats.currentWeapon.DropWeapon(stats.activeHand);
+                        sheathedWeapon = stats.currentWeapon;
+                        stats.sheathedWeapon = sheathedWeapon;
+                        //  stats.currentWeapon.DropWeapon(stats.activeHand);
+
                     }
                     Destroy(weaponToPickUp);
                     stats.closeToPickUp = false;
