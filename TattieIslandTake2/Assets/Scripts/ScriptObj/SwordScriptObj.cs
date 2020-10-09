@@ -61,6 +61,7 @@ public class SwordScriptObj : WeaponAbstract
     {
         clone.transform.SetParent(pos);
         clone.transform.position = pos.position;
+        clone.transform.rotation = pos.rotation;
 
     }
 
@@ -68,5 +69,6 @@ public class SwordScriptObj : WeaponAbstract
     {
         clone.transform.SetParent(pos);
         clone.transform.position = pos.position;
+        clone.transform.rotation = pos.rotation;
     }
 }

@@ -39,7 +39,6 @@ public class Fight : MonoBehaviour
         DetermineWeaponType();
         StandardWeaponAttack();
         ThrowWeaponAttack();
-        print(stats.activeHand);
         if (Input.GetKeyDown(KeyCode.R))
         {
             stats.sheathedWeapon = stats.currentWeapon;
