@@ -12,7 +12,7 @@ public class RangedScriptObj : WeaponAbstract
 
         clone = Instantiate(weaponPrefab, pos.position, pos.rotation);
         clone.transform.SetParent(pos);
-        clone.transform.rotation = Quaternion.Euler(0,0,00);
+        clone.transform.rotation = Quaternion.Euler(0, 0, 00);
         stats.currentWeapon = this;
     }
 
@@ -55,6 +55,15 @@ public class RangedScriptObj : WeaponAbstract
     {
         throw new System.NotImplementedException();
     }
+    public override void SheathWeapon(Transform pos)
+    {
+        clone.transform.SetParent(pos);
+        clone.transform.position = pos.position;
+    }
 
-
+    public override void UnSheathWeapon(Transform pos)
+    {
+        clone.transform.SetParent(pos);
+        clone.transform.position = pos.position;
+    }
 }

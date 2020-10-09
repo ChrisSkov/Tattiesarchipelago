@@ -59,4 +59,16 @@ public class MeleeScriptObj : WeaponAbstract
     {
         throw new System.NotImplementedException();
     }
+
+    public override void SheathWeapon(Transform pos)
+    {
+        clone.transform.SetParent(pos);
+        clone.transform.position = pos.position;
+    }
+
+    public override void UnSheathWeapon(Transform pos)
+    {
+        clone.transform.SetParent(pos);
+        clone.transform.position = pos.position;
+    }
 }

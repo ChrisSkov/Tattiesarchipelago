@@ -7,9 +7,10 @@ public class Fight : MonoBehaviour
 
     public Transform leftHand;
     public Transform rightHand;
+    public Transform sheathedWeaponHolder;
     public WeaponAbstract weaponInHand = null;
-    public WeaponAbstract defaultWeapon;
     public WeaponAbstract sheathedWeapon;
+    public WeaponAbstract defaultWeapon;
     Vector3 mouseWorldPositon = Vector3.zero;
 
     Animator anim;
@@ -23,6 +24,7 @@ public class Fight : MonoBehaviour
         source = GetComponent<AudioSource>();
         anim = GetComponent<Animator>();
         Physics.IgnoreLayerCollision(10, 12);
+        defaultWeapon.OnPickUp(stats.activeHand);
     }
 
     // Update is called once per frame
@@ -37,12 +39,23 @@ public class Fight : MonoBehaviour
         DetermineWeaponType();
         StandardWeaponAttack();
         ThrowWeaponAttack();
-
+        print(stats.activeHand);
         if (Input.GetKeyDown(KeyCode.R))
         {
             stats.sheathedWeapon = stats.currentWeapon;
+            stats.sheathedWeapon.SheathWeapon(sheathedWeaponHolder);
             stats.currentWeapon = sheathedWeapon;
             sheathedWeapon = stats.sheathedWeapon;
+            if (stats.currentWeapon.isRightHanded)
+            {
+
+                stats.currentWeapon.UnSheathWeapon(rightHand);
+            }
+            else
+            {
+                stats.currentWeapon.UnSheathWeapon(leftHand);
+
+            }
         }
     }
 
