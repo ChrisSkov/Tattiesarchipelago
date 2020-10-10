@@ -41,6 +41,7 @@ public class Fight : MonoBehaviour
         DetermineWeaponType();
         StandardWeaponAttack();
         ThrowWeaponAttack();
+        RightClickAttack();
         if (Input.GetKeyDown(KeyCode.R))
         {
 
@@ -92,7 +93,8 @@ public class Fight : MonoBehaviour
                         stats.sheathedWeapon = sheathedWeapon;
                         stats.sheathedWeapon.SheathWeapon(sheathedWeaponHolder);
                     }
-                    else{
+                    else
+                    {
                         sheathedWeapon.DropWeapon(stats.activeHand);
                         sheathedWeapon = defaultWeapon;
                     }
@@ -174,7 +176,16 @@ public class Fight : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Mouse0) && !stats.hasThrowable && timer >= weaponInHand.timeBetweenAttacks)
         {
-            weaponInHand.triggerAttack(anim, "attack");
+            weaponInHand.TriggerAttack(anim, "attack");
+            timer = 0f;
+        }
+    }
+
+    void RightClickAttack()
+    {
+        if (Input.GetKeyDown(KeyCode.Mouse1) && !stats.hasThrowable && timer >= weaponInHand.timeBetweenAttacks)
+        {
+            weaponInHand.TriggerAttack(anim, "rightClick");
             timer = 0f;
         }
     }
@@ -187,7 +198,7 @@ public class Fight : MonoBehaviour
         }
         else if (Input.GetKeyUp(KeyCode.Mouse0) && stats.hasThrowable)
         {
-            weaponInHand.triggerAttack(anim, "attack");
+            weaponInHand.TriggerAttack(anim, "attack");
 
         }
     }
@@ -196,13 +207,18 @@ public class Fight : MonoBehaviour
     {
         if (stats.hasThrowable)
         {
-            weaponInHand.attack(transform.GetChild(0).transform, force, source);
+            weaponInHand.Attack(transform.GetChild(0).transform, force, source);
             force = 0f;
         }
         else
         {
-            weaponInHand.leftClickAttack(stats.activeHand, gameObject.transform, source);
+            weaponInHand.LeftClickAttack(stats.activeHand, gameObject.transform, source);
         }
+    }
+
+    void AnimEventRightClick()
+    {
+        weaponInHand.RightClickAttack(stats.activeHand, gameObject.transform, source);
     }
 
     void CanAttack()

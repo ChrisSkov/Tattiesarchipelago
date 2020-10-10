@@ -5,7 +5,7 @@ using UnityEngine;
 public class SwordScriptObj : WeaponAbstract
 {
     GameObject clone;
-    public override void triggerAttack(Animator anim, string trigger)
+    public override void TriggerAttack(Animator anim, string trigger)
     {
         if (stats.currentWeapon.animOverride != null)
         {
@@ -13,7 +13,7 @@ public class SwordScriptObj : WeaponAbstract
         }
         anim.SetTrigger(trigger);
     }
-    public override void leftClickAttack(Transform pos, Transform rayCastPosition, AudioSource source)
+    public override void LeftClickAttack(Transform pos, Transform rayCastPosition, AudioSource source)
     {
         RaycastHit hit;
         LayerMask mask = LayerMask.GetMask("Enemy");
@@ -32,7 +32,7 @@ public class SwordScriptObj : WeaponAbstract
         }
     }
 
-    public override void rightClickAttack(Transform pos)
+    public override void RightClickAttack(Transform pos, Transform rayCastPosition, AudioSource source)
     {
         throw new System.NotImplementedException();
     }
@@ -52,7 +52,7 @@ public class SwordScriptObj : WeaponAbstract
         Destroy(clone);
     }
 
-    public override void attack(Transform pos, float throwForce, AudioSource source)
+    public override void Attack(Transform pos, float throwForce, AudioSource source)
     {
         throw new System.NotImplementedException();
     }

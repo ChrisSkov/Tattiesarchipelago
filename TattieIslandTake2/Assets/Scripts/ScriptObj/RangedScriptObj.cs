@@ -24,7 +24,7 @@ public class RangedScriptObj : WeaponAbstract
         pickUpClone.transform.rotation = Quaternion.Euler(90, 0, 0);
         Destroy(clone);
     }
-    public override void triggerAttack(Animator anim, string trigger)
+    public override void TriggerAttack(Animator anim, string trigger)
     {
         if (stats.currentWeapon.animOverride != null)
         {
@@ -32,7 +32,7 @@ public class RangedScriptObj : WeaponAbstract
         }
         anim.SetTrigger(trigger);
     }
-    public override void leftClickAttack(Transform pos, Transform rayCastPosition, AudioSource source)
+    public override void LeftClickAttack(Transform pos, Transform rayCastPosition, AudioSource source)
     {
         Destroy(clone);
         GameObject clone2 = Instantiate(weaponPrefab, pos.position, pos.rotation);
@@ -41,7 +41,7 @@ public class RangedScriptObj : WeaponAbstract
         stats.currentWeapon = null;
     }
 
-    public override void attack(Transform pos, float force, AudioSource source)
+    public override void Attack(Transform pos, float force, AudioSource source)
     {
         Destroy(clone);
         GameObject clone2 = Instantiate(weaponPrefab, pos.position, pos.rotation);
@@ -51,7 +51,7 @@ public class RangedScriptObj : WeaponAbstract
         stats.currentWeapon = null;
     }
 
-    public override void rightClickAttack(Transform pos)
+    public override void RightClickAttack(Transform pos, Transform rayCastPosition, AudioSource source)
     {
         throw new System.NotImplementedException();
     }

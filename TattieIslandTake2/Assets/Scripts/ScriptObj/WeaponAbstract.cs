@@ -17,12 +17,12 @@ public abstract class WeaponAbstract : ScriptableObject
     public AnimatorOverrideController animOverride;
     public PlayerStats stats;
     public PickUpScriptObj pickUpItem;
-    public abstract void leftClickAttack(Transform pos, Transform rayCastPosition, AudioSource source);
-    public abstract void rightClickAttack(Transform pos);
-    public abstract void triggerAttack(Animator anim, string trigger);
+    public abstract void LeftClickAttack(Transform pos, Transform rayCastPosition, AudioSource source);
+    public abstract void RightClickAttack(Transform pos, Transform rayCastPosition, AudioSource source);
+    public abstract void TriggerAttack(Animator anim, string trigger);
     public abstract void OnPickUp(Transform pos);
     public abstract void DropWeapon(Transform pos);
-    public abstract void attack(Transform pos, float throwForce, AudioSource source);
+    public abstract void Attack(Transform pos, float throwForce, AudioSource source);
     public abstract void SheathWeapon(Transform pos);
     public abstract void UnSheathWeapon(Transform pos);
 
