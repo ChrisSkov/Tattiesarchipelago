@@ -79,11 +79,12 @@ public class Fight : MonoBehaviour
                 {
                     newWeapon.pickUp = true;
                     weaponInHand = newWeapon;
+                    anim.runtimeAnimatorController = weaponInHand.animOverride;
                     if (stats.currentWeapon != defaultWeapon)
                     {
                         sheathedWeapon = stats.currentWeapon;
                         stats.sheathedWeapon = sheathedWeapon;
-                        //  stats.currentWeapon.DropWeapon(stats.activeHand);
+                        stats.sheathedWeapon.SheathWeapon(sheathedWeaponHolder);
 
                     }
                     Destroy(weaponToPickUp);
@@ -103,6 +104,7 @@ public class Fight : MonoBehaviour
         {
             stats.currentWeapon = defaultWeapon;
             stats.activeHand = leftHand;
+
         }
         weaponInHand = stats.currentWeapon;
     }
@@ -137,6 +139,7 @@ public class Fight : MonoBehaviour
         {
             weaponInHand.DropWeapon(stats.activeHand);
         }
+        anim.runtimeAnimatorController = weaponInHand.animOverride;
     }
 
     private void DetermineWeaponType()
@@ -185,6 +188,17 @@ public class Fight : MonoBehaviour
         {
             weaponInHand.leftClickAttack(stats.activeHand, gameObject.transform, source);
         }
+    }
+
+    void CanAttack()
+    {
+        anim.SetBool("canAttack", true);
+    }
+
+    void CannotAttack()
+    {
+        anim.SetBool("canAttack", false);
+
     }
 
 }

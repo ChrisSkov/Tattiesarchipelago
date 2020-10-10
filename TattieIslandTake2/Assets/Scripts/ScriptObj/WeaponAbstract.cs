@@ -25,4 +25,5 @@ public abstract class WeaponAbstract : ScriptableObject
     public abstract void attack(Transform pos, float throwForce, AudioSource source);
     public abstract void SheathWeapon(Transform pos);
     public abstract void UnSheathWeapon(Transform pos);
+
 }

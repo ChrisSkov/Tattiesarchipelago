@@ -9,16 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb50884c8b79ecd45b9256346dc9ec24, type: 3}
-  m_Name: SavageEnemy
+  m_Script: {fileID: 11500000, guid: 28ccd21472de5d84ba45f51ab6066cfa, type: 3}
+  m_Name: ShotgunPickup
   m_EditorClassIdentifier: 
-  moveSpeed: 3
-  fleeSpeed: 4
-  chaseRange: 10
-  attackRange: 2.6
-  damage: 35
-  timeBetweenAttacks: 4
-  maxHp: 100
-  fleeOnLowHealth: 1
-  fleeThreshold: 30
-  destroyTime: 1
+  pickUpPrefab: {fileID: 3919282947436684549, guid: ceff2dca90f72024594e84d7c6ff7dbf, type: 3}
+  pickUpRadius: 1
