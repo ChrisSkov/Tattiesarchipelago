@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: FarmerTattie
   m_EditorClassIdentifier: 
   currentWeapon: {fileID: 11400000, guid: dc3cdc0d982f07142bef657368a49217, type: 2}
+  sheathedWeapon: {fileID: 11400000, guid: dc3cdc0d982f07142bef657368a49217, type: 2}
   activeHand: {fileID: 0}
   closeToPickUp: 1
   hasThrowable: 0

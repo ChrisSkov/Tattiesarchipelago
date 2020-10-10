@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponPrefab: {fileID: 2229534974288466709, guid: c5ac01eb12f2a0a42a2bd25f3d6a7b70, type: 3}
   isThrowWeapon: 0
-  leftClickDamage: 35
+  leftClickDamage: 25
   rightClickDamage: 15
-  timeBetweenAttacks: 2
+  timeBetweenAttacks: 1
   isRightHanded: 0
   range: 1
   force: 0

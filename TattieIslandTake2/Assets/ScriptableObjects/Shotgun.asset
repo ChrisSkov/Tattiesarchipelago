@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponPrefab: {fileID: 2100338803721662578, guid: 874b5c5dbf04b1c439377cab4577d441, type: 3}
   isThrowWeapon: 0
-  leftClickDamage: 35
+  leftClickDamage: 50
   rightClickDamage: 10
-  timeBetweenAttacks: 1.2
+  timeBetweenAttacks: 2
   isRightHanded: 1
   range: 8
   force: 14
@@ -27,3 +27,4 @@ MonoBehaviour:
   pickUpItem: {fileID: 11400000, guid: 9712cac3198077549a2455e5ff7260f0, type: 2}
   particles: {fileID: 2036393232416015992, guid: 74097afc5cd4ef84b8d3cbf9ce7eb4cd, type: 3}
   coneCollider: {fileID: 5652708467791827936, guid: 02efda1a207b0ae47889ad638fa30993, type: 3}
+  shootSound: {fileID: 8300000, guid: 98de0fb752ada804b801fdf2311ade40, type: 3}

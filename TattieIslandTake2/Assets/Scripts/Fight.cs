@@ -17,6 +17,7 @@ public class Fight : MonoBehaviour
     public PlayerStats stats;
     public float force = 0f;
     AudioSource source;
+    public float timer = Mathf.Infinity;
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +25,8 @@ public class Fight : MonoBehaviour
         source = GetComponent<AudioSource>();
         anim = GetComponent<Animator>();
         Physics.IgnoreLayerCollision(10, 12);
-        defaultWeapon.OnPickUp(stats.activeHand);
+        defaultWeapon.OnPickUp(rightHand);
+
     }
 
     // Update is called once per frame
@@ -41,6 +43,7 @@ public class Fight : MonoBehaviour
         ThrowWeaponAttack();
         if (Input.GetKeyDown(KeyCode.R))
         {
+
             stats.sheathedWeapon = stats.currentWeapon;
             stats.sheathedWeapon.SheathWeapon(sheathedWeaponHolder);
             stats.currentWeapon = sheathedWeapon;
@@ -56,6 +59,8 @@ public class Fight : MonoBehaviour
 
             }
         }
+        timer += Time.deltaTime;
+
     }
 
     private void PickUpWeapon()
@@ -80,13 +85,22 @@ public class Fight : MonoBehaviour
                     newWeapon.pickUp = true;
                     weaponInHand = newWeapon;
                     anim.runtimeAnimatorController = weaponInHand.animOverride;
-                    if (stats.currentWeapon != defaultWeapon)
+
+                    if (sheathedWeapon == defaultWeapon)
                     {
                         sheathedWeapon = stats.currentWeapon;
                         stats.sheathedWeapon = sheathedWeapon;
                         stats.sheathedWeapon.SheathWeapon(sheathedWeaponHolder);
-
                     }
+                    else{
+                        sheathedWeapon.DropWeapon(stats.activeHand);
+                        sheathedWeapon = defaultWeapon;
+                    }
+
+
+
+
+
                     Destroy(weaponToPickUp);
                     stats.closeToPickUp = false;
                 }
@@ -158,9 +172,10 @@ public class Fight : MonoBehaviour
 
     private void StandardWeaponAttack()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0) && !stats.hasThrowable)
+        if (Input.GetKeyDown(KeyCode.Mouse0) && !stats.hasThrowable && timer >= weaponInHand.timeBetweenAttacks)
         {
             weaponInHand.triggerAttack(anim, "attack");
+            timer = 0f;
         }
     }
 

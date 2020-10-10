@@ -13,11 +13,13 @@ MonoBehaviour:
   m_Name: Sword2
   m_EditorClassIdentifier: 
   weaponPrefab: {fileID: 1033960063214299627, guid: bcdd8243e2f5b384dace52982cf094f7, type: 3}
-  leftClickDamage: 10
+  isThrowWeapon: 0
+  leftClickDamage: 30
   rightClickDamage: 15
-  timeBetweenAttacks: 2
+  timeBetweenAttacks: 1.5
   isRightHanded: 1
   range: 1
+  force: 0
   pickUp: 0
   hitSound: {fileID: 8300000, guid: 43243f92f398aa743a7cc03e4b048c72, type: 3}
   animOverride: {fileID: 22100000, guid: 601e76c461e30a34eabc948658c52e0c, type: 2}

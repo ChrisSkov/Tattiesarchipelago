@@ -83,13 +83,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1184305914}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0.05715249, y: 0.11501104, z: 0.5637918, w: 0.81587064}
+  m_LocalPosition: {x: 0.01, y: 1.225, z: -0.46}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8501936937698113528}
   m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -12.882, y: 7.262, z: 68.47}
 --- !u!1 &4305655499374501115
 GameObject:
   m_ObjectHideFlags: 0
@@ -374,8 +374,8 @@ MonoBehaviour:
   leftHand: {fileID: 1136494646437743289}
   rightHand: {fileID: 4340534822005407854}
   sheathedWeaponHolder: {fileID: 1184305915}
-  weaponInHand: {fileID: 0}
-  sheathedWeapon: {fileID: 0}
+  weaponInHand: {fileID: 11400000, guid: dc3cdc0d982f07142bef657368a49217, type: 2}
+  sheathedWeapon: {fileID: 11400000, guid: dc3cdc0d982f07142bef657368a49217, type: 2}
   defaultWeapon: {fileID: 11400000, guid: dc3cdc0d982f07142bef657368a49217, type: 2}
   stats: {fileID: 11400000, guid: d66d5124d742a3c44820ab8d1c02d69b, type: 2}
   force: 0
