@@ -67,5 +67,6 @@ public class EnemyHealth : MonoBehaviour
     {
         currentHp -= damage;
         health.UpdateHealthBar(currentHp);
+        anim.SetTrigger("isHit");
     }
 }

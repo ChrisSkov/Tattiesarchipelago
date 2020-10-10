@@ -19,7 +19,6 @@ public class PlayerStats : ScriptableObject
     public bool canMove;
     public bool canAttack;
     public AudioClip walkSound;
-    public AudioSource source;
-
+    public AudioClip deathSound;
 }
 

@@ -379,6 +379,7 @@ MonoBehaviour:
   defaultWeapon: {fileID: 11400000, guid: dc3cdc0d982f07142bef657368a49217, type: 2}
   stats: {fileID: 11400000, guid: d66d5124d742a3c44820ab8d1c02d69b, type: 2}
   force: 0
+  timer: Infinity
 --- !u!114 &6326105957598181474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -392,6 +393,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stats: {fileID: 11400000, guid: d66d5124d742a3c44820ab8d1c02d69b, type: 2}
+  deathScreen: {fileID: 0}
 --- !u!1 &8969957477003842585
 GameObject:
   m_ObjectHideFlags: 0
