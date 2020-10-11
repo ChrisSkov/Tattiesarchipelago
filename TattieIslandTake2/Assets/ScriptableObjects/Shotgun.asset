@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 626a586e8b8721440b16586cbe0df9d4, type: 3}
+  m_Name: Shotgun
+  m_EditorClassIdentifier: 
+  weaponPrefab: {fileID: 2100338803721662578, guid: 874b5c5dbf04b1c439377cab4577d441, type: 3}
+  isThrowWeapon: 0
+  leftClickDamage: 50
+  rightClickDamage: 10
+  timeBetweenAttacks: 2
+  isRightHanded: 1
+  range: 1
+  force: 14
+  pickUp: 0
+  hitSound: {fileID: 8300000, guid: 43243f92f398aa743a7cc03e4b048c72, type: 3}
+  animOverride: {fileID: 22100000, guid: c317f7b31c2d6e742b948bd951d2c96a, type: 2}
+  stats: {fileID: 11400000, guid: d66d5124d742a3c44820ab8d1c02d69b, type: 2}
+  pickUpItem: {fileID: 11400000, guid: 9712cac3198077549a2455e5ff7260f0, type: 2}
+  particles: {fileID: 2036393232416015992, guid: 74097afc5cd4ef84b8d3cbf9ce7eb4cd, type: 3}
+  coneCollider: {fileID: 5652708467791827936, guid: 02efda1a207b0ae47889ad638fa30993, type: 3}
+  shootSound: {fileID: 8300000, guid: 98de0fb752ada804b801fdf2311ade40, type: 3}

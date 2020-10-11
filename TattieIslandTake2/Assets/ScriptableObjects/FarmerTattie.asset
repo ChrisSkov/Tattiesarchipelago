@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0666a40a362e1a0409c9bf14269b478e, type: 3}
+  m_Name: FarmerTattie
+  m_EditorClassIdentifier: 
+  currentWeapon: {fileID: 11400000, guid: dc3cdc0d982f07142bef657368a49217, type: 2}
+  sheathedWeapon: {fileID: 11400000, guid: dc3cdc0d982f07142bef657368a49217, type: 2}
+  activeHand: {fileID: 0}
+  closeToPickUp: 1
+  hasThrowable: 0
+  maxMoveSpeed: 8.7
+  stepSoundDelay: 0.2
+  currentMoveSpeed: 6.93
+  maxHealth: 100
+  currentHealth: 100
+  isDead: 1
+  canMove: 1
+  canAttack: 1
+  walkSound: {fileID: 8300000, guid: 0275c3aefd04f344c9a9c03044e33bfc, type: 3}
+  deathSound: {fileID: 8300000, guid: 7d22e579568c3cb4b98ce36358cb9fd0, type: 3}

@@ -422,7 +422,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 57b90e2d129294548806a0bc74256d03, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -537,7 +537,6 @@ MonoBehaviour:
   currentHungerLevel: 0
   layEggCountDown: 0
   currentEnemyFear: 0
-  chickenName: 
   layEggTimer: 0
   healthRegenTimer: 0
 --- !u!114 &2720080778298822814
@@ -552,6 +551,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dfc1a6fadb19994591d8409d30569b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hpBar: {fileID: 6217462363273903894}
+  stats: {fileID: 11400000, guid: fc0b29047cd673f40838aeded7cb41eb, type: 2}
 --- !u!1 &1754005460542246013
 GameObject:
   m_ObjectHideFlags: 0
@@ -1819,3 +1820,14 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 698405160947307689, guid: 562b795173bedef4bb08f44bd1e7c500, type: 3}
   m_PrefabInstance: {fileID: 7502635013228954774}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6217462363273903894 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4491896257390230400, guid: 562b795173bedef4bb08f44bd1e7c500, type: 3}
+  m_PrefabInstance: {fileID: 7502635013228954774}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

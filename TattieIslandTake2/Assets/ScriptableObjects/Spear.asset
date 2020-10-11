@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1189cf116c88f4a4f8776e6b40485402, type: 3}
+  m_Name: Spear
+  m_EditorClassIdentifier: 
+  weaponPrefab: {fileID: 5271372890095054624, guid: 08bd5193bd74cc548b0b9ad1dabb94d8, type: 3}
+  leftClickDamage: 15
+  rightClickDamage: 10
+  timeBetweenAttacks: 2
+  isRightHanded: 1
+  range: 0.86
+  pickUp: 0
+  hitSound: {fileID: 8300000, guid: 43243f92f398aa743a7cc03e4b048c72, type: 3}
+  animOverride: {fileID: 22100000, guid: 073db2d9382d76c4484a1807c2086ed0, type: 2}
+  stats: {fileID: 11400000, guid: d66d5124d742a3c44820ab8d1c02d69b, type: 2}
+  pickUpItem: {fileID: 11400000, guid: dbbaa2a4a02875643bacbb1f9983ea0e, type: 2}

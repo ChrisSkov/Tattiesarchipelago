@@ -14,7 +14,6 @@ public class Shoot : MonoBehaviour
     AudioSource source;
     public bool canShoot = true;
     Animator anim;
-    EnemyHealth enemyHealth;
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +21,6 @@ public class Shoot : MonoBehaviour
         source = GetComponent<AudioSource>();
         shotgunShells = GameObject.FindGameObjectsWithTag("ShotgunShell");
         weapon.maxAmmo = shotgunShells.Length;
-        enemyHealth = GameObject.FindGameObjectWithTag("Enemy").GetComponent<EnemyHealth>();
         weapon.currentAmmo = weapon.maxAmmo;
         anim = GetComponent<Animator>();
     }

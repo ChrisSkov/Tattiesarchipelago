@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: d307307202999d44bba4105c05b5b2cb
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - stats: {fileID: 11400000, guid: d66d5124d742a3c44820ab8d1c02d69b, type: 2}
+  - weaponPrefab: {instanceID: 0}
+  - hitSound: {instanceID: 0}
+  - animOverride: {instanceID: 0}
+  - pickUpItem: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
