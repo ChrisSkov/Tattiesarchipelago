@@ -32,6 +32,11 @@ public class Zombo : MonoBehaviour
     {
         if (!health.isDead)
         {
+            if (playerStats.currentHealth <= 0)
+            {
+                path.isStopped = true;
+                anim.SetTrigger("victory");
+            }
             attackTimer += Time.deltaTime;
             HandleMoveAnim();
             if (Vector3.Distance(transform.position, player.position) <= zomboStats.chaseRange)
@@ -46,11 +51,7 @@ public class Zombo : MonoBehaviour
                     }
                 }
             }
-            if (playerStats.currentHealth <= 0)
-            {
-                path.isStopped = true;
-                anim.SetTrigger("victory");
-            }
+
         }
     }
     private void HandleMoveAnim()

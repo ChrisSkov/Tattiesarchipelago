@@ -5,6 +5,8 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     public PlayerStats stats;
+    public Transform bloodPos;
+
     public GameObject deathScreen;
     bool hasTriggeredDeath = false;
     // Start is called before the first frame update
@@ -38,5 +40,7 @@ public class Health : MonoBehaviour
     public void TakeDamage(float damage)
     {
         stats.currentHealth -= damage;
+        GameObject bloodClone = Instantiate(stats.blood, bloodPos.position, bloodPos.rotation);
+        Destroy(bloodClone, 0.5f);
     }
 }

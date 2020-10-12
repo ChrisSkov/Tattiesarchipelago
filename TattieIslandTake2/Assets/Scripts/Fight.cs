@@ -93,15 +93,11 @@ public class Fight : MonoBehaviour
                         stats.sheathedWeapon = sheathedWeapon;
                         stats.sheathedWeapon.SheathWeapon(sheathedWeaponHolder);
                     }
-                    else
-                    {
-                        sheathedWeapon.DropWeapon(stats.activeHand);
-                        sheathedWeapon = defaultWeapon;
-                    }
-
-
-
-
+                    // else
+                    // {
+                    //     sheathedWeapon.DropWeapon(stats.activeHand);
+                    //     sheathedWeapon = defaultWeapon;
+                    // }
 
                     Destroy(weaponToPickUp);
                     stats.closeToPickUp = false;
@@ -192,14 +188,14 @@ public class Fight : MonoBehaviour
 
     private void ThrowWeaponAttack()
     {
-        if (Input.GetKey(KeyCode.Mouse0) && stats.hasThrowable)
+        if (Input.GetKey(KeyCode.Mouse0) && stats.hasThrowable && timer >= weaponInHand.timeBetweenAttacks)
         {
             force += Time.deltaTime * 12f;
         }
-        else if (Input.GetKeyUp(KeyCode.Mouse0) && stats.hasThrowable)
+        else if (Input.GetKeyUp(KeyCode.Mouse0) && stats.hasThrowable && timer >= weaponInHand.timeBetweenAttacks)
         {
             weaponInHand.TriggerAttack(anim, "attack");
-
+            timer = 0f;
         }
     }
 
@@ -216,6 +212,10 @@ public class Fight : MonoBehaviour
         }
     }
 
+    void ResetWeaponAfterThrow()
+    {
+        stats.currentWeapon = null;
+    }
     void AnimEventRightClick()
     {
         weaponInHand.RightClickAttack(stats.activeHand, gameObject.transform, source);

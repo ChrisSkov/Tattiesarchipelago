@@ -7,6 +7,7 @@ public class PlayerStats : ScriptableObject
 {
     public WeaponAbstract currentWeapon;
     public WeaponAbstract sheathedWeapon;
+    public GameObject blood;
     public Transform activeHand;
     public bool closeToPickUp;
     public bool hasThrowable;

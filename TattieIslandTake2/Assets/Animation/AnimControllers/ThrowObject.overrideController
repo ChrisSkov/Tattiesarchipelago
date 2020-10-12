@@ -9,7 +9,5 @@ AnimatorOverrideController:
   m_Name: ThrowObject
   m_Controller: {fileID: 9100000, guid: ae158a2591b40a74c870f148b69db85e, type: 2}
   m_Clips:
-  - m_OriginalClip: {fileID: 7400000, guid: 33a737850dd35e24a8e62029f274bf99, type: 2}
-    m_OverrideClip: {fileID: 7400000, guid: 10b57832de0acce4389ca53ffcd2ac87, type: 2}
   - m_OriginalClip: {fileID: 7400000, guid: dce2cd50b60173c488e7a4476f9e12b6, type: 2}
     m_OverrideClip: {fileID: 7400000, guid: 10b57832de0acce4389ca53ffcd2ac87, type: 2}

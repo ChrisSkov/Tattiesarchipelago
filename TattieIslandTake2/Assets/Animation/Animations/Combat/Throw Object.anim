@@ -77058,7 +77058,14 @@ AnimationClip:
   - time: 0.6
     functionName: AnimEvent
     data: 
-    objectReferenceParameter: {fileID: 11400000, guid: ceb961f74abc00c4daadd3d2b1bc5f19, type: 2}
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 2.4666667
+    functionName: ResetWeaponAfterThrow
+    data: 
+    objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0

@@ -48,7 +48,6 @@ public class RangedScriptObj : WeaponAbstract
         clone2.AddComponent<Rigidbody>().AddRelativeForce(Vector3.forward * force, ForceMode.Impulse);
         clone2.GetComponent<Explode>().startExplosionTimer = true;
         source.PlayOneShot(throwSound);
-        stats.currentWeapon = null;
     }
 
     public override void RightClickAttack(Transform pos, Transform rayCastPosition, AudioSource source)

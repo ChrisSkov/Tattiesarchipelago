@@ -16,7 +16,7 @@ MonoBehaviour:
   isThrowWeapon: 1
   leftClickDamage: 100
   rightClickDamage: 0
-  timeBetweenAttacks: 0
+  timeBetweenAttacks: 1.5
   isRightHanded: 1
   range: 2
   force: 10
