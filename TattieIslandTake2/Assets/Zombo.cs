@@ -35,6 +35,7 @@ public class Zombo : MonoBehaviour
             if (playerStats.currentHealth <= 0)
             {
                 path.isStopped = true;
+                transform.LookAt(Camera.main.transform.GetChild(0).transform.position);
                 anim.SetTrigger("victory");
             }
             attackTimer += Time.deltaTime;
