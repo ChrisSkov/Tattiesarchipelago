@@ -22,7 +22,7 @@ MonoBehaviour:
   currentMoveSpeed: 6.93
   maxHealth: 100
   currentHealth: 100
-  isDead: 1
+  isDead: 0
   canMove: 1
   canAttack: 1
   walkSound: {fileID: 8300000, guid: 0275c3aefd04f344c9a9c03044e33bfc, type: 3}

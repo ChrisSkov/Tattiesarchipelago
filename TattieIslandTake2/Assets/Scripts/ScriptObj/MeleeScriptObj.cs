@@ -24,7 +24,7 @@ public class MeleeScriptObj : WeaponAbstract
         {
             if (Physics.Raycast(rayCastPosition.position, c.gameObject.transform.position - rayCastPosition.position, out hit, 100f, mask))
             {
-                hit.collider.gameObject.GetComponent<Rigidbody>().AddRelativeForce(-hit.normal * force, ForceMode.Impulse);
+                hit.collider.gameObject.GetComponent<Rigidbody>().AddForce(-hit.normal * force, ForceMode.Impulse);
                 if (hit.collider.gameObject.GetComponent<EnemyHealth>() != null)
                 {
                     hit.collider.gameObject.GetComponent<EnemyHealth>().TakeDamage(leftClickDamage);

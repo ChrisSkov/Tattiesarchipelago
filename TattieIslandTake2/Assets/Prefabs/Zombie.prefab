@@ -228,6 +228,7 @@ Transform:
   - {fileID: 1367772910517376077}
   - {fileID: 5807324272412055767}
   - {fileID: 8007941447718792860}
+  - {fileID: 8253556736173093045}
   m_Father: {fileID: 185446227504222309}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -786,6 +787,36 @@ Transform:
   - {fileID: 6471911964067185417}
   m_Father: {fileID: 938223562435207965}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3553303215198559942
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8253556736173093045}
+  m_Layer: 9
+  m_Name: Aim
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8253556736173093045
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3553303215198559942}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5323406626996737177}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3605847869781601916
 GameObject:
@@ -1763,6 +1794,7 @@ GameObject:
   - component: {fileID: 3094557428548495506}
   - component: {fileID: 4363036202355082406}
   - component: {fileID: 5849645103350290364}
+  - component: {fileID: 1437015707}
   m_Layer: 9
   m_Name: Zombie
   m_TagString: Enemy
@@ -1850,7 +1882,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 2
-  radius: 0.5
+  radius: 0.65
   height: 2
   repathRate: 0.5
   canSearch: 1
@@ -1868,7 +1900,7 @@ MonoBehaviour:
   rotationSpeed: 360
   slowdownDistance: 0.6
   pickNextWaypointDist: 2
-  endReachedDistance: 0.2
+  endReachedDistance: 1.93
   alwaysDrawGizmos: 0
   slowWhenNotFacingTarget: 1
   whenCloseToDestination: 0
@@ -2030,6 +2062,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1437015707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7770033524150812735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c178dab1cff3da408c711aa67b7d222, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zomboStats: {fileID: 11400000, guid: 8df3eff262b506342a4f3c286d4bbeda, type: 2}
+  playerStats: {fileID: 11400000, guid: d66d5124d742a3c44820ab8d1c02d69b, type: 2}
+  handAim: {fileID: 8253556736173093045}
 --- !u!1 &7777486549729000285
 GameObject:
   m_ObjectHideFlags: 0

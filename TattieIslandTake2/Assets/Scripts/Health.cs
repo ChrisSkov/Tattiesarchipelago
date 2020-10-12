@@ -11,6 +11,9 @@ public class Health : MonoBehaviour
     void Start()
     {
         stats.currentHealth = stats.maxHealth;
+        stats.isDead = false;
+        stats.canAttack = true;
+        stats.canMove = true;
     }
 
     // Update is called once per frame

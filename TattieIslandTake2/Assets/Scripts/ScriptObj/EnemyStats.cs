@@ -13,6 +13,7 @@ public class EnemyStats : ScriptableObject
     public float destroyTime;
     public float walkSoundDelay;
     public AudioClip walkSound;
+    public AudioClip hitSound;
     public AudioClip[] attackSounds;
 
     
