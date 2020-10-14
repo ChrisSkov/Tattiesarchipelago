@@ -93,13 +93,7 @@ public class Fight : MonoBehaviour
                         stats.sheathedWeapon = sheathedWeapon;
                         stats.sheathedWeapon.SheathWeapon(sheathedWeaponHolder);
                     }
-                    // else
-                    // {
-                    //     sheathedWeapon.DropWeapon(stats.activeHand);
-                    //     sheathedWeapon = defaultWeapon;
-                    // }
-
-                    Destroy(weaponToPickUp);
+                            Destroy(weaponToPickUp);
                     stats.closeToPickUp = false;
                 }
                 else

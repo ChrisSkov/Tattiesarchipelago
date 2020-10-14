@@ -18,11 +18,11 @@ MonoBehaviour:
   activeHand: {fileID: 0}
   closeToPickUp: 1
   hasThrowable: 0
-  maxMoveSpeed: 8.7
+  maxMoveSpeed: 4.5
   stepSoundDelay: 0.2
-  currentMoveSpeed: 6.93
+  currentMoveSpeed: 4.5
   maxHealth: 100
-  currentHealth: 100
+  currentHealth: 80
   isDead: 0
   canMove: 1
   canAttack: 1

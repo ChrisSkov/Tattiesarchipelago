@@ -2017,7 +2017,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 2
-  radius: 0.65
+  radius: 1.03
   height: 2
   repathRate: 0.5
   canSearch: 1
@@ -2053,7 +2053,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stats: {fileID: 11400000, guid: 8df3eff262b506342a4f3c286d4bbeda, type: 2}
-  shatterObject: {fileID: 141112414129132158, guid: db603113092b11649a35a31211f19cdd, type: 3}
+  shatterObject: {fileID: 6237718308195327962, guid: 666c6cd9d0cd79c46b6af33c50f15fec, type: 3}
   bloodSpray: {fileID: 539340935798995716, guid: ef96e9681868bb24abdb1e6d7847232c, type: 3}
   deathSound: {fileID: 8300000, guid: 01021012487f6f24bbb63beb6480c80f, type: 3}
   currentHp: 0
@@ -2419,7 +2419,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8985403161538202495}
   m_LocalRotation: {x: 0.84971577, y: 0.13608508, z: 0.10149452, w: 0.49916226}
-  m_LocalPosition: {x: -0.00015552818, y: 0.0005235073, z: 0.003743618}
+  m_LocalPosition: {x: -0.00015552758, y: 0.0005235097, z: 0.003743618}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7224450373980748070}

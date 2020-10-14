@@ -38,17 +38,21 @@ public class Zombo : MonoBehaviour
                 transform.LookAt(Camera.main.transform.GetChild(0).transform.position);
                 anim.SetTrigger("victory");
             }
-            attackTimer += Time.deltaTime;
-            HandleMoveAnim();
-            if (Vector3.Distance(transform.position, player.position) <= zomboStats.chaseRange)
+            else
             {
-                path.destination = player.position;
-                if (Vector3.Distance(transform.position, player.position) <= zomboStats.attackRange)
+                attackTimer += Time.deltaTime;
+                HandleMoveAnim();
+                if (Vector3.Distance(transform.position, player.position) <= zomboStats.chaseRange)
                 {
-                    if (attackTimer >= zomboStats.timeBetweenAttacks)
+                    transform.LookAt(player.position);
+                    path.destination = player.position;
+                    if (Vector3.Distance(transform.position, player.position) <= zomboStats.attackRange)
                     {
-                        anim.SetTrigger("attack");
-                        attackTimer = 0;
+                        if (attackTimer >= zomboStats.timeBetweenAttacks)
+                        {
+                            anim.SetTrigger("attack");
+                            attackTimer = 0;
+                        }
                     }
                 }
             }
@@ -84,6 +88,16 @@ public class Zombo : MonoBehaviour
                 source.PlayOneShot(zomboStats.hitSound);
             }
         }
+    }
+
+    void CanMove()
+    {
+        path.canMove = true;
+    }
+
+    void CannotMove()
+    {
+        path.canMove = false;
     }
     private void OnDrawGizmos()
     {

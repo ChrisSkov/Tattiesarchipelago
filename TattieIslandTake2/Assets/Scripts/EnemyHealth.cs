@@ -31,9 +31,14 @@ public class EnemyHealth : MonoBehaviour
     }
     private void Update()
     {
-        HandleDeath();
+     //   HandleDeath();
     }
 
+
+    bool IsDead()
+    {
+        return currentHp <= 0f;
+    }
     //anim event
     void DeathAnimEvent()
     {
@@ -44,17 +49,12 @@ public class EnemyHealth : MonoBehaviour
         DespawnEnemy();
 
     }
-
-    public bool IsDead()
-    {
-        return currentHp <= 0;
-    }
     void HandleDeath()
     {
         if (IsDead() && !isDead)
         {
-            currentHp = 0;
             isDead = true;
+            currentHp = 0;
             anim.SetTrigger("isDead");
         }
     }
@@ -66,7 +66,15 @@ public class EnemyHealth : MonoBehaviour
     public void TakeDamage(float damage)
     {
         currentHp -= damage;
+        if (currentHp > 0)
+        {
+            anim.SetTrigger("isHit");
+        }
+        else if (IsDead())
+        {
+            anim.SetTrigger("isDead");
+
+        }
         health.UpdateHealthBar(currentHp);
-        anim.SetTrigger("isHit");
     }
 }

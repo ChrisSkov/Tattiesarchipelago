@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4984695efd1ba624a9311209aad67e5f, type: 3}
   m_Name: Zombie
   m_EditorClassIdentifier: 
-  moveSpeed: 1.5
+  moveSpeed: 2
   maxHp: 100
   chaseRange: 4
   attackRange: 2
-  timeBetweenAttacks: 4
+  timeBetweenAttacks: 2.5
   damage: 20
   destroyTime: 1.4
   walkSoundDelay: 0.2
