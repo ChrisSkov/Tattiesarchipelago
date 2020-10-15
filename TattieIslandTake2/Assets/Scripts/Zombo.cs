@@ -8,11 +8,15 @@ public class Zombo : MonoBehaviour
     public EnemyStats zomboStats;
     public PlayerStats playerStats;
     public Transform handAim;
+    public Transform acidSprayAim;
+    public GameObject acidSpray;
+    public GameObject acidSprayCone;
     EnemyHealth health;
     Animator anim;
     AIPath path;
     AudioSource source;
 
+    float specialAttackTimer = 0f;
     float attackTimer = Mathf.Infinity;
     Transform player;
 
@@ -40,6 +44,7 @@ public class Zombo : MonoBehaviour
             }
             else
             {
+                specialAttackTimer += Time.deltaTime;
                 attackTimer += Time.deltaTime;
                 HandleMoveAnim();
                 if (Vector3.Distance(transform.position, player.position) <= zomboStats.chaseRange)
@@ -48,11 +53,17 @@ public class Zombo : MonoBehaviour
                     path.destination = player.position;
                     if (Vector3.Distance(transform.position, player.position) <= zomboStats.attackRange)
                     {
+                        if (specialAttackTimer >= zomboStats.timeBetweenSpecialAttack)
+                        {
+                            anim.SetTrigger("acidSpray");
+                            specialAttackTimer = 0f;
+                        }
                         if (attackTimer >= zomboStats.timeBetweenAttacks)
                         {
                             anim.SetTrigger("attack");
-                            attackTimer = 0;
+                            attackTimer = 0f;
                         }
+
                     }
                 }
             }
@@ -88,6 +99,14 @@ public class Zombo : MonoBehaviour
                 source.PlayOneShot(zomboStats.hitSound);
             }
         }
+    }
+
+    void AcidSprayAnimEvent()
+    {
+        GameObject acidClone = Instantiate(acidSpray, acidSprayAim.position, acidSprayAim.rotation);
+        GameObject acidCone = Instantiate(acidSprayCone, acidSprayAim.position, acidSprayAim.rotation);
+        Destroy(acidClone, 1f);
+        Destroy(acidCone, 1f);
     }
 
     void CanMove()

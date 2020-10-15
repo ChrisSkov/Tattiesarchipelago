@@ -9,6 +9,8 @@ public class EnemyStats : ScriptableObject
     public float chaseRange; 
     public float attackRange; 
     public float timeBetweenAttacks; 
+    public float timeBetweenSpecialAttack; 
+    public float specialAttackdamage;
     public float damage;
     public float destroyTime;
     public float walkSoundDelay;

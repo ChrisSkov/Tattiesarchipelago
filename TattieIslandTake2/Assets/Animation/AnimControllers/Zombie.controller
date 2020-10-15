@@ -421,43 +421,43 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: attack
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: isHit
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: forwardSpeed
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: isMoving
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: victory
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: acidSpray
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -597,9 +597,9 @@ AnimatorState:
   m_Transitions:
   - {fileID: 7703234022899315937}
   - {fileID: 8105496307034465266}
+  - {fileID: 3443360708619494474}
   - {fileID: -1678205473554101257}
   - {fileID: 7830784416267571020}
-  - {fileID: 3443360708619494474}
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
@@ -628,10 +628,10 @@ AnimatorState:
   m_Transitions:
   - {fileID: -8746700298436735052}
   - {fileID: -8743162544090953229}
+  - {fileID: -4113909565489758656}
   - {fileID: -1395694505786031788}
   - {fileID: 4701923400687446093}
   - {fileID: -7548815636667775389}
-  - {fileID: -4113909565489758656}
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
@@ -660,9 +660,9 @@ AnimatorState:
   m_Transitions:
   - {fileID: 5862955734217641775}
   - {fileID: 247426205949864321}
+  - {fileID: -1831804176387821737}
   - {fileID: 795368138962480497}
   - {fileID: 6938809877243155751}
-  - {fileID: -1831804176387821737}
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
@@ -797,9 +797,9 @@ AnimatorState:
   m_Transitions:
   - {fileID: -600689720156577170}
   - {fileID: -1237332198031806351}
+  - {fileID: -7704792160902965958}
   - {fileID: 3325592689945703269}
   - {fileID: -6155139920364639689}
-  - {fileID: -7704792160902965958}
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0

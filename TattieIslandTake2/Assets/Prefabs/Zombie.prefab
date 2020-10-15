@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1199393257
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1199393258}
+  m_Layer: 9
+  m_Name: AcidSprayAim
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1199393258
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1199393257}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.0009, y: -0, z: 0.00351}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6666302120794670712}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &209431876738061376
 GameObject:
   m_ObjectHideFlags: 0
@@ -1249,6 +1279,7 @@ Transform:
   m_LocalScale: {x: 1, y: 0.99999994, z: 1}
   m_Children:
   - {fileID: 135237435834920980}
+  - {fileID: 1199393258}
   m_Father: {fileID: 3743294841870694909}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2088,6 +2119,9 @@ MonoBehaviour:
   zomboStats: {fileID: 11400000, guid: 8df3eff262b506342a4f3c286d4bbeda, type: 2}
   playerStats: {fileID: 11400000, guid: d66d5124d742a3c44820ab8d1c02d69b, type: 2}
   handAim: {fileID: 8253556736173093045}
+  acidSprayAim: {fileID: 1199393258}
+  acidSpray: {fileID: 9050533088720637222, guid: 8d03a7c3e36f7d246b1f34b5487f0f58, type: 3}
+  acidSprayCone: {fileID: 5652708467791827936, guid: 7365514c6fcaa904d9083cc15ebebd95, type: 3}
 --- !u!1 &7777486549729000285
 GameObject:
   m_ObjectHideFlags: 0
@@ -2707,11 +2741,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ecccc4733a809b429813d3f57f8b88d, type: 3}
---- !u!1 &7627252733842187711 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5064180989103997207, guid: 4ecccc4733a809b429813d3f57f8b88d, type: 3}
-  m_PrefabInstance: {fileID: 3431430878379566248}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &7627252733842187710 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5064180989103997206, guid: 4ecccc4733a809b429813d3f57f8b88d, type: 3}
@@ -2739,3 +2768,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &7627252733842187711 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5064180989103997207, guid: 4ecccc4733a809b429813d3f57f8b88d, type: 3}
+  m_PrefabInstance: {fileID: 3431430878379566248}
+  m_PrefabAsset: {fileID: 0}

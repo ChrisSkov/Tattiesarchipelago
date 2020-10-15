@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6157133271982191157}
   - component: {fileID: 7158083815091859147}
   - component: {fileID: 266651892136856681}
+  - component: {fileID: 7483596489365990086}
   m_Layer: 0
   m_Name: AcidCone
   m_TagString: Untagged
@@ -110,3 +111,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTime: 0.3
+--- !u!114 &7483596489365990086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5652708467791827936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0431fc07f5f9a048b68aa26ba5f832e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zomboStats: {fileID: 11400000, guid: 8df3eff262b506342a4f3c286d4bbeda, type: 2}

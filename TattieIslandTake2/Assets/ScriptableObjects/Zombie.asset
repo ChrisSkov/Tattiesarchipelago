@@ -17,6 +17,8 @@ MonoBehaviour:
   chaseRange: 4
   attackRange: 2
   timeBetweenAttacks: 2.5
+  timeBetweenSpecialAttack: 6
+  specialAttackdamage: 30
   damage: 20
   destroyTime: 1.4
   walkSoundDelay: 0.2
