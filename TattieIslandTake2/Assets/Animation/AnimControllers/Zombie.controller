@@ -595,8 +595,8 @@ AnimatorState:
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
-  - {fileID: 7703234022899315937}
   - {fileID: 8105496307034465266}
+  - {fileID: 7703234022899315937}
   - {fileID: 3443360708619494474}
   - {fileID: -1678205473554101257}
   - {fileID: 7830784416267571020}
@@ -623,15 +623,15 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Zombie Reaction Hit
-  m_Speed: 2.22
+  m_Speed: 1.2
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -8746700298436735052}
   - {fileID: -8743162544090953229}
   - {fileID: -4113909565489758656}
   - {fileID: -1395694505786031788}
-  - {fileID: 4701923400687446093}
   - {fileID: -7548815636667775389}
+  - {fileID: 4701923400687446093}
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
