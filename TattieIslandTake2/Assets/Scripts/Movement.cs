@@ -21,7 +21,7 @@ public class Movement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (playerAnim.GetBool("canMove"))
+        if (playerAnim.GetBool("canMove") && stats.canMove)
         {
             HandleMovement();
             Rotate();

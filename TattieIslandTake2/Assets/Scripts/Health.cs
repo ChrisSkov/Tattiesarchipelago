@@ -18,9 +18,9 @@ public class Health : MonoBehaviour
         stats.canMove = true;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void TakeDamage(float damage)
     {
+        stats.currentHealth -= damage;
         if (stats.currentHealth <= 0)
         {
             stats.currentHealth = 0;
@@ -35,11 +35,6 @@ public class Health : MonoBehaviour
                 hasTriggeredDeath = true;
             }
         }
-    }
-
-    public void TakeDamage(float damage)
-    {
-        stats.currentHealth -= damage;
         GameObject bloodClone = Instantiate(stats.blood, bloodPos.position, bloodPos.rotation);
         Destroy(bloodClone, 0.5f);
     }

@@ -93,7 +93,7 @@ public class Fight : MonoBehaviour
                         stats.sheathedWeapon = sheathedWeapon;
                         stats.sheathedWeapon.SheathWeapon(sheathedWeaponHolder);
                     }
-                            Destroy(weaponToPickUp);
+                    Destroy(weaponToPickUp);
                     stats.closeToPickUp = false;
                 }
                 else
@@ -141,7 +141,7 @@ public class Fight : MonoBehaviour
     {
         if (weaponInHand == null)
             return;
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.Q) && anim.GetBool("canAttack"))
         {
             weaponInHand.DropWeapon(stats.activeHand);
         }
