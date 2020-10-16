@@ -17,6 +17,8 @@ public class EnemyStats : ScriptableObject
     public AudioClip walkSound;
     public AudioClip hitSound;
     public AudioClip[] attackSounds;
+    public AudioClip[] acidSprayChargeUpSounds;
+    public AudioClip[] acidSpraySounds;
 
     
 }
