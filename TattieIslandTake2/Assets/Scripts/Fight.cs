@@ -84,6 +84,10 @@ public class Fight : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.E) && stats.closeToPickUp == true)
                 {
                     newWeapon.pickUp = true;
+                    if (weaponInHand != defaultWeapon && sheathedWeapon != defaultWeapon)
+                    {
+                        weaponInHand.DropWeapon(stats.activeHand);
+                    }
                     weaponInHand = newWeapon;
                     anim.runtimeAnimatorController = weaponInHand.animOverride;
 
