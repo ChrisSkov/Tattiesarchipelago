@@ -13,6 +13,7 @@ public class DisplayHealth : MonoBehaviour
     {
         hpText = GetComponentInChildren<Text>();
         slider = GetComponentInChildren<Slider>();
+        slider.maxValue = stats.maxHealth;
     }
 
     // Update is called once per frame

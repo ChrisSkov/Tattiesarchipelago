@@ -94,7 +94,6 @@ public class Zombo : MonoBehaviour
         {
             if (c.gameObject.tag == "Player")
             {
-
                 c.gameObject.GetComponent<Health>().TakeDamage(zomboStats.damage);
                 source.PlayOneShot(zomboStats.hitSound);
             }

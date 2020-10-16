@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0666a40a362e1a0409c9bf14269b478e, type: 3}
   m_Name: FarmerTattie
   m_EditorClassIdentifier: 
-  currentWeapon: {fileID: 11400000, guid: dc3cdc0d982f07142bef657368a49217, type: 2}
+  currentWeapon: {fileID: 11400000, guid: 35eddeb601504bd4692bf87e8ce286e6, type: 2}
   sheathedWeapon: {fileID: 11400000, guid: dc3cdc0d982f07142bef657368a49217, type: 2}
   blood: {fileID: 1565275868738540, guid: 15b2d0ac3c1f5bd4791ae44984fba681, type: 3}
   activeHand: {fileID: 0}
@@ -21,8 +21,8 @@ MonoBehaviour:
   maxMoveSpeed: 4.5
   stepSoundDelay: 0.2
   currentMoveSpeed: 4.5
-  maxHealth: 100
-  currentHealth: 80
+  maxHealth: 500
+  currentHealth: 500
   isDead: 0
   canMove: 1
   canAttack: 1
