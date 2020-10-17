@@ -21,5 +21,6 @@ public class PlayerStats : ScriptableObject
     public bool canAttack;
     public AudioClip walkSound;
     public AudioClip deathSound;
+    public AudioClip[] takeDamageSounds;
 }
 

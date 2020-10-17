@@ -9,6 +9,7 @@ public class Health : MonoBehaviour
 
     public GameObject deathScreen;
     bool hasTriggeredDeath = false;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +22,7 @@ public class Health : MonoBehaviour
     public void TakeDamage(float damage)
     {
         stats.currentHealth -= damage;
+        GetComponent<AudioSource>().PlayOneShot(stats.takeDamageSounds[Random.Range(0,stats.takeDamageSounds.Length)]);
         if (stats.currentHealth <= 0)
         {
             stats.currentHealth = 0;

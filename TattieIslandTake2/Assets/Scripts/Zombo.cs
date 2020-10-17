@@ -81,7 +81,7 @@ public class Zombo : MonoBehaviour
     {
         if (specialAttackTimer >= zomboStats.timeBetweenSpecialAttack && attackTimer >= zomboStats.timeBetweenAttacks)
         {
-            if (Random.Range(0, 2) == 0)
+            if (Random.Range(0, 3) <= 1)
             {
                 anim.SetTrigger("acidSpray");
                 specialAttackTimer = 0f;
@@ -123,6 +123,7 @@ public class Zombo : MonoBehaviour
         {
             if (c.gameObject.tag == "Player")
             {
+                source.volume  = 0.3f;
                 c.gameObject.GetComponent<Health>().TakeDamage(zomboStats.damage);
                 source.PlayOneShot(zomboStats.hitSound);
             }
@@ -131,6 +132,7 @@ public class Zombo : MonoBehaviour
 
     void AcidSprayChargeUp()
     {
+        source.volume = 0.8f;
         source.PlayOneShot(zomboStats.acidSprayChargeUpSounds[Random.Range(0, zomboStats.acidSprayChargeUpSounds.Length)]);
     }
 

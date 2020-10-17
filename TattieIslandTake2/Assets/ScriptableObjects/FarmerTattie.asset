@@ -28,3 +28,8 @@ MonoBehaviour:
   canAttack: 1
   walkSound: {fileID: 8300000, guid: 0275c3aefd04f344c9a9c03044e33bfc, type: 3}
   deathSound: {fileID: 8300000, guid: 7d22e579568c3cb4b98ce36358cb9fd0, type: 3}
+  takeDamageSounds:
+  - {fileID: 8300000, guid: 34da9e257197070428d8a36ef4b08356, type: 3}
+  - {fileID: 8300000, guid: 3bb07853ed464784990d20ec1e26b7a9, type: 3}
+  - {fileID: 8300000, guid: 618529203ed2bd149950c0d3f396873a, type: 3}
+  - {fileID: 8300000, guid: 298045c584fd3cc439bdea769c84320c, type: 3}

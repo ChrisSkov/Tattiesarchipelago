@@ -129406,7 +129406,7 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 1.0166667
+  - time: 0.31666666
     functionName: AcidSprayChargeUp
     data: 
     objectReferenceParameter: {fileID: 0}

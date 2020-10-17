@@ -1923,7 +1923,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.177
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2064,7 +2064,7 @@ MonoBehaviour:
   targetCompatibility: {fileID: 0}
   maxAcceleration: -2.5
   rotationSpeed: 360
-  slowdownDistance: 0.6
+  slowdownDistance: 0
   pickNextWaypointDist: 2
   endReachedDistance: 1.93
   alwaysDrawGizmos: 0
@@ -2122,6 +2122,8 @@ MonoBehaviour:
   acidSprayAim: {fileID: 1199393258}
   acidSpray: {fileID: 9050533088720637222, guid: 8d03a7c3e36f7d246b1f34b5487f0f58, type: 3}
   acidSprayCone: {fileID: 5652708467791827936, guid: 7365514c6fcaa904d9083cc15ebebd95, type: 3}
+  canRotate: 1
+  specialAttackTimer: 0
 --- !u!1 &7777486549729000285
 GameObject:
   m_ObjectHideFlags: 0
@@ -2453,7 +2455,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8985403161538202495}
   m_LocalRotation: {x: 0.84971577, y: 0.13608508, z: 0.10149452, w: 0.49916226}
-  m_LocalPosition: {x: -0.00015552758, y: 0.0005235097, z: 0.003743618}
+  m_LocalPosition: {x: -0.00015552997, y: 0.0005235097, z: 0.003743618}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7224450373980748070}
