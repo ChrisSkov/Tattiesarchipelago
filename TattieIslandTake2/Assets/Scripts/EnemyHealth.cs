@@ -8,6 +8,7 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField] GameObject shatterObject = null;
     [SerializeField] ParticleSystem bloodSpray = null;
     [SerializeField] AudioClip deathSound = null;
+    [SerializeField] Transform organHolder = null;
     Animator anim;
     public float currentHp;
     public bool isDead = false;
@@ -31,7 +32,7 @@ public class EnemyHealth : MonoBehaviour
     }
     private void Update()
     {
-     //   HandleDeath();
+        //   HandleDeath();
     }
 
 
@@ -42,10 +43,13 @@ public class EnemyHealth : MonoBehaviour
     //anim event
     void DeathAnimEvent()
     {
+        //TODO get organ array from zombo stats. instantiate amount of organs based on damage taken. apply force to instantiated organs
+        GameObject organs = Instantiate(shatterObject, organHolder.position, organHolder.rotation);
+        
+        organs.GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * 3, ForceMode.Impulse);
         source.PlayOneShot(deathSound);
         particleHolder.transform.LookAt(playerTransform);
         Instantiate(bloodSpray, particleHolder.position, particleHolder.rotation);
-        Instantiate(shatterObject, transform.position, transform.rotation);
         DespawnEnemy();
 
     }

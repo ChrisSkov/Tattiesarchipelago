@@ -5,20 +5,21 @@ using UnityEngine;
 public class EnemyStats : ScriptableObject
 {
     public float moveSpeed;
-    public float maxHp; 
-    public float chaseRange; 
-    public float attackRange; 
-    public float timeBetweenAttacks; 
-    public float timeBetweenSpecialAttack; 
+    public float maxHp;
+    public float chaseRange;
+    public float attackRange;
+    public float timeBetweenAttacks;
+    public float timeBetweenSpecialAttack;
     public float specialAttackdamage;
     public float damage;
     public float destroyTime;
     public float walkSoundDelay;
+    public GameObject[] organs;
     public AudioClip walkSound;
     public AudioClip hitSound;
     public AudioClip[] attackSounds;
     public AudioClip[] acidSprayChargeUpSounds;
     public AudioClip[] acidSpraySounds;
 
-    
+
 }
