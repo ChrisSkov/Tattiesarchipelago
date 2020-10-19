@@ -15,9 +15,9 @@ public class EnemyStats : ScriptableObject
     public float destroyTime;
     public float walkSoundDelay;
     public GameObject[] organs;
+    public AudioClip[] attackSounds;
     public AudioClip walkSound;
     public AudioClip hitSound;
-    public AudioClip[] attackSounds;
     public AudioClip[] acidSprayChargeUpSounds;
     public AudioClip[] acidSpraySounds;
 

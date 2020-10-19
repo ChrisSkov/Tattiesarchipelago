@@ -57,16 +57,7 @@ public class Zombo : MonoBehaviour
                     path.destination = player.position;
                     if (Vector3.Distance(transform.position, player.position) <= zomboStats.attackRange)
                     {
-                        // if (specialAttackTimer >= zomboStats.timeBetweenSpecialAttack)
-                        // {
-                        //     anim.SetTrigger("acidSpray");
-                        //     specialAttackTimer = 0f;
-                        // }
-                        // if (attackTimer >= zomboStats.timeBetweenAttacks)
-                        // {
-                        //     anim.SetTrigger("attack");
-                        //     attackTimer = 0f;
-                        // }
+
                         ChooseAttack();
 
                     }
@@ -123,7 +114,7 @@ public class Zombo : MonoBehaviour
         {
             if (c.gameObject.tag == "Player")
             {
-                source.volume  = 0.3f;
+                source.volume = 0.3f;
                 c.gameObject.GetComponent<Health>().TakeDamage(zomboStats.damage);
                 source.PlayOneShot(zomboStats.hitSound);
             }
