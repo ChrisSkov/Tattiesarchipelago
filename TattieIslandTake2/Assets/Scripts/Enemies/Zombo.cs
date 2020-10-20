@@ -81,7 +81,7 @@ public class Zombo : MonoBehaviour
         {
             anim.SetBool("isMoving", false);
         }
-        float yVelocity = path.velocity.z;
+        float yVelocity = Mathf.Abs(path.velocity.z);
         anim.SetFloat("forwardSpeed", yVelocity);
     }
 
