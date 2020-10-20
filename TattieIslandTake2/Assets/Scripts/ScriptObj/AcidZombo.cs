@@ -11,11 +11,11 @@ public class AcidZombo : BaseZombo
     public GameObject acidSprayCone;
     public override void Attack(Transform aim, AudioSource source)
     {
-        Transform acidSprayAim = aim.transform.GetChild(5).transform.GetChild(0).transform.GetChild(0).transform.GetChild(0).transform.GetChild(0).transform.GetChild(0).transform.GetChild(0);
-        GameObject acidClone = Instantiate(acidSpray, acidSprayAim.position, acidSprayAim.rotation);
-        acidClone.transform.SetParent(acidSprayAim);
-        GameObject acidCone = Instantiate(acidSprayCone, acidSprayAim.position, acidSprayAim.rotation);
-        acidCone.transform.SetParent(acidSprayAim);
+        //Transform acidSprayAim = aim.transform.GetChild(5).transform.GetChild(0).transform.GetChild(0).transform.GetChild(0).transform.GetChild(0).transform.GetChild(0).transform.GetChild(0);
+        GameObject acidClone = Instantiate(acidSpray, aim.position, aim.rotation);
+        acidClone.transform.SetParent(aim);
+        GameObject acidCone = Instantiate(acidSprayCone, aim.position, aim.rotation);
+        acidCone.transform.SetParent(aim);
 
         source.PlayOneShot(acidSpraySounds[Random.Range(0, acidSpraySounds.Length)]);
         Destroy(acidClone, 1f);

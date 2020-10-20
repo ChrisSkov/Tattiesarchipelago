@@ -1647,7 +1647,7 @@ Transform:
   m_GameObject: {fileID: 4079962143790852179}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.67, y: 0.03, z: -2}
-  m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_Children:
   - {fileID: 3223434516538229673}
   - {fileID: 7246554161045951777}
@@ -1903,10 +1903,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zomboStats: {fileID: 11400000, guid: c7e4c7d9d4b385d4a9099558777e2437, type: 2}
   playerStats: {fileID: 11400000, guid: d66d5124d742a3c44820ab8d1c02d69b, type: 2}
-  handAim: {fileID: 1921578786802564341}
-  acidSprayAim: {fileID: 0}
-  acidSpray: {fileID: 0}
-  acidSprayCone: {fileID: 0}
+  aim: {fileID: 1921578786802564341}
   canRotate: 1
 --- !u!114 &6705753005597531237
 MonoBehaviour:

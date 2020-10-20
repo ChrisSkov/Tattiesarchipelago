@@ -7,6 +7,7 @@ public class Zombo : MonoBehaviour
 {
     public ZomboAbstract zomboStats;
     public PlayerStats playerStats;
+    public Transform aim;
     EnemyHealth health;
     Animator anim;
     AIPath path;
@@ -91,7 +92,7 @@ public class Zombo : MonoBehaviour
     }
     void ZomboAttackAnimEvent()
     {
-        zomboStats.Attack(gameObject.transform, source);
+        zomboStats.Attack(aim, source);
     }
     void CanMove()
     {
