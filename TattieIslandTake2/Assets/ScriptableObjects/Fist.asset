@@ -19,7 +19,7 @@ MonoBehaviour:
   timeBetweenAttacks: 1
   isRightHanded: 0
   range: 1
-  force: 75
+  force: 45
   pickUp: 0
   hitSound: {fileID: 8300000, guid: 43243f92f398aa743a7cc03e4b048c72, type: 3}
   animOverride: {fileID: 22100000, guid: 572df901acff64549b5fb00e0ad8e805, type: 2}

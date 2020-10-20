@@ -5,19 +5,18 @@ using UnityEngine;
 
 public class Zombo : MonoBehaviour
 {
-    public EnemyStats zomboStats;
+    public ZomboAbstract zomboStats;
     public PlayerStats playerStats;
     public Transform handAim;
-    public Transform acidSprayAim;
-    public GameObject acidSpray;
-    public GameObject acidSprayCone;
+    public Transform acidSprayAim = null;
+    public GameObject acidSpray = null;
+    public GameObject acidSprayCone = null;
     EnemyHealth health;
     Animator anim;
     AIPath path;
     AudioSource source;
     public bool canRotate = true;
-
-    public float specialAttackTimer = 0f;
+    //   public float specialAttackTimer = 0f;
     float attackTimer = Mathf.Infinity;
     Transform player;
 
@@ -45,7 +44,7 @@ public class Zombo : MonoBehaviour
             }
             else
             {
-                specialAttackTimer += Time.deltaTime;
+                // specialAttackTimer += Time.deltaTime;
                 attackTimer += Time.deltaTime;
                 HandleMoveAnim();
                 if (Vector3.Distance(transform.position, player.position) <= zomboStats.chaseRange)
@@ -57,9 +56,11 @@ public class Zombo : MonoBehaviour
                     path.destination = player.position;
                     if (Vector3.Distance(transform.position, player.position) <= zomboStats.attackRange)
                     {
-
-                        ChooseAttack();
-
+                        if (attackTimer >= zomboStats.timeBetweenAttacks)
+                        {
+                            anim.SetTrigger("attack");
+                            attackTimer = 0f;
+                        }
                     }
                 }
             }
@@ -68,28 +69,7 @@ public class Zombo : MonoBehaviour
     }
 
 
-    void ChooseAttack()
-    {
-        if (specialAttackTimer >= zomboStats.timeBetweenSpecialAttack && attackTimer >= zomboStats.timeBetweenAttacks)
-        {
-            if (Random.Range(0, 3) <= 1)
-            {
-                anim.SetTrigger("acidSpray");
-                specialAttackTimer = 0f;
-            }
-            else
-            {
-                anim.SetTrigger("attack");
-                attackTimer = 0f;
-            }
 
-        }
-        else if (attackTimer >= zomboStats.timeBetweenAttacks)
-        {
-            anim.SetTrigger("attack");
-            attackTimer = 0f;
-        }
-    }
     private void HandleMoveAnim()
     {
         if (path.velocity.magnitude >= 0.5)
@@ -116,29 +96,29 @@ public class Zombo : MonoBehaviour
             {
                 source.volume = 0.3f;
                 c.gameObject.GetComponent<Health>().TakeDamage(zomboStats.damage);
-                source.PlayOneShot(zomboStats.hitSound);
+                source.PlayOneShot(zomboStats.attackSounds[Random.Range(0, zomboStats.attackSounds.Length)]);
             }
         }
     }
 
-    void AcidSprayChargeUp()
-    {
-        source.volume = 0.8f;
-        source.PlayOneShot(zomboStats.acidSprayChargeUpSounds[Random.Range(0, zomboStats.acidSprayChargeUpSounds.Length)]);
-    }
+    // void AcidSprayChargeUp()
+    // {
+    //     source.volume = 0.8f;
+    //     source.PlayOneShot(zomboStats.acidSprayChargeUpSounds[Random.Range(0, zomboStats.acidSprayChargeUpSounds.Length)]);
+    // }
 
 
-    void AcidSprayAnimEvent()
-    {
-        GameObject acidClone = Instantiate(acidSpray, acidSprayAim.position, acidSprayAim.rotation);
-        acidClone.transform.SetParent(acidSprayAim);
-        GameObject acidCone = Instantiate(acidSprayCone, acidSprayAim.position, acidSprayAim.rotation);
-        acidCone.transform.SetParent(acidSprayAim);
+    // void AcidSprayAnimEvent()
+    // {
+    //     GameObject acidClone = Instantiate(acidSpray, acidSprayAim.position, acidSprayAim.rotation);
+    //     acidClone.transform.SetParent(acidSprayAim);
+    //     GameObject acidCone = Instantiate(acidSprayCone, acidSprayAim.position, acidSprayAim.rotation);
+    //     acidCone.transform.SetParent(acidSprayAim);
 
-        source.PlayOneShot(zomboStats.acidSpraySounds[Random.Range(0, zomboStats.acidSpraySounds.Length)]);
-        Destroy(acidClone, 1f);
-        Destroy(acidCone, 1f);
-    }
+    //     source.PlayOneShot(zomboStats.acidSpraySounds[Random.Range(0, zomboStats.acidSpraySounds.Length)]);
+    //     Destroy(acidClone, 1f);
+    //     Destroy(acidCone, 1f);
+    // }
 
     void CanMove()
     {
