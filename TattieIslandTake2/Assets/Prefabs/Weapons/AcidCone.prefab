@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 5652708467791827936}
   m_LocalRotation: {x: -0.7069834, y: 0, z: 0, w: 0.7072302}
   m_LocalPosition: {x: -2.9938908, y: 0.00000023841858, z: -1.5740502}
-  m_LocalScale: {x: 16, y: 6, z: 60}
+  m_LocalScale: {x: 17.424, y: 7.258948, z: 98.592}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -111,6 +111,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTime: 0.3
+  destroyTimeMin: 2
+  destroyTimeMax: 15
+  randomDestroyTime: 0
 --- !u!114 &7483596489365990086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,4 +126,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0431fc07f5f9a048b68aa26ba5f832e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zomboStats: {fileID: 11400000, guid: 8df3eff262b506342a4f3c286d4bbeda, type: 2}
+  zomboStats: {fileID: 11400000, guid: 9da69044fff5336469e96e29c6b93a0b, type: 2}

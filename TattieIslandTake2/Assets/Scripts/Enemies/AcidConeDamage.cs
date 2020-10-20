@@ -5,14 +5,14 @@ using UnityEngine;
 public class AcidConeDamage : MonoBehaviour
 {
 
-    public EnemyStats zomboStats;
+    public ZomboAbstract zomboStats;
 
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player")
         {
-            other.gameObject.GetComponent<Health>().TakeDamage(zomboStats.specialAttackdamage);
+            other.gameObject.GetComponent<Health>().TakeDamage(zomboStats.damage);
         }
     }
 }

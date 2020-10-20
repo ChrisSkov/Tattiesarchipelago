@@ -7,16 +7,11 @@ public class Zombo : MonoBehaviour
 {
     public ZomboAbstract zomboStats;
     public PlayerStats playerStats;
-    public Transform handAim;
-    public Transform acidSprayAim = null;
-    public GameObject acidSpray = null;
-    public GameObject acidSprayCone = null;
     EnemyHealth health;
     Animator anim;
     AIPath path;
     AudioSource source;
     public bool canRotate = true;
-    //   public float specialAttackTimer = 0f;
     float attackTimer = Mathf.Infinity;
     Transform player;
 
@@ -58,6 +53,10 @@ public class Zombo : MonoBehaviour
                     {
                         if (attackTimer >= zomboStats.timeBetweenAttacks)
                         {
+                            if (zomboStats.animOverride != null)
+                            {
+                                anim.runtimeAnimatorController = zomboStats.animOverride;
+                            }
                             anim.SetTrigger("attack");
                             attackTimer = 0f;
                         }
@@ -86,40 +85,14 @@ public class Zombo : MonoBehaviour
     }
 
 
-    void TwoHandedSlamAttack()
+    void ZomboChargeAttackAnimEvent()
     {
-
-        LayerMask mask = LayerMask.GetMask("IgnoreWeapon");
-        foreach (Collider c in Physics.OverlapSphere(handAim.position, zomboStats.attackRange, mask))
-        {
-            if (c.gameObject.tag == "Player")
-            {
-                source.volume = 0.3f;
-                c.gameObject.GetComponent<Health>().TakeDamage(zomboStats.damage);
-                source.PlayOneShot(zomboStats.attackSounds[Random.Range(0, zomboStats.attackSounds.Length)]);
-            }
-        }
+        zomboStats.AttackStartup(source);
     }
-
-    // void AcidSprayChargeUp()
-    // {
-    //     source.volume = 0.8f;
-    //     source.PlayOneShot(zomboStats.acidSprayChargeUpSounds[Random.Range(0, zomboStats.acidSprayChargeUpSounds.Length)]);
-    // }
-
-
-    // void AcidSprayAnimEvent()
-    // {
-    //     GameObject acidClone = Instantiate(acidSpray, acidSprayAim.position, acidSprayAim.rotation);
-    //     acidClone.transform.SetParent(acidSprayAim);
-    //     GameObject acidCone = Instantiate(acidSprayCone, acidSprayAim.position, acidSprayAim.rotation);
-    //     acidCone.transform.SetParent(acidSprayAim);
-
-    //     source.PlayOneShot(zomboStats.acidSpraySounds[Random.Range(0, zomboStats.acidSpraySounds.Length)]);
-    //     Destroy(acidClone, 1f);
-    //     Destroy(acidCone, 1f);
-    // }
-
+    void ZomboAttackAnimEvent()
+    {
+        zomboStats.Attack(gameObject.transform, source);
+    }
     void CanMove()
     {
         canRotate = true;

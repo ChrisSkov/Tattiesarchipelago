@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4125ba23cadf1494782481cef83c8da8, type: 3}
+  m_Name: AcidZombo
+  m_EditorClassIdentifier: 
+  moveSpeed: 2
+  chaseRange: 5
+  walkSoundDelay: 0.2
+  walkSound: {fileID: 8300000, guid: 9a9f85a5316efb14e9c2eb84128930fa, type: 3}
+  attackRange: 2
+  timeBetweenAttacks: 6
+  damage: 35
+  attackSounds: []
+  maxHp: 100
+  destroyTime: 1.4
+  organs: []
+  takeDamageSounds: []
+  idleSounds: []
+  animOverride: {fileID: 22100000, guid: dc7079857ac4e0849bc72dac2be1578d, type: 2}
+  acidSprayChargeUpSounds:
+  - {fileID: 8300000, guid: cd272d7c66036a3498c24248f436718c, type: 3}
+  - {fileID: 8300000, guid: 39bd44f34c3bfc24abb25184d617d7ae, type: 3}
+  - {fileID: 8300000, guid: 688a00cb318c6d94b91f144a6e5b6d03, type: 3}
+  - {fileID: 8300000, guid: 2178df7252bc3dd439486c877794d732, type: 3}
+  acidSpraySounds:
+  - {fileID: 8300000, guid: e42547fd01120604086af7d67ce85b26, type: 3}
+  - {fileID: 8300000, guid: bd87b421c8b99d94897c5a2b5876d55a, type: 3}
+  - {fileID: 8300000, guid: 35f77961ec27021448b65e0aa8bc27d0, type: 3}
+  acidSpray: {fileID: 9050533088720637222, guid: 8d03a7c3e36f7d246b1f34b5487f0f58, type: 3}
+  acidSprayCone: {fileID: 5652708467791827936, guid: 7365514c6fcaa904d9083cc15ebebd95, type: 3}

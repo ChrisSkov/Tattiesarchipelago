@@ -23,4 +23,7 @@ public abstract class ZomboAbstract : ScriptableObject
     public AudioClip[] idleSounds;
     public AnimatorOverrideController animOverride;
 
+    public abstract void Attack(Transform aim, AudioSource source);
+    public abstract void AttackStartup(AudioSource source);
+
 }

@@ -129407,14 +129407,14 @@ AnimationClip:
     intParameter: 0
     messageOptions: 0
   - time: 0.31666666
-    functionName: AcidSprayChargeUp
+    functionName: ZomboChargeAttackAnimEvent
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 1.9666667
-    functionName: AcidSprayAnimEvent
+    functionName: ZomboAttackAnimEvent
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
