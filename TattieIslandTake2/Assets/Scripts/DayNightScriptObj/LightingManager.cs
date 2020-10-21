@@ -8,7 +8,7 @@ public class LightingManager : MonoBehaviour
     [Header("References")]
     [SerializeField] private Light directionalLight;
     [SerializeField] private LightingPreset preset = null;
-    private GameObject[] lampPosts;
+ //   private GameObject[] lampPosts;
     private Light[] lampLights;
     [Header("Variables")]
     [SerializeField, Range(0, 24)] private float timeOfDay;
@@ -21,11 +21,11 @@ public class LightingManager : MonoBehaviour
 
     private void Start()
     {
-        lampPosts = GameObject.FindGameObjectsWithTag("Lamp");
+       // lampPosts = GameObject.FindGameObjectsWithTag("Lamp");
     }
     private void Update()
     {
-        LampOnOff();
+       // LampOnOff();
         if (preset == null)
             return;
         if (!timePause)
@@ -52,21 +52,21 @@ public class LightingManager : MonoBehaviour
         }
     }
 
-    private void LampOnOff()
-    {
-        foreach (GameObject lamp in lampPosts)
-        {
-            Light lampLight = lamp.GetComponentInChildren<Light>();
-            if (IsNightTime())
-            {
-               lampLight.intensity = LightIntensity;
-            }
-            else
-            {
-                lampLight.intensity = 0f;
-            }
-        }
-    }
+    // private void LampOnOff()
+    // {
+    //     foreach (GameObject lamp in lampPosts)
+    //     {
+    //         Light lampLight = lamp.GetComponentInChildren<Light>();
+    //         if (IsNightTime())
+    //         {
+    //            lampLight.intensity = LightIntensity;
+    //         }
+    //         else
+    //         {
+    //             lampLight.intensity = 0f;
+    //         }
+    //     }
+    // }
 
     public float GetHourLength()
     {
