@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
-    [SerializeField] EnemyStats stats = null;
+    [SerializeField] ZomboAbstract stats = null;
     [SerializeField] GameObject shatterObject = null;
     [SerializeField] ParticleSystem bloodSpray = null;
     [SerializeField] AudioClip deathSound = null;
@@ -45,7 +45,7 @@ public class EnemyHealth : MonoBehaviour
     {
         //TODO get organ array from zombo stats. instantiate amount of organs based on damage taken. apply force to instantiated organs
         GameObject organs = Instantiate(shatterObject, organHolder.position, organHolder.rotation);
-        
+
         organs.GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * 3, ForceMode.Impulse);
         source.PlayOneShot(deathSound);
         particleHolder.transform.LookAt(playerTransform);

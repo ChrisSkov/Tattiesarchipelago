@@ -13,11 +13,13 @@ MonoBehaviour:
   m_Name: Spear
   m_EditorClassIdentifier: 
   weaponPrefab: {fileID: 5271372890095054624, guid: 08bd5193bd74cc548b0b9ad1dabb94d8, type: 3}
+  isThrowWeapon: 0
   leftClickDamage: 15
   rightClickDamage: 10
   timeBetweenAttacks: 2
   isRightHanded: 1
   range: 0.86
+  force: 0
   pickUp: 0
   hitSound: {fileID: 8300000, guid: 43243f92f398aa743a7cc03e4b048c72, type: 3}
   animOverride: {fileID: 22100000, guid: 073db2d9382d76c4484a1807c2086ed0, type: 2}
