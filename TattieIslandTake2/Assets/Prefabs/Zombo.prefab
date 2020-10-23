@@ -1919,7 +1919,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hpBar: {fileID: 733065642633228021}
   hpText: {fileID: 2610213865237619915}
-  stats: {fileID: 11400000, guid: 8df3eff262b506342a4f3c286d4bbeda, type: 2}
+  stats: {fileID: 11400000, guid: c7e4c7d9d4b385d4a9099558777e2437, type: 2}
 --- !u!1 &4081797734463083313
 GameObject:
   m_ObjectHideFlags: 0

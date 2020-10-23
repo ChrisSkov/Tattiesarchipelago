@@ -7,7 +7,7 @@ public class DisplayEnemyHealth : MonoBehaviour
 {
     public Slider hpBar;
     public Text hpText;
-    public EnemyStats stats;
+    public ZomboAbstract stats;
 
     public void SetHPBarMaxValue(float maxHP)
     {
