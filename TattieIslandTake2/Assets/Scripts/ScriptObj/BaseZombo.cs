@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-[CreateAssetMenu]
+[CreateAssetMenu(fileName = "BaseZombo", menuName = "Enemies/BaseZombo", order = 0)]
 public class BaseZombo : ZomboAbstract
 {
     public override void Attack(Transform handAim, AudioSource source)

@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-[CreateAssetMenu]
+[CreateAssetMenu(fileName = "RangedWeapon", menuName = "Weapons/Ranged", order = 2)]
 public class RangedScriptObj : WeaponAbstract
 {
     GameObject clone;

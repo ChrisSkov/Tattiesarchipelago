@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-[CreateAssetMenu]
+[CreateAssetMenu(fileName = "AcidZombo", menuName = "Enemies/AcidZombo", order = 1)]
 public class AcidZombo : BaseZombo
 {
     public AudioClip[] acidSprayChargeUpSounds;

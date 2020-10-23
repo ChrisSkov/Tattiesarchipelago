@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "PlayerStats", menuName = "TattieIslandTake2/PlayerStats", order = 0)]
+[CreateAssetMenu(fileName = "PlayerStats", menuName = "Player/PlayerStats", order = 0)]
 public class PlayerStats : ScriptableObject
 {
     public WeaponAbstract currentWeapon;

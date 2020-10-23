@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-[CreateAssetMenu]
+[CreateAssetMenu(fileName = "BaseMeleeWeapon", menuName = "Weapons/MeleeWeapon", order = 0)]
 public class MeleeScriptObj : WeaponAbstract
 {
 

@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-[CreateAssetMenu]
+[CreateAssetMenu(fileName = "Rifle/gun", menuName = "Weapons/Gun", order = 3)]
 public class ShotgunScriptObj : WeaponAbstract
 {
     GameObject clone;

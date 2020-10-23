@@ -8,11 +8,11 @@ public class LightingManager : MonoBehaviour
     [Header("References")]
     [SerializeField] private Light directionalLight;
     [SerializeField] private LightingPreset preset = null;
- //   private GameObject[] lampPosts;
+    //   private GameObject[] lampPosts;
     private Light[] lampLights;
     [Header("Variables")]
     [SerializeField, Range(0, 24)] private float timeOfDay;
-    [SerializeField] private float LightIntensity = 1f;
+    //   [SerializeField] private float LightIntensity = 1f;
     [SerializeField] private float hourLength = 4;
     [SerializeField] private float sunRise = 7;
     [SerializeField] private float sunSet = 18;
@@ -21,11 +21,11 @@ public class LightingManager : MonoBehaviour
 
     private void Start()
     {
-       // lampPosts = GameObject.FindGameObjectsWithTag("Lamp");
+        // lampPosts = GameObject.FindGameObjectsWithTag("Lamp");
     }
     private void Update()
     {
-       // LampOnOff();
+        // LampOnOff();
         if (preset == null)
             return;
         if (!timePause)
