@@ -4,10 +4,20 @@ using UnityEngine;
 
 public class DrawMe : MonoBehaviour
 {
-    public WeaponAbstract thisWeapon;
+    public WeaponAbstract thisWeapon = null;
+    public bool useWeapon = true;
+    public float radius = 1f;
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, thisWeapon.range);
+        if (useWeapon == true)
+        {
+            Gizmos.DrawWireSphere(transform.position, thisWeapon.range);
+        }
+        else
+        {
+            Gizmos.color = Color.black;
+            Gizmos.DrawWireSphere(transform.position, radius);
+        }
     }
 }

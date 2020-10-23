@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 530297094061209938}
     m_Modifications:
+    - target: {fileID: 3927563445694065221, guid: f1d7dc68e3356064f9e17b185f905869, type: 3}
+      propertyPath: useWeapon
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4655446500171707285, guid: f1d7dc68e3356064f9e17b185f905869, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -78,23 +82,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6327649463628056484, guid: c589eeb6aba435a40adcf4c5888d870b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.56
+      value: 12.076581
       objectReference: {fileID: 0}
     - target: {fileID: 6327649463628056484, guid: c589eeb6aba435a40adcf4c5888d870b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.727
+      value: -6.729332
       objectReference: {fileID: 0}
     - target: {fileID: 6327649463628056484, guid: c589eeb6aba435a40adcf4c5888d870b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.76
+      value: -26.453857
       objectReference: {fileID: 0}
     - target: {fileID: 6327649463628056484, guid: c589eeb6aba435a40adcf4c5888d870b, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6327649463628056484, guid: c589eeb6aba435a40adcf4c5888d870b, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6327649463628056484, guid: c589eeb6aba435a40adcf4c5888d870b, type: 3}
       propertyPath: m_LocalRotation.z
@@ -122,7 +126,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6327649463628056487, guid: c589eeb6aba435a40adcf4c5888d870b, type: 3}
       propertyPath: m_Name
-      value: WeaponHolder Dynamite Variant
+      value: WeaponHolder Dynamite (3)
       objectReference: {fileID: 0}
     - target: {fileID: 6327649463628056490, guid: c589eeb6aba435a40adcf4c5888d870b, type: 3}
       propertyPath: thisWeapon
