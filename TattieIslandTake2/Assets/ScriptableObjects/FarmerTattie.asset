@@ -16,15 +16,13 @@ MonoBehaviour:
   sheathedWeapon: {fileID: 11400000, guid: dc3cdc0d982f07142bef657368a49217, type: 2}
   blood: {fileID: 1565275868738540, guid: 15b2d0ac3c1f5bd4791ae44984fba681, type: 3}
   activeHand: {fileID: 0}
+  stats: {fileID: 11400000, guid: afa206f9b74b97844acb9cebfa30d09b, type: 2}
+  resources: {fileID: 11400000, guid: abf6b85da09bad045b69ca4dfa05fbc8, type: 2}
   closeToPickUp: 1
   hasThrowable: 0
-  maxMoveSpeed: 4.5
   stepSoundDelay: 0.2
-  currentMoveSpeed: 4.5
-  maxHealth: 500
-  currentHealth: 500
-  isDead: 0
   canMove: 1
+  isDead: 0
   canAttack: 1
   moneyCount: 60
   walkSound: {fileID: 8300000, guid: 0275c3aefd04f344c9a9c03044e33bfc, type: 3}

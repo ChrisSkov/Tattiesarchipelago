@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class DisplayHealth : MonoBehaviour
 {
-    public PlayerStats stats;
+    public Player player;
     Slider slider;
     Text hpText;
     // Start is called before the first frame update
@@ -13,13 +13,13 @@ public class DisplayHealth : MonoBehaviour
     {
         hpText = GetComponentInChildren<Text>();
         slider = GetComponentInChildren<Slider>();
-        slider.maxValue = stats.maxHealth;
+        slider.maxValue = player.stats.maxHealth;
     }
 
     // Update is called once per frame
     void Update()
     {
-        hpText.text = string.Format("{0}/{1}", Mathf.RoundToInt(stats.currentHealth), Mathf.RoundToInt(stats.maxHealth));
-        slider.value = stats.currentHealth;
+        hpText.text = string.Format("{0}/{1}", Mathf.RoundToInt(player.stats.currentHealth), Mathf.RoundToInt(player.stats.maxHealth));
+        slider.value = player.stats.currentHealth;
     }
 }

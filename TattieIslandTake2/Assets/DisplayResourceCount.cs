@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DisplayMoneyCount : MonoBehaviour
+public class DisplayResourceCount : MonoBehaviour
 {
-    public Text text;
-    public PlayerStats stats;
+    public Text potatoCountText;
+    public Text chickenCountText;
+    public Player stats;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +17,6 @@ public class DisplayMoneyCount : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        text .text = string.Format( " X " + stats.moneyCount );
+        potatoCountText.text = string.Format( " X " + stats.moneyCount );
     }
 }

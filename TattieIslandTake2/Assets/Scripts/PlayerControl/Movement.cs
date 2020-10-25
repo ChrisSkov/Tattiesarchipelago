@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    [SerializeField] PlayerStats stats = null;
+    [SerializeField] Player player = null;
     Rigidbody playerRB;
     Vector3 moveDirection = Vector3.zero;
     Animator playerAnim;
@@ -17,11 +17,12 @@ public class Movement : MonoBehaviour
         source = GetComponent<AudioSource>();
         playerRB = GetComponent<Rigidbody>();
         playerAnim = GetComponent<Animator>();
+        player.stats.currentMoveSpeed = player.stats.maxMoveSpeed;
     }
 
     void FixedUpdate()
     {
-        if (playerAnim.GetBool("canMove") && stats.canMove)
+        if (playerAnim.GetBool("canMove") && player.canMove)
         {
             HandleMovement();
             Rotate();
@@ -34,10 +35,10 @@ public class Movement : MonoBehaviour
     private void PlayWalkSound()
     {
         runTimer += Time.deltaTime;
-        if (playerAnim.GetBool("isRunning") && runTimer >= stats.stepSoundDelay)
+        if (playerAnim.GetBool("isRunning") && runTimer >= player.stepSoundDelay)
         {
             runTimer = 0;
-            source.PlayOneShot(stats.walkSound);
+            source.PlayOneShot(player.walkSound);
         }
     }
 
@@ -67,7 +68,7 @@ public class Movement : MonoBehaviour
         }
 
         //Sætter base speed
-        moveDirection *= stats.currentMoveSpeed;
+        moveDirection *= player.stats.currentMoveSpeed;
         //Move
         playerRB.MovePosition(playerRB.position + moveDirection * Time.deltaTime);
     }

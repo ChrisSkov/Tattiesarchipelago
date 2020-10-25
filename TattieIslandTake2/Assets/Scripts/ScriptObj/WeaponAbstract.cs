@@ -14,7 +14,7 @@ public abstract class WeaponAbstract : ScriptableObject
     public bool pickUp = false;
     public AudioClip hitSound;
     public AnimatorOverrideController animOverride;
-    public PlayerStats stats;
+    public Player stats;
     public PickUpScriptObj pickUpItem;
     public abstract void LeftClickAttack(Transform pos, Transform rayCastPosition, AudioSource source);
     public abstract void RightClickAttack(Transform pos, Transform rayCastPosition, AudioSource source);

@@ -6,7 +6,7 @@ using UnityEngine;
 public class Zombo : MonoBehaviour
 {
     public ZomboAbstract zomboStats;
-    public PlayerStats playerStats;
+    public Player player;
     public Transform aim;
     EnemyHealth health;
     Animator anim;
@@ -14,13 +14,13 @@ public class Zombo : MonoBehaviour
     AudioSource source;
     public bool canRotate = true;
     float attackTimer = Mathf.Infinity;
-    Transform player;
+    Transform playerTransform;
 
     // Start is called before the first frame update
     void Start()
     {
         source = GetComponent<AudioSource>();
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
         health = GetComponent<EnemyHealth>();
         anim = GetComponent<Animator>();
         path = GetComponent<AIPath>();
@@ -32,7 +32,7 @@ public class Zombo : MonoBehaviour
     {
         if (!health.isDead)
         {
-            if (playerStats.currentHealth <= 0)
+            if (player.stats.currentHealth <= 0)
             {
                 path.isStopped = true;
                 transform.LookAt(Camera.main.transform.GetChild(0).transform.position);
@@ -43,14 +43,14 @@ public class Zombo : MonoBehaviour
                 // specialAttackTimer += Time.deltaTime;
                 attackTimer += Time.deltaTime;
                 HandleMoveAnim();
-                if (Vector3.Distance(transform.position, player.position) <= zomboStats.chaseRange)
+                if (Vector3.Distance(transform.position, playerTransform.position) <= zomboStats.chaseRange)
                 {
                     if (canRotate)
                     {
-                        transform.LookAt(player.position);
+                        transform.LookAt(playerTransform.position);
                     }
-                    path.destination = player.position;
-                    if (Vector3.Distance(transform.position, player.position) <= zomboStats.attackRange)
+                    path.destination = playerTransform.position;
+                    if (Vector3.Distance(transform.position, playerTransform.position) <= zomboStats.attackRange)
                     {
                         if (attackTimer >= zomboStats.timeBetweenAttacks)
                         {

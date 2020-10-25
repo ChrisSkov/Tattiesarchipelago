@@ -14,7 +14,7 @@ public class Fight : MonoBehaviour
     Vector3 mouseWorldPositon = Vector3.zero;
 
     Animator anim;
-    public PlayerStats stats;
+    public Player stats;
     public float force = 0f;
     AudioSource source;
     public float timer = Mathf.Infinity;

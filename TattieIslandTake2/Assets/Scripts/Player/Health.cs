@@ -4,40 +4,40 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    public PlayerStats stats;
+    public Player player;
     public Transform bloodPos;
 
     public GameObject deathScreen;
     bool hasTriggeredDeath = false;
-    
+
     // Start is called before the first frame update
     void Start()
     {
-        stats.currentHealth = stats.maxHealth;
-        stats.isDead = false;
-        stats.canAttack = true;
-        stats.canMove = true;
+        player.stats.currentHealth = player.stats.maxHealth;
+        player.isDead = false;
+        player.canAttack = true;
+        player.canMove = true;
     }
 
     public void TakeDamage(float damage)
     {
-        stats.currentHealth -= damage;
-        GetComponent<AudioSource>().PlayOneShot(stats.takeDamageSounds[Random.Range(0,stats.takeDamageSounds.Length)]);
-        if (stats.currentHealth <= 0)
+        player.stats.currentHealth -= damage;
+        GetComponent<AudioSource>().PlayOneShot(player.takeDamageSounds[Random.Range(0, player.takeDamageSounds.Length)]);
+        if (player.stats.currentHealth <= 0)
         {
-            stats.currentHealth = 0;
-            stats.isDead = true;
-            stats.canAttack = false;
-            stats.canMove = false;
+            player.stats.currentHealth = 0;
+            player.isDead = true;
+            player.canAttack = false;
+            player.canMove = false;
             if (!hasTriggeredDeath)
             {
                 deathScreen.SetActive(true);
                 GetComponent<Animator>().SetTrigger("isDead");
-                GetComponent<AudioSource>().PlayOneShot(stats.deathSound);
+                GetComponent<AudioSource>().PlayOneShot(player.deathSound);
                 hasTriggeredDeath = true;
             }
         }
-        GameObject bloodClone = Instantiate(stats.blood, bloodPos.position, bloodPos.rotation);
+        GameObject bloodClone = Instantiate(player.blood, bloodPos.position, bloodPos.rotation);
         Destroy(bloodClone, 0.5f);
     }
 }
