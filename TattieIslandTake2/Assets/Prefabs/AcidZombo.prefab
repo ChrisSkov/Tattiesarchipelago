@@ -115,6 +115,10 @@ PrefabInstance:
       propertyPath: aim
       value: 
       objectReference: {fileID: 2419786010607807573}
+    - target: {fileID: 3758812767427766189, guid: 43601bec13398db4bbf0d93ae93a88a4, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 11400000, guid: d66d5124d742a3c44820ab8d1c02d69b, type: 2}
     - target: {fileID: 4079962143790852179, guid: 43601bec13398db4bbf0d93ae93a88a4, type: 3}
       propertyPath: m_Name
       value: AcidZombo

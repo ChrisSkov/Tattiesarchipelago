@@ -1902,7 +1902,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zomboStats: {fileID: 11400000, guid: c7e4c7d9d4b385d4a9099558777e2437, type: 2}
-  playerStats: {fileID: 11400000, guid: d66d5124d742a3c44820ab8d1c02d69b, type: 2}
+  player: {fileID: 11400000, guid: d66d5124d742a3c44820ab8d1c02d69b, type: 2}
   aim: {fileID: 1921578786802564341}
   canRotate: 1
 --- !u!114 &6705753005597531237

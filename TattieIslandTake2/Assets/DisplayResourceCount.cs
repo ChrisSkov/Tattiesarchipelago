@@ -7,16 +7,17 @@ public class DisplayResourceCount : MonoBehaviour
 {
     public Text potatoCountText;
     public Text chickenCountText;
-    public Player stats;
+    public Player player;
     // Start is called before the first frame update
     void Start()
     {
-
+        player.resources.chickenCount = GameObject.FindGameObjectsWithTag("chicken").Length;
     }
 
     // Update is called once per frame
     void Update()
     {
-        potatoCountText.text = string.Format( " X " + stats.moneyCount );
+        potatoCountText.text = string.Format( " X " + player.resources.moneyCount);
+        chickenCountText.text = string.Format( " X " + player.resources.chickenCount);
     }
 }

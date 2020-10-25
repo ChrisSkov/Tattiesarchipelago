@@ -7,10 +7,12 @@ public class ChickenWalk : StateMachineBehaviour
 {
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     AIPath path;
+    public float minDistance;
+    public float maxDistance;
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         path = animator.gameObject.GetComponent<AIPath>();
-        path.destination = animator.gameObject.transform.TransformDirection(Vector3.forward * 100);
+        path.destination = Random.insideUnitCircle * Random.Range(minDistance,maxDistance);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

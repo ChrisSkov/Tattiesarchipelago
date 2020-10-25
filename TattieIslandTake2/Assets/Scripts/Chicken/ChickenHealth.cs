@@ -6,7 +6,7 @@ public class ChickenHealth : MonoBehaviour
 {
     public ChickenScriptObj chickenStats;
 
-    public float currentHp;
+    public float currentHp = 50f;
     public float currentHungerLevel = 0f;
     public float layEggCountDown;
     public float currentEnemyFear;
@@ -16,6 +16,7 @@ public class ChickenHealth : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        currentHp = chickenStats.maxHp;
         currentEnemyFear = chickenStats.fearOfEnemies;
         chickenInfo = GetComponent<DisplayChickenInfo>();
     }
