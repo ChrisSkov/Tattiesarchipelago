@@ -19,6 +19,7 @@ public class PlayerStats : ScriptableObject
     public bool isDead;
     public bool canMove;
     public bool canAttack;
+    public int moneyCount;
     public AudioClip walkSound;
     public AudioClip deathSound;
     public AudioClip[] takeDamageSounds;
