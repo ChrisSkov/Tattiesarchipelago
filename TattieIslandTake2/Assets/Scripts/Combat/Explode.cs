@@ -17,6 +17,7 @@ public class Explode : MonoBehaviour
     private void Start()
     {
         slider.maxValue = timeBeforeBoom;
+        slider.value = timeBeforeBoom;
     }
     // Update is called once per frame
     void Update()
@@ -25,7 +26,7 @@ public class Explode : MonoBehaviour
         {
             slider.gameObject.SetActive(true);
             timer += Time.deltaTime;
-            slider.value = timer;
+            slider.value -= Time.deltaTime;
             if (timer >= timeBeforeBoom && !hasBlownUp)
             {
                 hasBlownUp = true;

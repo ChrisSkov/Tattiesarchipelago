@@ -5,6 +5,8 @@ using UnityEngine;
 public class RangedScriptObj : WeaponAbstract
 {
     GameObject clone;
+    GameObject clone2;
+    GameObject clone3;
     public float throwForce;
     public AudioClip throwSound;
     public override void OnPickUp(Transform pos)
@@ -35,19 +37,21 @@ public class RangedScriptObj : WeaponAbstract
     public override void LeftClickAttack(Transform pos, Transform rayCastPosition, AudioSource source)
     {
         Destroy(clone);
+        stats.currentWeapon = null;
         GameObject clone2 = Instantiate(weaponPrefab, pos.position, pos.rotation);
         clone2.AddComponent<Rigidbody>().AddRelativeForce(Vector3.forward * throwForce, ForceMode.Impulse);
         clone2.GetComponent<Explode>().startExplosionTimer = true;
-        stats.currentWeapon = null;
     }
 
     public override void Attack(Transform pos, float force, AudioSource source)
     {
         Destroy(clone);
-        GameObject clone2 = Instantiate(weaponPrefab, pos.position, pos.rotation);
-        clone2.AddComponent<Rigidbody>().AddRelativeForce(Vector3.forward * force, ForceMode.Impulse);
-        clone2.GetComponent<Explode>().startExplosionTimer = true;
+        Destroy(clone3);
+        GameObject clone4 = Instantiate(weaponPrefab, pos.position, pos.rotation);
+        clone4.AddComponent<Rigidbody>().AddRelativeForce(Vector3.forward * force, ForceMode.Impulse);
+        clone4.GetComponent<Explode>().startExplosionTimer = true;
         source.PlayOneShot(throwSound);
+        // stats.currentWeapon = null;
     }
 
     public override void RightClickAttack(Transform pos, Transform rayCastPosition, AudioSource source)
@@ -56,13 +60,17 @@ public class RangedScriptObj : WeaponAbstract
     }
     public override void SheathWeapon(Transform pos)
     {
-        clone.transform.SetParent(pos);
-        clone.transform.position = pos.position;
+        Destroy(clone);
+        clone2 = Instantiate(weaponPrefab, pos.position, pos.rotation);
+        clone2.transform.SetParent(pos);
+        clone2.transform.position = pos.position;
     }
 
     public override void UnSheathWeapon(Transform pos)
     {
-        clone.transform.SetParent(pos);
-        clone.transform.position = pos.position;
+        Destroy(clone2);
+        clone3 = Instantiate(weaponPrefab, pos.position, pos.rotation);
+        clone3.transform.SetParent(pos);
+        clone3.transform.position = pos.position;
     }
 }
