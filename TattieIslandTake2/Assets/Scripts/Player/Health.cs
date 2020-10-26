@@ -22,7 +22,7 @@ public class Health : MonoBehaviour
     public void TakeDamage(float damage)
     {
         player.stats.currentHealth -= damage;
-        GetComponent<AudioSource>().PlayOneShot(player.takeDamageSounds[Random.Range(0, player.takeDamageSounds.Length)]);
+        GetComponent<AudioSource>().PlayOneShot(player.playerAudio.takeDamageSounds[Random.Range(0, player.playerAudio.takeDamageSounds.Length)]);
         if (player.stats.currentHealth <= 0)
         {
             player.stats.currentHealth = 0;
@@ -33,7 +33,7 @@ public class Health : MonoBehaviour
             {
                 deathScreen.SetActive(true);
                 GetComponent<Animator>().SetTrigger("isDead");
-                GetComponent<AudioSource>().PlayOneShot(player.deathSound);
+                GetComponent<AudioSource>().PlayOneShot(player.playerAudio.deathSound);
                 hasTriggeredDeath = true;
             }
         }

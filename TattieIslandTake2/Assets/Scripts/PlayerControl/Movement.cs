@@ -38,7 +38,7 @@ public class Movement : MonoBehaviour
         if (playerAnim.GetBool("isRunning") && runTimer >= player.stepSoundDelay)
         {
             runTimer = 0;
-            source.PlayOneShot(player.walkSound);
+            source.PlayOneShot(player.playerAudio.walkSound);
         }
     }
 

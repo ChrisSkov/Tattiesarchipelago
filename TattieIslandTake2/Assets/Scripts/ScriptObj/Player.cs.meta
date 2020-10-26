@@ -3,7 +3,15 @@ guid: 0666a40a362e1a0409c9bf14269b478e
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - currentWeapon: {instanceID: 0}
+  - sheathedWeapon: {instanceID: 0}
+  - blood: {instanceID: 0}
+  - activeHand: {instanceID: 0}
+  - stats: {fileID: 11400000, guid: afa206f9b74b97844acb9cebfa30d09b, type: 2}
+  - resources: {fileID: 11400000, guid: abf6b85da09bad045b69ca4dfa05fbc8, type: 2}
+  - walkSound: {instanceID: 0}
+  - deathSound: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

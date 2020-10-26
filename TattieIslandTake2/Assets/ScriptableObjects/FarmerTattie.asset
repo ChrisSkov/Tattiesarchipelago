@@ -12,23 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0666a40a362e1a0409c9bf14269b478e, type: 3}
   m_Name: FarmerTattie
   m_EditorClassIdentifier: 
+  stats: {fileID: 11400000, guid: afa206f9b74b97844acb9cebfa30d09b, type: 2}
+  resources: {fileID: 11400000, guid: abf6b85da09bad045b69ca4dfa05fbc8, type: 2}
+  playerAudio: {fileID: 11400000, guid: 8d9ef6a70fa328644b03827d37dfc35c, type: 2}
   currentWeapon: {fileID: 11400000, guid: 35eddeb601504bd4692bf87e8ce286e6, type: 2}
   sheathedWeapon: {fileID: 11400000, guid: dc3cdc0d982f07142bef657368a49217, type: 2}
   blood: {fileID: 1565275868738540, guid: 15b2d0ac3c1f5bd4791ae44984fba681, type: 3}
   activeHand: {fileID: 0}
-  stats: {fileID: 11400000, guid: afa206f9b74b97844acb9cebfa30d09b, type: 2}
-  resources: {fileID: 11400000, guid: abf6b85da09bad045b69ca4dfa05fbc8, type: 2}
+  stepSoundDelay: 0.2
+  canAttack: 1
+  canMove: 1
   closeToPickUp: 1
   hasThrowable: 0
-  stepSoundDelay: 0.2
-  canMove: 1
   isDead: 0
-  canAttack: 1
-  moneyCount: 60
-  walkSound: {fileID: 8300000, guid: 0275c3aefd04f344c9a9c03044e33bfc, type: 3}
-  deathSound: {fileID: 8300000, guid: 7d22e579568c3cb4b98ce36358cb9fd0, type: 3}
-  takeDamageSounds:
-  - {fileID: 8300000, guid: 34da9e257197070428d8a36ef4b08356, type: 3}
-  - {fileID: 8300000, guid: 3bb07853ed464784990d20ec1e26b7a9, type: 3}
-  - {fileID: 8300000, guid: 618529203ed2bd149950c0d3f396873a, type: 3}
-  - {fileID: 8300000, guid: 298045c584fd3cc439bdea769c84320c, type: 3}

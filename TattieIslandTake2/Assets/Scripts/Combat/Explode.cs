@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Explode : MonoBehaviour
 {
@@ -10,18 +11,25 @@ public class Explode : MonoBehaviour
     public float timeBeforeBoom = 1f;
     public WeaponAbstract stats;
     bool hasBlownUp = false;
-   
 
+    public Slider slider;
+
+    private void Start()
+    {
+        slider.maxValue = timeBeforeBoom;
+    }
     // Update is called once per frame
     void Update()
     {
         if (startExplosionTimer)
         {
+            slider.gameObject.SetActive(true);
             timer += Time.deltaTime;
+            slider.value = timer;
             if (timer >= timeBeforeBoom && !hasBlownUp)
             {
                 hasBlownUp = true;
-                AudioSource source= GetComponent<AudioSource>();
+                AudioSource source = GetComponent<AudioSource>();
                 source.PlayOneShot(stats.hitSound);
                 Instantiate(explosionVFX, transform.position, transform.rotation);
                 LayerMask mask = LayerMask.GetMask("Enemy");
@@ -38,6 +46,7 @@ public class Explode : MonoBehaviour
 
                     }
                 }
+                slider.gameObject.SetActive(false);
                 Destroy(gameObject, 1.4f);
             }
         }
