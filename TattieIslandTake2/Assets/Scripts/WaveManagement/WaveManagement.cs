@@ -35,13 +35,16 @@ public class WaveManagement : MonoBehaviour
         if (waveTimer >= timeBetweenWaves)
         {
             isSpawning = true;
+            waveTimer = 0f;
+            currentWave += 1;
+            maxEnemiesInCurrentWave = 0;
+            enemiesSpawnedInCurrentWave = 0;
             for (int i = 0; i < waveSet.waves[currentWave].numberOfEnemies.Length; i++)
             {
                 maxEnemiesInCurrentWave += waveSet.waves[currentWave].numberOfEnemies[i];
             }
-            waveTimer = 0f;
-            currentWave += 1;
         }
+
 
 
         if (enemyTimer >= timeBetweenEnemies && enemiesSpawnedInCurrentWave < maxEnemiesInCurrentWave)
@@ -49,6 +52,12 @@ public class WaveManagement : MonoBehaviour
             Instantiate(waveSet.waves[currentWave].enemyTypesInWave[Random.Range(0, waveSet.waves[currentWave].enemyTypesInWave.Length)], spawnPoints[Random.Range(0, spawnPoints.Length)].transform.position, spawnPoints[Random.Range(0, spawnPoints.Length)].transform.rotation);
             enemyTimer = 0f;
             enemiesSpawnedInCurrentWave++;
+        }
+
+        if (enemiesSpawnedInCurrentWave == maxEnemiesInCurrentWave)
+        {
+            isSpawning = false;
+
         }
 
 

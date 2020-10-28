@@ -462,7 +462,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2670016544397038217, guid: 00ef3618c7b564c428d14fc69c309f79, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2670016544397038217, guid: 00ef3618c7b564c428d14fc69c309f79, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -840,7 +840,7 @@ Transform:
   - {fileID: 1194572991}
   - {fileID: 1848562489}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &195878055
 PrefabInstance:
@@ -1388,7 +1388,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5703505856686067910, guid: c65b68e4d76a91243b241293764e676d, type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 5703505856686067910, guid: c65b68e4d76a91243b241293764e676d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2621,11 +2621,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af6167896744f444da435c01e910c26f, type: 3}
---- !u!1 &822950788 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1560869754989797376, guid: af6167896744f444da435c01e910c26f, type: 3}
-  m_PrefabInstance: {fileID: 822950787}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &847876257
 GameObject:
   m_ObjectHideFlags: 3
@@ -4190,11 +4185,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af6167896744f444da435c01e910c26f, type: 3}
---- !u!1 &1274424064 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1560869754989797376, guid: af6167896744f444da435c01e910c26f, type: 3}
-  m_PrefabInstance: {fileID: 1274424063}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1280515122 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2852203122908854576, guid: 9decb7eafd42dee4981bd06947c9cdd6, type: 3}
@@ -4438,11 +4428,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af6167896744f444da435c01e910c26f, type: 3}
---- !u!1 &1338628771 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1560869754989797376, guid: af6167896744f444da435c01e910c26f, type: 3}
-  m_PrefabInstance: {fileID: 1338628770}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1341492612
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5564,11 +5549,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af6167896744f444da435c01e910c26f, type: 3}
---- !u!1 &1613822296 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1560869754989797376, guid: af6167896744f444da435c01e910c26f, type: 3}
-  m_PrefabInstance: {fileID: 1613822295}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1618215003 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2852203122908854576, guid: 9decb7eafd42dee4981bd06947c9cdd6, type: 3}
@@ -6771,7 +6751,7 @@ Transform:
   m_Children:
   - {fileID: 164832910}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1876138645
 PrefabInstance:
@@ -8048,11 +8028,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5485580588014176883, guid: ead0bfde6ef222f43bf0f93922f3891a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 24.3
+      value: 17.9
       objectReference: {fileID: 0}
     - target: {fileID: 5485580588014176883, guid: ead0bfde6ef222f43bf0f93922f3891a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -27.630001
+      value: -22.88
       objectReference: {fileID: 0}
     - target: {fileID: 5485580588831054005, guid: ead0bfde6ef222f43bf0f93922f3891a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8126,18 +8106,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waveSet: {fileID: 11400000, guid: aa258c440ae4fba4ea9e2a854c1d4914, type: 2}
-  timeBetweenWaves: 45
+  timeBetweenWaves: 10
   timeBetweenEnemies: 2
   isSpawning: 0
-  currentWave: -1
+  currentWave: 0
   maxEnemiesInCurrentWave: 0
   enemiesSpawnedInCurrentWave: 0
   spawnPoints:
   - {fileID: 5485580588697585422}
-  - {fileID: 1274424064}
-  - {fileID: 1613822296}
-  - {fileID: 822950788}
-  - {fileID: 1338628771}
   enemyTimer: Infinity
   waveTimer: Infinity
 --- !u!1 &5485580588697585422 stripped
