@@ -14,7 +14,7 @@ public class Fight : MonoBehaviour
     Vector3 mouseWorldPositon = Vector3.zero;
 
     Animator anim;
-    public Player stats;
+    public Player player;
     public float force = 0f;
     AudioSource source;
     public float timer = Mathf.Infinity;
@@ -32,7 +32,7 @@ public class Fight : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (stats.canAttack == false)
+        if (player.canAttack == false)
             return;
         DefaultWeaponBehavior();
         PickUpWeapon();
@@ -45,18 +45,18 @@ public class Fight : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R))
         {
 
-            stats.sheathedWeapon = stats.currentWeapon;
-            stats.sheathedWeapon.SheathWeapon(sheathedWeaponHolder);
-            stats.currentWeapon = sheathedWeapon;
-            sheathedWeapon = stats.sheathedWeapon;
-            if (stats.currentWeapon.isRightHanded)
+            player.sheathedWeapon = player.currentWeapon;
+            player.sheathedWeapon.SheathWeapon(sheathedWeaponHolder);
+            player.currentWeapon = sheathedWeapon;
+            sheathedWeapon = player.sheathedWeapon;
+            if (player.currentWeapon.isRightHanded)
             {
 
-                stats.currentWeapon.UnSheathWeapon(rightHand);
+                player.currentWeapon.UnSheathWeapon(rightHand);
             }
             else
             {
-                stats.currentWeapon.UnSheathWeapon(leftHand);
+                player.currentWeapon.UnSheathWeapon(leftHand);
 
             }
         }
@@ -77,28 +77,28 @@ public class Fight : MonoBehaviour
             mouseWorldPositon = new Vector3(hit.point.x, transform.position.y, hit.point.z) - transform.position;
             if (Vector3.Distance(transform.position, hit.collider.gameObject.transform.position) <= 5f)
             {
-                stats.closeToPickUp = true;
+                player.closeToPickUp = true;
                 GameObject weaponToPickUp = hit.collider.gameObject;
                 WeaponAbstract newWeapon = weaponToPickUp.GetComponent<PickMeUp>().thisWeapon;
 
-                if (Input.GetKeyDown(KeyCode.E) && stats.closeToPickUp == true)
+                if (Input.GetKeyDown(KeyCode.E) && player.closeToPickUp == true)
                 {
                     newWeapon.pickUp = true;
                     if (weaponInHand != defaultWeapon && sheathedWeapon != defaultWeapon)
                     {
-                        weaponInHand.DropWeapon(stats.activeHand);
+                        weaponInHand.DropWeapon(player.activeHand);
                     }
                     weaponInHand = newWeapon;
                     anim.runtimeAnimatorController = weaponInHand.animOverride;
 
                     if (sheathedWeapon == defaultWeapon)
                     {
-                        sheathedWeapon = stats.currentWeapon;
-                        stats.sheathedWeapon = sheathedWeapon;
-                        stats.sheathedWeapon.SheathWeapon(sheathedWeaponHolder);
+                        sheathedWeapon = player.currentWeapon;
+                        player.sheathedWeapon = sheathedWeapon;
+                        player.sheathedWeapon.SheathWeapon(sheathedWeaponHolder);
                     }
                     Destroy(weaponToPickUp);
-                    stats.closeToPickUp = false;
+                    player.closeToPickUp = false;
                 }
                 else
                 {
@@ -112,11 +112,11 @@ public class Fight : MonoBehaviour
     {
         if (weaponInHand == null)
         {
-            stats.currentWeapon = defaultWeapon;
-            stats.activeHand = leftHand;
+            player.currentWeapon = defaultWeapon;
+            player.activeHand = leftHand;
 
         }
-        weaponInHand = stats.currentWeapon;
+        weaponInHand = player.currentWeapon;
     }
 
     private void HandManagement()
@@ -127,15 +127,15 @@ public class Fight : MonoBehaviour
 
         if (weaponInHand.isRightHanded)
         {
-            stats.activeHand = rightHand;
+            player.activeHand = rightHand;
         }
         else
         {
-            stats.activeHand = leftHand;
+            player.activeHand = leftHand;
         }
         if (weaponInHand.pickUp == true)
         {
-            weaponInHand.OnPickUp(stats.activeHand);
+            weaponInHand.OnPickUp(player.activeHand);
         }
         weaponInHand.pickUp = false;
 
@@ -147,7 +147,7 @@ public class Fight : MonoBehaviour
             return;
         if (Input.GetKeyDown(KeyCode.Q) && anim.GetBool("canAttack"))
         {
-            weaponInHand.DropWeapon(stats.activeHand);
+            weaponInHand.DropWeapon(player.activeHand);
         }
         anim.runtimeAnimatorController = weaponInHand.animOverride;
     }
@@ -158,17 +158,17 @@ public class Fight : MonoBehaviour
             return;
         if (weaponInHand.isThrowWeapon)
         {
-            stats.hasThrowable = true;
+            player.hasThrowable = true;
         }
         else
         {
-            stats.hasThrowable = false;
+            player.hasThrowable = false;
         }
     }
 
     private void StandardWeaponAttack()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0) && !stats.hasThrowable && timer >= weaponInHand.timeBetweenAttacks)
+        if (Input.GetKeyDown(KeyCode.Mouse0) && !player.hasThrowable && timer >= weaponInHand.timeBetweenAttacks)
         {
             weaponInHand.TriggerAttack(anim, "attack");
             timer = 0f;
@@ -177,7 +177,7 @@ public class Fight : MonoBehaviour
 
     void RightClickAttack()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse1) && !stats.hasThrowable && timer >= weaponInHand.timeBetweenAttacks)
+        if (Input.GetKeyDown(KeyCode.Mouse1) && !player.hasThrowable && timer >= weaponInHand.timeBetweenAttacks)
         {
             weaponInHand.TriggerAttack(anim, "rightClick");
             timer = 0f;
@@ -186,11 +186,11 @@ public class Fight : MonoBehaviour
 
     private void ThrowWeaponAttack()
     {
-        if (Input.GetKey(KeyCode.Mouse0) && stats.hasThrowable && timer >= weaponInHand.timeBetweenAttacks)
+        if (Input.GetKey(KeyCode.Mouse0) && player.hasThrowable && timer >= weaponInHand.timeBetweenAttacks)
         {
             force += Time.deltaTime * 12f;
         }
-        else if (Input.GetKeyUp(KeyCode.Mouse0) && stats.hasThrowable && timer >= weaponInHand.timeBetweenAttacks)
+        else if (Input.GetKeyUp(KeyCode.Mouse0) && player.hasThrowable && timer >= weaponInHand.timeBetweenAttacks)
         {
             weaponInHand.TriggerAttack(anim, "attack");
             timer = 0f;
@@ -199,24 +199,24 @@ public class Fight : MonoBehaviour
 
     void AnimEvent()
     {
-        if (stats.hasThrowable)
+        if (player.hasThrowable)
         {
             weaponInHand.Attack(transform.GetChild(0).transform, force, source);
             force = 0f;
         }
         else
         {
-            weaponInHand.LeftClickAttack(stats.activeHand, gameObject.transform, source);
+            weaponInHand.LeftClickAttack(player.activeHand, gameObject.transform, source);
         }
     }
 
     void ResetWeaponAfterThrow()
     {
-        stats.currentWeapon = null;
+        player.currentWeapon = null;
     }
     void AnimEventRightClick()
     {
-        weaponInHand.RightClickAttack(stats.activeHand, gameObject.transform, source);
+        weaponInHand.RightClickAttack(player.activeHand, gameObject.transform, source);
     }
 
     void CanAttack()

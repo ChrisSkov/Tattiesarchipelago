@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cec9c4fe70f854242ab017288e013c3d, type: 3}
   m_Name: Resources
   m_EditorClassIdentifier: 
-  moneyCount: 0
-  chickenCount: 0
-  ammoCount: 0
+  moneyCount: 50
+  chickenCount: 1
+  ammoCount: 5
   dynamiteCount: 0

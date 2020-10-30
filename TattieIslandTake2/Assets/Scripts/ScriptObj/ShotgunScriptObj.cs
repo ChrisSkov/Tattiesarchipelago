@@ -38,13 +38,17 @@ public class ShotgunScriptObj : WeaponAbstract
         {
             anim.runtimeAnimatorController = animOverride;
         }
-        anim.SetTrigger(trigger);
+        if (anim.gameObject.GetComponent<Fight>().player.resources.ammoCount > 0)
+        {
+            anim.SetTrigger(trigger);
+        }
     }
     public override void LeftClickAttack(Transform pos, Transform rayCastPosition, AudioSource source)
     {
         GameObject coneClone = Instantiate(coneCollider, pos.position, pos.rotation);
         GameObject particleClone = Instantiate(particles, pos.GetChild(0).transform.GetChild(0).transform.position, pos.rotation);
         particleClone.transform.Rotate(-90, -90, 0, Space.Self);
+        source.gameObject.GetComponent<Fight>().player.resources.ammoCount--;
         source.PlayOneShot(shootSound);
     }
 

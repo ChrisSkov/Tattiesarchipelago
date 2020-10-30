@@ -14,6 +14,8 @@ public class WaveManagement : MonoBehaviour
     public GameObject[] spawnPoints = null;
     public float enemyTimer = Mathf.Infinity;
     public float waveTimer = Mathf.Infinity;
+
+    public Player player;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +25,8 @@ public class WaveManagement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(!player.isDead)
+        {
         if (isSpawning)
         {
             enemyTimer += Time.deltaTime;
@@ -58,6 +62,7 @@ public class WaveManagement : MonoBehaviour
         {
             isSpawning = false;
 
+        }
         }
 
 
