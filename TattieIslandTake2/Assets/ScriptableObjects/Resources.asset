@@ -16,3 +16,4 @@ MonoBehaviour:
   chickenCount: 1
   ammoCount: 5
   dynamiteCount: 0
+  healthPotCount: 1

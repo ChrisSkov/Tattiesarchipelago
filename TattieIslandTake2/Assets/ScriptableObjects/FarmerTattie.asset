@@ -15,13 +15,14 @@ MonoBehaviour:
   stats: {fileID: 11400000, guid: afa206f9b74b97844acb9cebfa30d09b, type: 2}
   resources: {fileID: 11400000, guid: abf6b85da09bad045b69ca4dfa05fbc8, type: 2}
   playerAudio: {fileID: 11400000, guid: 8d9ef6a70fa328644b03827d37dfc35c, type: 2}
-  currentWeapon: {fileID: 11400000, guid: 35eddeb601504bd4692bf87e8ce286e6, type: 2}
+  currentWeapon: {fileID: 11400000, guid: dc3cdc0d982f07142bef657368a49217, type: 2}
   sheathedWeapon: {fileID: 11400000, guid: dc3cdc0d982f07142bef657368a49217, type: 2}
-  blood: {fileID: 1565275868738540, guid: 15b2d0ac3c1f5bd4791ae44984fba681, type: 3}
   activeHand: {fileID: 0}
-  stepSoundDelay: 0.2
   canAttack: 1
   canMove: 1
   closeToPickUp: 1
   hasThrowable: 0
   isDead: 0
+  blood: {fileID: 1565275868738540, guid: 15b2d0ac3c1f5bd4791ae44984fba681, type: 3}
+  stepSoundDelay: 0.2
+  activeConsumable: {fileID: 11400000, guid: b5b35784686f2054a9e704f72bb08f64, type: 2}

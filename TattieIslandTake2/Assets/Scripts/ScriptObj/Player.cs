@@ -22,5 +22,7 @@ public class Player : ScriptableObject
     [Header("Misc")]
     public GameObject blood;
     public float stepSoundDelay;
+
+    public ConsumableAbstract activeConsumable;
 }
 

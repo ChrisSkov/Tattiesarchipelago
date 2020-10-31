@@ -10,6 +10,8 @@ public class Health : MonoBehaviour
     public GameObject deathScreen;
     bool hasTriggeredDeath = false;
 
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +20,6 @@ public class Health : MonoBehaviour
         player.canAttack = true;
         player.canMove = true;
     }
-
     public void TakeDamage(float damage)
     {
         player.stats.currentHealth -= damage;

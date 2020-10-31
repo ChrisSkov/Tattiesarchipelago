@@ -8,4 +8,5 @@ public class PlayerResources : ScriptableObject
     public int chickenCount;
     public int ammoCount;
     public int dynamiteCount;
+    public int healthPotCount;
 }

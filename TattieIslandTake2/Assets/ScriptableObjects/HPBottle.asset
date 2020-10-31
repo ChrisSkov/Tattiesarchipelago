@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87696213edbee7a4ea83c986124442bd, type: 3}
+  m_Name: HPBottle
+  m_EditorClassIdentifier: 
+  statGainAmount:
+  - 40
+  prefab: {fileID: 4409512452136206499, guid: 6d6ddcdec84a3fa42902c147cc8d7463, type: 3}
+  consumeSounds:
+  - {fileID: 8300000, guid: d9cd3caca0f2c424b9b8bd993606787d, type: 3}
+  - {fileID: 8300000, guid: 369f9d34491d25a4ea9555dc5eedc5a8, type: 3}
+  - {fileID: 8300000, guid: 7c753164d94a38d45ae2b1ff5fdeb7c7, type: 3}
+  - {fileID: 8300000, guid: 5cce401decb28964ea49cf22342212ed, type: 3}
+  - {fileID: 8300000, guid: d5ea8d2e3139f594bbc2060323599a8f, type: 3}
+  player: {fileID: 11400000, guid: d66d5124d742a3c44820ab8d1c02d69b, type: 2}
