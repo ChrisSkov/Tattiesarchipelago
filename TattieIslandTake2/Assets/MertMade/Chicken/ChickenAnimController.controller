@@ -632,3 +632,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minDistance: 1
   maxDistance: 5
+  chickenScriptObj: {fileID: 11400000, guid: 473595a5ec114e448b2d628ea653e74a, type: 2}

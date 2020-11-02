@@ -9,9 +9,11 @@ public class ChickenWalk : StateMachineBehaviour
     AIPath path;
     public float minDistance;
     public float maxDistance;
+    public ChickenScriptObj chickenScriptObj;
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         path = animator.gameObject.GetComponent<AIPath>();
+        path.maxSpeed  = chickenScriptObj.runSpeed;
         path.destination = Random.insideUnitCircle * Random.Range(minDistance,maxDistance);
     }
 

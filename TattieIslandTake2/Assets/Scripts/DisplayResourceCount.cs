@@ -9,7 +9,6 @@ public class DisplayResourceCount : MonoBehaviour
     public Text chickenCountText;
     public Text potatoCountText;
     public Text ammoCountText;
-    public Text hpBottleText;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +22,5 @@ public class DisplayResourceCount : MonoBehaviour
         chickenCountText.text = string.Format(" X " + player.resources.chickenCount);
         potatoCountText.text = string.Format(" X " + player.resources.moneyCount);
         ammoCountText.text = string.Format(" X " + player.resources.ammoCount);
-        hpBottleText.text = player.resources.healthPotCount.ToString();
     }
 }

@@ -6,5 +6,6 @@ public class PickMeUp : MonoBehaviour
 {
     public Player stats;
     public WeaponAbstract thisWeapon;
+    
 
 }

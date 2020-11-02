@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moneyCount: 50
   chickenCount: 1
-  ammoCount: 5
+  ammoCount: 190
   dynamiteCount: 0
   healthPotCount: 0

@@ -90,4 +90,14 @@ public class Movement : MonoBehaviour
         transform.rotation = Quaternion.LookRotation(mouseWorldPositon, Vector3.up);
 
     }
+
+    void CanMove()
+    {
+        playerAnim.SetBool("canMove", true);
+    }
+
+    void CannotMove()
+    {
+        playerAnim.SetBool("canMove", false);
+    }
 }
