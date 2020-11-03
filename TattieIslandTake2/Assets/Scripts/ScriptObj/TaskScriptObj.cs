@@ -5,28 +5,37 @@ using UnityEngine;
 public class TaskScriptObj : TaskAbstract
 {
     GameObject toolClone;
+
+    bool toolCloneIsLive = false;
     public override void OnTaskBegin(Animator anim, Transform handAim)
     {
         if (animOverride != null)
         {
             anim.runtimeAnimatorController = animOverride;
         }
-        toolClone = Instantiate(toolPrefab, handAim.position, toolPrefab.transform.rotation);
-        toolClone.transform.SetParent(handAim);
-        //toolClone.transform.rotation = handAim.rotation;
+        if (toolCloneIsLive == false)
+        {
+            toolClone = Instantiate(toolPrefab, handAim.position, toolPrefab.transform.rotation);
+            toolClone.transform.SetParent(handAim);
+            toolCloneIsLive = true;
+        }
 
         anim.SetTrigger("task");
-        Debug.Log("eow");
+
     }
 
     public override void OnTaskComplete(Animator anim)
     {
-        throw new System.NotImplementedException();
+        anim.SetTrigger("taskComplete");
+        Instantiate(lootPrefab, anim.gameObject.transform.position, anim.gameObject.transform.rotation);
+        Destroy(anim.gameObject, 0.8f);
     }
 
-    public override void TaskAnimEvent(GameObject taskObject, int amount)
+    public override void TaskAnimEvent(GameObject taskObject, int amount, Animator anim)
     {
+        anim.SetTrigger("react");
         taskObject.GetComponent<TaskBehavior>().currentHealth -= amount;
-        Destroy(toolClone, 1.5f);
+        Destroy(toolClone, 1f);
+        toolCloneIsLive = false;
     }
 }

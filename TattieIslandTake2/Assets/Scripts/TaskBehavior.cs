@@ -11,6 +11,8 @@ public class TaskBehavior : MonoBehaviour
     public int currentHealth;
     public Animator playerAnim;
     PerformTask performTask;
+
+    bool canDoTask = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,12 +27,18 @@ public class TaskBehavior : MonoBehaviour
     {
         if (Vector3.Distance(transform.position, player.position) <= task.distanceToStart)
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E) && canDoTask)
             {
 
                 task.OnTaskBegin(playerAnim, performTask.handAimRight);
                 performTask.currentTaskObject = gameObject;
             }
+        }
+
+        if(currentHealth <= 0)
+        {
+            canDoTask = false;
+            task.OnTaskComplete(GetComponent<Animator>());
         }
     }
 

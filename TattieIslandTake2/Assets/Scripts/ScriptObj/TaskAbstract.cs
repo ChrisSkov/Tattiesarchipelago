@@ -16,6 +16,6 @@ public abstract class TaskAbstract : ScriptableObject
     public abstract void OnTaskComplete(Animator anim);
     public abstract void OnTaskBegin(Animator anim, Transform handAim);
 
-    public abstract void TaskAnimEvent(GameObject taskObject, int amount);
+    public abstract void TaskAnimEvent(GameObject taskObject, int amount, Animator anim);
 
 }

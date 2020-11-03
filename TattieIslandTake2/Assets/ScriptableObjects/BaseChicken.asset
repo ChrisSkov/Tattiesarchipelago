@@ -15,8 +15,8 @@ MonoBehaviour:
   maxHp: 50
   hpRegen: 2
   hpRegenTime: 5
-  runSpeed: 6
-  walkSpeed: 5
+  runSpeed: 4
+  walkSpeed: 3
   fearOfEnemies: 0
   fleeFromEnemyRange: 0
   foodSearchThreshold: 0

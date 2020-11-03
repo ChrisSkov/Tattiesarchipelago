@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c90fc785fac0fd4468d0746cd5d48f6d, type: 3}
   m_Name: ChopTree
   m_EditorClassIdentifier: 
-  maxHealth: 20
-  distanceToStart: 2
+  maxHealth: 50
+  distanceToStart: 1.6
   animOverride: {fileID: 0}
-  lootPrefab: {fileID: 0}
+  lootPrefab: {fileID: 3550366334037083557, guid: 75650f1ea0ded5b43b401e64dff04924, type: 3}
   toolPrefab: {fileID: 1164328234615206, guid: e048a401410aa9f4791cdd97e15735ca, type: 3}
   lootAmount: 1
