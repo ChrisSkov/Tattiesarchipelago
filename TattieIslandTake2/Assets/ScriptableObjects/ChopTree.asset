@@ -16,5 +16,5 @@ MonoBehaviour:
   distanceToStart: 1.6
   animOverride: {fileID: 0}
   lootPrefab: {fileID: 3550366334037083557, guid: 75650f1ea0ded5b43b401e64dff04924, type: 3}
-  toolPrefab: {fileID: 1164328234615206, guid: e048a401410aa9f4791cdd97e15735ca, type: 3}
+  toolPrefab: {fileID: 1124784329471907012, guid: c401cb348a121ac4ea6434b2bf578e0d, type: 3}
   lootAmount: 1

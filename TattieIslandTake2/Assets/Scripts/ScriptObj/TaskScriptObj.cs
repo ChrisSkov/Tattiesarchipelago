@@ -15,7 +15,7 @@ public class TaskScriptObj : TaskAbstract
         }
         if (toolCloneIsLive == false)
         {
-            toolClone = Instantiate(toolPrefab, handAim.position, toolPrefab.transform.rotation);
+            toolClone = Instantiate(toolPrefab, handAim.position, handAim.rotation);
             toolClone.transform.SetParent(handAim);
             toolCloneIsLive = true;
         }

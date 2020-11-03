@@ -9,6 +9,7 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField] ParticleSystem bloodSpray = null;
     [SerializeField] AudioClip deathSound = null;
     [SerializeField] Transform organHolder = null;
+    [SerializeField] Player player;
     Animator anim;
     public float currentHp;
     public bool isDead = false;
@@ -50,6 +51,7 @@ public class EnemyHealth : MonoBehaviour
         source.PlayOneShot(deathSound);
         particleHolder.transform.LookAt(playerTransform);
         Instantiate(bloodSpray, particleHolder.position, particleHolder.rotation);
+        player.progression.currentXP += stats.xpGrantedOnDeath;
         DespawnEnemy();
 
     }

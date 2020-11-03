@@ -1887,6 +1887,7 @@ MonoBehaviour:
   bloodSpray: {fileID: 539340935798995716, guid: ef96e9681868bb24abdb1e6d7847232c, type: 3}
   deathSound: {fileID: 8300000, guid: 01021012487f6f24bbb63beb6480c80f, type: 3}
   organHolder: {fileID: 982898934}
+  player: {fileID: 11400000, guid: d66d5124d742a3c44820ab8d1c02d69b, type: 2}
   currentHp: 0
   isDead: 0
 --- !u!114 &3758812767427766189

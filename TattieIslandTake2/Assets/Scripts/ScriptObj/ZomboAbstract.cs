@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class ZomboAbstract : ScriptableObject
 {
-    [Header("locomotion")]
+    [Header("Locomotion")]
     public float moveSpeed;
     public float chaseRange;
     public float walkSoundDelay;
@@ -17,6 +17,7 @@ public abstract class ZomboAbstract : ScriptableObject
     [Header("Life and Death")]
     public float maxHp;
     public float destroyTime;
+    public int xpGrantedOnDeath;
     public GameObject[] organs;
     public AudioClip[] takeDamageSounds;
     [Header("Misc")]

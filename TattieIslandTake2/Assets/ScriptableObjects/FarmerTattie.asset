@@ -15,6 +15,7 @@ MonoBehaviour:
   stats: {fileID: 11400000, guid: afa206f9b74b97844acb9cebfa30d09b, type: 2}
   resources: {fileID: 11400000, guid: abf6b85da09bad045b69ca4dfa05fbc8, type: 2}
   playerAudio: {fileID: 11400000, guid: 8d9ef6a70fa328644b03827d37dfc35c, type: 2}
+  progression: {fileID: 11400000, guid: 9ef2794d61ccc244b8f32358e176df9a, type: 2}
   currentWeapon: {fileID: 11400000, guid: dc3cdc0d982f07142bef657368a49217, type: 2}
   sheathedWeapon: {fileID: 11400000, guid: dc3cdc0d982f07142bef657368a49217, type: 2}
   activeHand: {fileID: 0}

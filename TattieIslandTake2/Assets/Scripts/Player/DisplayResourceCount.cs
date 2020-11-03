@@ -9,6 +9,8 @@ public class DisplayResourceCount : MonoBehaviour
     public Text chickenCountText;
     public Text potatoCountText;
     public Text ammoCountText;
+
+    public Slider xpSlider;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,5 +24,9 @@ public class DisplayResourceCount : MonoBehaviour
         chickenCountText.text = string.Format(" X " + player.resources.chickenCount);
         potatoCountText.text = string.Format(" X " + player.resources.moneyCount);
         ammoCountText.text = string.Format(" X " + player.resources.ammoCount);
+        player.progression.GetXpToLevel();
+        xpSlider.value =  player.progression.currentXP;
+        xpSlider.maxValue = player.progression.xpToLevel;
+        player.progression.LevelUp();
     }
 }
