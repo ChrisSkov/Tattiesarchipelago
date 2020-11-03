@@ -86,6 +86,9 @@ MonoBehaviour:
   - ChitChat
   - StandAndLook
   - Walk
+  - Walk
+  - Walk
+  - Walk
 --- !u!1101 &-6302171215105894555
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -630,6 +633,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 544a4af6299a5ac4a911c72e90473f94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minDistance: -2
-  maxDistance: -1
+  minDistance: 1
+  maxDistance: 2
   chickenScriptObj: {fileID: 11400000, guid: 473595a5ec114e448b2d628ea653e74a, type: 2}

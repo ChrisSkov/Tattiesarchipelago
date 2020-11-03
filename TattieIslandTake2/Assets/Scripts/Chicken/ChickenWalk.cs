@@ -14,7 +14,10 @@ public class ChickenWalk : StateMachineBehaviour
     {
         path = animator.gameObject.GetComponent<AIPath>();
         path.maxSpeed  = chickenScriptObj.runSpeed;
-        path.destination = Random.insideUnitCircle * Random.Range(minDistance,maxDistance);
+        var point= Random.insideUnitSphere * Random.Range(minDistance,maxDistance);
+        point.y = 0;
+        point += path.position;
+        path.destination = point;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
