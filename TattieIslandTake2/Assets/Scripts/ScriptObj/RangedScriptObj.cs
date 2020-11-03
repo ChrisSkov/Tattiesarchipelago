@@ -25,6 +25,7 @@ public class RangedScriptObj : WeaponAbstract
         var pickUpClone = Instantiate(pickUpItem.pickUpPrefab, pos.position, pos.rotation);
         pickUpClone.transform.rotation = Quaternion.Euler(90, 0, 0);
         Destroy(clone);
+        Destroy(clone3);
     }
     public override void TriggerAttack(Animator anim, string trigger)
     {
@@ -61,6 +62,7 @@ public class RangedScriptObj : WeaponAbstract
     public override void SheathWeapon(Transform pos)
     {
         Destroy(clone);
+        Destroy(clone3);
         clone2 = Instantiate(weaponPrefab, pos.position, pos.rotation);
         clone2.transform.SetParent(pos);
         clone2.transform.position = pos.position;
