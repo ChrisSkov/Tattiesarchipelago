@@ -3,7 +3,13 @@ guid: 6a63958a10431bd41a1471ed6f9060f1
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - stats: {instanceID: 0}
+  - shatterObject: {instanceID: 0}
+  - bloodSpray: {instanceID: 0}
+  - deathSound: {instanceID: 0}
+  - organHolder: {instanceID: 0}
+  - player: {fileID: 11400000, guid: d66d5124d742a3c44820ab8d1c02d69b, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

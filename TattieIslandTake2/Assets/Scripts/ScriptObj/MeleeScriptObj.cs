@@ -27,7 +27,7 @@ public class MeleeScriptObj : WeaponAbstract
                 hit.collider.gameObject.GetComponent<Rigidbody>().AddForce(-hit.normal * force, ForceMode.Impulse);
                 if (hit.collider.gameObject.GetComponent<EnemyHealth>() != null)
                 {
-                    hit.collider.gameObject.GetComponent<EnemyHealth>().TakeDamage(leftClickDamage);
+                    hit.collider.gameObject.GetComponent<EnemyHealth>().TakeDamage(leftClickDamage + stats.stats.dmgModifier);
                 }
                 source.PlayOneShot(stats.currentWeapon.hitSound);
 
@@ -45,7 +45,7 @@ public class MeleeScriptObj : WeaponAbstract
                 hit.collider.gameObject.GetComponent<Rigidbody>().AddForce(-hit.normal * force * 1.3f, ForceMode.Impulse);
                 if (hit.collider.gameObject.GetComponent<EnemyHealth>() != null)
                 {
-                    hit.collider.gameObject.GetComponent<EnemyHealth>().TakeDamage(rightClickDamage);
+                    hit.collider.gameObject.GetComponent<EnemyHealth>().TakeDamage(rightClickDamage + stats.stats.dmgModifier);
                 }
                 source.PlayOneShot(stats.currentWeapon.hitSound);
 

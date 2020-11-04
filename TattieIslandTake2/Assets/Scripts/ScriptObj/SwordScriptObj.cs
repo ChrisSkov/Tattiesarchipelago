@@ -24,7 +24,7 @@ public class SwordScriptObj : WeaponAbstract
             {
                 if (c.gameObject.GetComponent<EnemyHealth>() != null)
                 {
-                    c.gameObject.GetComponent<EnemyHealth>().TakeDamage(leftClickDamage);
+                    c.gameObject.GetComponent<EnemyHealth>().TakeDamage(leftClickDamage + stats.stats.dmgModifier);
                 }
 
                 if (Physics.Raycast(rayCastPosition.position, c.gameObject.transform.position - rayCastPosition.position, out hit, mask))

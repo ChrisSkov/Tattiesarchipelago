@@ -8,23 +8,26 @@ public class LevelUpProgression : ScriptableObject
     public int currentLevel;
     public int currentXP;
     public int xpGrowth;
+
     public int GetXpToLevel()
     {
 
-        return xpToLevel =  xpGrowth + xpGrowth;
+        return xpToLevel = xpGrowth + xpGrowth;
     }
 
-    public int LevelUp()
+    public int LevelUp(GameObject levelUpCanvas)
     {
         if (currentXP >= xpToLevel)
         {
             if (currentLevel >= 4)
             {
-                xpGrowth *= 2;     
+                xpGrowth *= 2;
             }
             xpGrowth *= 2;
             currentXP = 0;
+            levelUpCanvas.SetActive(true);
             return currentLevel += 1;
+
         }
         return currentLevel;
     }

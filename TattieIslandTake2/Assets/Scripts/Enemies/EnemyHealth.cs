@@ -9,7 +9,7 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField] ParticleSystem bloodSpray = null;
     [SerializeField] AudioClip deathSound = null;
     [SerializeField] Transform organHolder = null;
-    [SerializeField] Player player;
+    [SerializeField] Player player = null;
     Animator anim;
     public float currentHp;
     public bool isDead = false;

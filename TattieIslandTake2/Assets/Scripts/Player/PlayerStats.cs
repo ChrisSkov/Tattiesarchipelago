@@ -8,4 +8,5 @@ public class PlayerStats : ScriptableObject
     public float currentMoveSpeed;
     public float maxHealth;
     public float currentHealth;
+    public float dmgModifier;
 }
