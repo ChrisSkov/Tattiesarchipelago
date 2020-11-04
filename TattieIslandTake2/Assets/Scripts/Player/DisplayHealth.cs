@@ -21,9 +21,9 @@ public class DisplayHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        hpText.text = string.Format("{0}/{1}", Mathf.RoundToInt(player.stats.currentHealth), Mathf.RoundToInt(player.stats.maxHealth));
+        hpText.text = string.Format("{0}/{1}", Mathf.RoundToInt(player.stats.currentHealth.statValue), Mathf.RoundToInt(player.stats.maxHealth.statValue));
         //   slider.value = player.stats.currentHealth;
-        image.fillAmount = player.stats.currentHealth / player.stats.maxHealth;
-        print(player.stats.currentHealth / player.stats.maxHealth);
+        image.fillAmount = player.stats.currentHealth.statValue / player.stats.maxHealth.statValue;
+        print(player.stats.currentHealth.statValue / player.stats.maxHealth.statValue);
     }
 }

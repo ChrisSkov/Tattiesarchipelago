@@ -1,9 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using Pathfinding;
+﻿
 using UnityEngine;
+using Pathfinding;
 
-public class Zombo : MonoBehaviour
+    public class Zombo : MonoBehaviour
 {
     public ZomboAbstract zomboStats;
     public Player player;
@@ -32,7 +31,7 @@ public class Zombo : MonoBehaviour
     {
         if (!health.isDead)
         {
-            if (player.stats.currentHealth <= 0)
+            if (player.stats.currentHealth.statValue <= 0)
             {
                 path.isStopped = true;
                 transform.LookAt(Camera.main.transform.GetChild(0).transform.position);

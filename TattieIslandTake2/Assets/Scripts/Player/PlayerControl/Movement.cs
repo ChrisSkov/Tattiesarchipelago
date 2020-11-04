@@ -68,7 +68,7 @@ public class Movement : MonoBehaviour
         }
 
         //Sætter base speed
-        moveDirection *= player.stats.currentMoveSpeed;
+        moveDirection *= player.stats.currentMoveSpeed.statValue;
         //Move
         playerRB.MovePosition(playerRB.position + moveDirection * Time.deltaTime);
     }

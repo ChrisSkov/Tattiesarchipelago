@@ -6,7 +6,7 @@ public class HPBottleScriptObj : ConsumableAbstract
 {
     public override void ConsumeItem(AudioSource source)
     {
-        player.stats.currentHealth += statGainAmount[0];
+        player.stats.currentHealth.statValue += statGainAmount[0];
         source.PlayOneShot(consumeSounds[Random.Range(0,consumeSounds.Length)]);
         player.resources.healthPotCount --;
 

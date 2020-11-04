@@ -22,11 +22,11 @@ public class Health : MonoBehaviour
     }
     public void TakeDamage(float damage)
     {
-        player.stats.currentHealth -= damage;
+        player.stats.currentHealth.statValue -= damage;
         GetComponent<AudioSource>().PlayOneShot(player.playerAudio.takeDamageSounds[Random.Range(0, player.playerAudio.takeDamageSounds.Length)]);
-        if (player.stats.currentHealth <= 0)
+        if (player.stats.currentHealth.statValue <= 0)
         {
-            player.stats.currentHealth = 0;
+            player.stats.currentHealth.statValue = 0;
             player.isDead = true;
             player.canAttack = false;
             player.canMove = false;

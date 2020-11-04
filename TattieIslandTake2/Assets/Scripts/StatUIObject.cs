@@ -4,5 +4,12 @@ using UnityEngine;
 [CreateAssetMenu]
 public class StatUIObject : ScriptableObject
 {
-    public Player player;
+    public StatScriptObj myStat;
+
+
+    public void IncreaseStat()
+    {
+       myStat.statValue += 1;
+    }
+
 }

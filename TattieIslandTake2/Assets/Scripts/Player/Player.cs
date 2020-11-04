@@ -10,6 +10,7 @@ public class Player : ScriptableObject
     public PlayerResources resources;
     public PlayerAudio playerAudio;
     public LevelUpProgression progression;
+    public StatScriptObj statScriptObj;
     [Header("Weapon stuff")]
     public WeaponAbstract currentWeapon;
     public WeaponAbstract sheathedWeapon;

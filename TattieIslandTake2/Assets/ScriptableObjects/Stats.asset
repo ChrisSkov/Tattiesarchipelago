@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ea926ce1ff28804aad6d3ac2d45d938, type: 3}
   m_Name: Stats
   m_EditorClassIdentifier: 
-  maxMoveSpeed: 4.5
-  currentMoveSpeed: 4.5
-  maxHealth: 250
-  currentHealth: 49.4
-  dmgModifier: 0
+  maxMoveSpeed: {fileID: 11400000, guid: 35a2ccf0448263a4abe83f25c27afdb9, type: 2}
+  currentMoveSpeed: {fileID: 11400000, guid: 35a2ccf0448263a4abe83f25c27afdb9, type: 2}
+  maxHealth: {fileID: 11400000, guid: 7bed3990bc6a1e142afd521cfad93e86, type: 2}
+  currentHealth: {fileID: 11400000, guid: 93cc54e79d0c8fe4ebdd685040643bdd, type: 2}
+  dmgModifier: {fileID: 11400000, guid: 791cdc6220fc0e947bf1ad3e1ca4a1ce, type: 2}
