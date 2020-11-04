@@ -7,6 +7,8 @@ public class DisplayHealth : MonoBehaviour
 {
     public Player player;
     Slider slider;
+
+    public Image image;
     Text hpText;
     // Start is called before the first frame update
     void Start()
@@ -21,5 +23,7 @@ public class DisplayHealth : MonoBehaviour
     {
         hpText.text = string.Format("{0}/{1}", Mathf.RoundToInt(player.stats.currentHealth), Mathf.RoundToInt(player.stats.maxHealth));
         slider.value = player.stats.currentHealth;
+        image.fillAmount = player.stats.currentHealth / player.stats.maxHealth;
+        print(player.stats.currentHealth /player.stats.maxHealth);
     }
 }

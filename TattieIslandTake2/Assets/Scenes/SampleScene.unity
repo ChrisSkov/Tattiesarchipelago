@@ -8896,14 +8896,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 757575988}
     m_Modifications:
-    - target: {fileID: 3320570192400128307, guid: 9bac5fa579bdcac4d88b5b2532d8e28a, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3320570192400128307, guid: 9bac5fa579bdcac4d88b5b2532d8e28a, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3320570193479614088, guid: 9bac5fa579bdcac4d88b5b2532d8e28a, type: 3}
       propertyPath: m_Name
       value: HPcanvas
@@ -8991,10 +8983,6 @@ PrefabInstance:
     - target: {fileID: 3320570193479614089, guid: 9bac5fa579bdcac4d88b5b2532d8e28a, type: 3}
       propertyPath: m_Pivot.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3320570193628484869, guid: 9bac5fa579bdcac4d88b5b2532d8e28a, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 26
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9bac5fa579bdcac4d88b5b2532d8e28a, type: 3}
@@ -9097,10 +9085,6 @@ PrefabInstance:
     - target: {fileID: 3588019495043231383, guid: f1072ce0da0f54c40952d0fac07b017d, type: 3}
       propertyPath: m_Name
       value: LevelUpCanvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 3588019495043231383, guid: f1072ce0da0f54c40952d0fac07b017d, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1072ce0da0f54c40952d0fac07b017d, type: 3}
