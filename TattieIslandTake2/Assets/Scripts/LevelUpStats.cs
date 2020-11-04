@@ -7,7 +7,7 @@ public class LevelUpStats : MonoBehaviour
 {
     public Player player;
     public Text attributePointText = null;
-    StatScriptObj chosenStat;
+    List<StatScriptObj> chosenStat = null;
 
 
     void Update()
@@ -17,20 +17,28 @@ public class LevelUpStats : MonoBehaviour
 
     public void StatIncrease(StatScriptObj statToIncrease)
     {
-        chosenStat = statToIncrease;
-        statToIncrease.statValue += statToIncrease.increasePerLevel;
-        player.progression.attributePoints -= 1;
+        chosenStat.Add(statToIncrease);
+        // statToIncrease.statValue += statToIncrease.increasePerLevel;
+         player.progression.attributePoints -= 1;
 
     }
     public void AcceptChanges()
     {
+        foreach (StatScriptObj stat in chosenStat)
+        {
+            stat.statValue += stat.increasePerLevel;
+           // player.progression.attributePoints -= 1;
+        }
         gameObject.SetActive(false);
     }
 
     public void CancelChanges()
     {
-        chosenStat.statValue -= chosenStat.increasePerLevel;
-        player.progression.attributePoints += 1;
+        foreach (StatScriptObj stat in chosenStat)
+        {
+            stat.statValue -= stat.increasePerLevel;
+            player.progression.attributePoints += 1;
+        }
         gameObject.SetActive(false);
 
     }

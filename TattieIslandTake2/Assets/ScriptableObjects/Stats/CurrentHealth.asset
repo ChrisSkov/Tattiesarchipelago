@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: CurrentHealth
   m_EditorClassIdentifier: 
   statValue: 0
+  increasePerLevel: 0

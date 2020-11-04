@@ -21,11 +21,12 @@ public class LevelUpProgression : ScriptableObject
     {
         if (currentXP >= xpToLevel)
         {
+
+            xpGrowth *= 2;
             if (currentLevel >= 4)
             {
-                xpGrowth *= 2;
+                xpGrowth += currentLevel;
             }
-            xpGrowth *= 2;
             currentXP = 0;
             levelUpCanvas.SetActive(true);
             attributePoints += 1;
