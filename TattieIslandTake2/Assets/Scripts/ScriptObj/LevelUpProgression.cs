@@ -9,6 +9,8 @@ public class LevelUpProgression : ScriptableObject
     public int currentXP;
     public int xpGrowth;
 
+    public int attributePoints;
+
     public int GetXpToLevel()
     {
 
@@ -26,6 +28,7 @@ public class LevelUpProgression : ScriptableObject
             xpGrowth *= 2;
             currentXP = 0;
             levelUpCanvas.SetActive(true);
+            attributePoints += 1;
             return currentLevel += 1;
 
         }
