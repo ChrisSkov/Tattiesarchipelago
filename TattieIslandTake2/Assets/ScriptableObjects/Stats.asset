@@ -15,5 +15,5 @@ MonoBehaviour:
   maxMoveSpeed: 4.5
   currentMoveSpeed: 4.5
   maxHealth: 250
-  currentHealth: 201.7
+  currentHealth: 49.4
   dmgModifier: 0
