@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   statValue: 250
   increasePerLevel: 30
+  newValue: 250

@@ -7,4 +7,5 @@ public class StatScriptObj : ScriptableObject
     public float statValue;
 
     public float increasePerLevel;
+    public float newValue;
 }
