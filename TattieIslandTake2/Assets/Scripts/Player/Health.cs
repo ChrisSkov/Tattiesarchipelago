@@ -10,15 +10,25 @@ public class Health : MonoBehaviour
     public GameObject deathScreen;
     bool hasTriggeredDeath = false;
 
-
+    public float regenTimer = 0f;
+    public float timeBetweenRegen = 4f;
 
     // Start is called before the first frame update
     void Start()
     {
-        player.stats.currentHealth = player.stats.maxHealth;
+        player.stats.currentHealth.statValue = player.stats.maxHealth.statValue;
         player.isDead = false;
         player.canAttack = true;
         player.canMove = true;
+    }
+    private void Update()
+    {
+        regenTimer += Time.deltaTime;
+        if (regenTimer >= timeBetweenRegen && player.stats.currentHealth.statValue < player.stats.maxHealth.statValue)
+        {
+            player.stats.currentHealth.statValue += Mathf.RoundToInt((player.stats.maxHealth.statValue / 100));
+            regenTimer = 0f;
+        }
     }
     public void TakeDamage(float damage)
     {

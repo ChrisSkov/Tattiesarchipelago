@@ -23,7 +23,10 @@ MonoBehaviour:
   canMove: 1
   closeToPickUp: 1
   hasThrowable: 0
+  isSlowed: 0
   isDead: 0
+  zombiesKilled: {fileID: 11400000, guid: 8db08d6c95889f3448d081fd45dad796, type: 2}
+  dynamitesThrown: {fileID: 11400000, guid: b0df2524e896167488d7a6c49fb2d907, type: 2}
   blood: {fileID: 1565275868738540, guid: 15b2d0ac3c1f5bd4791ae44984fba681, type: 3}
   stepSoundDelay: 0.2
   activeConsumable: {fileID: 11400000, guid: b5b35784686f2054a9e704f72bb08f64, type: 2}

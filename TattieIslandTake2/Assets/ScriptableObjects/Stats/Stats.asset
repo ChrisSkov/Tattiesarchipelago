@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Stats
   m_EditorClassIdentifier: 
   maxMoveSpeed: {fileID: 11400000, guid: 35a2ccf0448263a4abe83f25c27afdb9, type: 2}
-  currentMoveSpeed: {fileID: 11400000, guid: 35a2ccf0448263a4abe83f25c27afdb9, type: 2}
+  currentMoveSpeed: {fileID: 11400000, guid: 8ef9e1f35f8d6f1449f0a2832bf3747d, type: 2}
   maxHealth: {fileID: 11400000, guid: 7bed3990bc6a1e142afd521cfad93e86, type: 2}
-  currentHealth: {fileID: 11400000, guid: 7bed3990bc6a1e142afd521cfad93e86, type: 2}
+  currentHealth: {fileID: 11400000, guid: 93cc54e79d0c8fe4ebdd685040643bdd, type: 2}
   dmgModifier: {fileID: 11400000, guid: 791cdc6220fc0e947bf1ad3e1ca4a1ce, type: 2}

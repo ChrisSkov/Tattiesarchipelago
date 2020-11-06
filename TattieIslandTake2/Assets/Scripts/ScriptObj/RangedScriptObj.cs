@@ -52,6 +52,7 @@ public class RangedScriptObj : WeaponAbstract
         clone4.AddComponent<Rigidbody>().AddRelativeForce(Vector3.forward * force, ForceMode.Impulse);
         clone4.GetComponent<Explode>().startExplosionTimer = true;
         source.PlayOneShot(throwSound);
+        stats.dynamitesThrown.statValue++;
         // stats.currentWeapon = null;
     }
 

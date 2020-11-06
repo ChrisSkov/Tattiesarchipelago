@@ -10,9 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a96e065f6b7c01b458a79a25c7e6b11c, type: 3}
-  m_Name: CurrentHealth
+  m_Name: DynamitesThrown
   m_EditorClassIdentifier: 
-  statValue: 250
+  statValue: 0
   increasePerLevel: 0
-  newValue: 250
-  baseValue: 250
+  newValue: 0

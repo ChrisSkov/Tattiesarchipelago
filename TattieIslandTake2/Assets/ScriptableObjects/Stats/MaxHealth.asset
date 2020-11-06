@@ -15,3 +15,4 @@ MonoBehaviour:
   statValue: 250
   increasePerLevel: 30
   newValue: 250
+  baseValue: 250

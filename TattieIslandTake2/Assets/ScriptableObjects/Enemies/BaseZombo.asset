@@ -23,7 +23,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 43243f92f398aa743a7cc03e4b048c72, type: 3}
   maxHp: 100
   destroyTime: 1.4
-  xpGrantedOnDeath: 20
+  xpGrantedOnDeath: 1
   organs: []
   takeDamageSounds: []
   idleSounds: []

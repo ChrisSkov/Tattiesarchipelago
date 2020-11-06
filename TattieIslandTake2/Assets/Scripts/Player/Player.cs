@@ -21,10 +21,12 @@ public class Player : ScriptableObject
     public bool hasThrowable;
     public bool isSlowed;
     public bool isDead;
+    [Header("DeathScreenStats")]
+    public StatScriptObj zombiesKilled;
+    public StatScriptObj dynamitesThrown;
     [Header("Misc")]
     public GameObject blood;
     public float stepSoundDelay;
-
     public ConsumableAbstract activeConsumable;
 }
 

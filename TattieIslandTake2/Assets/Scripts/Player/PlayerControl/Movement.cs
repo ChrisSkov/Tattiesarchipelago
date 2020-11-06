@@ -17,7 +17,7 @@ public class Movement : MonoBehaviour
         source = GetComponent<AudioSource>();
         playerRB = GetComponent<Rigidbody>();
         playerAnim = GetComponent<Animator>();
-        player.stats.currentMoveSpeed = player.stats.maxMoveSpeed;
+        player.stats.currentMoveSpeed.statValue = player.stats.maxMoveSpeed.statValue;
     }
 
     void FixedUpdate()

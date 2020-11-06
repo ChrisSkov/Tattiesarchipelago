@@ -8,4 +8,9 @@ public class StatScriptObj : ScriptableObject
 
     public float increasePerLevel;
     public float newValue;
+    public float baseValue;
+    public void ResetToBaseValue()
+    {
+        statValue  = baseValue;
+    }
 }
