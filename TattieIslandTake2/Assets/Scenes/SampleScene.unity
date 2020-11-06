@@ -1173,10 +1173,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: LightingManager (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 4901145592578211279, guid: c65b68e4d76a91243b241293764e676d, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5703505856686067910, guid: c65b68e4d76a91243b241293764e676d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -101.14957
@@ -1221,10 +1217,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6066103220855167474, guid: c65b68e4d76a91243b241293764e676d, type: 3}
-      propertyPath: directionalLight
-      value: 
-      objectReference: {fileID: 1471441511}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c65b68e4d76a91243b241293764e676d, type: 3}
 --- !u!4 &555611485 stripped
@@ -4773,11 +4765,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2852203122908854576, guid: 9decb7eafd42dee4981bd06947c9cdd6, type: 3}
   m_PrefabInstance: {fileID: 1493690442}
   m_PrefabAsset: {fileID: 0}
---- !u!108 &1471441511 stripped
-Light:
-  m_CorrespondingSourceObject: {fileID: 1824139956693906028, guid: c65b68e4d76a91243b241293764e676d, type: 3}
-  m_PrefabInstance: {fileID: 533305632}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1478264376 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2852203122908854576, guid: 9decb7eafd42dee4981bd06947c9cdd6, type: 3}
@@ -6830,19 +6817,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 233904991739246715, guid: d486097bdff9af6489dc0b3c820c6695, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -24.773857
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 233904991739246715, guid: d486097bdff9af6489dc0b3c820c6695, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 233904991739246715, guid: d486097bdff9af6489dc0b3c820c6695, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 233904991739246715, guid: d486097bdff9af6489dc0b3c820c6695, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 233904991739246715, guid: d486097bdff9af6489dc0b3c820c6695, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6866,11 +6853,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 233904991739246715, guid: d486097bdff9af6489dc0b3c820c6695, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 5.816581
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 233904991739246715, guid: d486097bdff9af6489dc0b3c820c6695, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -6.849332
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 233904991739246715, guid: d486097bdff9af6489dc0b3c820c6695, type: 3}
       propertyPath: m_SizeDelta.x
@@ -6907,10 +6894,6 @@ PrefabInstance:
     - target: {fileID: 233904991739246719, guid: d486097bdff9af6489dc0b3c820c6695, type: 3}
       propertyPath: m_Name
       value: DeathCanvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 233904991986463494, guid: d486097bdff9af6489dc0b3c820c6695, type: 3}
-      propertyPath: m_Text
-      value: Restart Game
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d486097bdff9af6489dc0b3c820c6695, type: 3}
@@ -7851,6 +7834,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 757575988}
     m_Modifications:
+    - target: {fileID: 1094877754, guid: 01bdf6dc60a85ef4db6b1e923547f183, type: 3}
+      propertyPath: radius.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094877754, guid: 01bdf6dc60a85ef4db6b1e923547f183, type: 3}
+      propertyPath: radius.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2360369228265972354, guid: 01bdf6dc60a85ef4db6b1e923547f183, type: 3}
       propertyPath: levelUpCanvas
       value: 
@@ -8048,6 +8039,10 @@ PrefabInstance:
     - target: {fileID: 3588019495043231383, guid: f1072ce0da0f54c40952d0fac07b017d, type: 3}
       propertyPath: m_Name
       value: LevelUpCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 3588019495043231383, guid: f1072ce0da0f54c40952d0fac07b017d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1072ce0da0f54c40952d0fac07b017d, type: 3}

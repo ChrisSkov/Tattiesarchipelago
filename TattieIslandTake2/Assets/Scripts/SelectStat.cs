@@ -14,7 +14,7 @@ public class SelectStat : MonoBehaviour
     private void Start()
     {
         levelUpStats = GetComponentInParent<LevelUpStats>();
-        myStatText.text = "" + myStat.statValue + "(" + myStat.increasePerLevel + ")";
+        UpdateStatText();
         myStat.newValue = myStat.statValue;
     }
 
@@ -25,8 +25,8 @@ public class SelectStat : MonoBehaviour
             statIncreaseCount++;
             levelUpStats.AddToStatIncreaseList(myStat);
             myStat.newValue += myStat.increasePerLevel;
-            myStatText.text = "" + myStat.newValue + "(+" + myStat.increasePerLevel + ")";
         }
+            UpdateStatText();
     }
 
 
@@ -38,6 +38,14 @@ public class SelectStat : MonoBehaviour
             myStat.newValue -= myStat.increasePerLevel;
             levelUpStats.ReturnAttributePoint();
         }
-        myStatText.text = "" + myStat.newValue + "(" + myStat.increasePerLevel + ")";
+        UpdateStatText();
     }
+
+    void UpdateStatText()
+    {
+        myStatText.text = "" + myStat.newValue + "(+" + myStat.increasePerLevel + ")";
+
+    }
+
+
 }

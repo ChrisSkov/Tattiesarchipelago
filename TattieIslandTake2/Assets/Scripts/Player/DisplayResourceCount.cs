@@ -11,6 +11,8 @@ public class DisplayResourceCount : MonoBehaviour
     public Text ammoCountText;
     public GameObject levelUpCanvas;
     public Slider xpSlider;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,5 +30,19 @@ public class DisplayResourceCount : MonoBehaviour
         xpSlider.value = player.progression.currentXP;
         xpSlider.maxValue = player.progression.xpToLevel;
         player.progression.LevelUp(levelUpCanvas);
+    }
+
+
+    public void OpenStatMenu()
+    {
+        if (levelUpCanvas.activeSelf == true)
+        {
+            levelUpCanvas.SetActive(false);
+        }
+        else if (levelUpCanvas.activeSelf == false)
+        {
+            levelUpCanvas.SetActive(true);
+
+        }
     }
 }
