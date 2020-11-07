@@ -52,6 +52,7 @@ public class EnemyHealth : MonoBehaviour
         particleHolder.transform.LookAt(playerTransform);
         Instantiate(bloodSpray, particleHolder.position, particleHolder.rotation);
         player.progression.currentXP += stats.xpGrantedOnDeath;
+        print("i died");
         player.zombiesKilled.statValue++;
         DespawnEnemy();
 

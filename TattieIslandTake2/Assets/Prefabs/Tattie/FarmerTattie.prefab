@@ -204,6 +204,8 @@ GameObject:
   - component: {fileID: 1438981950}
   - component: {fileID: 6326105957598181474}
   - component: {fileID: 6326105957598181475}
+  - component: {fileID: 1718141106388210832}
+  - component: {fileID: 6326105957598181484}
   m_Layer: 12
   m_Name: FarmerTattie
   m_TagString: Player
@@ -426,6 +428,8 @@ MonoBehaviour:
   player: {fileID: 11400000, guid: d66d5124d742a3c44820ab8d1c02d69b, type: 2}
   bloodPos: {fileID: 2079904868}
   deathScreen: {fileID: 0}
+  regenTimer: 0
+  timeBetweenRegen: 4
 --- !u!114 &6326105957598181475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -439,6 +443,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Effects: []
+--- !u!114 &1718141106388210832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8501936937698113529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 883026c44e5c31544aac7d6d40d27b0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentTaskObject: {fileID: 0}
+  handAimRight: {fileID: 4340534822005407854}
+  handAimLeft: {fileID: 1136494646437743289}
+--- !u!114 &6326105957598181484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8501936937698113529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8444a7ec097e4f54f9f4a832cf63bd33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 11400000, guid: d66d5124d742a3c44820ab8d1c02d69b, type: 2}
+  statsToReset:
+  - {fileID: 11400000, guid: 7bed3990bc6a1e142afd521cfad93e86, type: 2}
+  - {fileID: 11400000, guid: 35a2ccf0448263a4abe83f25c27afdb9, type: 2}
+  - {fileID: 11400000, guid: 791cdc6220fc0e947bf1ad3e1ca4a1ce, type: 2}
+  - {fileID: 11400000, guid: 8db08d6c95889f3448d081fd45dad796, type: 2}
 --- !u!1 &8969957477003842585
 GameObject:
   m_ObjectHideFlags: 0

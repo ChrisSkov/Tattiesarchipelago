@@ -17,11 +17,21 @@ public class LevelUpProgression : ScriptableObject
         return xpToLevel = xpGrowth + xpGrowth;
     }
 
-    public int LevelUp(GameObject levelUpCanvas)
+
+    public void ResetToBaseValues()
     {
+        xpToLevel = 0;
+        currentLevel = 1;
+        currentXP = 0;
+        xpGrowth = 2;
+        attributePoints = 0;
+    }
+    public void LevelUp()
+    {
+
         if (currentXP >= xpToLevel)
         {
-
+            Debug.Log("Level up fuction called");
             xpGrowth *= 2;
             if (currentLevel >= 4)
             {
@@ -29,10 +39,9 @@ public class LevelUpProgression : ScriptableObject
             }
             currentXP = 0;
             attributePoints += 1;
-            return currentLevel += 1;
+
 
         }
-        return currentLevel;
     }
 
 

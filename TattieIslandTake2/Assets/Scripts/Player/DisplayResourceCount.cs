@@ -31,6 +31,7 @@ public class DisplayResourceCount : MonoBehaviour
         player.progression.GetXpToLevel();
         xpSlider.value = player.progression.currentXP;
         xpSlider.maxValue = player.progression.xpToLevel;
+        player.progression.LevelUp();
         if (player.progression.attributePoints > 0)
         {
             availablePointIndicator.SetActive(true);

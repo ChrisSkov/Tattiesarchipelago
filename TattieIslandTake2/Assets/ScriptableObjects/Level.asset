@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 986edd7ea2d411145b3f80837ca21e1c, type: 3}
   m_Name: Level
   m_EditorClassIdentifier: 
-  xpToLevel: 4
+  xpToLevel: 8
   currentLevel: 1
-  currentXP: 16
-  xpGrowth: 2
-  attributePoints: 0
+  currentXP: 3
+  xpGrowth: 4
+  attributePoints: 1
