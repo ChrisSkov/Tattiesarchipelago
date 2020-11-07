@@ -13,10 +13,4 @@ public class HandleStatReset : MonoBehaviour
             stat.ResetToBaseValue();
         }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

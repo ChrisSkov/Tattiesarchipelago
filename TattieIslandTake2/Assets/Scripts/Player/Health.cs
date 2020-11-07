@@ -24,7 +24,7 @@ public class Health : MonoBehaviour
     private void Update()
     {
         regenTimer += Time.deltaTime;
-        if (regenTimer >= timeBetweenRegen && player.stats.currentHealth.statValue < player.stats.maxHealth.statValue)
+        if (regenTimer >= timeBetweenRegen && player.stats.currentHealth.statValue < player.stats.maxHealth.statValue && !player.isDead)
         {
             player.stats.currentHealth.statValue += Mathf.RoundToInt((player.stats.maxHealth.statValue / 100));
             regenTimer = 0f;

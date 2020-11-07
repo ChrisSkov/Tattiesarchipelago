@@ -18,7 +18,7 @@ MonoBehaviour:
   walkSound: {fileID: 8300000, guid: 9a9f85a5316efb14e9c2eb84128930fa, type: 3}
   attackRange: 2
   timeBetweenAttacks: 2
-  damage: 6
+  damage: 15
   attackSounds:
   - {fileID: 8300000, guid: 43243f92f398aa743a7cc03e4b048c72, type: 3}
   maxHp: 100

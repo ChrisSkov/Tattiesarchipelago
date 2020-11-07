@@ -10,7 +10,7 @@ public class DisplayDeathStats : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        myStat.statValue = myStat.newValue;
+       // myStat.statValue = myStat.newValue;
         myStatText = GetComponent<Text>();
     }
 
@@ -18,5 +18,6 @@ public class DisplayDeathStats : MonoBehaviour
     void Update()
     {
         myStatText.text = "" + myStat.statValue;
+
     }
 }

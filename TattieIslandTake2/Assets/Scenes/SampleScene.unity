@@ -6895,6 +6895,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DeathCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 233904991739246719, guid: d486097bdff9af6489dc0b3c820c6695, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d486097bdff9af6489dc0b3c820c6695, type: 3}
 --- !u!224 &1906238924 stripped
@@ -7925,42 +7929,6 @@ PrefabInstance:
     - target: {fileID: 2360369228265972377, guid: 01bdf6dc60a85ef4db6b1e923547f183, type: 3}
       propertyPath: m_Name
       value: ResourceDisplay
-      objectReference: {fileID: 0}
-    - target: {fileID: 2360369228571030706, guid: 01bdf6dc60a85ef4db6b1e923547f183, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 1.76
-      objectReference: {fileID: 0}
-    - target: {fileID: 2360369228571030706, guid: 01bdf6dc60a85ef4db6b1e923547f183, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 213.5188
-      objectReference: {fileID: 0}
-    - target: {fileID: 2360369228691356238, guid: 01bdf6dc60a85ef4db6b1e923547f183, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.0983
-      objectReference: {fileID: 0}
-    - target: {fileID: 2360369228691356238, guid: 01bdf6dc60a85ef4db6b1e923547f183, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.0983
-      objectReference: {fileID: 0}
-    - target: {fileID: 2360369228691356238, guid: 01bdf6dc60a85ef4db6b1e923547f183, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.0983
-      objectReference: {fileID: 0}
-    - target: {fileID: 2360369228691356238, guid: 01bdf6dc60a85ef4db6b1e923547f183, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 1.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 2360369228691356238, guid: 01bdf6dc60a85ef4db6b1e923547f183, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 228.71844
-      objectReference: {fileID: 0}
-    - target: {fileID: 2360369228691356238, guid: 01bdf6dc60a85ef4db6b1e923547f183, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -0.35
-      objectReference: {fileID: 0}
-    - target: {fileID: 2360369228691356238, guid: 01bdf6dc60a85ef4db6b1e923547f183, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 228.0777
       objectReference: {fileID: 0}
     - target: {fileID: 2360369229263747414, guid: 01bdf6dc60a85ef4db6b1e923547f183, type: 3}
       propertyPath: m_AnchorMax.y

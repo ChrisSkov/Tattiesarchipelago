@@ -12,6 +12,8 @@ public class DisplayResourceCount : MonoBehaviour
     public GameObject levelUpCanvas;
     public Slider xpSlider;
 
+    public GameObject availablePointIndicator;
+
 
     // Start is called before the first frame update
     void Start()
@@ -29,7 +31,15 @@ public class DisplayResourceCount : MonoBehaviour
         player.progression.GetXpToLevel();
         xpSlider.value = player.progression.currentXP;
         xpSlider.maxValue = player.progression.xpToLevel;
-        player.progression.LevelUp(levelUpCanvas);
+        if (player.progression.attributePoints > 0)
+        {
+            availablePointIndicator.SetActive(true);
+        }
+        else
+        {
+
+            availablePointIndicator.SetActive(false);
+        }
     }
 
 
