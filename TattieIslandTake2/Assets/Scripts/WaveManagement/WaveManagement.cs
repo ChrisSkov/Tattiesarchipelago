@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WaveManagement : MonoBehaviour
 {
@@ -14,7 +15,7 @@ public class WaveManagement : MonoBehaviour
     public GameObject[] spawnPoints = null;
     public float enemyTimer = Mathf.Infinity;
     public float waveTimer = Mathf.Infinity;
-
+    public Text text;
     public Player player;
     // Start is called before the first frame update
     void Start()
@@ -25,44 +26,46 @@ public class WaveManagement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!player.isDead)
-        {
-        if (isSpawning)
-        {
-            enemyTimer += Time.deltaTime;
-        }
-        else
-        {
-            waveTimer += Time.deltaTime;
-        }
 
-        if (waveTimer >= timeBetweenWaves)
+        text.text = "" + Mathf.RoundToInt(waveTimer);
+        if (!player.isDead)
         {
-            isSpawning = true;
-            waveTimer = 0f;
-            currentWave += 1;
-            maxEnemiesInCurrentWave = 0;
-            enemiesSpawnedInCurrentWave = 0;
-            for (int i = 0; i < waveSet.waves[currentWave].numberOfEnemies.Length; i++)
+            if (isSpawning)
             {
-                maxEnemiesInCurrentWave += waveSet.waves[currentWave].numberOfEnemies[i];
+                enemyTimer += Time.deltaTime;
             }
-        }
+            else
+            {
+                waveTimer += Time.deltaTime;
+            }
+
+            if (waveTimer >= timeBetweenWaves)
+            {
+                isSpawning = true;
+                waveTimer = 0f;
+                currentWave += 1;
+                maxEnemiesInCurrentWave = 0;
+                enemiesSpawnedInCurrentWave = 0;
+                for (int i = 0; i < waveSet.waves[currentWave].numberOfEnemies.Length; i++)
+                {
+                    maxEnemiesInCurrentWave += waveSet.waves[currentWave].numberOfEnemies[i];
+                }
+            }
 
 
 
-        if (enemyTimer >= timeBetweenEnemies && enemiesSpawnedInCurrentWave < maxEnemiesInCurrentWave)
-        {
-            Instantiate(waveSet.waves[currentWave].enemyTypesInWave[Random.Range(0, waveSet.waves[currentWave].enemyTypesInWave.Length)], spawnPoints[Random.Range(0, spawnPoints.Length)].transform.position, spawnPoints[Random.Range(0, spawnPoints.Length)].transform.rotation);
-            enemyTimer = 0f;
-            enemiesSpawnedInCurrentWave++;
-        }
+            if (enemyTimer >= timeBetweenEnemies && enemiesSpawnedInCurrentWave < maxEnemiesInCurrentWave)
+            {
+                Instantiate(waveSet.waves[currentWave].enemyTypesInWave[Random.Range(0, waveSet.waves[currentWave].enemyTypesInWave.Length)], spawnPoints[Random.Range(0, spawnPoints.Length)].transform.position, spawnPoints[Random.Range(0, spawnPoints.Length)].transform.rotation);
+                enemyTimer = 0f;
+                enemiesSpawnedInCurrentWave++;
+            }
 
-        if (enemiesSpawnedInCurrentWave == maxEnemiesInCurrentWave)
-        {
-            isSpawning = false;
+            if (enemiesSpawnedInCurrentWave == maxEnemiesInCurrentWave)
+            {
+                isSpawning = false;
 
-        }
+            }
         }
 
 
