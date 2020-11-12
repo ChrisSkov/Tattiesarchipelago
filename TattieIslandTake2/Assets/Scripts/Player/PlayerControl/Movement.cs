@@ -24,6 +24,10 @@ public class Movement : MonoBehaviour
     {
         if (playerAnim.GetBool("canMove") && player.canMove)
         {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                playerAnim.SetTrigger("jump");
+            }
             if (!player.isSlowed)
             {
                 player.stats.currentMoveSpeed.statValue = player.stats.maxMoveSpeed.statValue;
