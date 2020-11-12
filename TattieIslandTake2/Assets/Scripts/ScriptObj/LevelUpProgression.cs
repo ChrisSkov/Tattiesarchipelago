@@ -31,7 +31,6 @@ public class LevelUpProgression : ScriptableObject
 
         if (currentXP >= xpToLevel)
         {
-            Debug.Log("Level up fuction called");
             xpGrowth *= 2;
             if (currentLevel >= 4)
             {

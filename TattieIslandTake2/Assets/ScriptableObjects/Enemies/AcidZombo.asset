@@ -22,6 +22,7 @@ MonoBehaviour:
   attackSounds: []
   maxHp: 100
   destroyTime: 1.4
+  xpGrantedOnDeath: 3
   organs: []
   takeDamageSounds: []
   idleSounds: []

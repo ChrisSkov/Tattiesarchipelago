@@ -31,12 +31,6 @@ public class EnemyHealth : MonoBehaviour
         health.SetHPBarMaxValue(stats.maxHp);
         health.UpdateHealthBar(currentHp);
     }
-    private void Update()
-    {
-        //   HandleDeath();
-    }
-
-
     bool IsDead()
     {
         return currentHp <= 0f;
@@ -52,20 +46,11 @@ public class EnemyHealth : MonoBehaviour
         particleHolder.transform.LookAt(playerTransform);
         Instantiate(bloodSpray, particleHolder.position, particleHolder.rotation);
         player.progression.currentXP += stats.xpGrantedOnDeath;
-        print("i died");
         player.zombiesKilled.statValue++;
         DespawnEnemy();
 
     }
-    void HandleDeath()
-    {
-        if (IsDead() && !isDead)
-        {
-            isDead = true;
-            currentHp = 0;
-            anim.SetTrigger("isDead");
-        }
-    }
+ 
     void DespawnEnemy()
     {
         Destroy(gameObject, stats.destroyTime);
@@ -78,9 +63,11 @@ public class EnemyHealth : MonoBehaviour
         {
             anim.SetTrigger("isHit");
         }
-        else if (IsDead())
+        else if (IsDead() && !isDead)
         {
             anim.SetTrigger("isDead");
+            isDead = true;
+            currentHp = 0;
 
         }
         health.UpdateHealthBar(currentHp);

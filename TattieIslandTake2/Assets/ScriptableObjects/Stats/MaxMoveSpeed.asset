@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: MaxMoveSpeed
   m_EditorClassIdentifier: 
   statValue: 5
-  increasePerLevel: 1
-  newValue: 0
+  increasePerLevel: 0.3
+  newValue: 5
   baseValue: 5

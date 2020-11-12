@@ -12,5 +12,6 @@ public class StatScriptObj : ScriptableObject
     public void ResetToBaseValue()
     {
         statValue  = baseValue;
+        newValue  = baseValue;
     }
 }
