@@ -9134,6 +9134,10 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1600675844, guid: 01bdf6dc60a85ef4db6b1e923547f183, type: 3}
+      propertyPath: m_Text
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2360369228265972354, guid: 01bdf6dc60a85ef4db6b1e923547f183, type: 3}
       propertyPath: levelUpCanvas
       value: 
