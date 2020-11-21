@@ -9,6 +9,7 @@ public class DisplayResourceCount : MonoBehaviour
     public Text chickenCountText;
     public Text potatoCountText;
     public Text ammoCountText;
+    public Text logCountText;
     public GameObject levelUpCanvas;
     public Slider xpSlider;
 
@@ -26,8 +27,9 @@ public class DisplayResourceCount : MonoBehaviour
     {
         // TODO: refactor to only update on value change
         chickenCountText.text = string.Format(" X " + player.resources.chickenCount);
-        potatoCountText.text = string.Format(" X " + player.resources.moneyCount);
+        potatoCountText.text = string.Format(" X " + player.resources.potatoCount);
         ammoCountText.text = string.Format(" X " + player.resources.ammoCount);
+        logCountText.text = string.Format(" X " + player.resources.woodCount);
         player.progression.GetXpToLevel();
         xpSlider.value = player.progression.currentXP;
         xpSlider.maxValue = player.progression.xpToLevel;

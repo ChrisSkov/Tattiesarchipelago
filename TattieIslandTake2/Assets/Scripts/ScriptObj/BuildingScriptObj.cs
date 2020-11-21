@@ -10,4 +10,7 @@ public class BuildingScriptObj : ScriptableObject
     public int woodReq;
     public float deliveryTime;
     public bool canAfford;
+    public Player player;
+
+
 }

@@ -19,3 +19,4 @@ MonoBehaviour:
   woodReq: 5
   deliveryTime: 1
   canAfford: 0
+  player: {fileID: 11400000, guid: d66d5124d742a3c44820ab8d1c02d69b, type: 2}
