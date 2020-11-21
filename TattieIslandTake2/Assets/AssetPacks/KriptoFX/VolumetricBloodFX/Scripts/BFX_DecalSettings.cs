@@ -27,7 +27,6 @@ public class BFX_DecalSettings : MonoBehaviour
     BFX_ShaderProperies shaderProperies;
 
     Vector3 averageRay;
-    bool isPositionInitialized;
 
     private void Awake()
     {
@@ -44,17 +43,12 @@ public class BFX_DecalSettings : MonoBehaviour
         GetComponent<Renderer>().enabled = false;
     }
 
-    private void Update()
-    {
-        if (!isPositionInitialized) InitializePosition();
-    }
-
-    void InitializePosition()
+    void OnEnable() //todo поменять на update, иначе при старте нужно указывать позицию сразу
     {
         GetComponent<Renderer>().enabled = false;
 
         var currentHeight = parent.position.y;
-        var ground = BloodSettings.GroundHeight;
+        var ground = BloodSettings.Height;
 
         var currentScale = parent.localScale.y;
         var scaledTimeHeightMax = TimeHeightMax * currentScale;
@@ -101,15 +95,12 @@ public class BFX_DecalSettings : MonoBehaviour
             t.localScale = decalScale;
         }
 
-        if (BloodSettings.ClampDecalSideSurface) Shader.EnableKeyword("CLAMP_SIDE_SURFACE");
-
-        isPositionInitialized = true;
+        if(BloodSettings.ClampDecalSideSurface) Shader.EnableKeyword("CLAMP_SIDE_SURFACE");
     }
 
     private void OnDisable()
     {
         if (BloodSettings.ClampDecalSideSurface) Shader.DisableKeyword("CLAMP_SIDE_SURFACE");
-        isPositionInitialized = false;
     }
 
     Vector3 GetAverageRay(Vector3 start, Vector3 forward)

@@ -15,7 +15,7 @@ Shader "KriptoFX/BFX/BFX_Decal"
 
 	SubShader
 	{
-		Tags{ "Queue" = "AlphaTest"}
+		Tags{ "Queue" = "Transparent"}
 		Blend DstColor SrcColor
 		//Blend SrcAlpha OneMinusSrcAlpha
 		Cull Front
@@ -34,6 +34,7 @@ Shader "KriptoFX/BFX/BFX_Decal"
 				#pragma multi_compile _ USE_CUSTOM_DECAL_LAYERS
 				#pragma shader_feature CLAMP_SIDE_SURFACE
 				#pragma multi_compile _ USE_CUSTOM_DECAL_LAYERS_IGNORE_MODE
+				#pragma multi_compile _ USE_SCREEN_TO_WORLD_DEPTH
 
 				#include "UnityCG.cginc"
 
@@ -66,6 +67,8 @@ Shader "KriptoFX/BFX/BFX_Decal"
 				float4 _SunPos;
 				half _DepthMul;
 				half3 _DecalForwardDir;
+			float4x4 KW_ViewToWorld;
+				float4x4 KW_ProjToView;
 
 				struct appdata_t {
 					float4 vertex : POSITION;
@@ -109,6 +112,15 @@ Shader "KriptoFX/BFX/BFX_Decal"
 					return o;
 				}
 
+				inline float3 ScreenToWorld(float2 UV, float depth)
+				{
+					float2 uvClip = UV * 2.0 - 1.0;
+					float4 clipPos = float4(uvClip, depth, 1.0);
+					float4 viewPos = mul(KW_ProjToView, clipPos);
+					viewPos /= viewPos.w;
+					float3 worldPos = mul(KW_ViewToWorld, viewPos).xyz;
+					return worldPos;
+				}
 
 				half4 frag(v2f i) : SV_Target
 				{
@@ -121,15 +133,20 @@ Shader "KriptoFX/BFX/BFX_Decal"
 					float depth = tex2Dproj(_LayerDecalDepthTexture, i.screenUV);
 					float depthMask = tex2Dproj(_CameraDepthTexture, i.screenUV);
 					float fade = depth < depthMask - 0.0005 ? 0 : 1;
+
 	#if USE_CUSTOM_DECAL_LAYERS_IGNORE_MODE
 						fade = 1 - fade;
 						depth = depthMask;
 	#endif
-#else
+	#else
 					float depth = tex2Dproj(_CameraDepthTexture, i.screenUV);
 #endif
 
+#if USE_SCREEN_TO_WORLD_DEPTH
+					float3 wpos = ScreenToWorld(i.screenUV.xy / i.screenUV.w, depth);
+#else
 					float3 wpos = mul(unity_CameraToWorld, float4(i.ray * Linear01Depth(depth), 1)).xyz;
+#endif
 					float3 opos = mul(unity_WorldToObject, float4(wpos, 1)).xyz;
 
 
@@ -172,6 +189,7 @@ Shader "KriptoFX/BFX/BFX_Decal"
 					float3 normal = normalize(float3(normAlpha.x, 1, normAlpha.y));
 
 					half3 mask = tex2D(_CutoutTex, uvCutout).xyz;
+					//mask = LinearToGammaSpace(mask);
 					half cutout = 0.5 + UNITY_ACCESS_INSTANCED_PROP(Props, _Cutout) * i.color.a * 0.5;
 
 					half alphaMask = saturate((mask.r - (cutout * 2 - 1)) * 20) * res.a;
@@ -186,17 +204,15 @@ Shader "KriptoFX/BFX/BFX_Decal"
 					light *= (1 - mask.z * colorMask);
 
 					float4 tintColor = UNITY_ACCESS_INSTANCED_PROP(Props, _TintColor);
-					#if !UNITY_COLORSPACE_GAMMA
-							tintColor = tintColor * 1.35;
-					#endif
-					res.rgb = lerp(tintColor.rgb, tintColor.rgb * 0.25, mask.z * colorMask) + light;
+					tintColor *= tintColor;
+					res.rgb = lerp(tintColor.rgb * 2, tintColor.rgb * 0.25, mask.z * colorMask) + light;
 
 
 					half fresnel = (1 - dot(normal, normalize(i.viewDir)));
 					fresnel = pow(fresnel + 0.1, 5);
 
 					UNITY_APPLY_FOG_COLOR(i.fogCoord, res, half4(1, 1, 1, 1));
-					return lerp(0.5, res, res.a * tintColor.a);
+					return lerp(0.5, res, res.a);
 
 					return res;
 				}

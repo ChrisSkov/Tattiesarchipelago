@@ -10,6 +10,9 @@ public class DisplayBuilding : MonoBehaviour
     public Text potatoPriceText;
     public Text woodPriceText;
     RawImage myImage;
+
+    bool hasEnoughWood;
+    bool hasEnoughPotato;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,22 +30,33 @@ public class DisplayBuilding : MonoBehaviour
         if (myBuilding.player.resources.potatoCount >= myBuilding.price)
         {
             potatoPriceText.color = Color.white;
-
-            if (myBuilding.player.resources.woodCount >= myBuilding.woodReq)
-            {
-                woodPriceText.color = Color.white;
-
-                myBuilding.canAfford = true;
-            }
-            else
-            {
-                woodPriceText.color = Color.red;
-            }
+            hasEnoughPotato = true;
         }
         else
         {
             potatoPriceText.color = Color.red;
+            hasEnoughPotato = false;
+
         }
 
+        if (myBuilding.player.resources.woodCount >= myBuilding.woodReq)
+        {
+            woodPriceText.color = Color.white;
+            hasEnoughWood = true;
+        }
+        else
+        {
+            woodPriceText.color = Color.red;
+            hasEnoughWood = false;
+        }
+
+        if (hasEnoughPotato && hasEnoughWood)
+        {
+            myBuilding.canAfford = true;
+        }
+        else
+        {
+            myBuilding.canAfford = false;
+        }
     }
 }

@@ -67,9 +67,9 @@ public class BFX_ShaderProperies : MonoBehaviour {
 
         rend.GetPropertyBlock(props);
 
-        var deltaTime = BloodSettings == null ? Time.deltaTime : Time.deltaTime * BloodSettings.AnimationSpeed;
+
         if (BloodSettings != null && BloodSettings.FreezeDecalDisappearance && (timeLapsed / GraphTimeMultiplier) > 0.3f) { }
-        else timeLapsed += deltaTime;
+        else timeLapsed += Time.deltaTime;
 
         var eval = FloatCurve.Evaluate(timeLapsed / GraphTimeMultiplier) * GraphIntensityMultiplier;
         props.SetFloat(cutoutPropertyID, eval);

@@ -3,7 +3,7 @@
     Properties
     {
         _Color("Color", Color) = (1,1,1,1)
-
+ 	_SpecColor("SpecularColor", Color) = (1,1,1,1)
         _boundingMax("Bounding Max", Float) = 1.0
         _boundingMin("Bounding Min", Float) = 1.0
         _numOfFrames("Number Of Frames", int) = 240
@@ -31,7 +31,7 @@
             #pragma fragment frag
 
             #pragma multi_compile_instancing
-            #pragma multi_compile_fog
+           // #pragma multi_compile_fog
 
             #include "UnityCG.cginc"
 
@@ -52,7 +52,7 @@
                 float4 screenPos : TEXCOORD4;
                 float3 viewDir : TEXCOORD5;
                 float height : TEXCOORD6;
-
+               // UNITY_FOG_COORDS(8)
 
                 UNITY_VERTEX_INPUT_INSTANCE_ID
                 UNITY_VERTEX_OUTPUT_STEREO
@@ -66,6 +66,7 @@
             uniform float _speed;
             uniform int _numOfFrames;
             half4 _Color;
+half4 _SpecColor;
 
             float4 _HeightOffset;
             float _HDRFix;
@@ -115,6 +116,7 @@
                 o.screenPos = ComputeGrabScreenPos(o.pos);
 
 
+                //UNITY_TRANSFER_FOG(o,o.vertex);
                 return o;
             }
 
@@ -138,8 +140,8 @@
                 grabColor = lerp(grabColor * 0.15, grabColor, fresnel);
                 grabColor = min(grabColor, _Color.rgb * 0.55);
 
-                half3 color = grabColor.xyz + saturate(light) * intencity;
-                return half4(color, _Color.a);
+                half3 color = grabColor.xyz + saturate(light) * intencity * _SpecColor.xyz * _SpecColor.a;
+                return half4(color, 1);
 
             }
             ENDCG
