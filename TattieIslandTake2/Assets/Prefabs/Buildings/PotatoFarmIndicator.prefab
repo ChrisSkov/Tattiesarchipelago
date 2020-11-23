@@ -12,7 +12,9 @@ GameObject:
   - component: {fileID: 1094051411066035598}
   - component: {fileID: 6961569482341528465}
   - component: {fileID: 1619820029004814304}
-  m_Layer: 0
+  - component: {fileID: -4955279312854950980}
+  - component: {fileID: 649439910}
+  m_Layer: 16
   m_Name: PotatoFarmIndicator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 5954514575377422699}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 40.97705, y: -0.00091457367, z: -22.260654}
-  m_LocalScale: {x: 0.31894, y: 0.31894, z: 0.31894}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children:
   - {fileID: 1189587935137562412}
   - {fileID: 6993298328813028428}
@@ -96,12 +98,41 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5954514575377422699}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
+  m_IsTrigger: 1
+  m_Enabled: 0
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &-4955279312854950980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5954514575377422699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2156eab728bdd4a41aafd4069a6df26d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canPlace: 0
+  placeRange: 2.3
+  cube: {fileID: 709868140274309026, guid: 0407fe0fe3b3a014a9dfd7aadc443b39, type: 3}
+  gameObjectList: []
+--- !u!65 &649439910
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5954514575377422699}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 11.13, y: 1.11, z: 10.25}
+  m_Center: {x: 0, y: 0.1, z: 0}
 --- !u!1001 &4427673286104380163
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -109,9 +140,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3858814852310559179}
     m_Modifications:
+    - target: {fileID: 194071251630518164, guid: 77e796dcf357d454eb594534c5b2945c, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 2791055450776950421, guid: 77e796dcf357d454eb594534c5b2945c, type: 3}
       propertyPath: m_Name
       value: Potato
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791055450776950421, guid: 77e796dcf357d454eb594534c5b2945c, type: 3}
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 3310148515854421039, guid: 77e796dcf357d454eb594534c5b2945c, type: 3}
       propertyPath: m_RootOrder
@@ -171,9 +210,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3858814852310559179}
     m_Modifications:
+    - target: {fileID: 194071251630518164, guid: 77e796dcf357d454eb594534c5b2945c, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 2791055450776950421, guid: 77e796dcf357d454eb594534c5b2945c, type: 3}
       propertyPath: m_Name
       value: Potato (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791055450776950421, guid: 77e796dcf357d454eb594534c5b2945c, type: 3}
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 3310148515854421039, guid: 77e796dcf357d454eb594534c5b2945c, type: 3}
       propertyPath: m_RootOrder
@@ -245,9 +292,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3858814852310559179}
     m_Modifications:
+    - target: {fileID: 194071251630518164, guid: 77e796dcf357d454eb594534c5b2945c, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 2791055450776950421, guid: 77e796dcf357d454eb594534c5b2945c, type: 3}
       propertyPath: m_Name
       value: Potato (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791055450776950421, guid: 77e796dcf357d454eb594534c5b2945c, type: 3}
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 3310148515854421039, guid: 77e796dcf357d454eb594534c5b2945c, type: 3}
       propertyPath: m_RootOrder
@@ -319,9 +374,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3858814852310559179}
     m_Modifications:
+    - target: {fileID: 194071251630518164, guid: 77e796dcf357d454eb594534c5b2945c, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 2791055450776950421, guid: 77e796dcf357d454eb594534c5b2945c, type: 3}
       propertyPath: m_Name
       value: Potato (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791055450776950421, guid: 77e796dcf357d454eb594534c5b2945c, type: 3}
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 3310148515854421039, guid: 77e796dcf357d454eb594534c5b2945c, type: 3}
       propertyPath: m_RootOrder
@@ -393,9 +456,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3858814852310559179}
     m_Modifications:
+    - target: {fileID: 194071251630518164, guid: 77e796dcf357d454eb594534c5b2945c, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 2791055450776950421, guid: 77e796dcf357d454eb594534c5b2945c, type: 3}
       propertyPath: m_Name
       value: Potato (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791055450776950421, guid: 77e796dcf357d454eb594534c5b2945c, type: 3}
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 3310148515854421039, guid: 77e796dcf357d454eb594534c5b2945c, type: 3}
       propertyPath: m_RootOrder
@@ -467,9 +538,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3858814852310559179}
     m_Modifications:
+    - target: {fileID: 194071251630518164, guid: 77e796dcf357d454eb594534c5b2945c, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 2791055450776950421, guid: 77e796dcf357d454eb594534c5b2945c, type: 3}
       propertyPath: m_Name
       value: Potato (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791055450776950421, guid: 77e796dcf357d454eb594534c5b2945c, type: 3}
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 3310148515854421039, guid: 77e796dcf357d454eb594534c5b2945c, type: 3}
       propertyPath: m_RootOrder

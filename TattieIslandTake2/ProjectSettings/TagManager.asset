@@ -7,6 +7,7 @@ TagManager:
   - ShotgunShell
   - Enemy
   - chicken
+  - ground
   layers:
   - Default
   - TransparentFX
@@ -24,7 +25,7 @@ TagManager:
   - ConsumablePickUp
   - Task
   - Obstacle
-  - 
+  - Indicator
   - 
   - 
   - 

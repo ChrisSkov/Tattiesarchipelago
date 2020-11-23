@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Wall
   m_EditorClassIdentifier: 
   prefab: {fileID: 100000, guid: 51ffdcced8a47e44989761520d635e1c, type: 3}
-  indicatorPrefab: {fileID: 100000, guid: 51ffdcced8a47e44989761520d635e1c, type: 3}
-  uiImage: {fileID: 2800000, guid: 5446afc8530779348b066b329f57c43e, type: 3}
+  indicatorPrefab: {fileID: 1083488082825476421, guid: 1ed238ea37959df44952fa69854bb89e, type: 3}
+  uiImage: {fileID: 2800000, guid: 5b425b738d081654485f3bd6e63bc79f, type: 3}
   buildingName: Wall
   price: 6
   woodReq: 12
