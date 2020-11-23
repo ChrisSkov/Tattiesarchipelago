@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Resources
   m_EditorClassIdentifier: 
   potatoCount: 23
-  woodCount: 7
+  woodCount: 50
   chickenCount: 1
   ammoCount: 190
   dynamiteCount: 0

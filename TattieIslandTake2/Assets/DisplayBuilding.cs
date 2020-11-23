@@ -61,12 +61,24 @@ public class DisplayBuilding : MonoBehaviour
         if (indicatorClone != null)
         {
             indicatorClone.transform.position = myBuilding.player.mouseWorldPosition;
+            if (myBuilding.player.currentlySelectedBuilding != myBuilding)
+            {
+                Destroy(indicatorClone);
+            }
         }
     }
 
     public void SelectBuilding()
     {
-        indicatorClone = Instantiate(myBuilding.indicatorPrefab, myBuilding.player.mouseWorldPosition, gameObject.transform.rotation);
+        if (indicatorClone != null && myBuilding.player.currentlySelectedBuilding != myBuilding)
+        {
+            Destroy(indicatorClone);
+        }
+
+        if (myBuilding.canAfford && indicatorClone == null || myBuilding.player.currentlySelectedBuilding != myBuilding)
+        {
+            indicatorClone = Instantiate(myBuilding.indicatorPrefab, myBuilding.player.mouseWorldPosition, gameObject.transform.rotation);
+        }
         myBuilding.player.currentlySelectedBuilding = myBuilding;
     }
 }
