@@ -11,6 +11,8 @@ public class Movement : MonoBehaviour
     Vector3 mouseWorldPositon = Vector3.zero;
     float runTimer = Mathf.Infinity;
 
+    public GameObject cube;
+
     AudioSource source;
     void Start()
     {
@@ -96,6 +98,7 @@ public class Movement : MonoBehaviour
 
         //rotate the player accordingly
         transform.rotation = Quaternion.LookRotation(mouseWorldPositon, Vector3.up);
+        player.mouseWorldPosition = mouseWorldPositon + gameObject.transform.position;
 
     }
 

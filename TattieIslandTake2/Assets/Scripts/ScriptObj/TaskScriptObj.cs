@@ -7,6 +7,8 @@ public class TaskScriptObj : TaskAbstract
     GameObject toolClone;
 
     bool toolCloneIsLive = false;
+
+    bool hasSpawnedLoot = false;
     public override void OnTaskBegin(Animator anim, Transform handAim)
     {
         if (animOverride != null)
@@ -19,6 +21,7 @@ public class TaskScriptObj : TaskAbstract
             toolClone.transform.SetParent(handAim);
             toolCloneIsLive = true;
         }
+        hasSpawnedLoot = false;
 
         anim.SetTrigger("task");
 
@@ -27,7 +30,11 @@ public class TaskScriptObj : TaskAbstract
     public override void OnTaskComplete(Animator anim)
     {
         anim.SetTrigger("taskComplete");
-        Instantiate(lootPrefab, anim.gameObject.transform.position, anim.gameObject.transform.rotation);
+        if (!hasSpawnedLoot)
+        {
+            Instantiate(lootPrefab, anim.gameObject.transform.position, anim.gameObject.transform.rotation);
+            hasSpawnedLoot = true;
+        }
         Destroy(anim.gameObject, 0.8f);
     }
 

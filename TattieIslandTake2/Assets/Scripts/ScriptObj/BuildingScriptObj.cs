@@ -4,6 +4,7 @@ using UnityEngine;
 public class BuildingScriptObj : ScriptableObject
 {
     public GameObject prefab;
+    public GameObject indicatorPrefab;
     public Texture2D uiImage;
     public string buildingName;
     public int price;

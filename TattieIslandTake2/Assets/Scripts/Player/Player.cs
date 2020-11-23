@@ -28,5 +28,10 @@ public class Player : ScriptableObject
     public GameObject blood;
     public float stepSoundDelay;
     public ConsumableAbstract activeConsumable;
+
+    public Vector3 mouseWorldPosition;
+
+    public BuildingScriptObj currentlySelectedBuilding;
+    public bool previewBuilding;
 }
 

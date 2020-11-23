@@ -10,7 +10,7 @@ public class DisplayBuilding : MonoBehaviour
     public Text potatoPriceText;
     public Text woodPriceText;
     RawImage myImage;
-
+    GameObject indicatorClone = null;
     bool hasEnoughWood;
     bool hasEnoughPotato;
     // Start is called before the first frame update
@@ -58,5 +58,15 @@ public class DisplayBuilding : MonoBehaviour
         {
             myBuilding.canAfford = false;
         }
+        if (indicatorClone != null)
+        {
+            indicatorClone.transform.position = myBuilding.player.mouseWorldPosition;
+        }
+    }
+
+    public void SelectBuilding()
+    {
+        indicatorClone = Instantiate(myBuilding.indicatorPrefab, myBuilding.player.mouseWorldPosition, gameObject.transform.rotation);
+        myBuilding.player.currentlySelectedBuilding = myBuilding;
     }
 }
