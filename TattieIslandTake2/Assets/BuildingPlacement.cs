@@ -12,7 +12,6 @@ public class BuildingPlacement : MonoBehaviour
     RaycastHit m_Hit;
     bool m_HitDetect;
     public float placeRange = 4f;
-    public GameObject cube;
     public List<GameObject> gameObjectList;
     void Start()
     {
@@ -22,6 +21,15 @@ public class BuildingPlacement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        print(gameObjectList.Count);
+        if (gameObjectList.Count == 0)
+        {
+            canPlace = true;
+        }
+        else
+        {
+            canPlace = false;
+        }
         if (canPlace)
         {
             GetComponent<MeshRenderer>().material.color = Color.green;
@@ -36,20 +44,16 @@ public class BuildingPlacement : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.layer != 8)
+        if (other.gameObject.layer == 15)
         {
-            canPlace = false;
-        }
-        else
-        {
-            canPlace = true;
+            gameObjectList.Add(other.gameObject);
         }
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.layer != 8)
+        if (other.gameObject.layer == 15)
         {
-            canPlace = true;
+            gameObjectList.Remove(other.gameObject);
         }
     }
 
