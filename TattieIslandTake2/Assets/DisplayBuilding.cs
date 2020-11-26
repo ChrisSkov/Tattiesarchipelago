@@ -61,6 +61,16 @@ public class DisplayBuilding : MonoBehaviour
         if (indicatorClone != null)
         {
             indicatorClone.transform.position = myBuilding.player.mouseWorldPosition;
+            if (Input.GetKeyDown(KeyCode.Mouse1))
+            {
+                myBuilding.player.currentlySelectedBuilding = null;
+            }
+
+            if (Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                myBuilding.PlaceBuilding();
+
+            }
             if (myBuilding.player.currentlySelectedBuilding != myBuilding)
             {
                 Destroy(indicatorClone);

@@ -14,4 +14,16 @@ public class BuildingScriptObj : ScriptableObject
     public Player player;
 
 
+
+    public void PlaceBuilding()
+    {
+        if (canAfford)
+        {
+            Instantiate(prefab, player.mouseWorldPosition, prefab.transform.rotation);
+            player.resources.woodCount -= woodReq;
+            player.resources.potatoCount -= price;
+        }
+
+    }
+
 }
