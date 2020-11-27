@@ -108,6 +108,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2156eab728bdd4a41aafd4069a6df26d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myBuilding: {fileID: 11400000, guid: 3e11a2f75568e884ab181ecfbadae152, type: 2}
   canPlace: 0
+  cannotAffordText: {fileID: 3263636113991842044, guid: ab1d83d0342990e45911012648d6ce7e, type: 3}
   placeRange: 4
   gameObjectList: []

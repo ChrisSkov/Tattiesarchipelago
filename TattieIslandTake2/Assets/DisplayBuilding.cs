@@ -21,6 +21,7 @@ public class DisplayBuilding : MonoBehaviour
         woodPriceText.text = "X " + myBuilding.woodReq;
         nameText.text = myBuilding.buildingName;
         myImage.texture = myBuilding.uiImage;
+
     }
 
     // Update is called once per frame
@@ -58,6 +59,8 @@ public class DisplayBuilding : MonoBehaviour
         {
             myBuilding.canAfford = false;
         }
+
+
         if (indicatorClone != null)
         {
             indicatorClone.transform.position = myBuilding.player.mouseWorldPosition;
@@ -66,10 +69,9 @@ public class DisplayBuilding : MonoBehaviour
                 myBuilding.player.currentlySelectedBuilding = null;
             }
 
-            if (Input.GetKeyDown(KeyCode.Mouse0))
+            if (Input.GetKeyDown(KeyCode.Mouse0) && myBuilding.canAfford)
             {
                 myBuilding.PlaceBuilding();
-
             }
             if (myBuilding.player.currentlySelectedBuilding != myBuilding)
             {

@@ -10,9 +10,7 @@ public class DisplayResourceCount : MonoBehaviour
     public Text potatoCountText;
     public Text ammoCountText;
     public Text logCountText;
-    public GameObject levelUpCanvas;
     public Slider xpSlider;
-
     public GameObject availablePointIndicator;
 
 
@@ -30,31 +28,32 @@ public class DisplayResourceCount : MonoBehaviour
         potatoCountText.text = string.Format(" X " + player.resources.potatoCount);
         ammoCountText.text = string.Format(" X " + player.resources.ammoCount);
         logCountText.text = string.Format(" X " + player.resources.woodCount);
+
         player.progression.GetXpToLevel();
         xpSlider.value = player.progression.currentXP;
         xpSlider.maxValue = player.progression.xpToLevel;
         player.progression.LevelUp();
+
+
         if (player.progression.attributePoints > 0)
         {
             availablePointIndicator.SetActive(true);
         }
         else
         {
-
             availablePointIndicator.SetActive(false);
         }
     }
 
-
-    public void OpenStatMenu()
+    public void OpenMenu(GameObject menu)
     {
-        if (levelUpCanvas.activeSelf == true)
+        if (menu.activeSelf == true)
         {
-            levelUpCanvas.SetActive(false);
+            menu.SetActive(false);
         }
-        else if (levelUpCanvas.activeSelf == false)
+        else if (menu.activeSelf == false)
         {
-            levelUpCanvas.SetActive(true);
+            menu.SetActive(true);
 
         }
     }

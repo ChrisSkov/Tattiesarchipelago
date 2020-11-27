@@ -116,9 +116,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2156eab728bdd4a41aafd4069a6df26d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myBuilding: {fileID: 11400000, guid: d653be98457c2e3489143454485685fa, type: 2}
   canPlace: 0
+  cannotAffordText: {fileID: 3263636113991842044, guid: ab1d83d0342990e45911012648d6ce7e, type: 3}
   placeRange: 2.3
-  cube: {fileID: 709868140274309026, guid: 0407fe0fe3b3a014a9dfd7aadc443b39, type: 3}
   gameObjectList: []
 --- !u!65 &649439910
 BoxCollider:

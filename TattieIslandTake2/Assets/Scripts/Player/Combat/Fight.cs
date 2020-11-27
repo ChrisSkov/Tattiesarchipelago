@@ -32,7 +32,7 @@ public class Fight : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (player.canAttack == false)
+        if (player.canAttack == false || player.currentlySelectedBuilding != null)
             return;
         DefaultWeaponBehavior();
         PickUpWeapon();

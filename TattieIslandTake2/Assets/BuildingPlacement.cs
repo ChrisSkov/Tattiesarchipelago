@@ -1,27 +1,27 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BuildingPlacement : MonoBehaviour
 {
 
+    public BuildingScriptObj myBuilding;
     public bool canPlace = false;
-
-    // Start is called before the first frame update
-    BoxCollider m_Collider;
-    RaycastHit m_Hit;
-    bool m_HitDetect;
+    public Canvas cannotAffordText;
+    BoxCollider myBoxCollider;
+    RaycastHit rayHit;
+    bool hitDetection;
     public float placeRange = 4f;
     public List<GameObject> gameObjectList;
     void Start()
     {
-        m_Collider = GetComponent<BoxCollider>();
+        myBoxCollider = GetComponent<BoxCollider>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        print(gameObjectList.Count);
         if (gameObjectList.Count == 0)
         {
             canPlace = true;
@@ -30,13 +30,15 @@ public class BuildingPlacement : MonoBehaviour
         {
             canPlace = false;
         }
-        if (canPlace)
+        if (canPlace && myBuilding.canAfford)
         {
             GetComponent<MeshRenderer>().material.color = Color.green;
+            cannotAffordText.gameObject.SetActive(false);
 
         }
         else
         {
+            cannotAffordText.gameObject.SetActive(true);
             GetComponent<MeshRenderer>().material.color = Color.red;
 
         }
