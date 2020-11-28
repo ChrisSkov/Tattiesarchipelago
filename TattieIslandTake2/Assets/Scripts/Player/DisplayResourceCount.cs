@@ -29,10 +29,10 @@ public class DisplayResourceCount : MonoBehaviour
         ammoCountText.text = string.Format(" X " + player.resources.ammoCount);
         logCountText.text = string.Format(" X " + player.resources.woodCount);
 
-        player.progression.GetXpToLevel();
+        // player.progression.GetXpToLevel();
+        // player.progression.LevelUp();
         xpSlider.value = player.progression.currentXP;
         xpSlider.maxValue = player.progression.xpToLevel;
-        player.progression.LevelUp();
 
 
         if (player.progression.attributePoints > 0)

@@ -33,5 +33,7 @@ public class Player : ScriptableObject
 
     public BuildingScriptObj currentlySelectedBuilding;
     public bool previewBuilding;
+
+    public Animator anim;
 }
 

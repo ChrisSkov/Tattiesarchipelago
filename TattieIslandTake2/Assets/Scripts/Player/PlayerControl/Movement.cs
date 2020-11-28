@@ -10,9 +10,6 @@ public class Movement : MonoBehaviour
     Animator playerAnim;
     Vector3 mouseWorldPositon = Vector3.zero;
     float runTimer = Mathf.Infinity;
-
-    public GameObject cube;
-
     AudioSource source;
     void Start()
     {

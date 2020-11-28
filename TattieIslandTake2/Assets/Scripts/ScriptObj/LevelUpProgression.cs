@@ -8,9 +8,7 @@ public class LevelUpProgression : ScriptableObject
     public int currentLevel;
     public int currentXP;
     public int xpGrowth;
-
     public int attributePoints;
-
     public int GetXpToLevel()
     {
 
@@ -26,11 +24,11 @@ public class LevelUpProgression : ScriptableObject
         xpGrowth = 2;
         attributePoints = 0;
     }
-    public void LevelUp()
+    public void LevelUp(Animator anim)
     {
-
         if (currentXP >= xpToLevel)
         {
+
             xpGrowth *= 2;
             if (currentLevel >= 4)
             {
@@ -38,7 +36,8 @@ public class LevelUpProgression : ScriptableObject
             }
             currentXP = 0;
             attributePoints += 1;
-
+            currentLevel++;
+            anim.SetTrigger("levelUp");
 
         }
     }
