@@ -24,7 +24,7 @@ public class LevelUpProgression : ScriptableObject
         xpGrowth = 2;
         attributePoints = 0;
     }
-    public void LevelUp(Animator anim)
+    public void LevelUp(Animator anim, GameObject levelUpEffect, Transform vfxSpawnPos)
     {
         if (currentXP >= xpToLevel)
         {
@@ -38,6 +38,7 @@ public class LevelUpProgression : ScriptableObject
             attributePoints += 1;
             currentLevel++;
             anim.SetTrigger("levelUp");
+            Instantiate(levelUpEffect, vfxSpawnPos.position, vfxSpawnPos.rotation);
 
         }
     }

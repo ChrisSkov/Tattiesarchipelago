@@ -27998,8 +27998,9 @@ GameObject:
   - component: {fileID: 416536}
   - component: {fileID: 199793750598825380}
   - component: {fileID: 198665292533106868}
+  - component: {fileID: -2618559913655362864}
   m_Layer: 0
-  m_Name: pf_vfx-ult_demo_psys_oneshot_megaflare
+  m_Name: LevelUpEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32808,6 +32809,19 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!114 &-2618559913655362864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 164698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46df1812d137b7c45a66ae8c8afafb9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time: 2
 --- !u!1 &189624
 GameObject:
   m_ObjectHideFlags: 0

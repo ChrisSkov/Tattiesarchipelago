@@ -6,7 +6,8 @@ public class LevelUp : MonoBehaviour
 {
     public Player player;
     Animator anim;
-    public AnimationClip[] levelUpAnims;
+
+    public GameObject levelUpVFX;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +18,7 @@ public class LevelUp : MonoBehaviour
     void Update()
     {
         player.progression.GetXpToLevel();
-        player.progression.LevelUp(anim);
+        player.progression.LevelUp(anim, levelUpVFX, gameObject.transform);
         
     }
 }
