@@ -30,3 +30,13 @@ MonoBehaviour:
   blood: {fileID: 1565275868738540, guid: 15b2d0ac3c1f5bd4791ae44984fba681, type: 3}
   stepSoundDelay: 0.2
   activeConsumable: {fileID: 11400000, guid: b5b35784686f2054a9e704f72bb08f64, type: 2}
+  mouseWorldPosition: {x: 0, y: 0.02700001, z: 0}
+  currentlySelectedBuilding: {fileID: 0}
+  previewBuilding: 0
+  anim: {fileID: 0}
+  jumpSounds:
+  - {fileID: 8300000, guid: 64472a36ecae57049944d3fe274bebc1, type: 3}
+  - {fileID: 8300000, guid: ab6a91b764ec60740a8c1af73d01ff43, type: 3}
+  - {fileID: 8300000, guid: 94a034ea42be69243b7f22914a6699db, type: 3}
+  - {fileID: 8300000, guid: 207c6dbce8593644abf3add253d935c2, type: 3}
+  - {fileID: 8300000, guid: 1c730063bbee93644b1d43430b2ed8dd, type: 3}

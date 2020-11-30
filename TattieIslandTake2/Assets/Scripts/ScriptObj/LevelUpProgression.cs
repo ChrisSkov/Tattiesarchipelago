@@ -42,6 +42,8 @@ public class LevelUpProgression : ScriptableObject
             currentLevel++;
             anim.SetTrigger("levelUp");
             Instantiate(levelUpEffect, vfxSpawnPos.position, vfxSpawnPos.rotation);
+            AudioClip clipToPlay = levelUpAudio[Random.Range(0,levelUpAudio.Length)];
+            source.PlayOneShot(clipToPlay);
 
         }
     }

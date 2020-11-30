@@ -35,5 +35,7 @@ public class Player : ScriptableObject
     public bool previewBuilding;
 
     public Animator anim;
+
+    public AudioClip[] jumpSounds;
 }
 

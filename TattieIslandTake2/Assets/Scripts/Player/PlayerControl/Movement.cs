@@ -99,6 +99,11 @@ public class Movement : MonoBehaviour
 
     }
 
+
+    void PlayJumpAudio()
+    {
+        source.PlayOneShot(player.jumpSounds[Random.Range(0, player.jumpSounds.Length)]);
+    }
     void CanMove()
     {
         playerAnim.SetBool("canMove", true);
