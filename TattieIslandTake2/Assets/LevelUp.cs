@@ -6,11 +6,13 @@ public class LevelUp : MonoBehaviour
 {
     public Player player;
     Animator anim;
+    AudioSource source;
 
-    public GameObject levelUpVFX;
+
     // Start is called before the first frame update
     void Start()
     {
+        source = GetComponent<AudioSource>();
         anim = GetComponent<Animator>();
     }
 
@@ -18,7 +20,7 @@ public class LevelUp : MonoBehaviour
     void Update()
     {
         player.progression.GetXpToLevel();
-        player.progression.LevelUp(anim, levelUpVFX, gameObject.transform);
-        
+        player.progression.LevelUp(anim, gameObject.transform, source);
+
     }
 }

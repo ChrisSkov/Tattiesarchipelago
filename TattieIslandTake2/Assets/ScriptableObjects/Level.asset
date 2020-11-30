@@ -17,3 +17,5 @@ MonoBehaviour:
   currentXP: 0
   xpGrowth: 2
   attributePoints: 0
+  levelUpEffect: {fileID: 164698, guid: cd57ec0a2726e7d488e246707293d5cb, type: 3}
+  levelUpAudio: []

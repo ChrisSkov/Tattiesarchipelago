@@ -9,6 +9,9 @@ public class LevelUpProgression : ScriptableObject
     public int currentXP;
     public int xpGrowth;
     public int attributePoints;
+
+    public GameObject levelUpEffect;
+    public AudioClip[] levelUpAudio;
     public int GetXpToLevel()
     {
 
@@ -24,7 +27,7 @@ public class LevelUpProgression : ScriptableObject
         xpGrowth = 2;
         attributePoints = 0;
     }
-    public void LevelUp(Animator anim, GameObject levelUpEffect, Transform vfxSpawnPos)
+    public void LevelUp(Animator anim, Transform vfxSpawnPos, AudioSource source)
     {
         if (currentXP >= xpToLevel)
         {
