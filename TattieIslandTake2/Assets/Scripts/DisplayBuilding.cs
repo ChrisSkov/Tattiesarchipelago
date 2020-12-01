@@ -14,8 +14,6 @@ public class DisplayBuilding : MonoBehaviour
     bool hasEnoughWood;
     bool hasEnoughPotato;
     public AstarPath path;
-
-    public GameObject shop;
     // Start is called before the first frame update
     void Start()
     {
@@ -77,7 +75,7 @@ public class DisplayBuilding : MonoBehaviour
                 myBuilding.PlaceBuilding();
                 path.Scan();
             }
-            if (myBuilding.player.currentlySelectedBuilding != myBuilding || shop.activeSelf == false)
+            if (myBuilding.player.currentlySelectedBuilding != myBuilding)
             {
                 Destroy(indicatorClone);
             }

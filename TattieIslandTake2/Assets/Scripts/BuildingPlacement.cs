@@ -14,9 +14,12 @@ public class BuildingPlacement : MonoBehaviour
     bool hitDetection;
     public float placeRange = 4f;
     public List<GameObject> gameObjectList;
+
+    public GameObject shop;
     void Start()
     {
         myBoxCollider = GetComponent<BoxCollider>();
+        shop = GameObject.FindGameObjectWithTag("shop");
     }
 
     // Update is called once per frame
@@ -41,6 +44,11 @@ public class BuildingPlacement : MonoBehaviour
             cannotAffordText.gameObject.SetActive(true);
             GetComponent<MeshRenderer>().material.color = Color.red;
 
+        }
+
+        if(shop.activeSelf == false)
+        {
+            Destroy(gameObject);
         }
     }
 

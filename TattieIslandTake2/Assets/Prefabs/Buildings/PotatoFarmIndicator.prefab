@@ -121,6 +121,7 @@ MonoBehaviour:
   cannotAffordText: {fileID: 3263636113991842044, guid: ab1d83d0342990e45911012648d6ce7e, type: 3}
   placeRange: 2.3
   gameObjectList: []
+  shop: {fileID: 0}
 --- !u!65 &649439910
 BoxCollider:
   m_ObjectHideFlags: 0

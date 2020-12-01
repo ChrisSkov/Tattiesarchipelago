@@ -9821,6 +9821,10 @@ PrefabInstance:
       propertyPath: path
       value: 
       objectReference: {fileID: 51667280}
+    - target: {fileID: 6332072529574414424, guid: 6561e9a96d743454896793eb6d245d93, type: 3}
+      propertyPath: m_TagString
+      value: shop
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6561e9a96d743454896793eb6d245d93, type: 3}
 --- !u!1001 &2360369228108144886

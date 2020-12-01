@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - chicken
   - ground
+  - shop
   layers:
   - Default
   - TransparentFX

@@ -113,3 +113,4 @@ MonoBehaviour:
   cannotAffordText: {fileID: 3263636113991842044, guid: ab1d83d0342990e45911012648d6ce7e, type: 3}
   placeRange: 4
   gameObjectList: []
+  shop: {fileID: 0}
