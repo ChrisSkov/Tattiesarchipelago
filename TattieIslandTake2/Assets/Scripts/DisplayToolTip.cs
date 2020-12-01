@@ -34,4 +34,9 @@ public class DisplayToolTip : MonoBehaviour
     {
         myKey = key;
     }
+
+    public KeyCode GetKeyCode()
+    {
+        return myKey;
+    }
 }

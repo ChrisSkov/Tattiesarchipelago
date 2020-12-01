@@ -510,6 +510,8 @@ MonoBehaviour:
   nameText: {fileID: 1559743596}
   potatoPriceText: {fileID: 30474166}
   woodPriceText: {fileID: 2010406697}
+  path: {fileID: 3449711773532974873, guid: 55e4cc0f41568bb44a01e087bcaf1855, type: 3}
+  shop: {fileID: 5298107807234115075, guid: eb7bc2fcf47de0742b8d63c9819492c7, type: 3}
 --- !u!1 &4812758667783413259
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using Pathfinding;
 public class DisplayBuilding : MonoBehaviour
 {
     public BuildingScriptObj myBuilding;
@@ -13,6 +13,9 @@ public class DisplayBuilding : MonoBehaviour
     GameObject indicatorClone = null;
     bool hasEnoughWood;
     bool hasEnoughPotato;
+    public AstarPath path;
+
+    public GameObject shop;
     // Start is called before the first frame update
     void Start()
     {
@@ -69,11 +72,12 @@ public class DisplayBuilding : MonoBehaviour
                 myBuilding.player.currentlySelectedBuilding = null;
             }
 
-            if (Input.GetKeyDown(KeyCode.Mouse0) && myBuilding.canAfford)
+            if (Input.GetKeyDown(KeyCode.Mouse0) && myBuilding.canAfford && indicatorClone.GetComponent<BuildingPlacement>().canPlace)
             {
                 myBuilding.PlaceBuilding();
+                path.Scan();
             }
-            if (myBuilding.player.currentlySelectedBuilding != myBuilding)
+            if (myBuilding.player.currentlySelectedBuilding != myBuilding || shop.activeSelf == false)
             {
                 Destroy(indicatorClone);
             }
@@ -90,6 +94,7 @@ public class DisplayBuilding : MonoBehaviour
         if (myBuilding.canAfford && indicatorClone == null || myBuilding.player.currentlySelectedBuilding != myBuilding)
         {
             indicatorClone = Instantiate(myBuilding.indicatorPrefab, myBuilding.player.mouseWorldPosition, gameObject.transform.rotation);
+
         }
         myBuilding.player.currentlySelectedBuilding = myBuilding;
     }

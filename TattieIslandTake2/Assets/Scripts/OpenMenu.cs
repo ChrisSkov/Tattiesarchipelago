@@ -8,6 +8,7 @@ public class OpenMenu : MonoBehaviour
     public KeyCode keyToOpen;
 
     public GameObject uiButton;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +18,10 @@ public class OpenMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (uiButton.GetComponent<DisplayToolTip>().GetKeyCode() != keyToOpen)
+        {
+            uiButton.GetComponent<DisplayToolTip>().SetKeyCode(keyToOpen);
+        }
         if (Input.GetKeyDown(keyToOpen))
         {
             if (menuToOpen.activeSelf == true)
@@ -30,5 +35,5 @@ public class OpenMenu : MonoBehaviour
         }
     }
 
-    
+
 }

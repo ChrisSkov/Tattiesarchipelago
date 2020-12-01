@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cec9c4fe70f854242ab017288e013c3d, type: 3}
   m_Name: Resources
   m_EditorClassIdentifier: 
-  potatoCount: 14
-  woodCount: 94
+  potatoCount: 82
+  woodCount: 64
   chickenCount: 1
   ammoCount: 190
   dynamiteCount: 0
