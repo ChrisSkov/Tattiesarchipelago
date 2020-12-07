@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 986edd7ea2d411145b3f80837ca21e1c, type: 3}
   m_Name: Level
   m_EditorClassIdentifier: 
-  xpToLevel: 4
-  currentLevel: 1
+  xpToLevel: 72
+  currentLevel: 5
   currentXP: 0
-  xpGrowth: 2
-  attributePoints: 0
+  xpGrowth: 36
+  attributePoints: 4
   levelUpEffect: {fileID: 164698, guid: cd57ec0a2726e7d488e246707293d5cb, type: 3}
   levelUpAudio:
   - {fileID: 8300000, guid: 56d8a3007719f6f4dbdf259c050716c7, type: 3}

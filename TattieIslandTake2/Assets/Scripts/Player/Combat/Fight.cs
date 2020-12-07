@@ -26,7 +26,7 @@ public class Fight : MonoBehaviour
         anim = GetComponent<Animator>();
         Physics.IgnoreLayerCollision(10, 12);
         defaultWeapon.OnPickUp(rightHand);
-
+        player.currentlySelectedBuilding = null;
     }
 
     // Update is called once per frame

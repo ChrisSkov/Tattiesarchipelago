@@ -14,9 +14,12 @@ public class DisplayBuilding : MonoBehaviour
     bool hasEnoughWood;
     bool hasEnoughPotato;
     public AstarPath path;
+
+    DisablePlacementOnHover hover;
     // Start is called before the first frame update
     void Start()
     {
+        hover = GetComponentInParent<DisablePlacementOnHover>();
         myImage = GetComponent<RawImage>();
         potatoPriceText.text = "X " + myBuilding.price;
         woodPriceText.text = "X " + myBuilding.woodReq;
@@ -70,7 +73,7 @@ public class DisplayBuilding : MonoBehaviour
                 myBuilding.player.currentlySelectedBuilding = null;
             }
 
-            if (Input.GetKeyDown(KeyCode.Mouse0) && myBuilding.canAfford && indicatorClone.GetComponent<BuildingPlacement>().canPlace)
+            if (Input.GetKeyDown(KeyCode.Mouse0) && myBuilding.canAfford && indicatorClone.GetComponent<BuildingPlacement>().canPlace && hover.hoverUI == false)
             {
                 myBuilding.PlaceBuilding();
                 path.Scan();
@@ -81,6 +84,8 @@ public class DisplayBuilding : MonoBehaviour
             }
         }
     }
+
+
 
     public void SelectBuilding()
     {

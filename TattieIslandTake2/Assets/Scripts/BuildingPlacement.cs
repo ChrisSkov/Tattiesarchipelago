@@ -48,7 +48,13 @@ public class BuildingPlacement : MonoBehaviour
 
         if(shop.activeSelf == false)
         {
+            myBuilding.player.currentlySelectedBuilding = null;
             Destroy(gameObject);
+        }
+
+        if(Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            gameObject.transform.Rotate(new Vector3(0,90,0), Space.Self);
         }
     }
 
