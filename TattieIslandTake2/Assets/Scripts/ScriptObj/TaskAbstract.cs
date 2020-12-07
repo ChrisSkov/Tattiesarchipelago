@@ -4,8 +4,10 @@ using UnityEngine;
 
 public abstract class TaskAbstract : ScriptableObject
 {
+    public Player player;
     public int maxHealth;
     public float distanceToStart;
+    public float distanceToExit;
     public AnimatorOverrideController animOverride;
 
     public GameObject lootPrefab;

@@ -7,7 +7,7 @@ public class TaskBehavior : MonoBehaviour
 {
 
     public TaskAbstract task;
-
+    public Player playerScriptObj;
     public Transform player;
     public int currentHealth;
     public Animator playerAnim;
@@ -34,15 +34,26 @@ public class TaskBehavior : MonoBehaviour
             {
 
                 hpBar.gameObject.SetActive(true);
-                task.OnTaskBegin(playerAnim, performTask.handAimRight);
                 performTask.currentTaskObject = gameObject;
+                playerScriptObj.currentTaskObj = task;
+                playerAnim.runtimeAnimatorController = task.animOverride;
+                task.OnTaskBegin(playerAnim, performTask.handAimRight);
             }
         }
 
+
+        if (Vector3.Distance(transform.position, player.position) >= task.distanceToExit)
+        {
+            canDoTask = false;
+        }
         if (currentHealth <= 0)
         {
             canDoTask = false;
             task.OnTaskComplete(GetComponent<Animator>());
+        }
+        if (!canDoTask)
+        {
+            playerScriptObj.currentTaskObj = null;
         }
 
         hpBar.value = currentHealth;

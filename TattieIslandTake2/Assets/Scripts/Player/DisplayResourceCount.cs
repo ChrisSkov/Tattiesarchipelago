@@ -10,6 +10,7 @@ public class DisplayResourceCount : MonoBehaviour
     public Text potatoCountText;
     public Text ammoCountText;
     public Text logCountText;
+    public Text stoneCountText;
     public Slider xpSlider;
     public GameObject availablePointIndicator;
 
@@ -28,6 +29,7 @@ public class DisplayResourceCount : MonoBehaviour
         potatoCountText.text = string.Format(" X " + player.resources.potatoCount);
         ammoCountText.text = string.Format(" X " + player.resources.ammoCount);
         logCountText.text = string.Format(" X " + player.resources.woodCount);
+        stoneCountText.text = string.Format(" X " + player.resources.stoneCount);
 
         // player.progression.GetXpToLevel();
         // player.progression.LevelUp();

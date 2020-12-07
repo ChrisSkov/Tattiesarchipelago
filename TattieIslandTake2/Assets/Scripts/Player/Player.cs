@@ -25,6 +25,8 @@ public class Player : ScriptableObject
     public StatScriptObj zombiesKilled;
     public StatScriptObj dynamitesThrown;
     [Header("Misc")]
+
+    public TaskAbstract currentTaskObj;
     public GameObject blood;
     public float stepSoundDelay;
     public ConsumableAbstract activeConsumable;

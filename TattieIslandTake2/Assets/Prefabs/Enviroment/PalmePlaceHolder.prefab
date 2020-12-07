@@ -618,6 +618,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   task: {fileID: 11400000, guid: 59187bbbabba3d44691fe6f92d70399d, type: 2}
+  playerScriptObj: {fileID: 11400000, guid: d66d5124d742a3c44820ab8d1c02d69b, type: 2}
   player: {fileID: 0}
   currentHealth: 0
   playerAnim: {fileID: 0}

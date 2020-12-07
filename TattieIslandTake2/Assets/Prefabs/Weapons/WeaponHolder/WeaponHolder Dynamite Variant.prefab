@@ -39,7 +39,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 627085599481979014}
   m_LocalRotation: {x: 0.41214648, y: -0, z: -0, w: 0.9111177}
-  m_LocalPosition: {x: 0, y: 0, z: 0.14999965}
+  m_LocalPosition: {x: 0, y: 0, z: 0.14999962}
   m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
   m_Children: []
   m_Father: {fileID: 5507880700310553697}
@@ -47,7 +47,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 48.679, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.5300007, y: 0.5500004}
+  m_AnchoredPosition: {x: 0.0000019073486, y: 0.00000023841858}
   m_SizeDelta: {x: 161.7099, y: 27.983631}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4701635594039504600
@@ -128,8 +128,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1022, y: 454}
+  m_AnchoredPosition: {x: 0.45, y: -0}
+  m_SizeDelta: {x: 5.2887096, y: 1.9176779}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &8983428275734312450
 Canvas:
@@ -328,15 +328,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6327649463628056484, guid: c589eeb6aba435a40adcf4c5888d870b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.076581
+      value: 14.48
       objectReference: {fileID: 0}
     - target: {fileID: 6327649463628056484, guid: c589eeb6aba435a40adcf4c5888d870b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.729332
+      value: -6.62
       objectReference: {fileID: 0}
     - target: {fileID: 6327649463628056484, guid: c589eeb6aba435a40adcf4c5888d870b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -26.453857
+      value: -25.11
       objectReference: {fileID: 0}
     - target: {fileID: 6327649463628056484, guid: c589eeb6aba435a40adcf4c5888d870b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -368,7 +368,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6327649463628056487, guid: c589eeb6aba435a40adcf4c5888d870b, type: 3}
       propertyPath: m_Name
-      value: WeaponHolder Dynamite (3)
+      value: WeaponHolder Dynamite (9)
       objectReference: {fileID: 0}
     - target: {fileID: 6327649463628056490, guid: c589eeb6aba435a40adcf4c5888d870b, type: 3}
       propertyPath: thisWeapon

@@ -10,13 +10,16 @@ public class TaskScriptObj : TaskAbstract
 
     bool hasSpawnedLoot = false;
 
-    public StatScriptObj treesFelled;
+    public StatScriptObj numberOfTasksCompleted;
+
+
     public override void OnTaskBegin(Animator anim, Transform handAim)
     {
         if (animOverride != null)
         {
             anim.runtimeAnimatorController = animOverride;
         }
+
         if (toolCloneIsLive == false)
         {
             toolClone = Instantiate(toolPrefab, handAim.position, handAim.rotation);
@@ -37,13 +40,17 @@ public class TaskScriptObj : TaskAbstract
             Instantiate(lootPrefab, anim.gameObject.transform.position, anim.gameObject.transform.rotation);
             hasSpawnedLoot = true;
         }
-        treesFelled.statValue++;
+        numberOfTasksCompleted.statValue++;
         Destroy(anim.gameObject, 0.8f);
+        player.currentTaskObj = null;
     }
 
     public override void TaskAnimEvent(GameObject taskObject, int amount, Animator anim)
     {
-        anim.SetTrigger("react");
+        if (anim != null)
+        {
+            anim.SetTrigger("react");
+        }
         taskObject.GetComponent<TaskBehavior>().currentHealth -= amount;
         Destroy(toolClone, 1f);
         toolCloneIsLive = false;
