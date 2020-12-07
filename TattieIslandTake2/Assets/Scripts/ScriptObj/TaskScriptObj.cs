@@ -9,6 +9,8 @@ public class TaskScriptObj : TaskAbstract
     bool toolCloneIsLive = false;
 
     bool hasSpawnedLoot = false;
+
+    public StatScriptObj treesFelled;
     public override void OnTaskBegin(Animator anim, Transform handAim)
     {
         if (animOverride != null)
@@ -35,6 +37,7 @@ public class TaskScriptObj : TaskAbstract
             Instantiate(lootPrefab, anim.gameObject.transform.position, anim.gameObject.transform.rotation);
             hasSpawnedLoot = true;
         }
+        treesFelled.statValue++;
         Destroy(anim.gameObject, 0.8f);
     }
 
