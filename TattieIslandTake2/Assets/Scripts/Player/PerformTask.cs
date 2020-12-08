@@ -11,7 +11,6 @@ public class PerformTask : MonoBehaviour
 
     public void TaskAnimEvent()
     {
-        print("here");
         currentTaskObject.GetComponent<TaskBehavior>().task.TaskAnimEvent(currentTaskObject, 10, currentTaskObject.GetComponent<Animator>());
     }
 }

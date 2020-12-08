@@ -16,7 +16,7 @@ MonoBehaviour:
   maxHealth: 20
   distanceToStart: 1.6
   distanceToExit: 1.9
-  animOverride: {fileID: 22100000, guid: b6f5f314166f1684285ef397e48bcde8, type: 2}
+  animOverride: {fileID: 22100000, guid: 5403e860b5caa9d4a9901fd1c8da20c1, type: 2}
   lootPrefab: {fileID: 3550366334037083557, guid: 75650f1ea0ded5b43b401e64dff04924, type: 3}
   toolPrefab: {fileID: 1124784329471907012, guid: c401cb348a121ac4ea6434b2bf578e0d, type: 3}
   lootAmount: 1

@@ -42,10 +42,10 @@ public class TaskBehavior : MonoBehaviour
         }
 
 
-        if (Vector3.Distance(transform.position, player.position) >= task.distanceToExit)
-        {
-            canDoTask = false;
-        }
+        // if (Vector3.Distance(transform.position, player.position) >= task.distanceToExit)
+        // {
+        //     canDoTask = false;
+        // }
         if (currentHealth <= 0)
         {
             canDoTask = false;

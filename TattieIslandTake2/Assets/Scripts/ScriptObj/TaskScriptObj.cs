@@ -54,5 +54,6 @@ public class TaskScriptObj : TaskAbstract
         taskObject.GetComponent<TaskBehavior>().currentHealth -= amount;
         Destroy(toolClone, 1f);
         toolCloneIsLive = false;
+        player.currentTaskObj = null;
     }
 }
