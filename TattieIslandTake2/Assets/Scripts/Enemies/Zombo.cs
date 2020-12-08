@@ -49,6 +49,10 @@ using Pathfinding;
                         transform.LookAt(playerTransform.position);
                     }
                     path.destination = playerTransform.position;
+                    if(path.hasPath == false)
+                    {
+                        //Destroy obstacle
+                    }
                     if (Vector3.Distance(transform.position, playerTransform.position) <= zomboStats.attackRange)
                     {
                         if (attackTimer >= zomboStats.timeBetweenAttacks)
