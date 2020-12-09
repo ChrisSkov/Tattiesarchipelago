@@ -9,6 +9,7 @@ TagManager:
   - chicken
   - ground
   - shop
+  - Building
   layers:
   - Default
   - TransparentFX

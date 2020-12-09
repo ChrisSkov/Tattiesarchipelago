@@ -3,15 +3,19 @@ using UnityEngine;
 [CreateAssetMenu]
 public class BuildingScriptObj : ScriptableObject
 {
+    [Header("Attributes")]
+    public string buildingName;
     public GameObject prefab;
     public GameObject indicatorPrefab;
     public Texture2D uiImage;
-    public string buildingName;
+    public float maxHealth;
+    [Header("Price")]
     public int price;
     public int woodReq;
     public int stoneReq;
     public float deliveryTime;
     public bool canAfford;
+    
     public Player player;
 
 

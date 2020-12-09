@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3449711773532974854}
   - component: {fileID: 3449711773532974873}
-  - component: {fileID: 3449711773532974872}
   m_Layer: 0
   m_Name: AI
   m_TagString: Untagged
@@ -87,16 +86,3 @@ MonoBehaviour:
     pivotPointRoot: {fileID: 0}
     spreadOutCount: 1
   showGraphs: 1
---- !u!114 &3449711773532974872
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3449711773532974855}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00a9d38026945c84b845b93d23d31fe6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  path: {fileID: 3449711773532974873}

@@ -25,6 +25,7 @@ public abstract class ZomboAbstract : ScriptableObject
     public AnimatorOverrideController animOverride;
 
     public abstract void Attack(Transform aim, AudioSource source);
+    public abstract void AttackConstruction(Transform aim, AudioSource source);
     public abstract void AttackStartup(AudioSource source);
 
 }

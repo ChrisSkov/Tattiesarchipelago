@@ -78,20 +78,25 @@ public class DisplayBuilding : MonoBehaviour
             myBuilding.canAfford = false;
         }
 
-
+        //is there and active indicator?
         if (indicatorClone != null)
         {
+            //indicator moves with mouse
             indicatorClone.transform.position = myBuilding.player.mouseWorldPosition;
+            //right click to cancel building preview
             if (Input.GetKeyDown(KeyCode.Mouse1))
             {
                 myBuilding.player.currentlySelectedBuilding = null;
             }
-
+            //if we can afford the building, it fits on the map and the mouse is not on the shop UI
             if (Input.GetKeyDown(KeyCode.Mouse0) && myBuilding.canAfford && indicatorClone.GetComponent<BuildingPlacement>().canPlace && hover.hoverUI == false)
             {
+                //place the building and recreate the graph for AI movement
                 myBuilding.PlaceBuilding();
+                print("scanning");
                 path.Scan();
             }
+            //Destroy the indicator clone if the selected building is not the same as this building
             if (myBuilding.player.currentlySelectedBuilding != myBuilding)
             {
                 Destroy(indicatorClone);

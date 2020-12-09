@@ -2,7 +2,7 @@
 using UnityEngine;
 using Pathfinding;
 
-    public class Zombo : MonoBehaviour
+public class Zombo : MonoBehaviour
 {
     public ZomboAbstract zomboStats;
     public Player player;
@@ -12,9 +12,9 @@ using Pathfinding;
     AIPath path;
     AudioSource source;
     public bool canRotate = true;
-    float attackTimer = Mathf.Infinity;
+    public float attackTimer = Mathf.Infinity;
     Transform playerTransform;
-
+    public Transform currentTarget;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,38 +29,61 @@ using Pathfinding;
     // Update is called once per frame
     void Update()
     {
+        //If zombie is alive
         if (!health.isDead)
         {
+            //and player is dead      
             if (player.stats.currentHealth.statValue <= 0)
             {
+                //stop and dance          
                 path.isStopped = true;
                 transform.LookAt(Camera.main.transform.GetChild(0).transform.position);
                 anim.SetTrigger("victory");
             }
             else
             {
-                // specialAttackTimer += Time.deltaTime;
+                //increment the attack timer
                 attackTimer += Time.deltaTime;
                 HandleMoveAnim();
+                //if distance to player is less than or equal to zombie chase range
                 if (Vector3.Distance(transform.position, playerTransform.position) <= zomboStats.chaseRange)
                 {
+                    //set current target to player   
+                    currentTarget = playerTransform;
+                    //if there is no viable path to the player
+                    if (path.reachedEndOfPath == true || path.hasPath == false || path.isStopped || currentTarget == playerTransform && anim.GetFloat("forwardSpeed") <= 0.25f)
+                    {
+                        RaycastHit hit;
+                        LayerMask mask = LayerMask.GetMask("Obstacle");
+                        if (Physics.Raycast(transform.position, playerTransform.position - transform.position, out hit, mask))
+                        {
+                            if (hit.collider.gameObject.tag == "Building")
+                            {
+                                currentTarget = hit.transform;
+                            }
+                        }
+                    }
+
                     if (canRotate)
                     {
-                        transform.LookAt(playerTransform.position);
+                        //look at the target
+                        transform.LookAt(currentTarget.position);
                     }
-                    path.destination = playerTransform.position;
-                    if(path.hasPath == false)
+                    //go to the target
+                    path.destination = currentTarget.position;
+
+                    //are we close enough to attack?
+                    if (Vector3.Distance(transform.position, currentTarget.position) <= zomboStats.attackRange)
                     {
-                        //Destroy obstacle
-                    }
-                    if (Vector3.Distance(transform.position, playerTransform.position) <= zomboStats.attackRange)
-                    {
+                        //is it time to attack?
                         if (attackTimer >= zomboStats.timeBetweenAttacks)
                         {
+                            //do we have special attack animations?
                             if (zomboStats.animOverride != null)
                             {
                                 anim.runtimeAnimatorController = zomboStats.animOverride;
                             }
+                            //attack currentTarget and reset attack timer
                             anim.SetTrigger("attack");
                             attackTimer = 0f;
                         }
@@ -95,7 +118,14 @@ using Pathfinding;
     }
     void ZomboAttackAnimEvent()
     {
-        zomboStats.Attack(aim, source);
+        if (currentTarget != playerTransform && Vector3.Distance(transform.position, playerTransform.position) > Vector3.Distance(transform.position, currentTarget.position))
+        {
+            zomboStats.AttackConstruction(aim, source);
+        }
+        else
+        {
+            zomboStats.Attack(aim, source);
+        }
     }
     void CanMove()
     {

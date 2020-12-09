@@ -11,9 +11,12 @@ GameObject:
   - component: {fileID: 71507139022193727}
   - component: {fileID: 9053657890792783369}
   - component: {fileID: 3357860722977948400}
-  m_Layer: 0
+  - component: {fileID: 3440697995145159779}
+  - component: {fileID: 7297171085964737438}
+  - component: {fileID: 7839428345406341719}
+  m_Layer: 15
   m_Name: Fence
-  m_TagString: Untagged
+  m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,3 +86,49 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &3440697995145159779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3937644184076580396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1ca4e044390ebd4390d8314d3a6241d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myBuilding: {fileID: 11400000, guid: d46718d0b338fc549aef42fc7cf5ead5, type: 2}
+  currentHealth: 0
+  isDead: 0
+  path: {fileID: 3449711773532974873, guid: 55e4cc0f41568bb44a01e087bcaf1855, type: 3}
+  hpBar: {fileID: 0}
+--- !u!65 &7297171085964737438
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3937644184076580396}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.059805, y: 1.1688118, z: 0.37182236}
+  m_Center: {x: -0.026543617, y: 0.5294514, z: 0.07621002}
+--- !u!54 &7839428345406341719
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3937644184076580396}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 126
+  m_CollisionDetection: 1
