@@ -1302,67 +1302,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 6329f5837c6d2ca41acce9c35908cecb, type: 3}
   m_PrefabInstance: {fileID: 313672338}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &406977779 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 564593202490209328, guid: 6561e9a96d743454896793eb6d245d93, type: 3}
-  m_PrefabInstance: {fileID: 2190617009759766369}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &406977782 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2190617010045135002, guid: 6561e9a96d743454896793eb6d245d93, type: 3}
-  m_PrefabInstance: {fileID: 2190617009759766369}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 406977779}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55e22e765c142c0439ae23706a934007, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &406977785
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 406977779}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 406977782}
-          m_TargetAssemblyTypeName: DisplayBuilding, Assembly-CSharp
-          m_MethodName: MouseEnterUI
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 406977782}
-          m_TargetAssemblyTypeName: DisplayBuilding, Assembly-CSharp
-          m_MethodName: MouseExitUI
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!4 &415677862 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2852203122908854576, guid: 9decb7eafd42dee4981bd06947c9cdd6, type: 3}
@@ -5744,67 +5683,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9decb7eafd42dee4981bd06947c9cdd6, type: 3}
---- !u!1 &1235420317 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2190617009308919131, guid: 6561e9a96d743454896793eb6d245d93, type: 3}
-  m_PrefabInstance: {fileID: 2190617009759766369}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1235420320 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 564593201623939569, guid: 6561e9a96d743454896793eb6d245d93, type: 3}
-  m_PrefabInstance: {fileID: 2190617009759766369}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1235420317}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55e22e765c142c0439ae23706a934007, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1235420323
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1235420317}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1235420320}
-          m_TargetAssemblyTypeName: DisplayBuilding, Assembly-CSharp
-          m_MethodName: MouseEnterUI
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1235420320}
-          m_TargetAssemblyTypeName: DisplayBuilding, Assembly-CSharp
-          m_MethodName: MouseExitUI
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &1238415159
 GameObject:
   m_ObjectHideFlags: 0
@@ -10822,70 +10700,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!1 &2015464471 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6332072528690536995, guid: 6561e9a96d743454896793eb6d245d93, type: 3}
-  m_PrefabInstance: {fileID: 2190617009759766369}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2015464473
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2015464471}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 2015464475}
-          m_TargetAssemblyTypeName: DisablePlacementOnHover, Assembly-CSharp
-          m_MethodName: MouseEnterUI
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 2015464475}
-          m_TargetAssemblyTypeName: DisablePlacementOnHover, Assembly-CSharp
-          m_MethodName: MouseExitUI
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
---- !u!114 &2015464475
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2015464471}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b900f42778212f54a8883d21b98e6186, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 11400000, guid: d66d5124d742a3c44820ab8d1c02d69b, type: 2}
-  hoverUI: 0
 --- !u!1001 &2036100663
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11351,74 +11165,86 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 757575988}
     m_Modifications:
-    - target: {fileID: 878857673, guid: 6561e9a96d743454896793eb6d245d93, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 878857673, guid: 6561e9a96d743454896793eb6d245d93, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 878857673, guid: 6561e9a96d743454896793eb6d245d93, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 878857673, guid: 6561e9a96d743454896793eb6d245d93, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: DisplayBuilding, Assembly-CSharp
-      objectReference: {fileID: 0}
     - target: {fileID: 564593201623939569, guid: 6561e9a96d743454896793eb6d245d93, type: 3}
       propertyPath: path
       value: 
       objectReference: {fileID: 51667280}
+    - target: {fileID: 564593201886457770, guid: 6561e9a96d743454896793eb6d245d93, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 564593201886457770, guid: 6561e9a96d743454896793eb6d245d93, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 564593201886457770, guid: 6561e9a96d743454896793eb6d245d93, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 564593201886457770, guid: 6561e9a96d743454896793eb6d245d93, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 564593201886457770, guid: 6561e9a96d743454896793eb6d245d93, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 564593201886457770, guid: 6561e9a96d743454896793eb6d245d93, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -502.35
+      objectReference: {fileID: 0}
     - target: {fileID: 564593202490209329, guid: 6561e9a96d743454896793eb6d245d93, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 564593202490209329, guid: 6561e9a96d743454896793eb6d245d93, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 564593202490209329, guid: 6561e9a96d743454896793eb6d245d93, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 564593202490209329, guid: 6561e9a96d743454896793eb6d245d93, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 564593202490209329, guid: 6561e9a96d743454896793eb6d245d93, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 390.5
       objectReference: {fileID: 0}
     - target: {fileID: 564593202490209329, guid: 6561e9a96d743454896793eb6d245d93, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -75
       objectReference: {fileID: 0}
     - target: {fileID: 2190617009308919130, guid: 6561e9a96d743454896793eb6d245d93, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2190617009308919130, guid: 6561e9a96d743454896793eb6d245d93, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2190617009308919130, guid: 6561e9a96d743454896793eb6d245d93, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 2190617009308919130, guid: 6561e9a96d743454896793eb6d245d93, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 2190617009308919130, guid: 6561e9a96d743454896793eb6d245d93, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 2190617009308919130, guid: 6561e9a96d743454896793eb6d245d93, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -75
       objectReference: {fileID: 0}
+    - target: {fileID: 2190617009575080705, guid: 6561e9a96d743454896793eb6d245d93, type: 3}
+      propertyPath: path
+      value: 
+      objectReference: {fileID: 51667280}
     - target: {fileID: 2190617009759766375, guid: 6561e9a96d743454896793eb6d245d93, type: 3}
       propertyPath: uiButton
       value: 
@@ -11426,10 +11252,6 @@ PrefabInstance:
     - target: {fileID: 2190617009853836822, guid: 6561e9a96d743454896793eb6d245d93, type: 3}
       propertyPath: m_Name
       value: ShopCanvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 2190617009853836822, guid: 6561e9a96d743454896793eb6d245d93, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2190617009853836825, guid: 6561e9a96d743454896793eb6d245d93, type: 3}
       propertyPath: m_Pivot.x
@@ -11521,19 +11343,23 @@ PrefabInstance:
       objectReference: {fileID: 51667280}
     - target: {fileID: 6332072529223323856, guid: 6561e9a96d743454896793eb6d245d93, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6332072529223323856, guid: 6561e9a96d743454896793eb6d245d93, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332072529363410560, guid: 6561e9a96d743454896793eb6d245d93, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 465.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332072529363410560, guid: 6561e9a96d743454896793eb6d245d93, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 577.35
       objectReference: {fileID: 0}
     - target: {fileID: 6332072529574414424, guid: 6561e9a96d743454896793eb6d245d93, type: 3}
       propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6332072529574414424, guid: 6561e9a96d743454896793eb6d245d93, type: 3}
-      propertyPath: m_TagString
-      value: shop
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6561e9a96d743454896793eb6d245d93, type: 3}

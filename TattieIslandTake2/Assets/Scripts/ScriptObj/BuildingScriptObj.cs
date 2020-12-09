@@ -9,6 +9,7 @@ public class BuildingScriptObj : ScriptableObject
     public string buildingName;
     public int price;
     public int woodReq;
+    public int stoneReq;
     public float deliveryTime;
     public bool canAfford;
     public Player player;
@@ -22,6 +23,7 @@ public class BuildingScriptObj : ScriptableObject
             Instantiate(prefab, player.mouseWorldPosition, prefab.transform.rotation);
             player.resources.woodCount -= woodReq;
             player.resources.potatoCount -= price;
+            player.resources.stoneCount -= stoneReq;
         }
 
     }

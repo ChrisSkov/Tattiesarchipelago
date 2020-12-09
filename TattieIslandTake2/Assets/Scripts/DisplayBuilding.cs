@@ -9,10 +9,12 @@ public class DisplayBuilding : MonoBehaviour
     public Text nameText;
     public Text potatoPriceText;
     public Text woodPriceText;
+    public Text stonePriceText;
     RawImage myImage;
     GameObject indicatorClone = null;
     bool hasEnoughWood;
     bool hasEnoughPotato;
+    bool hasEnoguhStone;
     public AstarPath path;
 
     DisablePlacementOnHover hover;
@@ -23,6 +25,7 @@ public class DisplayBuilding : MonoBehaviour
         myImage = GetComponent<RawImage>();
         potatoPriceText.text = "X " + myBuilding.price;
         woodPriceText.text = "X " + myBuilding.woodReq;
+        stonePriceText.text = "X " + myBuilding.stoneReq;
         nameText.text = myBuilding.buildingName;
         myImage.texture = myBuilding.uiImage;
 
@@ -43,6 +46,17 @@ public class DisplayBuilding : MonoBehaviour
             hasEnoughPotato = false;
 
         }
+        if (myBuilding.player.resources.stoneCount >= myBuilding.stoneReq)
+        {
+            stonePriceText.color = Color.white;
+            hasEnoguhStone = true;
+        }
+        else
+        {
+            stonePriceText.color = Color.red;
+            hasEnoguhStone = false;
+
+        }
 
         if (myBuilding.player.resources.woodCount >= myBuilding.woodReq)
         {
@@ -55,7 +69,7 @@ public class DisplayBuilding : MonoBehaviour
             hasEnoughWood = false;
         }
 
-        if (hasEnoughPotato && hasEnoughWood)
+        if (hasEnoughPotato && hasEnoughWood && hasEnoguhStone)
         {
             myBuilding.canAfford = true;
         }
