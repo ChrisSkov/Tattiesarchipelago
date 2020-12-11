@@ -18,6 +18,7 @@ public class Fight : MonoBehaviour
     public float force = 0f;
     AudioSource source;
     public float timer = Mathf.Infinity;
+    public float specialWepTimer = Mathf.Infinity;
 
     // Start is called before the first frame update
     void Start()
@@ -34,7 +35,7 @@ public class Fight : MonoBehaviour
     {
         if (player.canAttack == false || player.currentlySelectedBuilding != null || player.currentTaskObj != null)
             return;
-        
+
         DefaultWeaponBehavior();
         PickUpWeapon();
         HandManagement();
@@ -62,6 +63,7 @@ public class Fight : MonoBehaviour
             }
         }
         timer += Time.deltaTime;
+        specialWepTimer += Time.deltaTime;
 
     }
 
@@ -187,34 +189,29 @@ public class Fight : MonoBehaviour
 
     private void ThrowWeaponAttack()
     {
-        if (Input.GetKey(KeyCode.Mouse0) && player.hasThrowable && timer >= weaponInHand.timeBetweenAttacks)
+        if (Input.GetKey(KeyCode.G) && player.selectedSpecialWeapon.weaponCount >= 1 && specialWepTimer >= player.selectedSpecialWeapon.timeBetweenUses)
         {
             force += Time.deltaTime * 12f;
         }
-        else if (Input.GetKeyUp(KeyCode.Mouse0) && player.hasThrowable && timer >= weaponInHand.timeBetweenAttacks)
+        else if (Input.GetKeyUp(KeyCode.G) && player.selectedSpecialWeapon.weaponCount >= 1 && specialWepTimer >= player.selectedSpecialWeapon.timeBetweenUses)
         {
-            weaponInHand.TriggerAttack(anim, "attack");
-            timer = 0f;
+            player.selectedSpecialWeapon.TriggerWeaponAnimation(anim, "specialWeapon");
+            specialWepTimer = 0f;
+
         }
     }
 
     void AnimEvent()
     {
-        if (player.hasThrowable)
-        {
-            weaponInHand.Attack(transform.GetChild(0).transform, force, source);
-            force = 0f;
-        }
-        else
-        {
-            weaponInHand.LeftClickAttack(player.activeHand, gameObject.transform, source);
-        }
+        weaponInHand.LeftClickAttack(player.activeHand, gameObject.transform, source);
     }
 
-    void ResetWeaponAfterThrow()
+    void SpecialWeaponAnimEvent()
     {
-        player.currentWeapon = null;
+        player.selectedSpecialWeapon.SpecialWeaponAnimEvent(source, transform.GetChild(0).transform, force);
+        force = 0;
     }
+
     void AnimEventRightClick()
     {
         weaponInHand.RightClickAttack(player.activeHand, gameObject.transform, source);

@@ -77063,14 +77063,7 @@ AnimationClip:
     intParameter: 0
     messageOptions: 0
   - time: 0.6
-    functionName: AnimEvent
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 2
-    functionName: ResetWeaponAfterThrow
+    functionName: SpecialWeaponAnimEvent
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

@@ -9,22 +9,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d307307202999d44bba4105c05b5b2cb, type: 3}
-  m_Name: Dynamite
+  m_Script: {fileID: 11500000, guid: fca2b37f81263a346aa16ccca833ee3b, type: 3}
+  m_Name: DynamiteSpecial
   m_EditorClassIdentifier: 
+  player: {fileID: 11400000, guid: d66d5124d742a3c44820ab8d1c02d69b, type: 2}
+  pickUpObject: {fileID: 530297094061209937, guid: 3908e33824216cd49b7991543325ab5c, type: 3}
   weaponPrefab: {fileID: 5463050248754669871, guid: f1d7dc68e3356064f9e17b185f905869, type: 3}
-  isThrowWeapon: 1
-  leftClickDamage: 100
-  rightClickDamage: 0
-  timeBetweenAttacks: 1.5
-  isRightHanded: 1
+  damage: 100
   range: 2
-  force: 10
-  pickUp: 0
-  hitSound: {fileID: 8300000, guid: ea82ddb032396d648a4accb8c20c9140, type: 3}
+  explodeForce: 3
+  timeBetweenUses: 2
+  pickUpDistance: 2
+  weaponCount: 7
   animOverride: {fileID: 22100000, guid: 93709fbc56be559488f0d8b8b73fd596, type: 2}
-  stats: {fileID: 11400000, guid: d66d5124d742a3c44820ab8d1c02d69b, type: 2}
-  pickUpItem: {fileID: 11400000, guid: 41f830d98033e2d46ad467139c4be6ea, type: 2}
-  throwForce: 10
   throwSound: {fileID: 8300000, guid: 05273ac0e8d9e76448462f82dd6db3dd, type: 3}
+  hitSound: {fileID: 8300000, guid: ea82ddb032396d648a4accb8c20c9140, type: 3}
   weaponIcon: {fileID: 21300000, guid: a11019ac7bd87ab4fbf3a89d53cc206b, type: 3}

@@ -44,7 +44,9 @@ public class RangedScriptObj : WeaponAbstract
         clone2.GetComponent<Explode>().startExplosionTimer = true;
     }
 
-    public override void Attack(Transform pos, float force, AudioSource source)
+    
+//Deprecated
+    public override void UseSpecialWeapon(Transform pos, float force, AudioSource source)
     {
         Destroy(clone);
         Destroy(clone3);

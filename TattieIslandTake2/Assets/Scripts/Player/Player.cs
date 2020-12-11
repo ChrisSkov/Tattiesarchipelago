@@ -14,6 +14,7 @@ public class Player : ScriptableObject
     public WeaponAbstract currentWeapon;
     public WeaponAbstract sheathedWeapon;
     public Transform activeHand;
+    public SpecialWeapon selectedSpecialWeapon;
     [Header("Player States")]
     public bool canAttack;
     public bool canMove;

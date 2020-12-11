@@ -1,5 +1,19 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &272351686531699063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 530297094061209937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca16cd2cdc76ff640a6060250b8b9a10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 11400000, guid: d66d5124d742a3c44820ab8d1c02d69b, type: 2}
+  mySpecialWeapon: {fileID: 11400000, guid: 6353dd5a2351a84449761f7251da009a, type: 2}
 --- !u!114 &5380859366436054124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24,7 +38,7 @@ GameObject:
   - component: {fileID: 7545322453141164709}
   - component: {fileID: 4701635594039504600}
   - component: {fileID: 5518311232060530393}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: Text (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +118,7 @@ GameObject:
   - component: {fileID: 8983428275734312450}
   - component: {fileID: 2011281870201033636}
   - component: {fileID: 5254577115245583090}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Canvas (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -191,6 +205,21 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &3194225308786606553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6650343430009644072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bbfe8d12b2cdcf4f9c5d208d4535c20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisWeapon: {fileID: 11400000, guid: 6353dd5a2351a84449761f7251da009a, type: 2}
+  useWeapon: 1
+  radius: 1
 --- !u!1001 &1700781060086975751
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -302,8 +331,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0.09
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3927563445694065221, guid: f1d7dc68e3356064f9e17b185f905869, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f1d7dc68e3356064f9e17b185f905869, type: 3}
+--- !u!1 &6650343430009644072 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5463050248754669871, guid: f1d7dc68e3356064f9e17b185f905869, type: 3}
+  m_PrefabInstance: {fileID: 1700781060086975751}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &2855838164951215940 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3475541905693598275, guid: f1d7dc68e3356064f9e17b185f905869, type: 3}
@@ -328,15 +363,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6327649463628056484, guid: c589eeb6aba435a40adcf4c5888d870b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 14.48
+      value: 12.076581
       objectReference: {fileID: 0}
     - target: {fileID: 6327649463628056484, guid: c589eeb6aba435a40adcf4c5888d870b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.62
+      value: -6.729332
       objectReference: {fileID: 0}
     - target: {fileID: 6327649463628056484, guid: c589eeb6aba435a40adcf4c5888d870b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -25.11
+      value: -26.453857
       objectReference: {fileID: 0}
     - target: {fileID: 6327649463628056484, guid: c589eeb6aba435a40adcf4c5888d870b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -368,7 +403,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6327649463628056487, guid: c589eeb6aba435a40adcf4c5888d870b, type: 3}
       propertyPath: m_Name
-      value: WeaponHolder Dynamite (9)
+      value: WeaponHolder Dynamite (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6327649463628056487, guid: c589eeb6aba435a40adcf4c5888d870b, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6327649463628056490, guid: c589eeb6aba435a40adcf4c5888d870b, type: 3}
       propertyPath: thisWeapon
@@ -414,7 +453,8 @@ PrefabInstance:
       propertyPath: m_Center.y
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6327649463628056490, guid: c589eeb6aba435a40adcf4c5888d870b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c589eeb6aba435a40adcf4c5888d870b, type: 3}
 --- !u!1 &530297094061209937 stripped
 GameObject:

@@ -8,7 +8,7 @@ public class ShotgunScriptObj : WeaponAbstract
     public GameObject particles;
     public GameObject coneCollider;
     public AudioClip shootSound;
-    public override void Attack(Transform pos, float throwForce, AudioSource source)
+    public override void UseSpecialWeapon(Transform pos, float throwForce, AudioSource source)
     {
         throw new System.NotImplementedException();
     }

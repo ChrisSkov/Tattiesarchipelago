@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,7 +9,7 @@ public class Explode : MonoBehaviour
     public GameObject explosionVFX = null;
     public float timer = 0f;
     public float timeBeforeBoom = 1f;
-    public WeaponAbstract stats;
+    public SpecialWeapon stats;
     bool hasBlownUp = false;
 
     public Slider slider;
@@ -39,11 +39,11 @@ public class Explode : MonoBehaviour
                 {
                     if (c.gameObject.GetComponent<EnemyHealth>() != null)
                     {
-                        c.gameObject.GetComponent<EnemyHealth>().TakeDamage(stats.leftClickDamage);
+                        c.gameObject.GetComponent<EnemyHealth>().TakeDamage(stats.damage);
                     }
                     if (Physics.Raycast(transform.position, c.gameObject.transform.position - transform.position, out hit, mask))
                     {
-                        hit.collider.gameObject.GetComponent<Rigidbody>().AddForce(-hit.normal * stats.force, ForceMode.Impulse);
+                        hit.collider.gameObject.GetComponent<Rigidbody>().AddForce(-hit.normal * stats.explodeForce, ForceMode.Impulse);
 
                     }
                 }

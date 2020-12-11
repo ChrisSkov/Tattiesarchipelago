@@ -69,7 +69,7 @@ public class MeleeScriptObj : WeaponAbstract
         Destroy(clone);
     }
 
-    public override void Attack(Transform pos, float throwForce, AudioSource source)
+    public override void UseSpecialWeapon(Transform pos, float throwForce, AudioSource source)
     {
         throw new System.NotImplementedException();
     }
