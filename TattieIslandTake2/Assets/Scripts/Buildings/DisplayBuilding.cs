@@ -35,7 +35,7 @@ public class DisplayBuilding : MonoBehaviour
     void Update()
     {
 
-        if (myBuilding.player.resources.potatoCount >= myBuilding.price)
+        if (myBuilding.player.resources.potato.resourceCount >= myBuilding.price)
         {
             potatoPriceText.color = Color.white;
             hasEnoughPotato = true;
@@ -46,7 +46,7 @@ public class DisplayBuilding : MonoBehaviour
             hasEnoughPotato = false;
 
         }
-        if (myBuilding.player.resources.stoneCount >= myBuilding.stoneReq)
+        if (myBuilding.player.resources.stone.resourceCount >= myBuilding.stoneReq)
         {
             stonePriceText.color = Color.white;
             hasEnoguhStone = true;
@@ -58,7 +58,7 @@ public class DisplayBuilding : MonoBehaviour
 
         }
 
-        if (myBuilding.player.resources.woodCount >= myBuilding.woodReq)
+        if (myBuilding.player.resources.wood.resourceCount >= myBuilding.woodReq)
         {
             woodPriceText.color = Color.white;
             hasEnoughWood = true;

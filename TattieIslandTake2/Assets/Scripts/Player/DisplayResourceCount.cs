@@ -18,18 +18,18 @@ public class DisplayResourceCount : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player.resources.chickenCount = GameObject.FindGameObjectsWithTag("chicken").Length;
+        player.resources.chickens.resourceCount = GameObject.FindGameObjectsWithTag("chicken").Length;
     }
 
     // Update is called once per frame
     void Update()
     {
         // TODO: refactor to only update on value change
-        chickenCountText.text = string.Format(" X " + player.resources.chickenCount);
-        potatoCountText.text = string.Format(" X " + player.resources.potatoCount);
-        ammoCountText.text = string.Format(" X " + player.resources.ammoCount);
-        logCountText.text = string.Format(" X " + player.resources.woodCount);
-        stoneCountText.text = string.Format(" X " + player.resources.stoneCount);
+        chickenCountText.text = string.Format(" X " + player.resources.chickens.resourceCount);
+        potatoCountText.text = string.Format(" X " + player.resources.potato.resourceCount);
+        ammoCountText.text = string.Format(" X " + player.resources.ammo.resourceCount);
+        logCountText.text = string.Format(" X " + player.resources.wood.resourceCount);
+        stoneCountText.text = string.Format(" X " + player.resources.stone.resourceCount);
 
         // player.progression.GetXpToLevel();
         // player.progression.LevelUp();

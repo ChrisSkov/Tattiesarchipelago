@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class PickUpLoot : MonoBehaviour
 {
+    public Player playerScriptObj;
+    public ResourceScriptObj myLoot;
     GameObject player;
+
     float pickUpDistance = 1.5f;
 
-    public Player playerScriptObj;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,8 +22,8 @@ public class PickUpLoot : MonoBehaviour
     {
         if (Vector3.Distance(gameObject.transform.position, player.transform.position) <= pickUpDistance && Input.GetKeyDown(KeyCode.E))
         {
-           playerScriptObj.resources.woodCount +=1;
-           Destroy(gameObject);
+            myLoot.resourceCount += 1;
+            Destroy(gameObject);
         }
 
     }

@@ -253,6 +253,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6289787635660081371}
   - component: {fileID: 6289787635675634813}
+  - component: {fileID: 4418485699576682060}
   m_Layer: 0
   m_Name: RockLoot
   m_TagString: Untagged
@@ -304,3 +305,17 @@ LODGroup:
     renderers:
     - renderer: {fileID: 6289787635658181175}
   m_Enabled: 1
+--- !u!114 &4418485699576682060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6289787635660379387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40fa6160fd5468c4d934a77b8af74b37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerScriptObj: {fileID: 11400000, guid: d66d5124d742a3c44820ab8d1c02d69b, type: 2}
+  myLoot: {fileID: 11400000, guid: e83046101e13f4040b4af7ff4addbc70, type: 2}

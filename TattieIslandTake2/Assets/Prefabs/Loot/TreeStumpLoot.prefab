@@ -96,3 +96,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerScriptObj: {fileID: 11400000, guid: d66d5124d742a3c44820ab8d1c02d69b, type: 2}
+  myLoot: {fileID: 11400000, guid: 686aaccddab2f4c4c9138c389146feb9, type: 2}

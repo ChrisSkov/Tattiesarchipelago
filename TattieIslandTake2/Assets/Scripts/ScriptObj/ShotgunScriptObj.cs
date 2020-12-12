@@ -38,7 +38,7 @@ public class ShotgunScriptObj : WeaponAbstract
         {
             anim.runtimeAnimatorController = animOverride;
         }
-        if (anim.gameObject.GetComponent<Fight>().player.resources.ammoCount > 0)
+        if (anim.gameObject.GetComponent<Fight>().player.resources.ammo.resourceCount > 0)
         {
             anim.SetTrigger(trigger);
         }
@@ -48,7 +48,7 @@ public class ShotgunScriptObj : WeaponAbstract
         GameObject coneClone = Instantiate(coneCollider, pos.position, pos.rotation);
         GameObject particleClone = Instantiate(particles, pos.GetChild(0).transform.GetChild(0).transform.position, pos.rotation);
         particleClone.transform.Rotate(-90, -90, 0, Space.Self);
-        source.gameObject.GetComponent<Fight>().player.resources.ammoCount--;
+        source.gameObject.GetComponent<Fight>().player.resources.ammo.resourceCount--;
         source.PlayOneShot(shootSound);
     }
 

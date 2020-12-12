@@ -12,14 +12,14 @@ public class UseConsumable : MonoBehaviour
     void Start()
     {
         source = GetComponent<AudioSource>();
-          player.resources.healthPotCount = 0;
+        player.resources.healthPot.resourceCount = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
         PickUpItem();
-        if (player.resources.healthPotCount >= 1 && Input.GetKeyDown(KeyCode.Alpha1))
+        if (player.resources.healthPot.resourceCount >= 1 && Input.GetKeyDown(KeyCode.Alpha1))
         {
             player.activeConsumable.ConsumeItem(source);
         }
@@ -44,7 +44,7 @@ public class UseConsumable : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     player.activeConsumable = hit.collider.gameObject.GetComponent<PickUpConsumable>().thisConsumable;
-                    player.resources.healthPotCount++;
+                    player.resources.healthPot.resourceCount++;
                     Destroy(hit.collider.gameObject);
                 }
             }

@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cec9c4fe70f854242ab017288e013c3d, type: 3}
+  m_Name: Resources
+  m_EditorClassIdentifier: 
+  potatoCount: 65
+  woodCount: 23
+  chickenCount: 1
+  stoneCount: 13
+  ammoCount: 190
+  dynamiteCount: 0
+  healthPotCount: 0
+  potato: {fileID: 11400000, guid: 3a61c24c36cdc3142817fab33602a7cb, type: 2}
+  wood: {fileID: 11400000, guid: 686aaccddab2f4c4c9138c389146feb9, type: 2}
+  chickens: {fileID: 11400000, guid: 4d128890a2ff0874aa22c866f4240c1c, type: 2}
+  stone: {fileID: 11400000, guid: e83046101e13f4040b4af7ff4addbc70, type: 2}
+  ammo: {fileID: 11400000, guid: efddb6e6e3459ef408a6341e04df475e, type: 2}
+  dynamite: {fileID: 11400000, guid: c2317e487a55fad4a94e9f84c8573103, type: 2}
+  healthPot: {fileID: 11400000, guid: e6b931b4c3d90794bb9eb644057506f9, type: 2}

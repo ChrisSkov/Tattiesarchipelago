@@ -8,7 +8,7 @@ public class HPBottleScriptObj : ConsumableAbstract
     {
         player.stats.currentHealth.statValue += statGainAmount[0];
         source.PlayOneShot(consumeSounds[Random.Range(0,consumeSounds.Length)]);
-        player.resources.healthPotCount --;
+        player.resources.healthPot.resourceCount --;
 
     }
 

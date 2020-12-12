@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Pathfinding;
 [CreateAssetMenu]
 public class TaskScriptObj : TaskAbstract
 {
@@ -12,7 +13,7 @@ public class TaskScriptObj : TaskAbstract
 
     public StatScriptObj numberOfTasksCompleted;
 
-
+    public UpdateGraph updateGraph;
     public override void OnTaskBegin(Animator anim, Transform handAim)
     {
         if (animOverride != null)
@@ -43,6 +44,7 @@ public class TaskScriptObj : TaskAbstract
         numberOfTasksCompleted.statValue++;
         Destroy(anim.gameObject, 0.8f);
         player.currentTaskObj = null;
+        updateGraph.GraphUpdate();
     }
 
     public override void TaskAnimEvent(GameObject taskObject, int amount, Animator anim)

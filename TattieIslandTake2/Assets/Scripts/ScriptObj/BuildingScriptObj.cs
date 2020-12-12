@@ -25,9 +25,9 @@ public class BuildingScriptObj : ScriptableObject
         if (canAfford)
         {
             Instantiate(prefab, player.mouseWorldPosition, prefab.transform.rotation);
-            player.resources.woodCount -= woodReq;
-            player.resources.potatoCount -= price;
-            player.resources.stoneCount -= stoneReq;
+            player.resources.wood.resourceCount -= woodReq;
+            player.resources.potato.resourceCount -= price;
+            player.resources.stone.resourceCount -= stoneReq;
         }
 
     }

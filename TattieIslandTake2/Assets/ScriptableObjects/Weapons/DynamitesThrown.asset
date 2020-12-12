@@ -15,3 +15,4 @@ MonoBehaviour:
   statValue: 0
   increasePerLevel: 0
   newValue: 0
+  baseValue: 0
