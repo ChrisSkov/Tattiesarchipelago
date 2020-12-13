@@ -11,7 +11,7 @@ public class PlayerResources : ScriptableObject
     // public int ammoCount;
     // public int dynamiteCount;
     // public int healthPotCount;
-
+    public ResourceScriptObj[] collectableResources;
     public ResourceScriptObj potato;
     public ResourceScriptObj wood;
     public ResourceScriptObj chickens;

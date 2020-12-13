@@ -12,13 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cec9c4fe70f854242ab017288e013c3d, type: 3}
   m_Name: Resources
   m_EditorClassIdentifier: 
-  potatoCount: 65
-  woodCount: 23
-  chickenCount: 1
-  stoneCount: 13
-  ammoCount: 190
-  dynamiteCount: 0
-  healthPotCount: 0
+  collectableResources:
+  - {fileID: 11400000, guid: 4d128890a2ff0874aa22c866f4240c1c, type: 2}
+  - {fileID: 11400000, guid: 3a61c24c36cdc3142817fab33602a7cb, type: 2}
+  - {fileID: 11400000, guid: 686aaccddab2f4c4c9138c389146feb9, type: 2}
+  - {fileID: 11400000, guid: e83046101e13f4040b4af7ff4addbc70, type: 2}
   potato: {fileID: 11400000, guid: 3a61c24c36cdc3142817fab33602a7cb, type: 2}
   wood: {fileID: 11400000, guid: 686aaccddab2f4c4c9138c389146feb9, type: 2}
   chickens: {fileID: 11400000, guid: 4d128890a2ff0874aa22c866f4240c1c, type: 2}
