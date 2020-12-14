@@ -8,4 +8,5 @@ public class ResourceScriptObj : ScriptableObject
     public string resourceName;
     public int resourceCount;
     public Sprite myIcon;
+    public bool updateMe;
 }

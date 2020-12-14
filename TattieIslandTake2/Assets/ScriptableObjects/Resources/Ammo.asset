@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resourceName: Ammo
   resourceCount: 0
+  myIcon: {fileID: 21300000, guid: 507144016f5110f468f93abcb69981dc, type: 3}

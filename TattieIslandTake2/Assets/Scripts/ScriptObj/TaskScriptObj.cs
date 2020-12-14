@@ -33,7 +33,7 @@ public class TaskScriptObj : TaskAbstract
 
     }
 
-    public override void OnTaskComplete(Animator anim)
+    public override void OnTaskComplete(Animator anim, UpdateGraph graph)
     {
         anim.SetTrigger("taskComplete");
         if (!hasSpawnedLoot)
@@ -44,7 +44,7 @@ public class TaskScriptObj : TaskAbstract
         numberOfTasksCompleted.statValue++;
         Destroy(anim.gameObject, 0.8f);
         player.currentTaskObj = null;
-        updateGraph.GraphUpdate();
+        graph.GraphUpdate();
     }
 
     public override void TaskAnimEvent(GameObject taskObject, int amount, Animator anim)

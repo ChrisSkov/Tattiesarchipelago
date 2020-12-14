@@ -16,6 +16,7 @@ public class ChickenHealth : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         currentHp = chickenStats.maxHp;
         currentEnemyFear = chickenStats.fearOfEnemies;
         chickenInfo = GetComponent<DisplayChickenInfo>();

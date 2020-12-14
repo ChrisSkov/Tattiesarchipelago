@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1649655336}
   - component: {fileID: 1649655337}
   - component: {fileID: 313672340}
+  - component: {fileID: 6881368672093648025}
   m_Layer: 15
   m_Name: Rock1
   m_TagString: Untagged
@@ -30,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -16.901718, y: 43.788425, z: -30.276566}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.46236, y: 0.46236, z: 0.46236}
   m_Children:
   - {fileID: 1563425152}
   m_Father: {fileID: 0}
@@ -127,10 +128,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   task: {fileID: 11400000, guid: fd1f09a16cf41e94e9f969849f367d67, type: 2}
+  playerScriptObj: {fileID: 11400000, guid: d66d5124d742a3c44820ab8d1c02d69b, type: 2}
   player: {fileID: 0}
   currentHealth: 0
   playerAnim: {fileID: 0}
   hpBar: {fileID: 409034677}
+  graph: {fileID: 0}
+--- !u!95 &6881368672093648025
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4860337ebc9ab4a41981513584dd2bf0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &187923232
 GameObject:
   m_ObjectHideFlags: 0

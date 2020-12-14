@@ -14,6 +14,8 @@ public class TaskBehavior : MonoBehaviour
     PerformTask performTask;
     public Slider hpBar;
     bool canDoTask = true;
+
+    public UpdateGraph graph;
     // Start is called before the first frame update
     void Start()
     {
@@ -49,7 +51,7 @@ public class TaskBehavior : MonoBehaviour
         if (currentHealth <= 0)
         {
             canDoTask = false;
-            task.OnTaskComplete(GetComponent<Animator>());
+            task.OnTaskComplete(GetComponent<Animator>(), graph);
         }
         if (!canDoTask)
         {

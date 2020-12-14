@@ -6,11 +6,6 @@ using UnityEngine.UI;
 public class DisplayResourceCount : MonoBehaviour
 {
     public Player player;
-    public Text chickenCountText;
-    public Text potatoCountText;
-    public Text ammoCountText;
-    public Text logCountText;
-    public Text stoneCountText;
     public Slider xpSlider;
     public GameObject availablePointIndicator;
 
@@ -18,21 +13,12 @@ public class DisplayResourceCount : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player.resources.chickens.resourceCount = GameObject.FindGameObjectsWithTag("chicken").Length;
+       // player.resources.chickens.resourceCount = GameObject.FindGameObjectsWithTag("chicken").Length;
     }
 
     // Update is called once per frame
     void Update()
     {
-        // TODO: refactor to only update on value change
-        chickenCountText.text = string.Format(" X " + player.resources.chickens.resourceCount);
-        potatoCountText.text = string.Format(" X " + player.resources.potato.resourceCount);
-        ammoCountText.text = string.Format(" X " + player.resources.ammo.resourceCount);
-        logCountText.text = string.Format(" X " + player.resources.wood.resourceCount);
-        stoneCountText.text = string.Format(" X " + player.resources.stone.resourceCount);
-
-        // player.progression.GetXpToLevel();
-        // player.progression.LevelUp();
         xpSlider.value = player.progression.currentXP;
         xpSlider.maxValue = player.progression.xpToLevel;
 

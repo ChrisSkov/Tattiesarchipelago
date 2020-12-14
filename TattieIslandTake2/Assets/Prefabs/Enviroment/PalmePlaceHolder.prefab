@@ -623,6 +623,7 @@ MonoBehaviour:
   currentHealth: 0
   playerAnim: {fileID: 0}
   hpBar: {fileID: 326846263}
+  graph: {fileID: 0}
 --- !u!54 &434039063
 Rigidbody:
   m_ObjectHideFlags: 0

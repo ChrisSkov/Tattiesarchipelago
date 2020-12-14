@@ -10,7 +10,7 @@ public class PickUpLoot : MonoBehaviour
 
     float pickUpDistance = 1.5f;
 
-
+    bool canPickUp = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,9 +20,13 @@ public class PickUpLoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.Distance(gameObject.transform.position, player.transform.position) <= pickUpDistance && Input.GetKeyDown(KeyCode.E))
+        if (Vector3.Distance(gameObject.transform.position, player.transform.position) <= pickUpDistance && Input.GetKeyDown(KeyCode.E) && canPickUp)
         {
+            canPickUp = false;
             myLoot.resourceCount += 1;
+
+            myLoot.updateMe = true;
+
             Destroy(gameObject);
         }
 
