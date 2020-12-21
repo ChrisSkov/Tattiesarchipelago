@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Dynamite
   m_EditorClassIdentifier: 
   resourceName: Dynamite
-  resourceCount: 0
+  resourceCount: 4
   myIcon: {fileID: 21300000, guid: a11019ac7bd87ab4fbf3a89d53cc206b, type: 3}
+  updateMe: 0

@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
@@ -23,6 +23,7 @@ public class TaskScriptObj : TaskAbstract
 
         if (toolCloneIsLive == false)
         {
+            handAim.GetChild(0).gameObject.SetActive(false);
             toolClone = Instantiate(toolPrefab, handAim.position, handAim.rotation);
             toolClone.transform.SetParent(handAim);
             toolCloneIsLive = true;
@@ -45,6 +46,7 @@ public class TaskScriptObj : TaskAbstract
         Destroy(anim.gameObject, 0.8f);
         player.currentTaskObj = null;
         graph.GraphUpdate();
+
     }
 
     public override void TaskAnimEvent(GameObject taskObject, int amount, Animator anim)
@@ -57,5 +59,12 @@ public class TaskScriptObj : TaskAbstract
         Destroy(toolClone, 1f);
         toolCloneIsLive = false;
         player.currentTaskObj = null;
+
+    }
+
+    public override void SetWeaponToActive(Transform handAim)
+    {
+
+        handAim.GetChild(0).gameObject.SetActive(true);
     }
 }

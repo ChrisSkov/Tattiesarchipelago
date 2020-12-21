@@ -15,7 +15,7 @@ public class BuildingScriptObj : ScriptableObject
     public int stoneReq;
     public float deliveryTime;
     public bool canAfford;
-    
+
     public Player player;
 
 
@@ -28,6 +28,9 @@ public class BuildingScriptObj : ScriptableObject
             player.resources.wood.resourceCount -= woodReq;
             player.resources.potato.resourceCount -= price;
             player.resources.stone.resourceCount -= stoneReq;
+            player.resources.wood.updateMe = true;
+            player.resources.potato.updateMe = true;
+            player.resources.stone.updateMe = true;
         }
 
     }

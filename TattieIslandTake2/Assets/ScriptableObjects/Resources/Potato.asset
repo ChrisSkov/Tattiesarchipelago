@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Potato
   m_EditorClassIdentifier: 
   resourceName: Potato
-  resourceCount: 0
+  resourceCount: 50
   myIcon: {fileID: 21300000, guid: 0c6c674eda825584c872b30fa44f1b97, type: 3}
+  updateMe: 0

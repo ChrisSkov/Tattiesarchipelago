@@ -19,4 +19,6 @@ public abstract class TaskAbstract : ScriptableObject
 
     public abstract void TaskAnimEvent(GameObject taskObject, int amount, Animator anim);
 
+    public abstract void SetWeaponToActive(Transform handAim);
+
 }

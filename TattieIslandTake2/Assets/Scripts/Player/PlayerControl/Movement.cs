@@ -11,6 +11,8 @@ public class Movement : MonoBehaviour
     Vector3 mouseWorldPositon = Vector3.zero;
     float runTimer = Mathf.Infinity;
     AudioSource source;
+
+    public float X2, Y2;
     void Start()
     {
         source = GetComponent<AudioSource>();
@@ -21,6 +23,7 @@ public class Movement : MonoBehaviour
 
     void FixedUpdate()
     {
+        
         if (playerAnim.GetBool("canMove") && player.canMove)
         {
             if (Input.GetKeyDown(KeyCode.Space))
@@ -52,18 +55,19 @@ public class Movement : MonoBehaviour
 
     private void HandleMovement()
     {
-        //Movement
+        //Store horizontal and vertical input computed in "MertInput" as x and z in a vector 3
         moveDirection = new Vector3(MertInput.horizontal, 0.0f, MertInput.vertical);
         //Animation
         float angle = transform.eulerAngles.y * Mathf.Deg2Rad;
 
         float X = moveDirection.x * Mathf.Cos(angle) - moveDirection.z * Mathf.Sin(angle);
         float Y = moveDirection.x * Mathf.Sin(angle) + moveDirection.z * Mathf.Cos(angle);
-
+        X2 = X;
+        Y2 = Y;
         playerAnim.SetFloat("horizontalSpeed", X);
         playerAnim.SetFloat("forwardSpeed", Y);
 
-        //Sikre sig at diagonal movement ikke er hurtigere
+        //Equalize strictly veritcal/horizontal speed and diagonal speed
         if (moveDirection.magnitude >= 1)
         {
             moveDirection = moveDirection.normalized;
@@ -74,9 +78,9 @@ public class Movement : MonoBehaviour
             playerAnim.SetBool("isRunning", false);
         }
 
-        //Sætter base speed
+        //Speed is based on the player stat currentMoveSpeed
         moveDirection *= player.stats.currentMoveSpeed.statValue;
-        //Move
+        //Pass the player's current position and movement vector to the actual movement function. *Time.deltaTime to ensure consistency accross framerates
         playerRB.MovePosition(playerRB.position + moveDirection * Time.deltaTime);
     }
 

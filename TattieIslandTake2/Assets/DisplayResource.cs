@@ -20,7 +20,6 @@ public class DisplayResource : MonoBehaviour
         if (myResource.resourceName == "Chickens")
         {
             myResource.resourceCount = GameObject.FindGameObjectsWithTag("chicken").Length;
-            print("hmm");
         }
 
     }
