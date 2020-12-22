@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -23,7 +23,7 @@ public class Movement : MonoBehaviour
 
     void FixedUpdate()
     {
-        
+
         if (playerAnim.GetBool("canMove") && player.canMove)
         {
             if (Input.GetKeyDown(KeyCode.Space))
@@ -62,12 +62,11 @@ public class Movement : MonoBehaviour
 
         float X = moveDirection.x * Mathf.Cos(angle) - moveDirection.z * Mathf.Sin(angle);
         float Y = moveDirection.x * Mathf.Sin(angle) + moveDirection.z * Mathf.Cos(angle);
-        X2 = X;
-        Y2 = Y;
+       
         playerAnim.SetFloat("horizontalSpeed", X);
         playerAnim.SetFloat("forwardSpeed", Y);
 
-        //Equalize strictly veritcal/horizontal speed and diagonal speed
+        //Equalize strictly veritcal/horizontal speed with diagonal speed
         if (moveDirection.magnitude >= 1)
         {
             moveDirection = moveDirection.normalized;
