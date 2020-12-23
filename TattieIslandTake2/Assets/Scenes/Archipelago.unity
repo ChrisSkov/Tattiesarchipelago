@@ -2224,6 +2224,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1132910043040287527, guid: e6e28f42add6ba342ae1a2ad76d1b1e2, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1399790683815218215, guid: e6e28f42add6ba342ae1a2ad76d1b1e2, type: 3}
       propertyPath: m_Name
       value: MertChicken
@@ -5434,25 +5438,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock1 (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 6329f5837c6d2ca41acce9c35908cecb, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6329f5837c6d2ca41acce9c35908cecb, type: 3}
       propertyPath: m_RootOrder
       value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 6329f5837c6d2ca41acce9c35908cecb, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.38534468
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 6329f5837c6d2ca41acce9c35908cecb, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.38534468
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 6329f5837c6d2ca41acce9c35908cecb, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.38534468
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6329f5837c6d2ca41acce9c35908cecb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5498,21 +5486,21 @@ PrefabInstance:
       propertyPath: graph
       value: 
       objectReference: {fileID: 667730844}
-    - target: {fileID: 313672340, guid: 6329f5837c6d2ca41acce9c35908cecb, type: 3}
-      propertyPath: playerScriptObj
-      value: 
-      objectReference: {fileID: 11400000, guid: d66d5124d742a3c44820ab8d1c02d69b, type: 2}
-    - target: {fileID: 1563425152, guid: 6329f5837c6d2ca41acce9c35908cecb, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.12
+    - target: {fileID: 409034675, guid: 6329f5837c6d2ca41acce9c35908cecb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1563425152, guid: 6329f5837c6d2ca41acce9c35908cecb, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.12
+    - target: {fileID: 729644786, guid: 6329f5837c6d2ca41acce9c35908cecb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1563425152, guid: 6329f5837c6d2ca41acce9c35908cecb, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.12
+    - target: {fileID: 1408473533, guid: 6329f5837c6d2ca41acce9c35908cecb, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1408473533, guid: 6329f5837c6d2ca41acce9c35908cecb, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6329f5837c6d2ca41acce9c35908cecb, type: 3}
@@ -5521,30 +5509,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 6329f5837c6d2ca41acce9c35908cecb, type: 3}
   m_PrefabInstance: {fileID: 1251188710}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1251188712 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100000, guid: 6329f5837c6d2ca41acce9c35908cecb, type: 3}
-  m_PrefabInstance: {fileID: 1251188710}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &1251188713
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1251188712}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4860337ebc9ab4a41981513584dd2bf0, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1254946110
 PrefabInstance:
   m_ObjectHideFlags: 0

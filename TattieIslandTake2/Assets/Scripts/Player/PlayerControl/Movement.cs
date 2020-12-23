@@ -62,9 +62,11 @@ public class Movement : MonoBehaviour
 
         float X = moveDirection.x * Mathf.Cos(angle) - moveDirection.z * Mathf.Sin(angle);
         float Y = moveDirection.x * Mathf.Sin(angle) + moveDirection.z * Mathf.Cos(angle);
-       
+
         playerAnim.SetFloat("horizontalSpeed", X);
         playerAnim.SetFloat("forwardSpeed", Y);
+        // playerAnim.SetFloat("horizontalSpeed", MertInput.horizontal);
+        // playerAnim.SetFloat("forwardSpeed", MertInput.vertical);
 
         //Equalize strictly veritcal/horizontal speed with diagonal speed
         if (moveDirection.magnitude >= 1)
