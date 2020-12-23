@@ -1,5 +1,24 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8961095288929199288
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81180773991d8724ab7f2d216912b564, type: 3}
+  m_Name: ChromaticAberration
+  m_EditorClassIdentifier: 
+  active: 1
+  m_AdvancedMode: 0
+  intensity:
+    m_OverrideState: 1
+    m_Value: 0
+    min: 0
+    max: 1
 --- !u!114 &-6385949076587897134
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -141,11 +160,12 @@ MonoBehaviour:
   components:
   - {fileID: 4029605876851037090}
   - {fileID: -5042492311044785410}
-  - {fileID: 8767150984347129955}
+  - {fileID: 6644035641931036527}
   - {fileID: -678898112026328299}
   - {fileID: -6385949076587897134}
-  - {fileID: 6443407004974773798}
+  - {fileID: 4927592457713305208}
   - {fileID: 4232977878277802076}
+  - {fileID: -8961095288929199288}
 --- !u!114 &4029605876851037090
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -187,7 +207,7 @@ MonoBehaviour:
     m_Value: -4.5
     min: -100
     max: 100
---- !u!114 &6443407004974773798
+--- !u!114 &4927592457713305208
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -206,11 +226,11 @@ MonoBehaviour:
     m_Value: 1
   gaussianStart:
     m_OverrideState: 1
-    m_Value: 15
+    m_Value: 20
     min: 0
   gaussianEnd:
     m_OverrideState: 1
-    m_Value: 30
+    m_Value: 35
     min: 0
   gaussianMaxRadius:
     m_OverrideState: 0
@@ -219,10 +239,10 @@ MonoBehaviour:
     max: 1.5
   highQualitySampling:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
   focusDistance:
-    m_OverrideState: 1
-    m_Value: 3.19
+    m_OverrideState: 0
+    m_Value: 10
     min: 0.1
   aperture:
     m_OverrideState: 0
@@ -249,7 +269,7 @@ MonoBehaviour:
     m_Value: 0
     min: -180
     max: 180
---- !u!114 &8767150984347129955
+--- !u!114 &6644035641931036527
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -265,10 +285,10 @@ MonoBehaviour:
   m_AdvancedMode: 0
   lift:
     m_OverrideState: 1
-    m_Value: {x: 0.80390024, y: 0.84661525, z: 1, w: 0}
+    m_Value: {x: 0.98687, y: 0.98607266, z: 1, w: 0}
   gamma:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 0.9169002, z: 0.9348976, w: 0}
+    m_Value: {x: 1, y: 1, z: 1, w: 0}
   gain:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 0.87388146, z: 0.9938918, w: -0.16889517}
+    m_Value: {x: 1, y: 1, z: 1, w: 0}
