@@ -12,10 +12,12 @@ public abstract class WeaponAbstract : ScriptableObject
     public float range;
     public float force;
     public bool pickUp = false;
+    public bool hasAmmo = false;
     public AudioClip hitSound;
     public AnimatorOverrideController animOverride;
     public Player stats;
     public PickUpScriptObj pickUpItem;
+    public Texture2D myIcon;
     public abstract void LeftClickAttack(Transform pos, Transform rayCastPosition, AudioSource source);
     public abstract void RightClickAttack(Transform pos, Transform rayCastPosition, AudioSource source);
     public abstract void TriggerAttack(Animator anim, string trigger);
