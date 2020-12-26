@@ -6808,7 +6808,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1484468162
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10070,7 +10070,7 @@ MonoBehaviour:
   currentWeaponImage: {fileID: 1238435621}
   sheathedWeaponImage: {fileID: 1782095419}
   player: {fileID: 11400000, guid: d66d5124d742a3c44820ab8d1c02d69b, type: 2}
-  ammoObject: {fileID: 454375401}
+  ammoObject: {fileID: 1484468161}
 --- !u!1001 &2034777329
 PrefabInstance:
   m_ObjectHideFlags: 0
