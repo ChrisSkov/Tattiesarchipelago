@@ -10619,15 +10619,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3588019495043231382, guid: f1072ce0da0f54c40952d0fac07b017d, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3588019495043231382, guid: f1072ce0da0f54c40952d0fac07b017d, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3588019495043231382, guid: f1072ce0da0f54c40952d0fac07b017d, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3588019495043231382, guid: f1072ce0da0f54c40952d0fac07b017d, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -10652,10 +10652,6 @@ PrefabInstance:
     - target: {fileID: 3588019495043231383, guid: f1072ce0da0f54c40952d0fac07b017d, type: 3}
       propertyPath: m_Name
       value: LevelUpCanvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 3588019495043231383, guid: f1072ce0da0f54c40952d0fac07b017d, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1072ce0da0f54c40952d0fac07b017d, type: 3}

@@ -10,10 +10,13 @@ public class Player : ScriptableObject
     public PlayerResources resources;
     public PlayerAudio playerAudio;
     public LevelUpProgression progression;
+    public TaskAbstract currentTaskObj;
+    public BuildingScriptObj currentlySelectedBuilding;
+    public ConsumableAbstract activeConsumable;
     [Header("Weapon stuff")]
+    public Transform activeHand;
     public WeaponAbstract currentWeapon;
     public WeaponAbstract sheathedWeapon;
-    public Transform activeHand;
     public SpecialWeapon selectedSpecialWeapon;
     [Header("Player States")]
     public bool canAttack;
@@ -22,23 +25,15 @@ public class Player : ScriptableObject
     public bool hasThrowable;
     public bool isSlowed;
     public bool isDead;
+    public bool previewBuilding;
     [Header("DeathScreenStats")]
     public StatScriptObj zombiesKilled;
     public StatScriptObj dynamitesThrown;
     [Header("Misc")]
-
-    public TaskAbstract currentTaskObj;
-    public GameObject blood;
     public float stepSoundDelay;
-    public ConsumableAbstract activeConsumable;
-
+    public GameObject blood;
+    public Animator anim;
     public Vector3 mouseWorldPosition;
 
-    public BuildingScriptObj currentlySelectedBuilding;
-    public bool previewBuilding;
-
-    public Animator anim;
-
-    public AudioClip[] jumpSounds;
 }
 

@@ -12,7 +12,6 @@ public class Movement : MonoBehaviour
     float runTimer = Mathf.Infinity;
     AudioSource source;
 
-    public float X2, Y2;
     void Start()
     {
         source = GetComponent<AudioSource>();
@@ -107,7 +106,7 @@ public class Movement : MonoBehaviour
 
     void PlayJumpAudio()
     {
-        source.PlayOneShot(player.jumpSounds[Random.Range(0, player.jumpSounds.Length)]);
+        source.PlayOneShot(player.playerAudio.jumpSounds[Random.Range(0, player.playerAudio.jumpSounds.Length)]);
     }
     void CanMove()
     {

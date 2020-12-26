@@ -19,3 +19,11 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 3bb07853ed464784990d20ec1e26b7a9, type: 3}
   - {fileID: 8300000, guid: 618529203ed2bd149950c0d3f396873a, type: 3}
   - {fileID: 8300000, guid: 298045c584fd3cc439bdea769c84320c, type: 3}
+  jumpSounds:
+  - {fileID: 8300000, guid: 64472a36ecae57049944d3fe274bebc1, type: 3}
+  - {fileID: 8300000, guid: ab6a91b764ec60740a8c1af73d01ff43, type: 3}
+  - {fileID: 8300000, guid: 94a034ea42be69243b7f22914a6699db, type: 3}
+  - {fileID: 8300000, guid: 207c6dbce8593644abf3add253d935c2, type: 3}
+  - {fileID: 8300000, guid: 1c730063bbee93644b1d43430b2ed8dd, type: 3}
+  attackSounds: []
+  taskSounds: []

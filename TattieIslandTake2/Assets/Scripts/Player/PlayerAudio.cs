@@ -7,4 +7,8 @@ public class PlayerAudio : ScriptableObject
     public AudioClip walkSound;
     public AudioClip deathSound;
     public AudioClip[] takeDamageSounds;
+    public AudioClip[] jumpSounds;
+    public AudioClip[] attackSounds;
+    public AudioClip[] taskSounds;
+
 }
