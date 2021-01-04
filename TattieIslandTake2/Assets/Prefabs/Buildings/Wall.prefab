@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2703742226278875016}
   - component: {fileID: 684911311}
   m_Layer: 15
-  m_Name: R1_Wall1
+  m_Name: Wall
   m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -219,6 +219,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 3
+    m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -523,6 +524,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 1
 --- !u!114 &1323137636802597789
 MonoBehaviour:
   m_ObjectHideFlags: 0

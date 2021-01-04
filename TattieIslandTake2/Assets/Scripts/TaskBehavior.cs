@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -44,13 +44,10 @@ public class TaskBehavior : MonoBehaviour
         }
 
 
-        // if (Vector3.Distance(transform.position, player.position) >= task.distanceToExit)
-        // {
-        //     canDoTask = false;
-        // }
         if (currentHealth <= 0)
         {
             canDoTask = false;
+            
             task.OnTaskComplete(GetComponent<Animator>(), graph);
         }
         if (!canDoTask)

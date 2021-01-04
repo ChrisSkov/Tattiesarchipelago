@@ -18,17 +18,25 @@ public class MeleeScriptObj : WeaponAbstract
     }
     public override void LeftClickAttack(Transform weaponPosition, Transform rayCastPosition, AudioSource source)
     {
+        // Define our hit and mask variables
         RaycastHit hit;
         LayerMask mask = LayerMask.GetMask("Enemy");
+
+        // Create OverlapSphere at the weapon position and loop through all colliders in that sphere
         foreach (Collider c in Physics.OverlapSphere(weaponPosition.position, range, mask))
         {
+            // Raycast from player position to enemy position
             if (Physics.Raycast(rayCastPosition.position, c.gameObject.transform.position - rayCastPosition.position, out hit, 100f, mask))
             {
+                // Push enemy directly away from the player
                 hit.collider.gameObject.GetComponent<Rigidbody>().AddForce(-hit.normal * force, ForceMode.Impulse);
+                // Check for a health script on the enemy
                 if (hit.collider.gameObject.GetComponent<EnemyHealth>() != null)
                 {
+                // Deal damage to the enemy    
                     hit.collider.gameObject.GetComponent<EnemyHealth>().TakeDamage(leftClickDamage + stats.stats.dmgModifier.statValue);
                 }
+                // Player hit sound
                 source.PlayOneShot(stats.currentWeapon.hitSound);
 
             }
