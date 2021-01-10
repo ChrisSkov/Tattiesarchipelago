@@ -26,7 +26,7 @@ MonoBehaviour:
   animOverride: {fileID: 22100000, guid: c317f7b31c2d6e742b948bd951d2c96a, type: 2}
   stats: {fileID: 11400000, guid: d66d5124d742a3c44820ab8d1c02d69b, type: 2}
   pickUpItem: {fileID: 11400000, guid: 9712cac3198077549a2455e5ff7260f0, type: 2}
-  myIcon: {fileID: 2800000, guid: 117a57aa9ce84db4b8b9806adaa15731, type: 3}
+  myIcon: {fileID: 2800000, guid: 6fe3b811b9bf5494e8307afabf411e6f, type: 3}
   particles: {fileID: 2036393232416015992, guid: 74097afc5cd4ef84b8d3cbf9ce7eb4cd, type: 3}
   coneCollider: {fileID: 5652708467791827936, guid: 02efda1a207b0ae47889ad638fa30993, type: 3}
   shootSound: {fileID: 8300000, guid: 98de0fb752ada804b801fdf2311ade40, type: 3}

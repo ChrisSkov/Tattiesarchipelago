@@ -21,8 +21,9 @@ MonoBehaviour:
   range: 1
   force: 2
   pickUp: 0
+  hasAmmo: 0
   hitSound: {fileID: 8300000, guid: 43243f92f398aa743a7cc03e4b048c72, type: 3}
   animOverride: {fileID: 22100000, guid: 601e76c461e30a34eabc948658c52e0c, type: 2}
   stats: {fileID: 11400000, guid: d66d5124d742a3c44820ab8d1c02d69b, type: 2}
   pickUpItem: {fileID: 11400000, guid: a5c9fd82951ce1a42b9df0ac75d00ac0, type: 2}
-  myIcon: {fileID: 2800000, guid: 4988f778b20941340801bb71c2c06d92, type: 3}
+  myIcon: {fileID: 2800000, guid: 55cba3da501b270459aff69e26b7eabd, type: 3}

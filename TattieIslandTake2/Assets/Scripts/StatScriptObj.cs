@@ -9,6 +9,8 @@ public class StatScriptObj : ScriptableObject
     public float increasePerLevel;
     public float newValue;
     public float baseValue;
+
+    // Reset values when starting the game
     public void ResetToBaseValue()
     {
         statValue  = baseValue;
