@@ -16,9 +16,12 @@ MonoBehaviour:
   resources: {fileID: 11400000, guid: abf6b85da09bad045b69ca4dfa05fbc8, type: 2}
   playerAudio: {fileID: 11400000, guid: 8d9ef6a70fa328644b03827d37dfc35c, type: 2}
   progression: {fileID: 11400000, guid: 9ef2794d61ccc244b8f32358e176df9a, type: 2}
+  currentTaskObj: {fileID: 0}
+  currentlySelectedBuilding: {fileID: 0}
+  activeConsumable: {fileID: 11400000, guid: b5b35784686f2054a9e704f72bb08f64, type: 2}
+  activeHand: {fileID: 0}
   currentWeapon: {fileID: 11400000, guid: dc3cdc0d982f07142bef657368a49217, type: 2}
   sheathedWeapon: {fileID: 11400000, guid: dc3cdc0d982f07142bef657368a49217, type: 2}
-  activeHand: {fileID: 0}
   selectedSpecialWeapon: {fileID: 11400000, guid: 6353dd5a2351a84449761f7251da009a, type: 2}
   canAttack: 1
   canMove: 1
@@ -26,19 +29,10 @@ MonoBehaviour:
   hasThrowable: 0
   isSlowed: 0
   isDead: 0
+  previewBuilding: 0
   zombiesKilled: {fileID: 11400000, guid: 8db08d6c95889f3448d081fd45dad796, type: 2}
   dynamitesThrown: {fileID: 11400000, guid: b0df2524e896167488d7a6c49fb2d907, type: 2}
-  currentTaskObj: {fileID: 0}
-  blood: {fileID: 1565275868738540, guid: 15b2d0ac3c1f5bd4791ae44984fba681, type: 3}
   stepSoundDelay: 0.2
-  activeConsumable: {fileID: 11400000, guid: b5b35784686f2054a9e704f72bb08f64, type: 2}
-  mouseWorldPosition: {x: 0, y: 0.02700001, z: 0}
-  currentlySelectedBuilding: {fileID: 0}
-  previewBuilding: 0
+  blood: {fileID: 1565275868738540, guid: 15b2d0ac3c1f5bd4791ae44984fba681, type: 3}
   anim: {fileID: 0}
-  jumpSounds:
-  - {fileID: 8300000, guid: 64472a36ecae57049944d3fe274bebc1, type: 3}
-  - {fileID: 8300000, guid: ab6a91b764ec60740a8c1af73d01ff43, type: 3}
-  - {fileID: 8300000, guid: 94a034ea42be69243b7f22914a6699db, type: 3}
-  - {fileID: 8300000, guid: 207c6dbce8593644abf3add253d935c2, type: 3}
-  - {fileID: 8300000, guid: 1c730063bbee93644b1d43430b2ed8dd, type: 3}
+  mouseWorldPosition: {x: 0, y: 0.02700001, z: 0}

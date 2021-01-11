@@ -11,7 +11,7 @@ public class Health : MonoBehaviour
     bool hasTriggeredDeath = false;
 
     public float regenTimer = 0f;
-    public float timeBetweenRegen = 4f;
+    public float timeBetweenRegen = 2f;
 
     // Start is called before the first frame update
     void Start()

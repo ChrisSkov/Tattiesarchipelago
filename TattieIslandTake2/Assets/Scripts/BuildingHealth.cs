@@ -28,7 +28,6 @@ public class BuildingHealth : MonoBehaviour
 
         if (isDead)
         {
-            print("Building Scanning");
             if (!isScanning)
             {
                 graph.GraphUpdate();

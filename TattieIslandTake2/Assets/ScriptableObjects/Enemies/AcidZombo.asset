@@ -13,16 +13,16 @@ MonoBehaviour:
   m_Name: AcidZombo
   m_EditorClassIdentifier: 
   moveSpeed: 2
-  chaseRange: 5
+  chaseRange: 16
   walkSoundDelay: 0.2
   walkSound: {fileID: 8300000, guid: 9a9f85a5316efb14e9c2eb84128930fa, type: 3}
   attackRange: 2
   timeBetweenAttacks: 6
   damage: 35
   attackSounds: []
-  maxHp: 100
+  maxHp: 160
   destroyTime: 1.4
-  xpGrantedOnDeath: 3
+  xpGrantedOnDeath: 4
   organs: []
   takeDamageSounds: []
   idleSounds: []

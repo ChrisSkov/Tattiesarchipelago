@@ -328,7 +328,7 @@ MonoBehaviour:
   myBuilding: {fileID: 11400000, guid: d46718d0b338fc549aef42fc7cf5ead5, type: 2}
   currentHealth: 0
   isDead: 0
-  graph: {fileID: 0}
+  graph: {fileID: 667730844, guid: 55e4cc0f41568bb44a01e087bcaf1855, type: 3}
   hpBar: {fileID: 6102464925317269163}
 --- !u!65 &7297171085964737438
 BoxCollider:

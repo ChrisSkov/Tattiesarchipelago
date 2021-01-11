@@ -50,6 +50,7 @@ public class ShotgunScriptObj : WeaponAbstract
         particleClone.transform.Rotate(-90, -90, 0, Space.Self);
         source.gameObject.GetComponent<Fight>().player.resources.ammo.resourceCount--;
         source.PlayOneShot(shootSound);
+        stats.resources.ammo.updateMe = true;
     }
 
 

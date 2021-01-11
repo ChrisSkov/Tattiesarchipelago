@@ -84,7 +84,7 @@ public class Fight : MonoBehaviour
                 GameObject weaponToPickUp = hit.collider.gameObject;
                 WeaponAbstract newWeapon = weaponToPickUp.GetComponent<PickMeUp>().thisWeapon;
 
-                if (Input.GetKeyDown(KeyCode.E) && player.closeToPickUp == true)
+                if (Input.GetKeyDown(KeyCode.E) /*&& player.closeToPickUp == true*/)
                 {
                     newWeapon.pickUp = true;
                     if (weaponInHand != defaultWeapon && sheathedWeapon != defaultWeapon)

@@ -402,7 +402,7 @@ MonoBehaviour:
   myBuilding: {fileID: 11400000, guid: d653be98457c2e3489143454485685fa, type: 2}
   currentHealth: 0
   isDead: 0
-  graph: {fileID: 0}
+  graph: {fileID: 667730844, guid: 55e4cc0f41568bb44a01e087bcaf1855, type: 3}
   hpBar: {fileID: 5678346644596738406}
 --- !u!114 &-2668412363415948743
 MonoBehaviour:
