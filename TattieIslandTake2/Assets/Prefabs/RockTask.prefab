@@ -470,12 +470,13 @@ GameObject:
   - component: {fileID: 1615634089303101037}
   - component: {fileID: 8803512754293169940}
   - component: {fileID: 106166150464746901}
+  - component: {fileID: 1298236301618445190}
   m_Layer: 0
-  m_Name: Rock1 (1)
+  m_Name: RockTask
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &8803512752466140249
 Transform:
@@ -484,9 +485,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8803512752465903737}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 25.952, y: 0.049648, z: -13.95}
-  m_LocalScale: {x: 0.5177266, y: 0.5177266, z: 0.5177266}
+  m_LocalScale: {x: 0.46174484, y: 0.46174484, z: 0.46174484}
   m_Children:
   - {fileID: 6334038292071531468}
   m_Father: {fileID: 0}
@@ -606,3 +607,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textObject: {fileID: 1777381987960304658}
+--- !u!114 &1298236301618445190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8803512752465903737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a0cfde78563333479943e3e5b625fdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxSize: 0.65
+  minSize: 0.14

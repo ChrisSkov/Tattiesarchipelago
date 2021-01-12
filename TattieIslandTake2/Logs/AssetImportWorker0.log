@@ -15,11 +15,11 @@ C:/Users/stoff/Documents/Tattiesarchipelago/TattieIslandTake2
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-59426
+52251
 Successfully changed project path to: C:/Users/stoff/Documents/Tattiesarchipelago/TattieIslandTake2
 C:/Users/stoff/Documents/Tattiesarchipelago/TattieIslandTake2
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 135.13 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 135.35 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.2.0f1 (3721df5a8b28)
 [Subsystems] Discovering subsystems at path D:/UnityVersions/2020.2.0f1/Editor/Data/Resources/UnitySubsystems
@@ -38,31 +38,31 @@ Initialize mono
 Mono path[0] = 'D:/UnityVersions/2020.2.0f1/Editor/Data/Managed'
 Mono path[1] = 'D:/UnityVersions/2020.2.0f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'D:/UnityVersions/2020.2.0f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56056
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56084
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: D:/UnityVersions/2020.2.0f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002180 seconds.
+Registered in 0.002489 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 130.22 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 154.03 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.218 seconds
+- Completed reload, in  2.324 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.006232 seconds.
+Registered in 0.007100 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 148.17 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 159.05 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.187 seconds
+- Completed reload, in  1.331 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
@@ -70,152 +70,104 @@ Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'AS
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
 Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 1.41 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 2.54 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2992 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 241.8 MB.
-System memory in use after: 241.7 MB.
+Unloading 2993 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 243.9 MB.
+System memory in use after: 243.7 MB.
 
-Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 3471.
-Total: 2.962700 ms (FindLiveObjects: 0.415200 ms CreateObjectMapping: 0.260600 ms MarkObjects: 2.094900 ms  DeleteObjects: 0.190900 ms)
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 3472.
+Total: 4.997300 ms (FindLiveObjects: 0.625500 ms CreateObjectMapping: 0.453300 ms MarkObjects: 3.638300 ms  DeleteObjects: 0.278600 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/MenuScene
-  artifactKey: Guid(3c712fd1755063f4a864ef7967b1200e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MenuScene using Guid(3c712fd1755063f4a864ef7967b1200e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '97c50902b6ce211948f5bac08f42513f') in 0.035431 seconds
-  Import took 0.041874 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000341 seconds.
-  path: Assets/MenuScene/MainMenu.unity
-  artifactKey: Guid(cae2f9493f8f1b347a160dc7dce1f11f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MenuScene/MainMenu.unity using Guid(cae2f9493f8f1b347a160dc7dce1f11f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a99bfcf1d4805534dd27f5e2caba255') in 0.015290 seconds
-  Import took 0.020515 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 276.002792 seconds.
-  path: Assets/MenuScene/Garbage
-  artifactKey: Guid(2f6e952009d96264abaa8bf7d536d6bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MenuScene/Garbage using Guid(2f6e952009d96264abaa8bf7d536d6bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd0ee4f7ac1e063a6cc52e2583a775812') in 0.005609 seconds
-  Import took 0.011692 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.005910 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.52 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.065 seconds
-Platform modules already initialized, skipping
-Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
-Refreshing native plugins compatible for Editor in 1.79 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2818 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 231.8 MB.
-System memory in use after: 231.7 MB.
-
-Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 3473.
-Total: 3.169400 ms (FindLiveObjects: 0.367400 ms CreateObjectMapping: 0.311300 ms MarkObjects: 2.317100 ms  DeleteObjects: 0.172400 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.005552 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.27 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.002 seconds
-Platform modules already initialized, skipping
-Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
-Refreshing native plugins compatible for Editor in 1.21 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2818 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 231.8 MB.
-System memory in use after: 231.7 MB.
-
-Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 3475.
-Total: 2.517900 ms (FindLiveObjects: 0.427200 ms CreateObjectMapping: 0.193100 ms MarkObjects: 1.702500 ms  DeleteObjects: 0.193800 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.005790 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.40 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.154 seconds
-Platform modules already initialized, skipping
-Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
-Refreshing native plugins compatible for Editor in 1.28 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2818 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 231.9 MB.
-System memory in use after: 231.8 MB.
-
-Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 3477.
-Total: 2.163600 ms (FindLiveObjects: 0.373100 ms CreateObjectMapping: 0.117600 ms MarkObjects: 1.504700 ms  DeleteObjects: 0.167300 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 801.669019 seconds.
   path: Assets/Scenes/Archipelago.unity
   artifactKey: Guid(d1c3109bdb54ad54c8a2b2838528e640) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Archipelago.unity using Guid(d1c3109bdb54ad54c8a2b2838528e640) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f641d93a5ad814cacb1befa73ba31de') in 0.055584 seconds
-  Import took 0.065658 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 28.566975 seconds.
-  path: Assets/Prefabs/Rock1 (1).prefab
-  artifactKey: Guid(ad30c9141a7243d4283009e35d174b1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Rock1 (1).prefab using Guid(ad30c9141a7243d4283009e35d174b1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d0fa02afb65c46e2b5629200ad03d6b') in 0.955799 seconds
-  Import took 0.966367 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.591237 seconds.
-  path: Assets/Prefabs/RockTask.prefab
-  artifactKey: Guid(ad30c9141a7243d4283009e35d174b1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/RockTask.prefab using Guid(ad30c9141a7243d4283009e35d174b1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '778cafa8ed0f2ca1d568adb20cf3197d') in 0.558144 seconds
-  Import took 0.570090 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 125.286427 seconds.
-  path: Assets/MenuScene/MainMenu.unity
-  artifactKey: Guid(cae2f9493f8f1b347a160dc7dce1f11f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MenuScene/MainMenu.unity using Guid(cae2f9493f8f1b347a160dc7dce1f11f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b58dc72bdff72deb12967188dd12c97c') in 0.004177 seconds
-  Import took 0.010977 seconds .
+Start importing Assets/Scenes/Archipelago.unity using Guid(d1c3109bdb54ad54c8a2b2838528e640) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c33b4a860e908d345afd54b8c121939a') in 0.017909 seconds
+  Import took 0.024410 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.008693 seconds.
+Registered in 0.005946 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.32 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.175 seconds
+Platform modules already initialized, skipping
+Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Refreshing native plugins compatible for Editor in 1.39 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2819 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 233.8 MB.
+System memory in use after: 233.7 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 3474.
+Total: 2.827400 ms (FindLiveObjects: 0.515000 ms CreateObjectMapping: 0.288600 ms MarkObjects: 1.846400 ms  DeleteObjects: 0.175700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005862 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.34 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.142 seconds
+Platform modules already initialized, skipping
+Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Refreshing native plugins compatible for Editor in 1.40 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2819 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 233.9 MB.
+System memory in use after: 233.7 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 3476.
+Total: 2.579000 ms (FindLiveObjects: 0.250200 ms CreateObjectMapping: 0.110000 ms MarkObjects: 2.040400 ms  DeleteObjects: 0.177500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006373 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.17 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.601 seconds
+Platform modules already initialized, skipping
+Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Refreshing native plugins compatible for Editor in 1.37 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2820 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 233.9 MB.
+System memory in use after: 233.8 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 3479.
+Total: 2.881000 ms (FindLiveObjects: 0.355700 ms CreateObjectMapping: 0.119400 ms MarkObjects: 2.092100 ms  DeleteObjects: 0.312600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005917 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 1.52 ms, found 0 plugins.
@@ -224,162 +176,24 @@ Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.348 seconds
+- Completed reload, in  1.025 seconds
 Platform modules already initialized, skipping
 Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
 Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
-Refreshing native plugins compatible for Editor in 1.45 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 1.37 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2819 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 237.4 MB.
-System memory in use after: 237.2 MB.
+Unloading 2820 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 233.9 MB.
+System memory in use after: 233.8 MB.
 
-Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 3529.
-Total: 3.605700 ms (FindLiveObjects: 0.666400 ms CreateObjectMapping: 0.320900 ms MarkObjects: 2.334700 ms  DeleteObjects: 0.281400 ms)
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 3481.
+Total: 2.625900 ms (FindLiveObjects: 0.329800 ms CreateObjectMapping: 0.217200 ms MarkObjects: 1.902100 ms  DeleteObjects: 0.175900 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.005823 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.20 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.090 seconds
-Platform modules already initialized, skipping
-Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
-Refreshing native plugins compatible for Editor in 1.23 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2819 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 237.4 MB.
-System memory in use after: 237.3 MB.
-
-Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 3531.
-Total: 5.443300 ms (FindLiveObjects: 0.489600 ms CreateObjectMapping: 0.131500 ms MarkObjects: 4.638700 ms  DeleteObjects: 0.182500 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.005856 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.21 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.072 seconds
-Platform modules already initialized, skipping
-Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
-Refreshing native plugins compatible for Editor in 1.83 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2819 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 237.4 MB.
-System memory in use after: 237.3 MB.
-
-Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 3533.
-Total: 2.581500 ms (FindLiveObjects: 0.343800 ms CreateObjectMapping: 0.140400 ms MarkObjects: 1.888700 ms  DeleteObjects: 0.207600 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 769.018873 seconds.
-  path: Assets/AssetPacks/Simple Fantasy GUI/PNG/Character Panel/Character_Box.png
-  artifactKey: Guid(81c655d952ad6ca498cc4b1491740ee0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetPacks/Simple Fantasy GUI/PNG/Character Panel/Character_Box.png using Guid(81c655d952ad6ca498cc4b1491740ee0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bdf80939562c3e9d04813876826a426b') in 0.158914 seconds
-  Import took 0.165496 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.005694 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 2.00 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.118 seconds
-Platform modules already initialized, skipping
-Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
-Refreshing native plugins compatible for Editor in 1.88 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2819 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 237.4 MB.
-System memory in use after: 237.3 MB.
-
-Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 3539.
-Total: 3.193500 ms (FindLiveObjects: 0.558000 ms CreateObjectMapping: 0.316900 ms MarkObjects: 2.132100 ms  DeleteObjects: 0.185200 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.006037 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.28 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.079 seconds
-Platform modules already initialized, skipping
-Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
-Refreshing native plugins compatible for Editor in 1.24 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2819 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 237.4 MB.
-System memory in use after: 237.3 MB.
-
-Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 3541.
-Total: 2.663000 ms (FindLiveObjects: 0.278300 ms CreateObjectMapping: 0.113300 ms MarkObjects: 2.077400 ms  DeleteObjects: 0.193000 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.006085 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.27 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.013 seconds
-Platform modules already initialized, skipping
-Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
-Refreshing native plugins compatible for Editor in 2.01 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2819 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 237.4 MB.
-System memory in use after: 237.3 MB.
-
-Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 3543.
-Total: 2.383800 ms (FindLiveObjects: 0.283800 ms CreateObjectMapping: 0.123500 ms MarkObjects: 1.789100 ms  DeleteObjects: 0.186300 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.005720 seconds.
+Registered in 0.008491 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 1.41 ms, found 0 plugins.
@@ -388,466 +202,252 @@ Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.066 seconds
+- Completed reload, in  1.054 seconds
 Platform modules already initialized, skipping
 Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
 Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
-Refreshing native plugins compatible for Editor in 2.05 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 1.27 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2819 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 237.4 MB.
-System memory in use after: 237.3 MB.
+Unloading 2820 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 233.9 MB.
+System memory in use after: 233.8 MB.
 
-Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 3545.
-Total: 3.699700 ms (FindLiveObjects: 0.397800 ms CreateObjectMapping: 0.158400 ms MarkObjects: 2.957500 ms  DeleteObjects: 0.184700 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 22926.586902 seconds.
-  path: Assets/Icons
-  artifactKey: Guid(b5b6432c55e4d5f4d9c03351ed1e1467) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Icons using Guid(b5b6432c55e4d5f4d9c03351ed1e1467) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f912a36db70ef73e680f896bf0ef258f') in 0.236664 seconds
-  Import took 0.546709 seconds .
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 3483.
+Total: 5.323800 ms (FindLiveObjects: 0.743900 ms CreateObjectMapping: 0.403000 ms MarkObjects: 3.624000 ms  DeleteObjects: 0.550800 ms)
 
 ========================================================================
-Received Import Request.
-  Time since last request: 18.805735 seconds.
-  path: Assets/AssetPacks/beffio/UI - BUILDER
-  artifactKey: Guid(abd807bc2752d4aad91fa03e3b5d6b78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetPacks/beffio/UI - BUILDER using Guid(abd807bc2752d4aad91fa03e3b5d6b78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e989be09e19f95b4c9e53fa9d57d555') in 0.011190 seconds
-  Import took 0.017239 seconds .
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005950 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.97 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.098 seconds
+Platform modules already initialized, skipping
+Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Refreshing native plugins compatible for Editor in 1.63 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2820 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 233.9 MB.
+System memory in use after: 233.8 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 3485.
+Total: 3.402800 ms (FindLiveObjects: 0.567800 ms CreateObjectMapping: 0.278800 ms MarkObjects: 2.361900 ms  DeleteObjects: 0.193400 ms)
 
 ========================================================================
-Received Import Request.
-  Time since last request: 0.002904 seconds.
-  path: Assets/AssetPacks/beffio/UI - BUILDER
-  artifactKey: Guid(abd807bc2752d4aad91fa03e3b5d6b78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetPacks/beffio/UI - BUILDER using Guid(abd807bc2752d4aad91fa03e3b5d6b78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e989be09e19f95b4c9e53fa9d57d555') in 0.004800 seconds
-  Import took 0.012709 seconds .
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006031 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.38 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.067 seconds
+Platform modules already initialized, skipping
+Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Refreshing native plugins compatible for Editor in 1.44 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2820 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 234.0 MB.
+System memory in use after: 233.8 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 3487.
+Total: 7.844800 ms (FindLiveObjects: 0.707800 ms CreateObjectMapping: 0.291800 ms MarkObjects: 6.590400 ms  DeleteObjects: 0.252100 ms)
 
 ========================================================================
-Received Import Request.
-  Time since last request: 1.000281 seconds.
-  path: Assets/AssetPacks/beffio/UI - BUILDER/Prefabs
-  artifactKey: Guid(3c2993742baf944dbb16ec0719380ca5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetPacks/beffio/UI - BUILDER/Prefabs using Guid(3c2993742baf944dbb16ec0719380ca5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '576f64934b00634b98efc41bab564bf4') in 0.008188 seconds
-  Import took 0.018424 seconds .
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006082 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.51 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.130 seconds
+Platform modules already initialized, skipping
+Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Refreshing native plugins compatible for Editor in 1.31 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2820 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 234.0 MB.
+System memory in use after: 233.9 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 3489.
+Total: 3.523800 ms (FindLiveObjects: 0.410400 ms CreateObjectMapping: 0.315700 ms MarkObjects: 2.551400 ms  DeleteObjects: 0.244100 ms)
 
 ========================================================================
-Received Import Request.
-  Time since last request: 5.197412 seconds.
-  path: Assets/AssetPacks/beffio/UI - BUILDER/Source Files/Icons/Icons@1x-assets
-  artifactKey: Guid(f4a63a2927d70455d9945ca849da7331) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetPacks/beffio/UI - BUILDER/Source Files/Icons/Icons@1x-assets using Guid(f4a63a2927d70455d9945ca849da7331) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bfda88a2efd67a9e65bdd6303b320847') in 0.005909 seconds
-  Import took 0.012869 seconds .
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007454 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.34 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.112 seconds
+Platform modules already initialized, skipping
+Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Refreshing native plugins compatible for Editor in 1.48 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2820 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 234.0 MB.
+System memory in use after: 233.9 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 3491.
+Total: 2.197800 ms (FindLiveObjects: 0.281300 ms CreateObjectMapping: 0.118700 ms MarkObjects: 1.606800 ms  DeleteObjects: 0.189900 ms)
 
 ========================================================================
-Received Import Request.
-  Time since last request: 1.226884 seconds.
-  path: Assets/AssetPacks/beffio/UI - BUILDER/Source Files/Icons/Icons@1x-assets/App
-  artifactKey: Guid(82b4d7d24ba3a430e91f49bfaf6cad07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetPacks/beffio/UI - BUILDER/Source Files/Icons/Icons@1x-assets/App using Guid(82b4d7d24ba3a430e91f49bfaf6cad07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '50f3cc6ecae47b3d0057592a5f179ba0') in 0.006590 seconds
-  Import took 0.013040 seconds .
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006992 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.55 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.026 seconds
+Platform modules already initialized, skipping
+Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Refreshing native plugins compatible for Editor in 2.52 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2820 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 234.0 MB.
+System memory in use after: 233.9 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 3493.
+Total: 3.322200 ms (FindLiveObjects: 0.468400 ms CreateObjectMapping: 0.495500 ms MarkObjects: 2.127300 ms  DeleteObjects: 0.229600 ms)
 
 ========================================================================
-Received Import Request.
-  Time since last request: 373.133973 seconds.
-  path: Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures
-  artifactKey: Guid(6e0acc477281b474db749668a861cab5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures using Guid(6e0acc477281b474db749668a861cab5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b13420df0450fb182951391af14527e') in 0.006202 seconds
-  Import took 0.012701 seconds .
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008839 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.98 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.240 seconds
+Platform modules already initialized, skipping
+Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Refreshing native plugins compatible for Editor in 2.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2820 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 234.0 MB.
+System memory in use after: 233.9 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 3495.
+Total: 2.990300 ms (FindLiveObjects: 0.442400 ms CreateObjectMapping: 0.269600 ms MarkObjects: 2.071900 ms  DeleteObjects: 0.205000 ms)
 
 ========================================================================
-Received Import Request.
-  Time since last request: 1.951528 seconds.
-  path: Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Filled
-  artifactKey: Guid(723e31ccf28c81e4a897ac29c9fe3f54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Filled using Guid(723e31ccf28c81e4a897ac29c9fe3f54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '882e9e8fb1eec5a88aedb0ba39b87e81') in 0.007135 seconds
-  Import took 0.013536 seconds .
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008139 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.25 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.676 seconds
+Platform modules already initialized, skipping
+Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Refreshing native plugins compatible for Editor in 1.42 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2820 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 234.0 MB.
+System memory in use after: 233.9 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 3497.
+Total: 2.815200 ms (FindLiveObjects: 0.367000 ms CreateObjectMapping: 0.259700 ms MarkObjects: 1.974500 ms  DeleteObjects: 0.213100 ms)
 
 ========================================================================
-Received Import Request.
-  Time since last request: 1.610229 seconds.
-  path: Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Filled/128
-  artifactKey: Guid(ba5d299c9b07e72499be7d5d8a024741) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Filled/128 using Guid(ba5d299c9b07e72499be7d5d8a024741) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8c4b3a7b31f0978a9011bc20983578e') in 0.008706 seconds
-  Import took 0.014899 seconds .
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006952 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.80 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.133 seconds
+Platform modules already initialized, skipping
+Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Refreshing native plugins compatible for Editor in 1.43 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2820 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 234.0 MB.
+System memory in use after: 233.9 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 3499.
+Total: 3.405900 ms (FindLiveObjects: 0.730600 ms CreateObjectMapping: 0.487900 ms MarkObjects: 1.987700 ms  DeleteObjects: 0.197600 ms)
 
 ========================================================================
-Received Import Request.
-  Time since last request: 0.000647 seconds.
-  path: Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Filled/128
-  artifactKey: Guid(ba5d299c9b07e72499be7d5d8a024741) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Filled/128 using Guid(ba5d299c9b07e72499be7d5d8a024741) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8c4b3a7b31f0978a9011bc20983578e') in 0.004697 seconds
-  Import took 0.010708 seconds .
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006542 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.78 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.056 seconds
+Platform modules already initialized, skipping
+Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Refreshing native plugins compatible for Editor in 1.82 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2820 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 234.0 MB.
+System memory in use after: 233.9 MB.
 
-========================================================================
-Received Import Request.
-  Time since last request: 7.491644 seconds.
-  path: Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Filled/128/mouse_left.png
-  artifactKey: Guid(8013a4b22fcbef54ea6f6d288bf7ebf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Filled/128/mouse_left.png using Guid(8013a4b22fcbef54ea6f6d288bf7ebf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5056b81a9d7aafcc1ed4bd3b42329095') in 0.352243 seconds
-  Import took 0.358348 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.243073 seconds.
-  path: Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Filled/128/mouse_middle.png
-  artifactKey: Guid(9669ee75193ec4a448cae7f23f732c57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Filled/128/mouse_middle.png using Guid(9669ee75193ec4a448cae7f23f732c57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cdabc4a24377157cf3b434b741368ef1') in 0.018036 seconds
-  Import took 0.024726 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.504232 seconds.
-  path: Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Filled/128/mouse_none.png
-  artifactKey: Guid(47b995c0d355c544e92cb7a4e8671515) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Filled/128/mouse_none.png using Guid(47b995c0d355c544e92cb7a4e8671515) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd76125d5f536bb3283060df092d4d05e') in 0.016934 seconds
-  Import took 0.024047 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.001902 seconds.
-  path: Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Filled/128/mouse_none.png
-  artifactKey: Guid(47b995c0d355c544e92cb7a4e8671515) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Filled/128/mouse_none.png using Guid(47b995c0d355c544e92cb7a4e8671515) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd76125d5f536bb3283060df092d4d05e') in 0.013932 seconds
-  Import took 0.019330 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.744896 seconds.
-  path: Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Filled/128/mouse_right.png
-  artifactKey: Guid(d3e68f556897a06499d261b7e0fcd07f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Filled/128/mouse_right.png using Guid(d3e68f556897a06499d261b7e0fcd07f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3c74457cfb6e74308eba367d2f7a044') in 0.022368 seconds
-  Import took 0.032500 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.723423 seconds.
-  path: Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/128/mouse_left.png
-  artifactKey: Guid(ecf708777265a2f48867a80c66adc1ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/128/mouse_left.png using Guid(ecf708777265a2f48867a80c66adc1ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '016c9709af7ed428307c309ef6578616') in 0.014426 seconds
-  Import took 0.021730 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.006371 seconds.
-  path: Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/128/mouse_left.png
-  artifactKey: Guid(ecf708777265a2f48867a80c66adc1ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/128/mouse_left.png using Guid(ecf708777265a2f48867a80c66adc1ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '016c9709af7ed428307c309ef6578616') in 0.013305 seconds
-  Import took 0.019546 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 64.995215 seconds.
-  path: Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/128/button_a.png
-  artifactKey: Guid(84583fb3eeafc3c4e88986eac394b00b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/128/button_a.png using Guid(84583fb3eeafc3c4e88986eac394b00b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70ace1238c59b641702cd048bcd9468a') in 0.018964 seconds
-  Import took 0.024988 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.002134 seconds.
-  path: Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/128/button_a.png
-  artifactKey: Guid(84583fb3eeafc3c4e88986eac394b00b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/128/button_a.png using Guid(84583fb3eeafc3c4e88986eac394b00b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70ace1238c59b641702cd048bcd9468a') in 0.013873 seconds
-  Import took 0.019202 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.361997 seconds.
-  path: Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/128/bumper2_right.png
-  artifactKey: Guid(422d138dbcf53044cbb4ab23650a1d7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/128/bumper2_right.png using Guid(422d138dbcf53044cbb4ab23650a1d7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c5d3a2265fbf7773696742b64698dcf') in 0.014950 seconds
-  Import took 0.022770 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.002386 seconds.
-  path: Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/128/bumper2_right.png
-  artifactKey: Guid(422d138dbcf53044cbb4ab23650a1d7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/128/bumper2_right.png using Guid(422d138dbcf53044cbb4ab23650a1d7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c5d3a2265fbf7773696742b64698dcf') in 0.013338 seconds
-  Import took 0.019932 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.377691 seconds.
-  path: Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/128/bumper2_left.png
-  artifactKey: Guid(1827b66a57d63334db5a6b1d4728919d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/128/bumper2_left.png using Guid(1827b66a57d63334db5a6b1d4728919d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85c87ca8b740052793fef5d92c4a7b8c') in 0.019850 seconds
-  Import took 0.027119 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.310325 seconds.
-  path: Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/128/bumper2_empty.png
-  artifactKey: Guid(0b7a6f9ce6bfdc54ca9fa4a1760cf04d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/128/bumper2_empty.png using Guid(0b7a6f9ce6bfdc54ca9fa4a1760cf04d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b44b9d42883f60002673933e31ffb180') in 0.017364 seconds
-  Import took 0.023634 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.404562 seconds.
-  path: Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/128/bumper1_r1.png
-  artifactKey: Guid(06a057c87283dab4c8576af3c1d566ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/128/bumper1_r1.png using Guid(06a057c87283dab4c8576af3c1d566ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '773aaac9d0aba272bc27ff6bed091210') in 0.016031 seconds
-  Import took 0.022646 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000935 seconds.
-  path: Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/128/bumper1_r1.png
-  artifactKey: Guid(06a057c87283dab4c8576af3c1d566ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/128/bumper1_r1.png using Guid(06a057c87283dab4c8576af3c1d566ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '773aaac9d0aba272bc27ff6bed091210') in 0.014418 seconds
-  Import took 0.021187 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.330534 seconds.
-  path: Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/128/bumper1_l1.png
-  artifactKey: Guid(98b874c28d261ec49bfd84cfa6a5242a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/128/bumper1_l1.png using Guid(98b874c28d261ec49bfd84cfa6a5242a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b61ed2325f5ff8cc3866c6735ce4e0b') in 0.020101 seconds
-  Import took 0.025681 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000748 seconds.
-  path: Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/128/bumper1_l1.png
-  artifactKey: Guid(98b874c28d261ec49bfd84cfa6a5242a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/128/bumper1_l1.png using Guid(98b874c28d261ec49bfd84cfa6a5242a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b61ed2325f5ff8cc3866c6735ce4e0b') in 0.012384 seconds
-  Import took 0.018337 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.879543 seconds.
-  path: Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/128/bumper1_empty.png
-  artifactKey: Guid(66caea5bec3f27849a15dbd75c94fe46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/128/bumper1_empty.png using Guid(66caea5bec3f27849a15dbd75c94fe46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83d5288abf7cb0532b981f9251d1432e') in 0.017953 seconds
-  Import took 0.025521 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.001408 seconds.
-  path: Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/128/bumper1_empty.png
-  artifactKey: Guid(66caea5bec3f27849a15dbd75c94fe46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/128/bumper1_empty.png using Guid(66caea5bec3f27849a15dbd75c94fe46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83d5288abf7cb0532b981f9251d1432e') in 0.013159 seconds
-  Import took 0.019718 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.491861 seconds.
-  path: Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/128/awsd2.png
-  artifactKey: Guid(f09e374f25068dc42a3f1f0f9f69516b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/128/awsd2.png using Guid(f09e374f25068dc42a3f1f0f9f69516b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '104994ab1c1a195a00cb0af22b620783') in 0.017725 seconds
-  Import took 0.023987 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.439719 seconds.
-  path: Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/128/awsd.png
-  artifactKey: Guid(bbd17523f98795143b64dd88b176e116) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/128/awsd.png using Guid(bbd17523f98795143b64dd88b176e116) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6418a19b02fe992fb5cc0a3c59f163a4') in 0.015809 seconds
-  Import took 0.022930 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.782702 seconds.
-  path: Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/128/arrowkeys2.png
-  artifactKey: Guid(194aca0685742f844845dc44fe86385f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/128/arrowkeys2.png using Guid(194aca0685742f844845dc44fe86385f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6635791a88919d3fad812d74d9eb42b5') in 0.015921 seconds
-  Import took 0.021447 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.002139 seconds.
-  path: Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/128/arrowkeys2.png
-  artifactKey: Guid(194aca0685742f844845dc44fe86385f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/128/arrowkeys2.png using Guid(194aca0685742f844845dc44fe86385f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6635791a88919d3fad812d74d9eb42b5') in 0.013010 seconds
-  Import took 0.019697 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.374206 seconds.
-  path: Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/128/arrowkeys.png
-  artifactKey: Guid(de435c71a473516449d80f8341b4c532) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/128/arrowkeys.png using Guid(de435c71a473516449d80f8341b4c532) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a66422c0a4688424d047cc9264ed4c8e') in 0.016227 seconds
-  Import took 0.023293 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.285695 seconds.
-  path: Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/128/button_options.png
-  artifactKey: Guid(c2eb6f9b19c69724c91456529235110d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/128/button_options.png using Guid(c2eb6f9b19c69724c91456529235110d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '696a6b997ead6610b87df05d7f44f48a') in 0.018974 seconds
-  Import took 0.025879 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.438088 seconds.
-  path: Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/128/button_plus.png
-  artifactKey: Guid(826604d8555aa594493b879567bf765e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/128/button_plus.png using Guid(826604d8555aa594493b879567bf765e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dda56adf58e08d497914edbade832c73') in 0.017749 seconds
-  Import took 0.025051 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000940 seconds.
-  path: Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/128/button_plus.png
-  artifactKey: Guid(826604d8555aa594493b879567bf765e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/128/button_plus.png using Guid(826604d8555aa594493b879567bf765e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dda56adf58e08d497914edbade832c73') in 0.012394 seconds
-  Import took 0.019338 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.817204 seconds.
-  path: Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/128/button_ps.png
-  artifactKey: Guid(10cd580cdd087d24289f6ad6d3d16cad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/128/button_ps.png using Guid(10cd580cdd087d24289f6ad6d3d16cad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7be024ddb6180317c12346a22109567') in 0.017280 seconds
-  Import took 0.024347 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.002168 seconds.
-  path: Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/128/button_ps.png
-  artifactKey: Guid(10cd580cdd087d24289f6ad6d3d16cad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/128/button_ps.png using Guid(10cd580cdd087d24289f6ad6d3d16cad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7be024ddb6180317c12346a22109567') in 0.012368 seconds
-  Import took 0.020136 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.334549 seconds.
-  path: Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/128/button_share.png
-  artifactKey: Guid(b3b680f429b1301488c5d5f3b04cd37c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/128/button_share.png using Guid(b3b680f429b1301488c5d5f3b04cd37c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '864a2a5b72ce7a4f9c35f8dc0c7d10ba') in 0.015585 seconds
-  Import took 0.023100 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000617 seconds.
-  path: Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/128/button_share.png
-  artifactKey: Guid(b3b680f429b1301488c5d5f3b04cd37c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/128/button_share.png using Guid(b3b680f429b1301488c5d5f3b04cd37c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '864a2a5b72ce7a4f9c35f8dc0c7d10ba') in 0.013792 seconds
-  Import took 0.019747 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.223644 seconds.
-  path: Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/128/button_square.png
-  artifactKey: Guid(fa4982bc77fb73a478b4c9f20e19013b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/128/button_square.png using Guid(fa4982bc77fb73a478b4c9f20e19013b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de657f2a7531c825b635e97c6eb5d1c9') in 0.016824 seconds
-  Import took 0.023253 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.304835 seconds.
-  path: Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/128/button_triangle.png
-  artifactKey: Guid(689b5dcf79056a24bbe38c21ad14a3a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/128/button_triangle.png using Guid(689b5dcf79056a24bbe38c21ad14a3a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f22a732e7985c084fb14a7ef3723c8e3') in 0.018095 seconds
-  Import took 0.027092 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.282602 seconds.
-  path: Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/128/button_x.png
-  artifactKey: Guid(b9743a574c1e0d046bb38000f81de26b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/128/button_x.png using Guid(b9743a574c1e0d046bb38000f81de26b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3308fb08d386968e74a78a9caad1968c') in 0.016638 seconds
-  Import took 0.026338 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.424245 seconds.
-  path: Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/128/button_y.png
-  artifactKey: Guid(bb1bb30499e09cf4d900e39181fda83e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/128/button_y.png using Guid(bb1bb30499e09cf4d900e39181fda83e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23b33606978eee769d0d32dfc85b5054') in 0.018945 seconds
-  Import took 0.025873 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.303334 seconds.
-  path: Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/128/console_ps4.png
-  artifactKey: Guid(51beec5596276994f8776f90b2987433) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/128/console_ps4.png using Guid(51beec5596276994f8776f90b2987433) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06e034c7f7d68bb2d6d8a085925af358') in 0.017157 seconds
-  Import took 0.023540 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.001461 seconds.
-  path: Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/128/console_ps4.png
-  artifactKey: Guid(51beec5596276994f8776f90b2987433) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/128/console_ps4.png using Guid(51beec5596276994f8776f90b2987433) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06e034c7f7d68bb2d6d8a085925af358') in 0.012386 seconds
-  Import took 0.017482 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.411131 seconds.
-  path: Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/128/console_switch.png
-  artifactKey: Guid(79ae1ee46a999e2418c6cab931bbfe7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/128/console_switch.png using Guid(79ae1ee46a999e2418c6cab931bbfe7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '385a2c4a84bb5ba68c054657c64210c8') in 0.016618 seconds
-  Import took 0.022920 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000602 seconds.
-  path: Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/128/console_switch.png
-  artifactKey: Guid(79ae1ee46a999e2418c6cab931bbfe7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/128/console_switch.png using Guid(79ae1ee46a999e2418c6cab931bbfe7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '385a2c4a84bb5ba68c054657c64210c8') in 0.015559 seconds
-  Import took 0.021852 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.089990 seconds.
-  path: Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/128/dkeys_empty2.png
-  artifactKey: Guid(c9203f50ec486af45952aaca50a88af9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/128/dkeys_empty2.png using Guid(c9203f50ec486af45952aaca50a88af9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '24fcf1c9b7ee8623031698aaa2255562') in 0.015812 seconds
-  Import took 0.022944 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.001395 seconds.
-  path: Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/128/dkeys_empty2.png
-  artifactKey: Guid(c9203f50ec486af45952aaca50a88af9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/128/dkeys_empty2.png using Guid(c9203f50ec486af45952aaca50a88af9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '24fcf1c9b7ee8623031698aaa2255562') in 0.012709 seconds
-  Import took 0.019106 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.084269 seconds.
-  path: Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/Sheets/desktop.png
-  artifactKey: Guid(e07f5b884e9b81a4ea181fcf10cbcc52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/Sheets/desktop.png using Guid(e07f5b884e9b81a4ea181fcf10cbcc52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2905b0943f31b34b5f579136435c7481') in 0.049800 seconds
-  Import took 0.057097 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.406567 seconds.
-  path: Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/Sheets/gear_vr.png
-  artifactKey: Guid(b7dd0893ab5619547a2a12c1accf80db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/Sheets/gear_vr.png using Guid(b7dd0893ab5619547a2a12c1accf80db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4fcbfcf567a430f516fe4ecf0665880e') in 0.027499 seconds
-  Import took 0.034829 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.522540 seconds.
-  path: Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/Sheets/ps4.png
-  artifactKey: Guid(0f970087e679960468886ed0c3df91a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/Sheets/ps4.png using Guid(0f970087e679960468886ed0c3df91a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0bd836c1a50f1ca5ad6261c99b6207ab') in 0.089396 seconds
-  Import took 0.095906 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.069721 seconds.
-  path: Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/Sheets/switch.png
-  artifactKey: Guid(4d607b49daa68454d8d9c340754721d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/Sheets/switch.png using Guid(4d607b49daa68454d8d9c340754721d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '559bff35c40ab34758e2aed1cba5d376') in 0.104453 seconds
-  Import took 0.110784 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.700228 seconds.
-  path: Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/Sheets/xbox.png
-  artifactKey: Guid(bece165af26307e47bb63394ab1e38b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetPacks/Controller Icons Pack (by NullSave)/Textures/Outlined/Sheets/xbox.png using Guid(bece165af26307e47bb63394ab1e38b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3ab5c49074eb87c0d9071b550d37b24') in 0.087045 seconds
-  Import took 0.093639 seconds .
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 3501.
+Total: 2.935000 ms (FindLiveObjects: 0.275300 ms CreateObjectMapping: 0.118900 ms MarkObjects: 2.239800 ms  DeleteObjects: 0.299700 ms)
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file

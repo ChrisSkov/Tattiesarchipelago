@@ -50,12 +50,14 @@ public class WaveManagement : MonoBehaviour
                 {
                     maxEnemiesInCurrentWave += waveSet.waves[currentWave].numberOfEnemies[i];
                 }
+                timeBetweenWaves = Random.Range(30, 220);
             }
 
 
 
             if (enemyTimer >= timeBetweenEnemies && enemiesSpawnedInCurrentWave < maxEnemiesInCurrentWave)
             {
+                timeBetweenEnemies = Random.Range(3, 23);
                 Instantiate(waveSet.waves[currentWave].enemyTypesInWave[Random.Range(0, waveSet.waves[currentWave].enemyTypesInWave.Length)], spawnPoints[Random.Range(0, spawnPoints.Length)].transform.position, spawnPoints[Random.Range(0, spawnPoints.Length)].transform.rotation);
                 enemyTimer = 0f;
                 enemiesSpawnedInCurrentWave++;
