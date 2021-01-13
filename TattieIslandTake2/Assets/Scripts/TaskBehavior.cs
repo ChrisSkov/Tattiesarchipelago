@@ -14,11 +14,12 @@ public class TaskBehavior : MonoBehaviour
     PerformTask performTask;
     public Slider hpBar;
     bool canDoTask = true;
-
+    ShowInfoOnHover hover;
     public UpdateGraph graph;
     // Start is called before the first frame update
     void Start()
     {
+        hover = GetComponent<ShowInfoOnHover>();
         currentHealth = task.maxHealth;
         player = GameObject.FindGameObjectWithTag("Player").transform;
         playerAnim = player.gameObject.GetComponent<Animator>();
@@ -30,7 +31,7 @@ public class TaskBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.Distance(transform.position, player.position) <= task.distanceToStart)
+        if (Vector3.Distance(transform.position, player.position) <= task.distanceToStart && hover.isHover)
         {
             if (Input.GetKeyDown(KeyCode.E) && canDoTask)
             {
