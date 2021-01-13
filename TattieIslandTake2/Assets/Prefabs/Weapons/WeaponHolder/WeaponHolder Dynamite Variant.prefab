@@ -15,6 +15,7 @@ MonoBehaviour:
   player: {fileID: 11400000, guid: d66d5124d742a3c44820ab8d1c02d69b, type: 2}
   mySpecialWeapon: {fileID: 11400000, guid: 6353dd5a2351a84449761f7251da009a, type: 2}
   playerTransform: {fileID: 0}
+  hover: {fileID: 0}
 --- !u!114 &5380859366436054124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27,6 +28,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bcf022b9bb39a04093caa10976658ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isHover: 0
   textObject: {fileID: 627085599481979014}
 --- !u!1 &627085599481979014
 GameObject:
@@ -220,21 +222,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3738693a67f9af7409c74c1ef84678fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &3194225308786606553
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6650343430009644072}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0bbfe8d12b2cdcf4f9c5d208d4535c20, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thisWeapon: {fileID: 11400000, guid: 6353dd5a2351a84449761f7251da009a, type: 2}
-  useWeapon: 1
-  radius: 1
 --- !u!1001 &1700781060086975751
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -349,11 +336,6 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 3927563445694065221, guid: f1d7dc68e3356064f9e17b185f905869, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f1d7dc68e3356064f9e17b185f905869, type: 3}
---- !u!1 &6650343430009644072 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5463050248754669871, guid: f1d7dc68e3356064f9e17b185f905869, type: 3}
-  m_PrefabInstance: {fileID: 1700781060086975751}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &2855838164951215940 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3475541905693598275, guid: f1d7dc68e3356064f9e17b185f905869, type: 3}

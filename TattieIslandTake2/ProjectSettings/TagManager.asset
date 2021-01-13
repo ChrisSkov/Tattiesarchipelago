@@ -10,6 +10,7 @@ TagManager:
   - ground
   - shop
   - Building
+  - RockSpawnPoint
   layers:
   - Default
   - TransparentFX
