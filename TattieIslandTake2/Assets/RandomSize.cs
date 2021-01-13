@@ -6,10 +6,12 @@ public class RandomSize : MonoBehaviour
 {
     public float maxSize = 1.2f;
     public float minSize = 0.25f;
+    public float actualSize = .5f;
     // Start is called before the first frame update
     void Start()
     {
-        transform.localScale = new Vector3(Random.Range(minSize,maxSize),Random.Range(minSize,maxSize),Random.Range(minSize,maxSize));
+        actualSize= Random.Range(minSize,maxSize);
+        transform.localScale = new Vector3(actualSize,actualSize,actualSize);
     }
 
     // Update is called once per frame

@@ -70,11 +70,11 @@ public class MeleeScriptObj : WeaponAbstract
 
     public override void DropWeapon(Transform pos)
     {
-        stats.currentWeapon = null;
+        // stats.currentWeapon = null;
 
-        var pickUpClone = Instantiate(pickUpItem.pickUpPrefab, pos.position, pos.rotation);
-        pickUpClone.transform.rotation = Quaternion.Euler(90, 0, 0);
-        Destroy(clone);
+        // var pickUpClone = Instantiate(pickUpItem.pickUpPrefab, pos.position, pos.rotation);
+        // pickUpClone.transform.rotation = Quaternion.Euler(90, 0, 0);
+        // Destroy(clone);
     }
 
     public override void UseSpecialWeapon(Transform pos, float throwForce, AudioSource source)

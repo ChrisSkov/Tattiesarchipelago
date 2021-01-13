@@ -10,6 +10,7 @@ public abstract class WeaponAbstract : ScriptableObject
     public float timeBetweenAttacks;
     public bool isRightHanded;
     public float range;
+    public float pickUpDistance;
     public float force;
     public bool pickUp = false;
     public bool hasAmmo = false;

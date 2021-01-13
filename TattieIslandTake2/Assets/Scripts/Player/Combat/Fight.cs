@@ -28,6 +28,7 @@ public class Fight : MonoBehaviour
         Physics.IgnoreLayerCollision(10, 12);
         defaultWeapon.OnPickUp(rightHand);
         player.currentlySelectedBuilding = null;
+        player.sheathedWeapon = defaultWeapon;
     }
 
     // Update is called once per frame
@@ -37,7 +38,7 @@ public class Fight : MonoBehaviour
             return;
 
         DefaultWeaponBehavior();
-        PickUpWeapon();
+       // PickUpWeapon();
         HandManagement();
         DropWeapon();
         DetermineWeaponType();
@@ -80,7 +81,7 @@ public class Fight : MonoBehaviour
             mouseWorldPositon = new Vector3(hit.point.x, transform.position.y, hit.point.z) - transform.position;
             if (Vector3.Distance(transform.position, hit.collider.gameObject.transform.position) <= 5f)
             {
-                player.closeToPickUp = true;
+                
                 GameObject weaponToPickUp = hit.collider.gameObject;
                 WeaponAbstract newWeapon = weaponToPickUp.GetComponent<PickMeUp>().thisWeapon;
 
@@ -101,7 +102,6 @@ public class Fight : MonoBehaviour
                         player.sheathedWeapon.SheathWeapon(sheathedWeaponHolder);
                     }
                     Destroy(weaponToPickUp);
-                    player.closeToPickUp = false;
                 }
                 else
                 {

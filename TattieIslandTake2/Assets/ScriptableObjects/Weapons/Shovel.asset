@@ -19,6 +19,7 @@ MonoBehaviour:
   timeBetweenAttacks: 1.5
   isRightHanded: 1
   range: 1
+  pickUpDistance: 2
   force: 2
   pickUp: 0
   hasAmmo: 0
