@@ -21,6 +21,7 @@ MonoBehaviour:
   fleeFromEnemyRange: 0
   foodSearchThreshold: 0
   layEggTime: 0
+  pickUpRange: 2
   chickenNames:
   - Destroyer Of Worlds
   - Mert
@@ -29,3 +30,4 @@ MonoBehaviour:
   - "Warl\xF8kke"
   - Nicolas
   - Cage
+  carryChickenPrefab: {fileID: 6427866947424236502, guid: 69ca5f37ac258b14c860ddef5d3ac9a5, type: 3}

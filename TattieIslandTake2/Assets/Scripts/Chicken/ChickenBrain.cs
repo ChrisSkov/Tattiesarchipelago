@@ -8,7 +8,10 @@ public class ChickenBrain : StateMachineBehaviour
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-       animator.SetTrigger(triggers[Random.Range(0, triggers.Length)]);
+        if (!animator.GetBool("isCarry"))
+        {
+            animator.SetTrigger(triggers[Random.Range(0, triggers.Length)]);
+        }
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

@@ -17,7 +17,6 @@ public class SpawnRocks : MonoBehaviour
     void Start()
     {
         spawnPoints = GameObject.FindGameObjectsWithTag("RockSpawnPoint");
-        StartRockSpawn();
     }
 
     // Update is called once per frame

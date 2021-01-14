@@ -19,5 +19,7 @@ MonoBehaviour:
   lootPrefab: {fileID: 6289787635660379387, guid: f5153e40d53cd3144b824ae8d44c910f, type: 3}
   toolPrefab: {fileID: 4444764231477746219, guid: 296e892c7e7d28f4ba55a3111d0fb7ab, type: 3}
   lootAmount: 1
+  minLootAmount: 1
+  maxLootAmount: 3
   numberOfTasksCompleted: {fileID: 11400000, guid: f979e32cd8b2cff4192c2c84b023c29e, type: 2}
   updateGraph: {fileID: 667730844, guid: 55e4cc0f41568bb44a01e087bcaf1855, type: 3}

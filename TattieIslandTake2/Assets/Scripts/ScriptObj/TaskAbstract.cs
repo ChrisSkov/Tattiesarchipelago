@@ -13,6 +13,8 @@ public abstract class TaskAbstract : ScriptableObject
     public GameObject toolPrefab;
 
     public int lootAmount;
+    public int minLootAmount;
+    public int maxLootAmount;
 
     public abstract void OnTaskComplete(Animator anim, UpdateGraph graph);
     public abstract void OnTaskBegin(Animator anim, Transform handAim);

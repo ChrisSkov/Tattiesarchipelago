@@ -26,6 +26,7 @@ public class Player : ScriptableObject
     public bool isSlowed;
     public bool isDead;
     public bool previewBuilding;
+    public bool carryChicken;
     [Header("DeathScreenStats")]
     public StatScriptObj zombiesKilled;
     public StatScriptObj dynamitesThrown;

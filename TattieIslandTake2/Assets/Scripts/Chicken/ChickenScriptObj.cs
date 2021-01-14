@@ -17,6 +17,7 @@ public class ChickenScriptObj : ScriptableObject
     [Header("Misc")]
     public float foodSearchThreshold;
     public float layEggTime;
+    public float pickUpRange;
     public string[] chickenNames;
 
 }
