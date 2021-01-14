@@ -16,6 +16,7 @@ public class TaskBehavior : MonoBehaviour
     bool canDoTask = true;
     ShowInfoOnHover hover;
     public UpdateGraph graph;
+    public SpawnRocks spawnRock;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +27,7 @@ public class TaskBehavior : MonoBehaviour
         performTask = player.gameObject.GetComponent<PerformTask>();
         hpBar.maxValue = task.maxHealth;
         hpBar.gameObject.SetActive(false);
+        spawnRock = GetComponentInParent<SpawnRocks>();
     }
 
     // Update is called once per frame
@@ -48,7 +50,10 @@ public class TaskBehavior : MonoBehaviour
         if (currentHealth <= 0)
         {
             canDoTask = false;
-            
+            if (task.name == "MineStone")
+            {
+                spawnRock.currentRockAmount--;
+            }
             task.OnTaskComplete(GetComponent<Animator>(), graph);
         }
         if (!canDoTask)

@@ -11,26 +11,40 @@ public class SpawnRocks : MonoBehaviour
 
     public int maxAmountOfRocks;
     public int currentRockAmount;
+
+    public float timeBetweenRockSpawn = 15f;
+    public float timer = 0f;
     void Start()
     {
         spawnPoints = GameObject.FindGameObjectsWithTag("RockSpawnPoint");
+        StartRockSpawn();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.M) && currentRockAmount < maxAmountOfRocks)
+        timer += Time.deltaTime;
+        if (timer >= timeBetweenRockSpawn)
         {
-            for (int i = 0; i < maxAmountOfRocks; i++)
+            StartRockSpawn();
+            timer = 0f;
+        }
+    }
+
+    private void StartRockSpawn()
+    {
+        if (currentRockAmount <= maxAmountOfRocks)
+        {
+            for (int i = 0; i <= maxAmountOfRocks; i++)
             {
                 int rockPrefabIndex = Random.Range(0, rockPrefabs.Length);
                 int spawnPointIndex = Random.Range(0, spawnPoints.Length);
-                if (spawnPoints[spawnPointIndex].transform.childCount == 0)
+                if (spawnPoints[spawnPointIndex].transform.childCount == 0 && currentRockAmount < maxAmountOfRocks)
                 {
-                    Instantiate(rockPrefabs[rockPrefabIndex], spawnPoints[rockPrefabIndex].transform);
+                    Instantiate(rockPrefabs[rockPrefabIndex], spawnPoints[spawnPointIndex].transform);
                     currentRockAmount++;
                 }
-                
+
             }
         }
     }

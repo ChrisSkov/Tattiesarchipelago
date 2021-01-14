@@ -330,6 +330,7 @@ GameObject:
   - component: {fileID: 3668732662545940585}
   - component: {fileID: 3668732662545940583}
   - component: {fileID: 3668732662545940584}
+  - component: {fileID: 499083368}
   m_Layer: 0
   m_Name: RockParent
   m_TagString: Untagged
@@ -391,6 +392,7 @@ MonoBehaviour:
   playerAnim: {fileID: 0}
   hpBar: {fileID: 4235204045820192894}
   graph: {fileID: 667730844, guid: 55e4cc0f41568bb44a01e087bcaf1855, type: 3}
+  spawnRock: {fileID: 0}
 --- !u!114 &3668732662545940584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -405,6 +407,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isHover: 0
   textObject: {fileID: 4241696551398425686}
+--- !u!65 &499083368
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5619210266068203122}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.65, y: 1.87, z: 2.16}
+  m_Center: {x: 0, y: 0.97, z: 0}
 --- !u!1 &6366774027927515197
 GameObject:
   m_ObjectHideFlags: 0
@@ -416,13 +431,12 @@ GameObject:
   - component: {fileID: 6366774027927350301}
   - component: {fileID: 6366774027930741821}
   - component: {fileID: 6366774027929775869}
-  - component: {fileID: 6366774027914277789}
   m_Layer: 0
   m_Name: Rock1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &6366774027927350301
 Transform:
@@ -487,20 +501,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &6366774027914277789
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6366774027927515197}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 2.4545298
-  m_Height: 1.8629913
-  m_Direction: 1
-  m_Center: {x: -0.07944882, y: 0.35, z: -0.0014170408}
 --- !u!1 &6576356430850923304
 GameObject:
   m_ObjectHideFlags: 0
