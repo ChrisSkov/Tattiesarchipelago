@@ -19,8 +19,9 @@ MonoBehaviour:
   walkSpeed: 3
   fearOfEnemies: 0
   fleeFromEnemyRange: 0
+  eggPrefab: {fileID: 3026422129107612408, guid: 526695e1f74a0354994c053ceb79960f, type: 3}
   foodSearchThreshold: 0
-  layEggTime: 0
+  layEggTime: 20
   pickUpRange: 2
   chickenNames:
   - Destroyer Of Worlds
@@ -30,4 +31,3 @@ MonoBehaviour:
   - "Warl\xF8kke"
   - Nicolas
   - Cage
-  carryChickenPrefab: {fileID: 6427866947424236502, guid: 69ca5f37ac258b14c860ddef5d3ac9a5, type: 3}

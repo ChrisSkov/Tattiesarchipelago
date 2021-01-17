@@ -15,6 +15,7 @@ public class ChickenScriptObj : ScriptableObject
     public float fearOfEnemies;
     public float fleeFromEnemyRange;
     [Header("Misc")]
+    public GameObject eggPrefab;
     public float foodSearchThreshold;
     public float layEggTime;
     public float pickUpRange;

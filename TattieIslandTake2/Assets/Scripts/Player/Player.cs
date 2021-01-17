@@ -31,6 +31,7 @@ public class Player : ScriptableObject
     public StatScriptObj zombiesKilled;
     public StatScriptObj dynamitesThrown;
     [Header("Misc")]
+    public Transform carryPosition;
     public float stepSoundDelay;
     public GameObject blood;
     public Animator anim;

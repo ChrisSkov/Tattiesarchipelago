@@ -28,6 +28,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bcf022b9bb39a04093caa10976658ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 11400000, guid: d66d5124d742a3c44820ab8d1c02d69b, type: 2}
+  useCondition: 0
   isHover: 0
   textObject: {fileID: 627085599481979014}
 --- !u!1 &627085599481979014
@@ -311,11 +313,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7882045869433671401, guid: f1d7dc68e3356064f9e17b185f905869, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7882045869433671401, guid: f1d7dc68e3356064f9e17b185f905869, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9047540811677545809, guid: f1d7dc68e3356064f9e17b185f905869, type: 3}
       propertyPath: m_SizeDelta.x
@@ -360,15 +362,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6327649463628056484, guid: c589eeb6aba435a40adcf4c5888d870b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.076581
+      value: 18.8
       objectReference: {fileID: 0}
     - target: {fileID: 6327649463628056484, guid: c589eeb6aba435a40adcf4c5888d870b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.729332
+      value: -6.73
       objectReference: {fileID: 0}
     - target: {fileID: 6327649463628056484, guid: c589eeb6aba435a40adcf4c5888d870b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -26.453857
+      value: -22.09
       objectReference: {fileID: 0}
     - target: {fileID: 6327649463628056484, guid: c589eeb6aba435a40adcf4c5888d870b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -400,7 +402,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6327649463628056487, guid: c589eeb6aba435a40adcf4c5888d870b, type: 3}
       propertyPath: m_Name
-      value: WeaponHolder Dynamite (3)
+      value: WeaponHolder Dynamite (6)
       objectReference: {fileID: 0}
     - target: {fileID: 6327649463628056487, guid: c589eeb6aba435a40adcf4c5888d870b, type: 3}
       propertyPath: m_Layer

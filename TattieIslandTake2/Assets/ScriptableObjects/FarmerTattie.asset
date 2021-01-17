@@ -30,8 +30,10 @@ MonoBehaviour:
   isSlowed: 0
   isDead: 0
   previewBuilding: 0
+  carryChicken: 0
   zombiesKilled: {fileID: 11400000, guid: 8db08d6c95889f3448d081fd45dad796, type: 2}
   dynamitesThrown: {fileID: 11400000, guid: b0df2524e896167488d7a6c49fb2d907, type: 2}
+  carryPosition: {fileID: 0}
   stepSoundDelay: 0.2
   blood: {fileID: 1565275868738540, guid: 15b2d0ac3c1f5bd4791ae44984fba681, type: 3}
   anim: {fileID: 0}

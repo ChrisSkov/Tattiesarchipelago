@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6807358931478177288}
   - component: {fileID: 8200008062391748001}
   - component: {fileID: 667086697257434748}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86,7 +86,7 @@ GameObject:
   - component: {fileID: 4019686749582730873}
   - component: {fileID: 2195145635708173778}
   - component: {fileID: 437580542050018641}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -160,7 +160,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7206895995504514965}
   - component: {fileID: 4235204045820192894}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -266,14 +266,14 @@ RectTransform:
   m_GameObject: {fileID: 4241696551398425686}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.029151628, y: 0.03491782, z: 0.029151628}
+  m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
   m_Children: []
   m_Father: {fileID: 8471281129716069256}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.629, y: 0.62}
+  m_AnchoredPosition: {x: 0.629, y: 1.22}
   m_SizeDelta: {x: 161.7099, y: 27.983631}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2277065589311652972
@@ -317,7 +317,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Press 'E' to interact
+  m_Text: Press 'E' to mine stone
 --- !u!1 &5619210266068203122
 GameObject:
   m_ObjectHideFlags: 0
@@ -331,8 +331,8 @@ GameObject:
   - component: {fileID: 3668732662545940583}
   - component: {fileID: 3668732662545940584}
   - component: {fileID: 499083368}
-  m_Layer: 0
-  m_Name: RockParent
+  m_Layer: 15
+  m_Name: RockParent 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -392,8 +392,6 @@ MonoBehaviour:
   playerAnim: {fileID: 0}
   hpBar: {fileID: 4235204045820192894}
   graph: {fileID: 667730844, guid: 55e4cc0f41568bb44a01e087bcaf1855, type: 3}
-  spawnRock: {fileID: 0}
-  isRock: 1
 --- !u!114 &3668732662545940584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -406,6 +404,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bcf022b9bb39a04093caa10976658ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 11400000, guid: d66d5124d742a3c44820ab8d1c02d69b, type: 2}
+  useCondition: 0
   isHover: 0
   textObject: {fileID: 4241696551398425686}
 --- !u!65 &499083368
@@ -432,7 +432,7 @@ GameObject:
   - component: {fileID: 6366774027927350301}
   - component: {fileID: 6366774027930741821}
   - component: {fileID: 6366774027929775869}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Rock1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -511,7 +511,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1308135742634012821}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -550,6 +550,7 @@ GameObject:
   - component: {fileID: 327704937482057861}
   - component: {fileID: 4700089287036047290}
   - component: {fileID: 4230760022034162811}
+  - component: {fileID: 4403081221679111931}
   m_Layer: 15
   m_Name: PalmTreeHealthCanvas (2)
   m_TagString: Untagged
@@ -564,7 +565,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8721689639840460486}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.52299947, y: 0.52299947, z: 0.52299947}
   m_Children:
@@ -572,7 +573,7 @@ RectTransform:
   - {fileID: 591126435553432595}
   m_Father: {fileID: 4044513069228489798}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 1.0878389}
@@ -639,3 +640,15 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &4403081221679111931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8721689639840460486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3738693a67f9af7409c74c1ef84678fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
