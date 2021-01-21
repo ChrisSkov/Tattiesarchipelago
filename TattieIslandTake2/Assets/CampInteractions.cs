@@ -25,7 +25,10 @@ public class CampInteractions : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.E))
                 {
-                    print("cooked");
+                    GameObject chicken = player.carryPosition.GetChild(0).gameObject;
+                    player.stats.currentHealth.statValue +=chicken.GetComponent<ChickenHealth>().currentHp/3;
+
+                    Destroy(chicken);
                 }
             }
         }

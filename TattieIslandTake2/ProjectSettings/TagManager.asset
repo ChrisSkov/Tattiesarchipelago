@@ -11,6 +11,8 @@ TagManager:
   - shop
   - Building
   - RockSpawnPoint
+  - PW - Prop
+  - nest
   layers:
   - Default
   - TransparentFX

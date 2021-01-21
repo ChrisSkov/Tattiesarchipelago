@@ -524,6 +524,7 @@ MonoBehaviour:
   player: {fileID: 11400000, guid: d66d5124d742a3c44820ab8d1c02d69b, type: 2}
   chicken: {fileID: 11400000, guid: 473595a5ec114e448b2d628ea653e74a, type: 2}
   carryPos: {fileID: 739467238}
+  fire: {fileID: 0}
 --- !u!1 &8969957477003842585
 GameObject:
   m_ObjectHideFlags: 0

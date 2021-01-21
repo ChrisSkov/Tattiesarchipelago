@@ -12,12 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20ecadbc7104f0f4d976b6814d0fdff3, type: 3}
   m_Name: PotatoFarm
   m_EditorClassIdentifier: 
+  buildingName: PotatoField
   prefab: {fileID: 7398263533630608997, guid: fa087b16b9dd86a4bace9486d669de6c, type: 3}
   indicatorPrefab: {fileID: 5954514575377422699, guid: ea2e00d85c2767a4488c56371ede6254, type: 3}
   uiImage: {fileID: 2800000, guid: 70b84f50082465241a1cc5519f266084, type: 3}
-  buildingName: PotatoField
+  maxHealth: 15
   price: 20
   woodReq: 5
+  stoneReq: 2
   deliveryTime: 1
   canAfford: 1
   player: {fileID: 11400000, guid: d66d5124d742a3c44820ab8d1c02d69b, type: 2}

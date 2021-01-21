@@ -8,6 +8,7 @@ public class ChickenScriptObj : ScriptableObject
     public float maxHp;
     public float hpRegen;
     public float hpRegenTime;
+    
     [Header("Locomotion")]
     public float runSpeed;
     public float walkSpeed;
@@ -15,6 +16,7 @@ public class ChickenScriptObj : ScriptableObject
     public float fearOfEnemies;
     public float fleeFromEnemyRange;
     [Header("Misc")]
+    public ResourceScriptObj chickenResource;
     public GameObject eggPrefab;
     public float foodSearchThreshold;
     public float layEggTime;

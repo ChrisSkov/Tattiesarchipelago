@@ -23,6 +23,10 @@ public class Health : MonoBehaviour
     }
     private void Update()
     {
+        if (player.stats.currentHealth.statValue >= player.stats.maxHealth.statValue)
+        {
+            player.stats.currentHealth.statValue = player.stats.maxHealth.statValue;
+        }
         regenTimer += Time.deltaTime;
         if (regenTimer >= timeBetweenRegen && player.stats.currentHealth.statValue < player.stats.maxHealth.statValue && !player.isDead)
         {

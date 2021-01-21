@@ -9,6 +9,8 @@ public class CarryChicken : MonoBehaviour
     public Transform carryPos;
     Animator anim;
 
+    public Transform fire;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +32,17 @@ public class CarryChicken : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Q))
             {
                 player.carryChicken = false;
+            }
+            if (Vector3.Distance(fire.transform.position, player.carryPosition.position) <= 2f)
+            {
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    GameObject chickenObj = player.carryPosition.GetChild(0).gameObject;
+                    player.stats.currentHealth.statValue += chickenObj.GetComponent<ChickenHealth>().currentHp / 3;
+                    chicken.chickenResource.updateMe = true;
+                    Destroy(chickenObj,0.2f);
+                    player.carryChicken = false;
+                }
             }
         }
         else

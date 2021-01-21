@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 20ecadbc7104f0f4d976b6814d0fdff3, type: 3}
-  m_Name: Wall
+  m_Name: ChickenCoop
   m_EditorClassIdentifier: 
   buildingName: Wall
-  prefab: {fileID: 100000, guid: 51ffdcced8a47e44989761520d635e1c, type: 3}
-  indicatorPrefab: {fileID: 1083488082825476421, guid: 1ed238ea37959df44952fa69854bb89e, type: 3}
-  uiImage: {fileID: 2800000, guid: 5b425b738d081654485f3bd6e63bc79f, type: 3}
-  maxHealth: 50
-  price: 10
-  woodReq: 0
-  stoneReq: 5
+  prefab: {fileID: 7723439196534458892, guid: b0de07b1df3265b46b18c2a5ff29a4be, type: 3}
+  indicatorPrefab: {fileID: 7723439196534458892, guid: b0de07b1df3265b46b18c2a5ff29a4be, type: 3}
+  uiImage: {fileID: 2800000, guid: f5a370f494680c343ad8c2433bbec168, type: 3}
+  maxHealth: 20
+  price: 5
+  woodReq: 8
+  stoneReq: 0
   deliveryTime: 1
   canAfford: 0
   player: {fileID: 11400000, guid: d66d5124d742a3c44820ab8d1c02d69b, type: 2}
