@@ -38,7 +38,7 @@ public class Fight : MonoBehaviour
             return;
 
         DefaultWeaponBehavior();
-       // PickUpWeapon();
+        // PickUpWeapon();
         HandManagement();
         DropWeapon();
         DetermineWeaponType();
@@ -68,6 +68,7 @@ public class Fight : MonoBehaviour
 
     }
 
+    // THIS METHOD IS DEPRECATED. WEAPON PICKUP IS HANDLED THROUGH THE WEAPON IT SELF
     private void PickUpWeapon()
     {
         //Set up hit, ray and mask for raycast
@@ -81,7 +82,7 @@ public class Fight : MonoBehaviour
             mouseWorldPositon = new Vector3(hit.point.x, transform.position.y, hit.point.z) - transform.position;
             if (Vector3.Distance(transform.position, hit.collider.gameObject.transform.position) <= 5f)
             {
-                
+
                 GameObject weaponToPickUp = hit.collider.gameObject;
                 WeaponAbstract newWeapon = weaponToPickUp.GetComponent<PickMeUp>().thisWeapon;
 
