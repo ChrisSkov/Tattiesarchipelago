@@ -7,12 +7,13 @@ public class ChickenBehavior : MonoBehaviour
     AIPath path;
     public ChickenScriptObj chicken;
     public float eggTimer = 0f;
-
+    float timeBetweenEggs;
     public Transform nest;
     bool atNest;
     // Start is called before the first frame update
     void Start()
     {
+        timeBetweenEggs = chicken.layEggTime + Random.Range(1,10);
         path = GetComponent<AIPath>();
     }
 
@@ -24,23 +25,24 @@ public class ChickenBehavior : MonoBehaviour
         {
             atNest = true;
         }
-        else{
+        else
+        {
             atNest = false;
         }
-            if (eggTimer >= chicken.layEggTime)
+        if (eggTimer >= timeBetweenEggs)
+        {
+            if (!atNest)
             {
-                if (!atNest)
-                {
-                    path.destination = nest.position;
-                }
-                else if (atNest)
-                {
-
-                    Instantiate(chicken.eggPrefab, transform.position, transform.rotation);
-                    eggTimer = 0f;
-                }
-
+                path.destination = nest.position;
             }
+            else if (atNest)
+            {
+
+                Instantiate(chicken.eggPrefab, transform.position, transform.rotation);
+                eggTimer = 0f;
+            }
+
+        }
     }
 
     private void OnTriggerEnter(Collider other)

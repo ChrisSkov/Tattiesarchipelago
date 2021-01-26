@@ -696,7 +696,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chicken: {fileID: 11400000, guid: 473595a5ec114e448b2d628ea653e74a, type: 2}
   eggTimer: 0
-  nest: {fileID: 0}
+  nest: {fileID: 7723439196534458891, guid: b0de07b1df3265b46b18c2a5ff29a4be, type: 3}
 --- !u!1 &1754005460542246013
 GameObject:
   m_ObjectHideFlags: 0
