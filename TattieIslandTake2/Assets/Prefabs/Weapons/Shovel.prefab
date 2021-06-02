@@ -369,7 +369,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7854760877223744657}
-  - component: {fileID: 6406365602905999071}
   m_Layer: 0
   m_Name: Aim
   m_TagString: Untagged
@@ -391,19 +390,6 @@ Transform:
   m_Father: {fileID: 1223493656573023375}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6406365602905999071
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6202181394602537483}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8ba505f3ac1e1240868f828b46d5dcf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thisWeapon: {fileID: 11400000, guid: 35eddeb601504bd4692bf87e8ce286e6, type: 2}
 --- !u!1 &6740910622020532142
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Wood
   m_EditorClassIdentifier: 
   resourceName: Wood
-  resourceCount: 50
+  resourceCount: 200
   myIcon: {fileID: 21300000, guid: 04d600fe322837744b9807baf668f461, type: 3}
   updateMe: 0

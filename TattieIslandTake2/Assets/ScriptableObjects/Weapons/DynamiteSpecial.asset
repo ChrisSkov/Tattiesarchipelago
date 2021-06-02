@@ -20,7 +20,7 @@ MonoBehaviour:
   explodeForce: 3
   timeBetweenUses: 2
   pickUpDistance: 2
-  weaponCount: 7
+  weaponCount: 3
   animOverride: {fileID: 22100000, guid: 93709fbc56be559488f0d8b8b73fd596, type: 2}
   throwSound: {fileID: 8300000, guid: 05273ac0e8d9e76448462f82dd6db3dd, type: 3}
   hitSound: {fileID: 8300000, guid: ea82ddb032396d648a4accb8c20c9140, type: 3}

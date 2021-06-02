@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Stone
   m_EditorClassIdentifier: 
   resourceName: Stone
-  resourceCount: 51
+  resourceCount: 200
   myIcon: {fileID: 21300000, guid: ee1414963c65fa44d9c85e1b4f838bba, type: 3}
   updateMe: 0

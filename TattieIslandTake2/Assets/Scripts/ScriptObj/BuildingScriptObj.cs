@@ -30,11 +30,11 @@ public class BuildingScriptObj : ScriptableObject
 
 
 
-    public void PlaceBuilding()
+    public void PlaceBuilding(Transform indicatorTransform)
     {
         if (canAfford)
         {
-            Instantiate(prefab, player.mouseWorldPosition, prefab.transform.rotation);
+            Instantiate(prefab, player.mouseWorldPosition, indicatorTransform.rotation);
             player.resources.wood.resourceCount -= woodReq;
             player.resources.potato.resourceCount -= price;
             player.resources.stone.resourceCount -= stoneReq;

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: AcidZombo
   m_EditorClassIdentifier: 
   moveSpeed: 2
-  chaseRange: 16
+  chaseRange: 22
   walkSoundDelay: 0.2
   walkSound: {fileID: 8300000, guid: 9a9f85a5316efb14e9c2eb84128930fa, type: 3}
   attackRange: 2

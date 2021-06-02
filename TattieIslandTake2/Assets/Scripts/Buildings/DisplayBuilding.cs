@@ -92,7 +92,7 @@ public class DisplayBuilding : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Mouse0) && myBuilding.canAfford && indicatorClone.GetComponent<BuildingPlacement>().canPlace && hover.hoverUI == false)
             {
                 //place the building and recreate the graph for AI movement
-                myBuilding.PlaceBuilding();
+                myBuilding.PlaceBuilding(indicatorClone.transform);
                 print("scanning");
                 path.Scan();
             }
