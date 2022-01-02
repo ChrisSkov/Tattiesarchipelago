@@ -1,37 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &272351686531699063
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 530297094061209937}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca16cd2cdc76ff640a6060250b8b9a10, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 11400000, guid: d66d5124d742a3c44820ab8d1c02d69b, type: 2}
-  mySpecialWeapon: {fileID: 11400000, guid: 6353dd5a2351a84449761f7251da009a, type: 2}
-  playerTransform: {fileID: 0}
-  hover: {fileID: 0}
---- !u!114 &5380859366436054124
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 530297094061209937}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bcf022b9bb39a04093caa10976658ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 11400000, guid: d66d5124d742a3c44820ab8d1c02d69b, type: 2}
-  useCondition: 0
-  isHover: 0
-  textObject: {fileID: 627085599481979014}
 --- !u!1 &627085599481979014
 GameObject:
   m_ObjectHideFlags: 0
@@ -57,13 +25,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 627085599481979014}
-  m_LocalRotation: {x: 0, y: 0.9111194, z: -0.4121426, w: 0}
+  m_LocalRotation: {x: 0.4121426, y: 0, z: 0, w: 0.9111194}
   m_LocalPosition: {x: 0, y: 0, z: 0.14999962}
   m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
   m_Children: []
   m_Father: {fileID: 5507880700310553697}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 48.679, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 48.679, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.0000019073486, y: 0.00000023841858}
@@ -224,6 +192,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3738693a67f9af7409c74c1ef84678fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &272351686531699063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 530297094061209937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca16cd2cdc76ff640a6060250b8b9a10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 11400000, guid: d66d5124d742a3c44820ab8d1c02d69b, type: 2}
+  mySpecialWeapon: {fileID: 11400000, guid: 6353dd5a2351a84449761f7251da009a, type: 2}
+  playerTransform: {fileID: 0}
+  hover: {fileID: 0}
+--- !u!114 &5380859366436054124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 530297094061209937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bcf022b9bb39a04093caa10976658ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 11400000, guid: d66d5124d742a3c44820ab8d1c02d69b, type: 2}
+  useCondition: 0
+  isHover: 0
+  textObject: {fileID: 627085599481979014}
 --- !u!1001 &1700781060086975751
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -402,7 +402,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6327649463628056487, guid: c589eeb6aba435a40adcf4c5888d870b, type: 3}
       propertyPath: m_Name
-      value: WeaponHolder Dynamite (6)
+      value: WeaponHolder Dynamite Variant
       objectReference: {fileID: 0}
     - target: {fileID: 6327649463628056487, guid: c589eeb6aba435a40adcf4c5888d870b, type: 3}
       propertyPath: m_Layer

@@ -968,7 +968,10 @@ MonoBehaviour:
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
+    ModeOverride: 0
     LensShift: {x: 0, y: 0}
+    GateFit: 0
+    m_SensorSize: {x: 2.5890806, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -4453,6 +4456,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 415875724}
     m_Modifications:
+    - target: {fileID: 680433951, guid: 6781950e72d8b1340988663d0b302c06, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9111194
+      objectReference: {fileID: 0}
+    - target: {fileID: 680433951, guid: 6781950e72d8b1340988663d0b302c06, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.4121426
+      objectReference: {fileID: 0}
+    - target: {fileID: 680433951, guid: 6781950e72d8b1340988663d0b302c06, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 680433951, guid: 6781950e72d8b1340988663d0b302c06, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 680433951, guid: 6781950e72d8b1340988663d0b302c06, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1222253414400084737, guid: 6781950e72d8b1340988663d0b302c06, type: 3}
       propertyPath: m_Name
       value: WeaponHolder Shovel
@@ -5738,6 +5761,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -6369,6 +6393,7 @@ Terrain:
   m_DrawHeightmap: 1
   m_DrawInstanced: 0
   m_DrawTreesAndFoliage: 1
+  m_StaticShadowCaster: 0
   m_ReflectionProbeUsage: 1
   m_MaterialTemplate: {fileID: 2100000, guid: 594ea882c5a793440b60ff72d896021e, type: 2}
   m_BakeLightProbesForTrees: 1
@@ -12292,7 +12317,10 @@ MonoBehaviour:
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
+    ModeOverride: 0
     LensShift: {x: 0, y: 0}
+    GateFit: 0
+    m_SensorSize: {x: 1, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -12359,6 +12387,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
