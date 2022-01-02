@@ -2103,7 +2103,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1247144463719845719, guid: 98036942f062c0246999ef3ff8fd0fbe, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -1
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4148229120340851477, guid: 98036942f062c0246999ef3ff8fd0fbe, type: 3}
       propertyPath: m_SizeDelta.x
@@ -2115,11 +2115,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4148229120340851477, guid: 98036942f062c0246999ef3ff8fd0fbe, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.91999817
+      value: 0.91999817
       objectReference: {fileID: 0}
     - target: {fileID: 4466593170564317390, guid: 98036942f062c0246999ef3ff8fd0fbe, type: 3}
       propertyPath: m_Name
       value: HpCanvasChicken
+      objectReference: {fileID: 0}
+    - target: {fileID: 4491896257390230400, guid: 98036942f062c0246999ef3ff8fd0fbe, type: 3}
+      propertyPath: m_Direction
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5851387118749756928, guid: 98036942f062c0246999ef3ff8fd0fbe, type: 3}
       propertyPath: m_RenderMode
@@ -2179,7 +2183,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7370231287230676684, guid: 98036942f062c0246999ef3ff8fd0fbe, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.0099983215
+      value: -0.0099983215
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98036942f062c0246999ef3ff8fd0fbe, type: 3}
